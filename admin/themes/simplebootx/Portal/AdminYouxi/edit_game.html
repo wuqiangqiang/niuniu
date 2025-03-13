@@ -1,0 +1,68 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('AdminYouxi/GameList')}">游戏种类</a></li>
+			<li class="active"><a href="{:U('AdminYouxi/Edit_Game')}">修改游戏</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form" action="{:U('AdminYouxi/Edit_Game_Post')}" method="post">
+			<fieldset>
+<!--                 <div class="control-group" >
+					<label class="control-label">上级:</label>
+					<div class="controls" >
+						<select id="parentid" name="parentid" onchange="fangfa(this)">
+							<option value="0">作为一级菜单</option>
+							{$select_categorys}
+						</select>
+					</div>
+				</div> -->
+				<div class="control-group" >
+					<label class="control-label">名称:</label>
+					<div class="controls" >
+                        <input type="text" style="color: red" name="name" value="{$post.name}" required >
+					</div>
+				</div>
+				<div class="control-group" >
+                    <label class="control-label">图片</label>
+                    <div class="controls" >
+                       <input type='hidden' name='img' id='thumb' value="{$post.img|default=''}">
+                        <a href="javascript:upload_one_image('图片上传','#thumb');">
+                            <if condition="empty($post['img'])">
+                                <img src="__TMPL__Public/assets/images/default-thumbnail.png" id='thumb-preview' width='135' height='113' style='cursor: hand' />
+                            <else />
+                                <img src="{:sp_get_image_preview_url($post['img'])}" id='thumb-preview' width='135' height='113' style='cursor: hand' />
+                            </if>
+                        </a>
+                    </div>
+                </div>
+                <div class="control-group">
+					<label class="control-label">开启状态</label>
+					<div class="controls">
+						<php>$active_true_checked=($post['zt']==1)?"checked":"";</php>
+						<label class="radio inline" for="status_yes">
+							<input type="radio" name="zt" value="1" id="status_yes" {$active_true_checked} />开启
+						</label>
+						<php>$active_false_checked=($post['zt']==2)?"checked":"";</php>
+						<label class="radio inline" for="status_no">
+							<input type="radio" name="zt" value="2" id="status_no" {$active_false_checked}>关闭
+						</label>
+					</div>
+				</div> 
+				<div class="control-group" >
+					<label class="control-label">排序:</label>
+					<div class="controls" >
+                        <input type="number" name="sort" value="{$post.sort}">
+					</div>
+				</div>                      
+			</fieldset>
+			<div class="form-actions">
+				<input type="hidden" name="id" value="{$post.id}">
+				<button type="submit" class="btn btn-primary  js-ajax-submit">更新</button>
+				<a class="btn" href="javascript:history.back(-1);">返回</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

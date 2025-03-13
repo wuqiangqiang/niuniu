@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{$titlexx}大厅</title>
+    <link rel="stylesheet" type="text/css" href="/app/css/dasheng4.css"/>
+</head>
+<body>
+<div id="loadings" style="position:fixed;top:0;right:0;bottom:0;left:0;background:#fff;z-index:999;font-size:16px;">
+    <div class="spinner">
+        <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+    </div>
+    <div class="loadings-text">
+        页面加载中
+        <span data-item="1">.</span>
+        <span data-item="2">.</span>
+        <span data-item="3">.</span>
+    </div>
+</div>
+<div id="networkReconnect" style="position: fixed; width:2.88rem; line-height:.2rem; font-size:.1rem; left:.36rem; text-align: center; bottom:45%; background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0)); background: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0)); background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0)); color:#fff; display:none; z-index:9999;">
+    您的网络已断开，我们正在尝试重连...
+</div>
+    <div class="index">
+    <div class="top">
+        <div class="user">
+            <div class="user-img">
+                <img class="avatar"  src="" id="userimg"/>
+                <!--<div id="user-id" class="user-id"></div>-->
+            </div>
+            <div class="user-info">
+                <div class="name" id="nickname"></div>
+                <div class="room-card">
+                    <img src="http://cdn.lfzgame.com/images/index/room-card1.png" alt="" onerror="this.src='http://cdn.lfzgame.com/images/index/room-card1.png'" />
+                    <span id="fknum"></span>
+                </div>
+            </div>
+        </div>
+        <button class="issue-room-card" onclick="location.href='{:U('portal/user/dashengfangka')}'">发放房卡</button>
+        <button class="room-card-record">更多功能</button>
+    </div>
+        <?php
+        $rule_model = M('rule');
+        $rules = $rule_model->where('type="15" and zt=1')->order('`sort` desc')->select();
+        ?>
+        <script type="text/javascript">
+            var selectConfig = {};
+            selectConfig['tenniu'] = JSON.parse('<?php echo json_encode($rules, JSON_UNESCAPED_UNICODE); ?>');
+        </script>
+    <div class="game-list">
+        <div class="game-item niuniuTen-bg" onclick="send('xzplay',{id:{$rules[0]['id']}});">
+            <button>创建房间</button>
+        </div>
+        <div class="game-item niuniu-bg">
+            <button>创建房间</button>
+        </div>
+        <div class="game-item goldflower-bg">
+            <button>创建房间</button>
+        </div>
+        <div class="game-item thirteencard-bg">
+            <button>创建房间</button>
+        </div>
+        <div class="game-item three-opens-bg">
+            <button>创建房间</button>
+        </div>
+        <div class="game-item texas-poker-bg">
+            <button>创建房间</button>
+        </div>
+    </div>
+
+    <div class="pupop-container niuniuTen-mask">
+        <div class="niuniu-opacity">
+            <div class="content-box">
+                <i class="mask-icon mask-top"></i>
+                <i class="mask-icon mask-right"></i>
+                <i class="mask-icon mask-bottom"></i>
+                <i class="mask-icon mask-left"></i>
+                <div class="tab">
+                    <?php foreach( $rules as $k=>$v ): ?>
+                    <span class="tab-item {$k==0 ? 'on' : ''}" data-item="{$k+1}" onclick="send('xzplay',{id:{$v['id']}})">{:mb_substr($v['name'], 0, 2, 'utf-8')}<br/>{:mb_substr($v['name'], 2, 2, 'utf-8')}</span>
+                    <?php endforeach; ?>
+                </div>
+                <div class="content-item">
+                    <div class="content">
+                        <div class="flex-cont number">
+                            <div class="nameText">
+                                底分（计分牌）
+                            </div>
+                            <div class="flex-cont flex-item">
+                                <div class="prev">
+                                    -
+                                </div>
+                                <div class="radio flex-item">
+                                    <div class="on" data-item="1" data-pos="1"></div>
+                                    <div data-item="2" data-pos="2"></div>
+                                    <div data-item="3" data-pos="3"></div>
+                                    <div data-item="4" data-pos="4"></div>
+                                    <div data-item="5" data-pos="5"></div>
+                                    <span class="showNumber" data-pos="1"><i>1</i></span>
+                                </div>
+                                <div class="next">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-cont rules"></div>
+                        <div class="flex-cont type"></div>
+                        <div class="flex-cont innings"></div>
+                        <div class="zhuang"></div>
+                    </div>
+                </div>
+                <div class="text">
+                    创建房间，无人参与，半小时后返还房卡
+                </div>
+                <button class="createRoomBtn" onclick="createRoom()"></button>
+                <div class="niuniu-bottom"></div>
+                <div class="close-window"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pupop-container niuniu-mask">
+        <div class="niuniu-opacity">
+            <div class="content-box">
+                <i class="mask-icon mask-top"></i>
+                <i class="mask-icon mask-right"></i>
+                <i class="mask-icon mask-bottom"></i>
+                <i class="mask-icon mask-left"></i>
+                <div class="tab">
+                    <span class="tab-item on" data-item="1">明牌<br />抢庄</span>
+                    <span class="tab-item" data-item="2">通比<br />牛牛</span>
+                    <span class="tab-item" data-item="3">自由<br />抢庄</span>
+                    <span class="tab-item" data-item="4">牛牛<br />上庄</span>
+                    <span class="tab-item" data-item="5">固定<br />庄家</span>
+                </div>
+                <div class="content-item">
+                    <div class="content">
+                        <div class="flex-cont number">
+                            <div class="nameText">
+                                底分（计分牌）
+                            </div>
+                            <div class="flex-cont flex-item">
+                                <div class="prev">
+                                    -
+                                </div>
+                                <div class="radio flex-item">
+                                    <div class="on" data-item="1" data-pos="1"></div>
+                                    <div data-item="2" data-pos="2"></div>
+                                    <div data-item="3" data-pos="3"></div>
+                                    <div data-item="4" data-pos="4"></div>
+                                    <div data-item="5" data-pos="5"></div>
+                                    <span class="showNumber" data-pos="1"><i>1</i></span>
+                                </div>
+                                <div class="next">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-cont rules">
+                            <div class="name">
+                                规则:
+                            </div>
+                            <div class="flex-item">
+                                <label><input type="radio" name="niuniu_card_rule" value="1" checked="" /><span>牛牛&times;3 牛九&times;2 牛八&times;2</span></label>
+                                <br />
+                                <label><input type="radio" name="niuniu_card_rule" value="2" /><span>牛牛&times;4 牛九&times;3 牛八&times;2 牛七&times;2</span></label>
+                            </div>
+                        </div>
+                        <div class="flex-cont type">
+                            <div class="name">
+                                牌型:
+                            </div>
+                            <div class="flex-item"></div>
+                        </div>
+                        <div class="flex-cont innings">
+                            <div class="name">
+                                局数:
+                            </div>
+                            <div class="flex-item">
+                                <label><input type="radio" name="niuniu_max_matches" value="10" checked="" /><span>10局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X1</span></label>
+                                <label><input type="radio" name="niuniu_max_matches" value="20" /><span>20局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X2</span></label>
+                            </div>
+                        </div>
+                        <div class="zhuang"></div>
+                    </div>
+                </div>
+                <div class="text">
+                    创建房间，无人参与，半小时后返还房卡
+                </div>
+                <button class="createRoomBtn"></button>
+                <div class="niuniu-bottom"></div>
+                <div class="close-window"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pupop-container goldflower-mask">
+        <div class="opacity">
+            <div class="content-box">
+                <i class="mask-icon mask-top"></i>
+                <i class="mask-icon mask-right"></i>
+                <i class="mask-icon mask-bottom"></i>
+                <i class="mask-icon mask-left"></i>
+                <div class="content-item">
+                    <div class="content">
+                        <div class="flex-cont number">
+                            <div class="nameText">
+                                底分
+                            </div>
+                            <div class="flex-cont flex-item">
+                                <div class="prev2">
+                                    -
+                                </div>
+                                <div class="radio flex-item">
+                                    <div class="on" data-item="2" data-pos="1"></div>
+                                    <div data-item="4" data-pos="2"></div>
+                                    <div data-item="8" data-pos="3"></div>
+                                    <span class="showNumber" data-pos="1"><i>2</i></span>
+                                </div>
+                                <div class="next2">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-cont rules">
+                            <div class="name">
+                                分数:
+                            </div>
+                            <div class="flex-item">
+                                <label><input type="radio" name="gold_card_rule" value="1" checked="" /><span>2/4，4/8，8/16，10/20</span></label>
+                                <br />
+                                <label><input type="radio" name="gold_card_rule" value="2" /><span>2/4，5/10，10/20，20/40</span></label>
+                            </div>
+                        </div>
+                        <div class="flex-cont innings">
+                            <div class="name">
+                                局数:
+                            </div>
+                            <div class="flex-item">
+                                <label><input type="radio" name="gold_max_matches" value="10" checked="" /><span>10局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X1</span></label>
+                                <label><input type="radio" name="gold_max_matches" value="20" /><span>20局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X2</span></label>
+                            </div>
+                        </div>
+                        <div class="flex-cont goldflower-number">
+                            <div class="name">
+                                上限:
+                            </div>
+                            <div class="flex-item">
+                                <label><input type="radio" name="gold_hand_patterns" value="0" /><span>无</span></label>
+                                <label><input type="radio" name="gold_hand_patterns" value="500" checked="" /><span>500</span></label>
+                                <label><input type="radio" name="gold_hand_patterns" value="1000" /><span>1000</span></label>
+                                <label><input type="radio" name="gold_hand_patterns" value="2000" /><span>2000</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    创建房间，无人参与，半小时后返还房卡
+                </div>
+                <button class="createRoomBtn"></button>
+                <div class="niuniu-bottom"></div>
+                <div class="close-window"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pupop-container texas-poker-mask">
+        <div class="opacity">
+            <div class="content-box">
+                <i class="mask-icon mask-top"></i>
+                <i class="mask-icon mask-right"></i>
+                <i class="mask-icon mask-bottom"></i>
+                <i class="mask-icon mask-left"></i>
+                <div class="content-item">
+                    <div class="content">
+                        <div class="flex-cont">
+                            <div class="title-text">
+                                小盲/大盲:
+                            </div>
+                            <label><input type="radio" name="texasPoker_mang" checked="" value="1" /><span>1/2</span></label>
+                            <label><input type="radio" name="texasPoker_mang" value="2" /><span>2/4</span></label>
+                        </div>
+                        <div class="flex-cont">
+                            <div class="title-text">
+                                局数:
+                            </div>
+                            <label><input type="radio" name="texasPoker_jushu" checked="" value="10" /><span>10局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X2</span></label>
+                            <label><input type="radio" name="texasPoker_jushu" value="20" /><span>20局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X4</span></label>
+                        </div>
+                        <div class="flex-cont">
+                            <div class="title-text">
+                                前注:
+                            </div>
+                            <label><input type="radio" name="texasPoker_zhu" checked="" value="0" /><span>无</span></label>
+                            <label><input type="radio" name="texasPoker_zhu" value="1" /><span>1倍小盲</span></label>
+                            <label><input type="radio" name="texasPoker_zhu" value="2" /><span>2倍小盲</span></label>
+                        </div>
+                        <div class="flex-cont">
+                            <div class="title-text">
+                                初始分数:
+                            </div>
+                            <label><input type="radio" name="texasPoker_chip" checked="" value="500" /><span>500</span></label>
+                            <label><input type="radio" name="texasPoker_chip" value="1000" /><span>1000</span></label>
+                            <label><input type="radio" name="texasPoker_chip" value="1500" /><span>1500</span></label>
+                            <label><input type="radio" name="texasPoker_chip" value="2000" /><span>2000</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    创建房间，无人参与，半小时后返还房卡
+                </div>
+                <button class="createRoomBtn"></button>
+                <div class="close-window"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pupop-container thirteencard-mask">
+        <div class="niuniu-opacity">
+            <div class="content-box">
+                <i class="mask-icon mask-top"></i>
+                <i class="mask-icon mask-right"></i>
+                <i class="mask-icon mask-bottom"></i>
+                <i class="mask-icon mask-left"></i>
+                <div class="content-item">
+                    <div class="content">
+                        <div class="flex-cont number">
+                            <div class="nameText">
+                                底分（计分牌）
+                            </div>
+                            <div class="flex-cont flex-item">
+                                <div class="prev">
+                                    -
+                                </div>
+                                <div class="radio flex-item">
+                                    <div class="on" data-item="1" data-pos="1"></div>
+                                    <div data-item="3" data-pos="2"></div>
+                                    <div data-item="5" data-pos="3"></div>
+                                    <span class="showNumber" data-pos="1"><i>1</i></span>
+                                </div>
+                                <div class="next">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-cont type">
+                            <div class="name">
+                                玩法:
+                            </div>
+                            <div class="flex-item">
+                                <label><input type="checkbox" name="thirteen_hand_patterns" value="1" checked="" disabled="" /><span>经典</span></label>
+                            </div>
+                        </div>
+                        <div class="flex-cont innings">
+                            <div class="name">
+                                局数:
+                            </div>
+                            <div class="flex-item">
+                                <label><input type="radio" name="thirteen_max_matches" value="5" checked="" /><span>5局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X1</span></label>
+                                <label><input type="radio" name="thirteen_max_matches" value="10" /><span>10局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X2</span></label>
+                                <label><input type="radio" name="thirteen_max_matches" value="20" /><span>20局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X4</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    创建房间，无人参与，半小时后返还房卡
+                </div>
+                <button class="createRoomBtn"></button>
+                <div class="niuniu-bottom"></div>
+                <div class="close-window"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pupop-container threeOpens-mask">
+        <div class="niuniu-opacity">
+            <div class="content-box">
+                <i class="mask-icon mask-top"></i>
+                <i class="mask-icon mask-right"></i>
+                <i class="mask-icon mask-bottom"></i>
+                <i class="mask-icon mask-left"></i>
+                <div class="tab">
+                    <span class="tab-item on" data-item="1">抢庄模式</span>
+                    <span class="tab-item" data-item="2">通比模式</span>
+                    <span class="tab-item" data-item="3">三公当庄</span>
+                </div>
+                <div class="content-item">
+                    <div class="content">
+                        <div class="flex-cont number">
+                            <div class="nameText">
+                                底分
+                            </div>
+                            <div class="flex-cont flex-item">
+                                <div class="prev">
+                                    -
+                                </div>
+                                <div class="radio flex-item">
+                                    <div class="on" data-item="1" data-pos="1"></div>
+                                    <div data-item="2" data-pos="2"></div>
+                                    <div data-item="3" data-pos="3"></div>
+                                    <div data-item="4" data-pos="4"></div>
+                                    <div data-item="5" data-pos="5"></div>
+                                    <span class="showNumber" data-pos="1"><i>1</i></span>
+                                </div>
+                                <div class="next">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-cont type">
+                            <div class="name">
+                                规则:
+                            </div>
+                            <div class="flex-item"></div>
+                        </div>
+                        <div class="flex-cont matches">
+                            <div class="name">
+                                局数:
+                            </div>
+                            <div class="flex-item">
+                                <label><input type="radio" name="threeOpens_max_matches" value="12" checked="" /><span>12局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X2</span></label>
+                                <label><input type="radio" name="threeOpens_max_matches" value="24" /><span>24局<img class="mask-inning-card" src="http://cdn.lfzgame.com/images/index/mask-inning-card.png" />X4</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    创建房间，无人参与，半小时后返还房卡
+                </div>
+                <button class="createRoomBtn"></button>
+                <div class="niuniu-bottom"></div>
+                <div class="close-window"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/app/js/jquery3.2.1.min.js"></script>
+<script src="/app/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="/app/js/dasheng4.js"></script>
+
+
+<script src="/app/js/homepage/home.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/app/js/base64.js"></script>
+<script src="/app/js/dashengapp.js" type="text/javascript"></script>
+<script src="/index.php/portal/index/gamejs" type="text/javascript"></script>
+
+<script type="text/javascript">
+    load('show');
+    token='{$token}';
+    if(dkxx){
+        connect(dkxx);
+    }
+    else{
+        load('hide');
+        prompt('服务器没开启,请稍后再试');
+        setTimeout("$('body').hide()",3000);
+    }
+</script>
+</body>
+</html>

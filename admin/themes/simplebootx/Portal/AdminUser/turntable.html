@@ -1,0 +1,107 @@
+<admintpl file="header" />
+</head>
+<body>
+    <div class="wrap">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">幸运大转盘</a></li>
+            <!--<li><a href="{:U('AdminUser/add')}"></a></li>-->
+        </ul>
+        <form class="well form-search" method="post" action="{:U('Portal/AdminUser/turntable')}">
+            会员账号：
+            <input type="text" name="user_login" style="width: 200px;" value="{:I('request.user_login/s','')}"  placeholder="请输入会员账号">
+            奖项： 
+            <select name="award_id" style="width: 120px;" class='award_id'>
+                <option value=''>全部</option>
+                <option value='1'>一等奖</option>
+                <option value='2'>二等奖</option>
+                <option value='3'>三等奖</option>
+                <option value='4'>四等奖</option>
+                <option value='5'>五等奖</option>
+                <option value='6'>六等奖</option>
+                <option value='7'>感谢参与</option>
+            </select> &nbsp;&nbsp;
+<!--            数量:
+            <input type="number" name="number" style="width: 200px;" value="" required placeholder="请输入数量">-->
+            <!--            邮箱:
+                        <input type="text" name="user_email" style="width: 100px;" value="{:I('request.user_email/s','')}" placeholder="请输入{:L('EMAIL')}">-->
+            <input type="submit" class="btn btn-primary js-ajax-submit" value="查找" />
+            <!--<a class="btn btn-danger" href="{:U('User/index')}">清空</a>-->
+        </form>
+        <script type="text/javascript">
+           $(function () {
+               function setSelected(element,value){
+                   element.each(function(index,e){
+                       if($(e).val()==value){
+                           $(e).attr('selected','selected');
+        //                            console.log(1111);
+                       }
+//                       console.log($(e).val());
+//                       console.log(value);
+                   });
+               }
+               var status='{$award_id}';
+               setSelected($('.award_id option'),status);
+
+
+           });
+        </script>
+            <table class="table table-hover table-bordered table-list">
+                <thead>
+                    <tr>
+                        <th width="50">ID</th>
+                        <th>会员</th>
+                        <th>奖品</th>
+                        <th>时间</th>
+                        <th>状态</th>
+<!--                        <th>使用用户</th>
+                        <th>使用时间</th>-->
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+               <php>
+                   $status[0]='未派发';
+                   $status[1]='已派发';
+               </php>
+                <foreach name="record" item="vo">
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.user_login}</td>
+                        <td>{$vo.prize}</td>
+                        <td>{$vo.create_time}</td>
+                        <td>
+                              <if condition="$vo['award_id'] neq 7">
+                                    {$status[$vo['status']]}
+                            </if>
+                        </td>
+<!--                        <td>
+                               <php>
+                                  if($vo['use_user']=='0'){
+                                  $vo['use_user']='';
+                                  }
+                              </php>
+                            {$vo.use_user}
+                        </td>
+                        <td>{$vo.use_time}</td>-->
+                        <td>
+                            <a class="js-ajax-delete" href="{:U('Portal/AdminUser/deleteAward',array('id'=>$vo['id']))}">{:L('DELETE')}</a> 
+                        <if condition="$vo['award_id'] neq 7">
+                            <if condition="$vo['status'] neq 1">
+                            <a class="js-ajax-dialog-btn" data-msg="派发奖品？" href="{:U('Portal/AdminUser/giveAward',array('id'=>$vo['id']))}">派发</a> 
+                            </if>
+                            
+                        </if>
+                        </td>
+                    </tr>
+                </foreach>
+
+
+                </tbody>
+
+            </table>
+            <div class="pagination">{$page}</div>
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<admintpl file="header" />
+</head>
+<body>
+    <div class="wrap">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">房卡操作</a></li>
+            <!--<li><a href="{:U('AdminUser/add')}"></a></li>-->
+        </ul>
+        <form class="well form-search" method="post" action="{:U('Portal/AdminUser/editMoneyPost')}">
+            
+            类型： 
+            <select name="wallet" style="width: 120px;">
+                    <option value='fk'>房卡</option>
+                    <option value="daycard">天卡</option>
+            </select> &nbsp;&nbsp;
+            会员ID：
+            <input type="text" name="user_login" style="width: 200px;" value="" required placeholder="请输入会员ID">
+            数量:
+            <input type="number" name="number" style="width: 200px;" value="" required placeholder="请输入数量">
+             &nbsp;&nbsp;
+             操作方式： 
+            <select name="type" style="width: 120px;">
+                    <option value='1'>赠送</option>
+                    <option value='2'>扣除</option>
+            </select> &nbsp;&nbsp;
+            <input type="submit" class="btn btn-primary js-ajax-submit" value="提交" />
+            <!--<a class="btn btn-danger" href="{:U('User/index')}">清空</a>-->
+        </form>
+            <table class="table table-hover table-bordered table-list">
+                <thead>
+                    <tr>
+                        <th width="50">ID</th>
+                        <th>会员</th>
+                        <th>数量</th>
+                        <th>类型</th>
+                        <th>时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <php>
+                    $wallet['fk']="房卡";
+                    $wallet['daycard']="天卡";
+                </php>
+                <foreach name="record" item="vo">
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.user_login}</td>
+                        <td>{$vo.number}</td>
+                        <td>{$wallet[$vo['wallet']]}</td>
+                        <td>{$vo.create_time}</td>
+                    </tr>
+                </foreach>
+
+
+                </tbody>
+
+            </table>
+            <div class="pagination">{$page}</div>
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+    
+</body>
+</html>

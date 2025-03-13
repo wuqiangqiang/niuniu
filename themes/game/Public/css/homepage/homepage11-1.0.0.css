@@ -1,0 +1,72 @@
+
+*{padding: 0;margin:0;}a {text-decoration: none;color: #fff;}ul {list-style: none;}input{border: none;outline:none}body{font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, Arial, sans-serif;cursor: default;}
+img{border: none;}
+.main{width: 100%;position:relative;margin:0 auto;}
+.roomCard{position: absolute;top:0;right:0;width: 26%;}
+.roomCard .img1{position: relative;float: left;z-index: 50;}
+.roomCard .img2{position: absolute;top:0;z-index: 51}
+.roomCard .num{position: relative;background: #273151;color:#fff;font-size: 3.5vw;border-radius:4vw;padding: 1vw 4vw;float: left;margin-left: -3vw;z-index: 49;}
+
+.recharge{position: absolute;top:5vw;right:30%;width: 22vw;height: 8vw;z-index: 51;}
+
+.user{position: absolute;top:0;left:0;width: 50%;}
+.user .avatar{border: 1px solid #b495d8;border-radius:5px;float: left;position: relative;z-index: 50;}
+.user .name{color: #fff;font-size: 3.5vw;border-radius:3.5vw;padding: 1vw 4vw;background:#273151;margin-left: -3vw;float: left;position: relative;z-index: 49;}
+
+.shop{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 112;}	
+.shop .shopBack{width: 100%;height:100%;background: #000;opacity:0.6;}	
+.shop .shopBody{width: 100%;position: absolute;bottom: 0;left:0;height: 0; }	
+.shop .shopBody .shopReturn{width: 15%;float: left;margin-top:6.3%;margin-left:5%;position: relative;}	
+.shop .shopBody .shopBuy{width: 34%;float: right;margin-top:8.3%;margin-right:33%;position: relative;}	
+.shop .shopBody .shopGoods{width: 34%;position: relative;padding: 3px;}	
+.shop .shopBody .shopGoods img{width: 100%;border-radius: 10px;}	
+.shop .shopBody .shopGoods .title{position: absolute;top: 3;font-size: 14px;left: 0;width: 100%;text-align: center;color: #fff;}	
+.shop .shopBody .shopGoods .price{position: absolute;bottom: 3;font-size: 20px;left: 0;width: 100%;text-align: center;color: #f1c818;line-height: 36px;}
+.shop .shopBody .goodsBack{border:3px solid #fada23;padding: 0;border-radius: 14px;}
+.shop .shopBody .goodsBack .title{top: 0;}	
+.shop .shopBody .goodsBack .price{bottom: 0;}
+.shop .shopBody .goodsBack .background{position: absolute;top:0;left: 0;width:100%;height:100%;background:#fada23;opacity:.15; }
+.shop .shopBody .shopGoods1{margin-top:39%;margin-left: 11.2%;float: left;}	
+.shop .shopBody .shopGoods2{margin-top:39%;margin-right: 11.2%;float: right;}	
+.shop .shopBody .shopGoods3{margin-top:7.2%;margin-left: 11.2%;float: left;}	
+.shop .shopBody .shopGoods4{margin-top:7.2%;margin-right: 11.2%;float: right;}
+.shop .shopLoading{width: 100%;position: absolute;left: 0;top:0;height: 100%;z-index: 9;}
+
+
+.alert{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 111;color: #fff;font-family: simHei;}
+.alert .alertBack{width: 100%;height:100%;background: #000;opacity:0.8;position: absolute;}
+.alert .mainPart{position: relative;top: 45%;left: 50%;margin-top:-19vh ;margin-left:-22.5vh ;width: 45vh;height:38vh; }
+/*.alert .mainPart .backImg{position: relative;width:100%;height:100%;border-radius: 10px;}*/
+.alert .mainPart .alertText{position: absolute;width:100%;line-height: 3.5vh;font-size: 2.5vh;width: 36vh;left:50%;margin-left:-18vh;top:5.6vh;text-align: center;}
+.alert .mainPart .buttonMiddle{position: absolute;width:100%;line-height: 6vh;height: 5.6vh;font-size: 2.5vh;width: 18vh;left:50%;margin-left:-9vh;bottom:2.2vh;text-align: center;background:url("http://goss.fexteam.com/files/d_11/images/game/button2.png");background-size:100%;}
+.alert .mainPart .buttonLeft{position: absolute;width:100%;line-height: 6vh;height: 5.6vh;font-size: 2.5vh;width: 18vh;left:3vh;bottom:2.2vh;text-align: center;background:url("http://goss.fexteam.com/files/d_11/images/game/button1.png");background-size:100%;}
+.alert .mainPart .buttonRight{position: absolute;width:100%;line-height: 6vh;height: 5.6vh;font-size: 2.5vh;width: 18vh;right:3vh;bottom:2.2vh;text-align: center;background:url("http://goss.fexteam.com/files/d_11/images/game/button2.png");background-size:100%;}
+.alert .mainPart .backImg{position: absolute;width:100%;height:100%;border-radius: 1.5vh;border:0.1vh solid #de51f1;top:0;left:0;background: #6d4ba8;}
+.alert .mainPart .backImg .blackImg{position: absolute;width:40.6vh;height:25vh;border-radius: 1.5vh;border:0.1vh solid #ae71cb;top:2.2vh;left:2.2vh;background: #190d2d;}
+
+.createRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 110;}	
+.createRoom .createRoomBack{width: 100%;height:100%;background: #000;opacity:0.6;}
+/* top:38%;left:50%;margin-top:-24vh;margin-left: -22.5vh; */	
+.createRoom .mainPart{width: 45vh;position: absolute;top:67%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
+.createRoom .mainPart .createB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:#634fa6;border:1px solid #a684f2;border-radius:10px; }	
+.createRoom .mainPart .createTitle{position:relative;height:5.5vh;text-align: center;}	
+.createRoom .mainPart .createTitle img{position:relative;height:3vh;margin-top: 1.5vh;}	
+.createRoom .mainPart .cancelCreate{width: 5vh;height:5vh;top:-2.5vh;right:-2.5vh;position: absolute;}	
+.createRoom .mainPart .createCommit{position: relative;margin-top: 3vh;bottom: 1.5vh;line-height: 6vh;height: 5.7vh;font-size: 2.5vh;width: 18vh;left:50%;margin-left:-9vh;text-align: center;background:url("http://goss.fexteam.com/files/d_11/images/game/button2.png");background-size:100%;color: #fff;}	
+.createRoom .mainPart .blueBack{width: 42vh;background:#111431;border:1px solid #a684f2;border-radius:4px;margin:0 auto;position: relative;padding: 0 0 0.8vh 0; }
+.createRoom .mainPart .blueBack .selectPart{width:100%;margin-top:0.5vh;line-height:4.5vh;font-size:2.1vh;position: relative;color:#111431;background:#bbbff1;border-radius:0px;font-family:simHei; padding:1vh 0;}
+.createRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:8vh;text-align: right;}
+.createRoom .mainPart .blueBack .selectPart .selectList{float: left; width: 34vh}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:1.8vh; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:2.1vh;width:2.1vh;border:1px solid #1d1045;border-radius:2px;background:#78899d;margin-top:1vh;position: relative; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 3vh;height:3vh;left: 0;top:0.2vh;}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 0.4vh;}
+
+.bankerSelected{position: absolute;width: 8vh;height: 5.4vh;border-style: solid;border-width: 0px;border-color: #392c62;color: #653604;text-align: center;font-size: 1.8vh;overflow: hidden;}
+.bankerSelected .img{position: absolute;top: 0;left: 0;width: 7.7vh;height: 5.4vh;border-style: solid;border-width: 0.5px;border-color: #392c62;}
+.bankerUnSelected{position: absolute;width: 8vh;height: 5.4vh;border-style: solid;border-width: 0px;border-color: #e8c007;color: #9a6b3a;text-align: center;font-size: 1.8vh;overflow: hidden;}
+.bankerUnSelected .img{position: absolute;top: 0;left: 0;width: 7.7vh;height: 5.4vh;border-style: solid;border-width: 0.5px;border-color: #e8c007;}
+
+
+.waiting{position: fixed;width:100%;height:100%;top:0;left:0;z-index: 111;}	
+.waiting .waitingBack{position: fixed;width:100%;height:100%;top:0;left:0;background: #000;opacity:.5;}	

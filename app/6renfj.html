@@ -1,0 +1,814 @@
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta name="msapplication-tap-highlight" content="no" /> 
+  <meta http-equiv="Pragma" content="public" /> 
+  <meta http-equiv="Cache-Control" content="public" /> 
+  <title>3309842号六人房间</title> 
+  <link rel="stylesheet" type="text/css" href="./css/bull_vue-2.0.6.css" /> 
+  <link rel="stylesheet" type="text/css" href="./css/alert-1.1.css" /> 
+  <link rel="stylesheet" type="text/css" href="./css/public.css">
+  <script src="./js/homepage/jq.js" type="text/javascript"></script> 
+  <script src="./js/homepage/home.js" type="text/javascript"></script> 
+  
+ </head> 
+ <body> 
+  <div  class="main liurenniuniu" >
+
+
+
+   <div class="roomCard">
+    <img src="./img/game/roomCard.png" /> 
+    <div class="num">
+     <div class='liurenniuniu-fk'></div> 
+     <div class='liurenniuniu-fk-1'>
+      10张
+     </div>
+    </div>
+   </div> 
+
+
+   <div class="round">
+    0&nbsp;/&nbsp;10&nbsp;局
+   </div> 
+   <img src="./img/game/home.png" class="return liurenniuniu-return1"  onclick="opnemm('fangjian-fanhuisy','tishi')"/> 
+   <img src="./img/common/note4.png" class="return liurenniuniu-return"  onclick="opnemm('fangjian-tishi','tishi')"/>
+   <img src="./img/common/footer_bull.png" usemap="#planetmap" class="bottom" /> 
+   <img src="./img/common/icon_game_rule.png" class="bottomGameRule"   onclick="opnemm('fangjian-gz','vroomRule')"/> 
+   <img src="./img/common/icon_sound61.png" class="bottomGameHistory"   onclick="opnemm('fangjian-yinyue','vaudioRoom')" /> 
+   <img src="./img/common/icon_game_message.png" class="bottomGameMessage" onclick="opnemm('fangjian-kj','message')"/> 
+
+   <div class="myCardType">
+    <div class='liurenniuniu-df'>
+     底分：0分
+    </div>
+   </div> 
+   
+
+
+  <div class="messageSay messageSay1"  style="display: none;">
+	<div id='fj-kjyy'></div> <div class="triangle"></div>
+  </div>
+  <div id="tishi" class="alert" style="display: none;"></div> 	
+  <div id="vaudioRoom" class="audioRoom" style="display: none;"></div> 
+  <div id="vroomRule" class="createRoom" style="display: none;"></div>
+  <div id='message' class="message" style="display: none;"></div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div id="table" class="table">
+    <img src="./img/bull/table.jpg" class="tableBack" /> 
+    <div class="cardDeal liurenniuniu-cardDeal">
+     <div style="display: none;">
+      <div class="card card11 liurenniuniu-index14"></div> 
+      <div class="card card12 liurenniuniu-index13" ></div> 
+      <div class="card card13 liurenniuniu-index12" ></div> 
+      <div class="card card14 liurenniuniu-index11" ></div> 
+      <div class="card card15 liurenniuniu-index10"></div>
+     </div>
+     <div style="display: none;">
+      <div class="card card21 liurenniuniu-index14" ></div> 
+      <div class="card card22 liurenniuniu-index13" ></div> 
+      <div class="card card23 liurenniuniu-index12" ></div> 
+      <div class="card card24 liurenniuniu-index11" ></div> 
+      <div class="card card25 liurenniuniu-index10" ></div>
+     </div>
+     <div style="display: none;">
+      <div class="card card31 liurenniuniu-index14" ></div> 
+      <div class="card card32 liurenniuniu-index13" ></div> 
+      <div class="card card33 liurenniuniu-index12" ></div> 
+      <div class="card card34 liurenniuniu-index11" ></div> 
+      <div class="card card35 liurenniuniu-index10" ></div>
+     </div>
+     <div style="display: none;">
+      <div class="card card41 liurenniuniu-index14" ></div> 
+      <div class="card card42 liurenniuniu-index13" ></div> 
+      <div class="card card43 liurenniuniu-index12" ></div> 
+      <div class="card card44 liurenniuniu-index11" ></div> 
+      <div class="card card45 liurenniuniu-index10" ></div>
+     </div>
+     <div style="display: none;">
+      <div class="card card51 liurenniuniu-index14" ></div> 
+      <div class="card card52 liurenniuniu-index13" ></div> 
+      <div class="card card53 liurenniuniu-index12" ></div> 
+      <div class="card card54 liurenniuniu-index11" ></div> 
+      <div class="card card55 liurenniuniu-index10" ></div>
+     </div>
+     <div style="display: none;">
+      <div class="card card61 liurenniuniu-index14" ></div> 
+      <div class="card card62 liurenniuniu-index13" ></div> 
+      <div class="card card63 liurenniuniu-index12" ></div> 
+      <div class="card card64 liurenniuniu-index11" ></div> 
+      <div class="card card65 liurenniuniu-index10" ></div>
+     </div> 
+     <!---->
+     <!---->
+     <!---->
+     <!---->
+     <!---->
+     <!----> 
+     <div class="myCards" style="display: none;">
+      <div class="cards3D">
+       <div class="cards card0" style="display: none;">
+        <div class="face front"></div> 
+        <div class="face back cardundefined"></div>
+       </div> 
+       <div class="cards card1" style="display: none;">
+        <div class="face front"></div> 
+        <div class="face back cardundefined"></div>
+       </div> 
+       <div class="cards card2" style="display: none;">
+        <div class="face front"></div> 
+        <div class="face back cardundefined"></div>
+       </div> 
+       <div class="cards card3" style="display: none;">
+        <div class="face front"></div> 
+        <div class="face back cardundefined"></div>
+       </div> 
+       <div class="cards card4" style="display: none;">
+        <div class="face front"></div> 
+        <div class="face back cardundefined"></div>
+       </div>
+      </div>
+     </div> 
+     <div class="myCards" style="display: none;">
+      <div class="cards card00">
+       <div class="face back cardundefined" style="transform: rotateY(0deg);"></div>
+      </div> 
+      <div class="cards card01">
+       <div class="face back cardundefined" style="transform: rotateY(0deg);"></div>
+      </div> 
+      <div class="cards card02">
+       <div class="face back cardundefined" style="transform: rotateY(0deg);"></div>
+      </div> 
+      <div class="cards card03">
+       <div class="face back cardundefined" style="transform: rotateY(0deg);"></div>
+      </div> 
+      <div class="cards card04">
+       <div class="face back cardundefined" style="transform: rotateY(0deg);"></div>
+      </div>
+     </div>
+    </div> 
+    <div class="cardOver" style="position: absolute; top: 19.5%; left: 19%; width: 62%; height: 55.5%; overflow: hidden;">
+     <!---->
+     <div style="display: none;">
+      <div class="cards card2 card211 liurenniuniu-index14s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card2 card221 liurenniuniu-index13s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card2 card231 liurenniuniu-index12s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card2 card241 liurenniuniu-index11s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card2 card251 liurenniuniu-index10s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div>
+     <div style="display: none;">
+      <div class="cards card3 card311 liurenniuniu-index14s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card3 card321 liurenniuniu-index13s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card3 card331 liurenniuniu-index12s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card3 card341 liurenniuniu-index11s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card3 card351 liurenniuniu-index10s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div>
+     <div style="display: none;">
+      <div class="cards card4 card411 liurenniuniu-index14s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card4 card421 liurenniuniu-index13s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card4 card431 liurenniuniu-index12s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card4 card441 liurenniuniu-index11s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card4 card451 liurenniuniu-index10s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div>
+     <div style="display: none;">
+      <div class="cards card5 card511 liurenniuniu-index14s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card5 card521 liurenniuniu-index13s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card5 card531 liurenniuniu-index12s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card5 card541 liurenniuniu-index11s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card5 card551 liurenniuniu-index10s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div>
+     <div style="display: none;">
+      <div class="cards card6 card611 liurenniuniu-index14s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card6 card621 liurenniuniu-index13s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card6 card631 liurenniuniu-index12s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card6 card641 liurenniuniu-index11s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card6 card651 liurenniuniu-index10s" >
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div>
+    </div> 
+    <!---->
+    <div class="memberRobText2" style="display: none;">
+     <img src="" class='liurenniuniu-memberRobText2-img'  />
+    </div>
+    <div class="memberRobText3" style="display: none;">
+     <img src="" class='liurenniuniu-memberRobText2-img' />
+    </div>
+    <div class="memberRobText4" style="display: none;">
+     <img src="" class='liurenniuniu-memberRobText2-img' />
+    </div>
+    <div class="memberRobText5" style="display: none;">
+     <img src="" class='liurenniuniu-memberRobText2-img' />
+    </div>
+    <div class="memberRobText6" style="display: none;">
+     <img src="" class='liurenniuniu-memberRobText2-img' />
+    </div> 
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!----> 
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!----> 
+    <div class="memberTimesText1" style="display: none;">
+     <img src="" class='liurenniuniu-memberTimesText1-imgs' />
+    </div> 
+    <!---->
+    <div class="memberTimesText2" style="display: none;">
+     <img src="" class='liurenniuniu-memberTimesText1-img' />
+    </div>
+    <div class="memberTimesText3" style="display: none;">
+     <img src="" class='liurenniuniu-memberTimesText1-img' />
+    </div>
+    <div class="memberTimesText4" style="display: none;">
+     <img src="" class='liurenniuniu-memberTimesText1-img' />
+    </div>
+    <div class="memberTimesText5" style="display: none;">
+     <img src="" class='liurenniuniu-memberTimesText1-img' />
+    </div>
+    <div class="memberTimesText6" style="display: none;">
+     <img src="" class='liurenniuniu-memberTimesText1-img' />
+    </div> 
+    <!----> 
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!----> 
+    <div class="memberBull1" style="display: none;">
+     <img src="" class='liurenniuniu-memberBull1-img' />
+    </div>
+    <div class="memberBull2" style="display: none;">
+     <img src="" class='liurenniuniu-memberBull1-img' />
+    </div>
+    <div class="memberBull3" style="display: none;">
+     <img src="" class='liurenniuniu-memberBull1-img' />
+    </div>
+    <div class="memberBull4" style="display: none;">
+     <img src="" class='liurenniuniu-memberBull1-img' />
+    </div>
+    <div class="memberBull5" style="display: none;">
+     <img src="" class='liurenniuniu-memberBull1-img' />
+    </div>
+    <div class="memberBull6" style="display: none;">
+     <img src="" class='liurenniuniu-memberBull1-img' />
+    </div> 
+    <div class="memberScoreText1" style="display: none;">
+     <label class='liurenniuniu-memberScoreText1' >0</label> 
+     <label class='liurenniuniu-memberScoreText2'>+0</label> 
+     <label class='liurenniuniu-memberScoreText2'>0</label>
+    </div> 
+    <!---->
+    <div class="memberScoreText2" style="display: none;">
+     <p class='liurenniuniu-memberScoreText3'>0</p> 
+     <p class='liurenniuniu-memberScoreText4'>+0</p> 
+     <p class='liurenniuniu-memberScoreText4'>0</p>
+    </div>
+    <div class="memberScoreText3" style="display: none;">
+     <p class='liurenniuniu-memberScoreText3'>0</p> 
+     <p class='liurenniuniu-memberScoreText4'>+0</p> 
+     <p class='liurenniuniu-memberScoreText4'>0</p>
+    </div>
+    <!---->
+    <!---->
+    <!----> 
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <div class="memberScoreText5" style="display: none;">
+     <label class='liurenniuniu-memberScoreText5'>0</label> 
+     <label class='liurenniuniu-memberScoreText6' >+0</label> 
+     <label class='liurenniuniu-memberScoreText6'>0</label>
+    </div>
+    <div class="memberScoreText6" style="display: none;">
+     <label class='liurenniuniu-memberScoreText5'>0</label> 
+     <label class='liurenniuniu-memberScoreText6'>+0</label> 
+     <label class='liurenniuniu-memberScoreText6'>0</label>
+    </div> 
+    <div class="memberScoreText4" style="display: none;">
+     <label class='liurenniuniu-memberScoreText1'>0</label> 
+     <label class='liurenniuniu-memberScoreText2'>+0</label> 
+     <label class='liurenniuniu-memberScoreText2'>0</label>
+    </div> 
+    <div class="member member1" style="display: none;">
+     <img src="./img/game/player.png" class="background" /> 
+     <img src="./img/game/playerWin.png" class="background" style="display: none;" /> 
+     <div class="title"></div> 
+     <img src="" class="avatar" /> 
+     <div class="score">
+      0
+     </div> 
+     <img id="banker0 "  src="./img/bull/bull_banker_bg.png" class="background liurenniuniu-banker0"  /> 
+     <img src="./img/bull/bull_banker_icon.png" class="background liurenniuniu-background" /> 
+     <img id="bankerAnimate1" class="liurenniuniu-bankerAnimate1" src="./img/bull/bull_banker_animate.png" /> 
+     <img id="bankerAnimate11" class="liurenniuniu-bankerAnimate1" src="./img/bull/bull_banker_animate.png" /> 
+     <div class="quitBack" style="display: none;"></div> 
+     <div class="isReady">
+      <img src="./img/game/readyButton.png" class="unready" /> 
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/ready.png" class="ready" style="display: none;" />
+     </div>
+    </div>
+    <div class="member member2" style="display: none;">
+     <img src="./img/game/player.png" class="background" /> 
+     <img src="./img/game/playerWin.png" class="background" style="display: none;" /> 
+     <div class="title"></div> 
+     <img src="" class="avatar" /> 
+     <div class="score">
+      0
+     </div> 
+     <img id="banker0" src="./img/bull/bull_banker_bg.png" class="background liurenniuniu-banker0" /> 
+     <img src="./img/bull/bull_banker_icon.png" class="background liurenniuniu-background" /> 
+     <img id="bankerAnimate2" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <img id="bankerAnimate12" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <div class="quitBack"></div> 
+     <div class="isReady">
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/ready.png" class="ready" style="display: none;" />
+     </div>
+    </div>
+    <div class="member member3" style="display: none;">
+     <img src="./img/game/player.png" class="background" /> 
+     <img src="./img/game/playerWin.png" class="background" style="display: none;" /> 
+     <div class="title"></div> 
+     <img src="" class="avatar" /> 
+     <div class="score">
+      0
+     </div> 
+     <img id="banker0" src="./img/bull/bull_banker_bg.png" class="background liurenniuniu-banker0" /> 
+     <img src="./img/bull/bull_banker_icon.png" class="background liurenniuniu-background" /> 
+     <img id="bankerAnimate3" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <img id="bankerAnimate13" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <div class="quitBack"></div> 
+     <div class="isReady">
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/ready.png" class="ready" style="display: none;" />
+     </div>
+    </div>
+    <div class="member member4" style="display: none; top: 4.87744%;">
+     <img src="./img/game/player.png" class="background" /> 
+     <img src="./img/game/playerWin.png" class="background" style="display: none;" /> 
+     <div class="title"></div> 
+     <img src="" class="avatar" /> 
+     <div class="score">
+      0
+     </div> 
+     <img id="banker0" src="./img/bull/bull_banker_bg.png" class="background liurenniuniu-banker0" /> 
+     <img src="./img/bull/bull_banker_icon.png" class="background liurenniuniu-background" /> 
+     <img id="bankerAnimate4" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <img id="bankerAnimate14" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <div class="quitBack"></div> 
+     <div class="isReady">
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/ready.png" class="ready" style="display: none;" />
+     </div>
+    </div>
+    <div class="member member5" style="display: none;">
+     <img src="./img/game/player.png" class="background" /> 
+     <img src="./img/game/playerWin.png" class="background" style="display: none;" /> 
+     <div class="title"></div> 
+     <img src="" class="avatar" /> 
+     <div class="score">
+      0
+     </div> 
+     <img id="banker0" src="./img/bull/bull_banker_bg.png" class="background liurenniuniu-banker0" /> 
+     <img src="./img/bull/bull_banker_icon.png" class="background liurenniuniu-background" /> 
+     <img id="bankerAnimate5" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <img id="bankerAnimate15" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <div class="quitBack"></div> 
+     <div class="isReady">
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/ready.png" class="ready" style="display: none;" />
+     </div>
+    </div>
+    <div class="member member6" style="display: none;">
+     <img src="./img/game/player.png" class="background" /> 
+     <img src="./img/game/playerWin.png" class="background" style="display: none;" /> 
+     <div class="title"></div> 
+     <img src="" class="avatar" /> 
+     <div class="score">
+      0
+     </div> 
+     <img id="banker0" src="./img/bull/bull_banker_bg.png" class="background liurenniuniu-banker0" /> 
+     <img src="./img/bull/bull_banker_icon.png" class="background liurenniuniu-background" /> 
+     <img id="bankerAnimate6" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <img id="bankerAnimate16" src="./img/bull/bull_banker_animate.png" class="liurenniuniu-bankerAnimate1" /> 
+     <div class="quitBack"></div> 
+     <div class="isReady">
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/readyButton.png" class="unready" style="display: none;" /> 
+      <img src="./img/game/ready.png" class="ready" style="display: none;" />
+     </div>
+    </div> 
+    <div id="playerCoins" style="display: none;">
+     <div>
+      <div class="memberCoin memberCoin10 ">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin'  />
+      </div>
+      <div class="memberCoin memberCoin11">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin12">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin13">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin14">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin15">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin16">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin17">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+     </div>
+     <div>
+      <div class="memberCoin memberCoin20">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin21">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin22">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin23">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin24">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin25">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin26">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin27">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+     </div>
+     <div>
+      <div class="memberCoin memberCoin30">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin31">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin32">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin33">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin34">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin35">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin36">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin37">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+     </div>
+     <div>
+      <div class="memberCoin memberCoin40">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin41">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin42">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin43">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin44">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin45">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin46">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin47">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+     </div>
+     <div>
+      <div class="memberCoin memberCoin50">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin51">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin52">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin53">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin54">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin55">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin56">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin57">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+     </div>
+     <div>
+      <div class="memberCoin memberCoin60">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin61">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin62">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin63">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin64">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin65">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin66">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+      <div class="memberCoin memberCoin67">
+       <img src="./img/bull/bull_coin.png" class='liurenniuniu-memberCoin' />
+      </div>
+     </div>
+    </div> 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="divRobBankerText" class='liurenniuniu-Text' class='liurenniuniu-Text'>
+     <p class='liurenniuniu-ziti' >抢庄</p>
+    </div> 
+    <div id="divBetText" class='liurenniuniu-Text'>
+     <p class='liurenniuniu-ziti'>闲家下注</p>
+    </div> 
+    <div id="divBetText" class='liurenniuniu-Text1' >
+     <p class='liurenniuniu-ziti'>等待摊牌</p>
+    </div> 
+    <div id="" class="clock liurenniuniu-Text2">
+     <img src="./img/bull/bull_clock.png" class='liurenniuniu-memberCoin' /> 
+     <p class='liurenniuniu-ziti1'> -1 </p>
+    </div> 
+    <div id="operationButton" class='liurenniuniu-operationButton' >
+     <div class='liurenniuniu-operationButton1'>
+      <img src="./img/bull/bull_button_orange.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-operationButton2' >
+       抢庄
+      </div>
+     </div> 
+     <div class='liurenniuniu-buqiang' >
+      <img src="./img/bull/bull_button_blue.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-operationButton2'>
+       不抢
+      </div>
+     </div> 
+     <div class='liurenniuniu-shangzhuang' >
+      <img src="./img/bull/bull_button_orange.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-operationButton2'>
+       上庄
+      </div>
+     </div> 
+     <div class='liurenniuniu-buqiang'>
+      <img src="./img/bull/bull_button_blue.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-operationButton2'>
+       不上庄
+      </div>
+     </div> 
+     <div class='liurenniuniu-xiazhuang'>
+      <img src="./img/bull/bull_button_blue.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-operationButton2'>
+       下庄
+      </div>
+     </div> 
+     <div class='liurenniuniu-buqiang'>
+      <img src="./img/bull/bull_button_orange.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-operationButton2'>
+       准备
+      </div>
+     </div> 
+     <div  class="divCoin liurenniuniu-yibei">
+      <img src="./img/bull/bull_times_bg1.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-yibei1'>
+       1倍
+      </div>
+     </div> 
+     <div class="divCoin liurenniuniu-erbei">
+      <img src="./img/bull/bull_times_bg1.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-erbei1'>
+       2倍
+      </div>
+     </div> 
+     <div class="divCoin liurenniuniu-sibei">
+      <img src="./img/bull/bull_times_bg1.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-sibei1'>
+       4倍
+      </div>
+     </div> 
+     <div class="divCoin liurenniuniu-buqiangs" >
+      <img src="./img/bull/bull_times_bg_blue.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-buqiangss' >
+       不抢
+      </div>
+     </div> 
+     <div id="showShowCardButton" class='liurenniuniu-tanpan' >
+      <img src="./img/bull/bull_button_blue.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-operationButton2'>
+       摊牌
+      </div>
+     </div> 
+     <div class="divCoin liurenniuniu-yibei">
+      <img src="./img/bull/bull_times_bg1.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-buqiangss'>
+       1倍
+      </div>
+     </div> 
+     <div class="divCoin liurenniuniu-erbei">
+      <img src="./img/bull/bull_times_bg1.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-buqiangss'>
+       2倍
+      </div>
+     </div> 
+     <div class="divCoin liurenniuniu-sibei">
+      <img src="./img/bull/bull_times_bg1.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-buqiangss'>
+       4倍
+      </div>
+     </div> 
+     <div class="divCoin liurenniuniu-wubei" >
+      <img src="./img/bull/bull_times_bg1.png" class='liurenniuniu-memberBull1-img' /> 
+      <div class='liurenniuniu-buqiangss'>
+       5倍
+      </div>
+     </div> 
+     <!----> 
+     <!----> 
+     <!----> 
+     <!----> 
+     <!----> 
+     <!----> 
+     <div class='liurenniuniu-xianjia'>
+      <p class='liurenniuniu-xianjia1'>等待闲家下注</p>
+     </div> 
+     <div class='liurenniuniu-kanpai'>
+      <p class='liurenniuniu-kanpai1'>点击牌面看牌</p>
+     </div>
+    </div>
+   </div> 
+
+
+
+
+
+
+ 
+  
+
+ 
+
+
+  
+ 
+  
+  </div> 
+ </body>
+</html>

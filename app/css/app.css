@@ -1,0 +1,70 @@
+.maik,.maiks{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+.maik{
+    z-index: 200;
+}
+.maiks{
+    z-index: 200;
+}
+.load{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 201;
+    background: rgba(255,255,255,0);
+}
+.load>img{
+    width: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.35rem;
+    margin-top: -0.35rem;
+}
+.prompt{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f2463a;
+    font-size: 1rem;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index:9999999999;
+}
+.prompt>span{
+    padding: .1rem .3rem;
+    display: inline-block;
+    color: #fff;
+}
+
+.niuniuselect{
+    display: none;
+}
+.niuniuunselect{
+    display: block;
+}
+.active .niuniuselect{
+    display: block;
+}
+.active .niuniuunselect{
+    display: none;
+}
+
+.selectItem img{
+    display: none;
+}
+.selectItem.active img{
+    display: block;
+}
+.selectPart:after{
+    clear: both;
+}
+.cjfj-home-img11{display:none;}

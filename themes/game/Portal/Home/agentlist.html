@@ -1,0 +1,202 @@
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta name="msapplication-tap-highlight" content="no" /> 
+  <title>{$titlexx}主页</title> 
+  <link rel="stylesheet" href="__TMPL__Public/css/public.css" /> 
+  <link rel="stylesheet" href="__TMPL__Public/css/alert.css" /> 
+  <link rel="stylesheet" href="__TMPL__Public/css/swiper-3.4.2.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/bull_vue-1.0.0.css" /> 
+  <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/bullalert.css" /> 
+  <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/bullshop.css" /> 
+  <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/common/alert.css" /> 
+  <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/activity.css">
+  <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/{$user.password}.css">
+  
+  <script src="__TMPL__Public/js/homepage/jq.js" type="text/javascript"></script>  
+  <script src="__TMPL__Public/js/homepage/home.js" type="text/javascript"></script>  
+  <script src="__TMPL__Public/js/swiper-3.4.2.min.js" type="text/javascript"></script> 
+ </head> 
+ <body style="background-color: #0e0226">
+ <img class='' src="__TMPL__Public/img/activity/{$user.password}.jpg"  style="position: fixed;left: 0;right: 0;top: 0;bottom: 0;margin:auto;" />
+
+
+ <div  class="main" style="position: absolute;">
+     <div class='gerenzx-top-zt' >
+         <div class='gerenzx-top'>
+             <img class='gerenzx-yhimg' src="{$user.img}" />
+             <div class='gerenzx-yhid'>
+                 ID:{$user.id}
+             </div>
+         </div>
+         <div class='gerenzx-gg' >{$user.nickname}</div>
+         <img class='gerenzx-sjrz' src="__TMPL__Public/img/activity/homepage_phone.png" onclick="shoujibd()" <if condition="$user['mobile']">style="display:none"</if>/>
+         <div class='gerenzx-xg' onclick="shoujibd()" <if condition="$user['mobile']">style="display:block"</if>>
+         {$user.mobile}&nbsp;&nbsp;修改
+        </div>
+    </div>
+     <div class='gerenzx-fksl'>
+         <div class='gerenzx-fksls'>
+             {$user.daycard}张
+         </div>
+         <div class='gerenzx-fk' >
+             天卡
+         </div>
+     </div>
+
+         <div id="fasongfk" style="background: rgb(14, 2, 38);position: fixed;top: 25vw; bottom: 0; width: 100%;overflow: auto;">
+             <div style="color: #FFF;padding: 5vw;">
+                 <form id="openform">
+                     用户ID:
+                     <input type="number" id="openuid" name="openuid" required style="width: 26vw;padding: 1vw;text-align: center;color: #000;"/>
+                     <button type="submit" id="openagent" style="background: orange;color: #FFF;padding: 1vw;border: none;">新增控制</button>
+                 </form>
+             </div>
+         <div id="app-main" class="main" style="position: relative; width: 100%; margin: 0px auto; background: rgb(14, 2, 38); display: block;">
+
+
+       <div id="valert" class="alert" style="display: none;">
+        <div class="alertBack"></div>
+        <div class="mainPart">
+         <div class="backImg">
+          <div class="blackImg"></div>
+         </div>
+         <div class="alertText" id="tipmsg"></div>
+         <div>
+          <div class="buttonLeft" onclick="$('#valert').hide();">
+           确定
+          </div>
+          <div class="buttonRight" onclick="$('#valert').hide();">
+           取消
+          </div>
+         </div>
+         <div style="display: none;">
+          <div class="buttonMiddle">
+           确定
+          </div>
+         </div>
+
+
+         </div>
+        </div>
+       </div>
+         <div class='jiuren-chengyuangl' style="">
+
+
+             <foreach name="qun" item="one">
+
+             <div class='qun-bg' id="userxx{$one.uid}">
+
+                 <img src="{$one.img}" style="position: absolute; top: 3vw; left: 3vw; width: 12vw; height: 12vw;">
+                 <div style="position: absolute; top: 3vw; width: 100%; left: 18vw; font-size: 12pt; color: white; text-align: left;">{$one.nickname}</div>
+                 <div class="jiuren-chengyuangl-yhid">
+                     ID:{$one.uid}
+                     <span style="color:#CCC;font-size:12px;">
+                     (<?php
+                     if(($one['time']-time()) < 0):
+                        echo '已到期';
+                     elseif(($one['time']-time())/(24*3600) < 1):
+                        echo ceil(($one['time']-time())/3600),'小时到期';
+                     else:
+                        echo ceil(($one['time']-time())/(24*3600)),'天到期';
+                     endif;
+                     ?>)
+                     </span>
+                 </div>
+
+                 <div class="jiuren-chengyuangl-ty" <if condition="$one['is_grade'] eq 0">style="display:block;height: 9vw;
+                 line-height: 9vw;"</if> onclick="tongyi({$one.uid})">
+                 透视
+                 </div>
+                 <div class="jiuren-chengyuangl-jj" <if condition="$one['is_grade'] eq 1">style="display:block;height: 9vw;
+                 line-height: 9vw;right:28vw"<else/>style="right:28vw;"</if> onclick="jvjue({$one.uid})">
+                 关闭
+                 </div>
+                 <div class="jiuren-chengyuangl-tc"  style="display: block;
+            height: 5vw;
+            line-height: 5vw;">
+                     输赢<input name="gailv" value="{$one.gailv}" name="disable_notice" value="666"style="width: 18vw;height:4vw;
+            line-height: 4vw;
+            text-align: center;
+            color: #000;" onchange="shuying({$one.uid},$(this).val());">
+                 </div>
+             </div>
+             </foreach>
+
+             <div class='jiuren-chengyuangl-mygd'  id="moretext">
+              没有更多内容
+             </div>
+        </div>
+     </div>
+</div>
+<div id="fasongfking"></div>
+
+
+
+
+
+
+ <script>
+     $("#openform").click(function (e) {
+         e.preventDefault();
+     });
+     $("#openagent").click(function (e) {
+         var openuid = $("#openuid").val();
+         if(!openuid) return alert("请填写用户ID");
+         $.post("/index.php/portal/home/openagent/", {"uid":openuid}, function (result) {
+             if(result.status == '1'){
+                 tipxx('授权用户成功');
+                 setTimeout(function () {
+                     window.location.reload();
+                 }, 2000);
+             }
+             else {
+                 tipxx(result.info);
+             }
+         }, "json")
+     });
+     function tipxx(msg){
+         $('#tipmsg').html(msg);
+         $('#valert').show();
+     }
+     function tongyi(id){
+         $.post("/index.php/portal/home/toushi/",{id:id,zt:1},function(result){
+             if(result.status=='1'){
+                 tipxx('开启透视成功');
+                 $('#userxx'+id+' .jiuren-chengyuangl-ty').hide();
+                 $('#userxx'+id+' .jiuren-chengyuangl-jj').show();
+             }
+             else{
+                 tipxx(result.info);
+             }
+         },'json');
+     }
+     function shuying(id,val){
+         $.post("/index.php/portal/home/shuying/",{id:id,val:val},function(result){
+             if(result.status=='1'){
+                 tipxx('修改输赢成功');
+             }
+             else{
+                 tipxx(result.info);
+             }
+         },'json');
+     }
+     function jvjue(id){
+         $.post("/index.php/portal/home/toushi/",{id:id,zt:0},function(result){
+             if(result.status=='1'){
+                 tipxx('关闭透视成功');
+                 $('#userxx'+id+' .jiuren-chengyuangl-ty').show();
+                 $('#userxx'+id+' .jiuren-chengyuangl-jj').hide();
+             }
+             else{
+                 tipxx(result.info);
+             }
+         },'json');
+     }
+ </script>
+
+
+ </body>
+</html>

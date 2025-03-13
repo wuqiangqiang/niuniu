@@ -1,0 +1,73 @@
+.member .bottom .bname {white-space: nowrap;}
+.shiren-index14{z-index: 14; display: none;}
+.shiren-index13{z-index: 13; display: none;}
+.shiren-index12{z-index: 12; display: none;}
+.shiren-index11{z-index: 11; display: none;}
+.shiren-index10{z-index: 10; display: none;}
+.shiren-background{position: absolute; top: -0.2vh; left: -0.2vh; width: 6.4vh; height: 6.4vh; display: none;}
+.shiren-background2{position: absolute; top: -0.2vh; left: -0.2vh; width: 6.4vh; height: 6.4vh ; display: none;}
+.shiren-background1{position: absolute; z-index: 999; top: -6%; left: -6%; width: 2.6vh ; height: 2.6vh; display: none;}
+.shiren-bottom{background-color: rgba(0, 0, 0, 0.6); border-radius: 2px; overflow: hidden;}
+.shiren-bname{text-align: center; overflow: hidden;}
+.shiren-memberCoin{position: absolute; width: 100%; height: 100%;z-index: 9999;}
+.shiren-memberScoreText1{position: absolute; line-height: 4vh; width: 100%; height: 4vh; text-align: right; color: white; font-size: 3vh; font-family: &quot;Helvetica 微软雅黑&quot;; -webkit-text-stroke: 1.3px; text-shadow: rgb(2, 32, 85) 1px 2px 2px; display: none;}
+.shiren-memberScoreText2{position: absolute; line-height: 4vh; width: 100%; height: 4vh; text-align: right; color: rgb(234, 171, 55); font-size: 3vh; font-family: &quot;Helvetica 微软雅黑&quot;; -webkit-text-stroke: 1.3px; text-shadow: rgb(120, 42, 0) 1px 2px 2px; display: none;}
+.shier-fk{position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: rgb(0, 0, 0); opacity: 0.6; border-radius: 1.5vh;}
+.shier-fk-1{position: relative; padding: 0px 1.5vh 0px 5vh;}
+.shier-return{right: 28.5vh;}
+.shier-bGameRule{right: 22vh;}
+.shier-bottomHistory{right: 15.5vh;}
+.shier-bottomHistory-img{position: absolute;width: 100%;height: 100%;}
+.shier-bottomMessage-img{position: absolute; width: 100%; height: 100%;}
+.tableBack{width: 100%;height: 100%;}
+.shier-clock{
+	position: absolute;
+    top: 38%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+    height: 42px;
+    display: none;
+}
+.shier-memberCoin{position: absolute;
+    width: 100%;
+    height: 100%;}
+.shier-clock1{position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 42px;
+    color: white;
+    text-align: center;
+    line-height: 42px;}
+.shiren-index14s{z-index: 14;}
+.shiren-index13s{z-index: 13;}
+.shiren-index12s{z-index: 12;}
+.shiren-index11s{z-index: 11;}
+.shiren-index10s{z-index: 10;}
+.shier-qiangzhuang{position: absolute;
+    top: 33%;
+    z-index: 99;
+    left: 0px;
+    width: 375px;
+    height: 30px;
+     display: none; 
+    color: white;
+    font-size: 2.2vh;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;}
+.zmmyctime
+{
+    position: absolute;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.72);
+    color: red;
+    font-size: 0.2rem;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+.sangong6-fk{position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: rgb(255, 255, 255); opacity: 0.2; border-radius: 10px;}
+.sangong6-fk1{position: relative; padding: 0px 10px 0px 35px;}
+.sangong6-index2{z-index: 12; display: none;}
+.sangong6-index1{z-index: 10; display: none;}
+.sangong6-index3{z-index: 13; display: none;}
+.sangong6-index4{z-index: 14; display: none;}
+.sangong6-index2s{z-index: 14; display: none;}
+.sangong6-index1s{z-index: 15; display: none;}
+.sangong6-index3s{z-index: 13; display: none;}
+.sangong6-index4s{z-index: 12; display: none;}
+.sangong6-memberScoreText2{position: absolute; line-height: 40px; width: 100%; height: 40px; text-align: center; color: white; font-size: 16pt; font-family: &quot;Helvetica 微软雅黑&quot;; -webkit-text-stroke: 1.3px; text-shadow: rgb(2, 32, 85) 1px 2px 2px; display: none;}
+.sangong6-memberScoreText1{position: absolute; line-height: 40px; width: 100%; height: 40px; text-align: center; color: rgb(234, 171, 55); font-size: 16pt; font-family: &quot;Helvetica 微软雅黑&quot;; -webkit-text-stroke: 1.3px; text-shadow: rgb(120, 42, 0) 1px 2px 2px; display: none;}
+.sangong6-banker0{position: absolute !important; top: 10% !important; left: 10% !important; width: 80% !important; height: 81% !important; display: none;}
+.sangong6-background{position: absolute !important;    z-index: 9; top: 3% !important; left: 3% !important; width: 18px !important; height: 18px !important; display: none;}
+.sangong6-bankerAnimate1{position: absolute; top: 10%; left: 10%; width: 80%; height: 80%; display: none;}
+.sangong6-memberCoin{position: absolute;width: 2.5vh;height: 2.5vh; z-index: 100}
+.sangong-Text{position: absolute;top: 33%;left: 0px;width: 100%;height: 30px;}
+.sangong-ziti{color: white;font-size: 10pt;width: 100%;height: 30px;line-height: 30px;text-align: center;font-family: "Helvetica 微软雅黑";}

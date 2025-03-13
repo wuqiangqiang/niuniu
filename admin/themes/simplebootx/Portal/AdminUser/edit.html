@@ -1,0 +1,155 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('AdminUser/index')}">会员管理</a></li>
+			<li class="active"><a href="#">会员编辑</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form" action="{:U('AdminUser/edit_post')}" method="post">
+			<fieldset>
+				<!-- <div class="control-group" >
+					<label class="control-label">推荐人</label>
+					<div class="controls" >
+                                            <input type="text" style="color: red" name="parent" placeholder="没有可以不填"  value="{$post.parent}">
+					</div>
+				</div> -->
+				<!-- 				<div class="control-group">
+					<label class="control-label">是否高级会员</label>
+					<div class="controls">
+						<php>$active_true_checked=($post['is_grade']==1)?"checked":"";</php>
+						<label class="radio inline" for="yes">
+							<input type="radio" name="is_grade" value="1" {$active_true_checked} id="yes"/>是
+						</label>
+						<php>$active_false_checked=($post['is_grade']==0)?"checked":"";</php>
+						<label class="radio inline" for="no">
+							<input type="radio" name="is_grade" value="0" id="no"{$active_false_checked}>否
+						</label>
+					</div>
+				</div> -->
+                <div class="control-group" >
+					<label class="control-label">账号</label>
+					<div class="controls" >
+						<input type="hidden" name="id" value="{$post.id}">
+                        <input type="text" style="color: red" name="user_login" value="{$post.user_login}" required/>
+					</div>
+				</div>
+				<div class="control-group" >
+                    <label class="control-label">头像</label>
+                    <div class="controls" >
+                       <input type='hidden' name='img' id='thumb' value="{$post.img|default=''}">
+                        <a href="javascript:upload_one_image('图片上传','#thumb');">
+                            <if condition="empty($post['img'])">
+                                <img src="__TMPL__Public/assets/images/default-thumbnail.png" id='thumb-preview' width='135' height='113' style='cursor: hand' />
+                            <else />
+                                <img src="{:sp_get_image_preview_url($post['img'])}" id='thumb-preview' width='135' height='113' style='cursor: hand' />
+                            </if>
+                        </a>
+                    </div>
+                </div>
+				<!-- <div class="control-group">
+                    <label class="control-label">手机号码</label>
+                    <div class="controls">
+                        <input type="text" name="mobile" value="{$post.mobile}" />
+                    </div>
+                </div> -->
+				
+				<div class="control-group" >
+					<label class="control-label">房卡</label>
+					<div class="controls" >
+                        <input type="text" style="color: red" name="fk" value="{$post.fk}" required/>
+					</div>
+				</div>
+
+                <div class="control-group">
+                    <label class="control-label">输赢概率</label>
+                    <div class="controls">
+                        <input type="text" name="gailv" value="{$post.gailv}" />
+                    </div>
+                </div>
+                <div class="control-group" >
+					<label class="control-label">token</label>
+					<div class="controls" >
+                        <input type="text" style="color: red" name="token" value="{$post.token}" required/>
+					</div>
+				</div>
+				<!-- <div class="control-group" >
+					<label class="control-label">密码</label>
+					<div class="controls" >
+                        <input type="password" style="color: red" name="password" value="{$post.password}" required/>
+					</div>
+				</div> -->
+
+				<div class="control-group">
+					<label class="control-label">是否透视</label>
+					<div class="controls">
+						<php>$active_true_checked=($post['is_grade']==0)?"checked":"";</php>
+						<label class="radio inline" for="status_yes2">
+							<input type="radio" name="is_grade" value="0" {$active_true_checked} id="status_yes2"/>不透视
+						</label>
+						<php>$active_false_checked=($post['is_grade']==1)?"checked":"";</php>
+						<label class="radio inline" for="status_no2">
+							<input type="radio" name="is_grade" value="1" id="status_no2"{$active_false_checked}>透视
+						</label>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label">是否开启延迟显示</label>
+					<div class="controls">
+						<php>$active_true_checked=($post['level']==0)?"checked":"";</php>
+						<label class="radio inline" for="status_yes3">
+							<input type="radio" name="level" value="0" {$active_true_checked} id="status_yes3"/>不显示
+						</label>
+						<php>$active_false_checked=($post['level']==1)?"checked":"";</php>
+						<label class="radio inline" for="status_no3">
+							<input type="radio" name="level" value="1" id="status_no3"{$active_false_checked}>显示
+						</label>
+					</div>
+				</div>
+				
+				<div class="control-group" >
+					<label class="control-label">功能到期时间：</label>
+					<div class="controls" >
+					<label class="">{$post.create_time|default=''}</label>
+                        <input style="width: 222px;" class="form-control form-control-inline input-medium" size="16" value="{$post.create_time|default=''}" name="create_time">
+					</div>
+				</div>
+
+				<div class="control-group" >
+					<label class="control-label">备注:</label>
+					<div class="controls" >
+                        <input type="text" name="disable_notice"  value="{$post.disable_notice}" autocomplete="off">
+					</div>
+				</div>
+
+
+				<div class="control-group">
+					<label class="control-label">会员状态</label>
+					<div class="controls">
+						<php>$active_true_checked=($post['status']==0)?"checked":"";</php>
+						<label class="radio inline" for="status_yes">
+							<input type="radio" name="status" value="0" {$active_true_checked} id="status_yes"/>正常
+						</label>
+						<php>$active_false_checked=($post['status']==1)?"checked":"";</php>
+						<label class="radio inline" for="status_no">
+							<input type="radio" name="status" value="1" id="status_no"{$active_false_checked}>管理
+						</label>
+						<php>$active_false_checked=($post['status']==2)?"checked":"";</php>
+						<label class="radio inline" for="active_false">
+							<input type="radio" name="status" value="2" id="active_false"{$active_false_checked}>限制登录
+						</label>
+					</div>
+				</div>
+                           
+			</fieldset>
+			<div class="form-actions">
+				<input type="hidden" name="id" value="{$post.id}"/>
+				<button type="submit" class="btn btn-primary  js-ajax-submit">{:L('SAVE')}</button>
+				<a class="btn" href="javascript:history.back(-1);">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

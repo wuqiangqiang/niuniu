@@ -1,0 +1,27 @@
+<admintpl file="header" />
+</head>
+<body>
+    <div class="wrap">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">生成激活码</a></li>
+            <!--<li><a href="{:U('AdminUser/add')}"></a></li>-->
+        </ul>
+        <form class="well form-search" method="post" action="{:U('Portal/AdminUser/makeActivationCode')}">
+           <select name="term" style="width: 120px;">
+                <option value='1'>时卡</option>
+                <option value='24'>日卡</option>
+                <option value='168'>周卡</option>
+                <option value='720'>月卡</option>
+                <option value='8760'>年卡</option>
+            </select> &nbsp;&nbsp;
+            数量:
+            <input type="number" name="number" style="width: 200px;" value="" required placeholder="请输入数量">
+           
+            <input type="submit" class="btn btn-primary js-ajax-submit" value="生成" />
+            <a class="btn btn-danger" href="{:U('Portal/AdminUser/expUser')}">导出Excel</a>
+        </form>
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,165 @@
+<admintpl file="header" />
+</head>
+<body>
+	<script>
+	var xzqs=0;					
+	</script>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+            <li><a href="{:U('Portal/AdminOrder/menuOrder')}">选项管理</a></li>
+            <li class="active"><a href="#" >时间配置</a></li>
+        </ul>
+        <div class="well form-search" method="post" >
+            开始时间:
+            <input type="text" name="start" style="width: 200px;" value="" placeholder="请输开始时间,格式aa:bb:cc" id='start' onchange='checktime("start")'>
+            结束时间:
+            <input type="text" name="end" style="width: 200px;" value="" placeholder="请输入结束时间,格式aa:bb:cc" id='end' onchange='checktime("end")'>
+            期数:
+            <input type="number" name="qs" style="width: 200px;" value="" placeholder="请输入期数" id='qs'>
+            间隔时间:
+            <input type="number" name="jgtime" style="width: 200px;" value="" placeholder="请输入间隔时间(s)" id='jgtime'>
+            <input type="button" class="btn btn-primary" value="添加" onclick="add()">
+            <input type="button" class="btn btn-primary" value="一键配置" onclick="alladd()">
+        </div>
+		<form class="form-horizontal js-ajax-form" action="{:U('AdminOrder/data_setpost')}" method="post">
+			<fieldset>
+				<ul id="datapz">
+				<foreach name="data" item="one" key="key">
+						<li class="radio inline">
+							{$key+1}期:<input type="text" name="data[]" value="{$one}">
+						</li>
+						<script>
+						xzqs={$key+1};
+						</script>
+				</foreach>
+				</ul>
+			</fieldset>
+			<div class="form-actions">
+				<input type="hidden" name="id" value="{$post.id}"/>
+				<button type="submit" class="btn btn-primary">{:L('SAVE')}</button>
+				<a class="btn" href="javascript:history.back(-1);">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<style>
+	#datapz input{
+		width: 60px;
+	}
+	#datapz li{
+		width: 120px;
+	}
+	</style>
+	<script>
+		function checktime(id){
+				var a = /^(\d{2}):(\d{2}):(\d{2})$/;
+				if (!a.test($('#'+id).val())) { 
+				alert("格式不正确!"); 
+				$('#'+id).val('');
+				} 
+		} 
+		function add(){
+			var start=$('#start').val();
+			var end=$('#end').val();
+			var qs=$('#qs').val();
+			var jgtime=$('#jgtime').val();
+			if(!start){
+				alert("请输入开始时间!");
+				return; 		
+			}
+			if(!end){
+				alert("请输入结束时间!");
+				return; 		
+			}
+			if(!qs){
+				alert("请输入期数!");
+				return; 		
+			}
+			if(!jgtime){
+				alert("请输入间隔时间!");
+				return; 		
+			}
+				start=zhtime(start);
+				end=zhtime(end);
+			if(end<start){
+				alert("开始时间必须小于结束时间!");
+				return;
+			}
+			for(i=1;(start<=end && i<=qs);i++){
+				xzqs=xzqs-(-1);
+				var html='<li class="radio inline">'+xzqs+'期:<input type="text" name="data[]" value="'+hdtime(start)+'"></li>';
+				$('#datapz').append(html);
+				start=start-(-jgtime);
+			}
+		}
+		function alladd(){
+			var start=$('#start').val();
+			var end=$('#end').val();
+			var qs=$('#qs').val();
+			var jgtime=$('#jgtime').val();
+			if(!start){
+				alert("请输入开始时间!");
+				return; 		
+			}
+			if(!end){
+				alert("请输入结束时间!");
+				return; 		
+			}
+			if(!qs){
+				alert("请输入期数!");
+				return; 		
+			}
+			if(!jgtime){
+				alert("请输入间隔时间!");
+				return; 		
+			}
+				start=zhtime(start);
+				end=zhtime(end);
+			if(end<start){
+				alert("开始时间必须小于结束时间!");
+				return;
+			}
+			xzqs=0;
+			$('#datapz').html('');
+			for(i=1;(start<=end && i<=qs);i++){
+				xzqs=xzqs-(-1);
+				var html='<li class="radio inline">'+xzqs+'期:<input type="text" name="data[]" value="'+hdtime(start)+'"></li>';
+				$('#datapz').append(html);
+				start=start-(-jgtime);
+			}
+		}
+		function zhtime(id){
+				var strs= new Array(); //定义一数组 
+				strs=id.split(":"); //字符分割 
+				id=parseInt(strs[0])*3600-(-parseInt(strs[1])*60)-(-parseInt(strs[2]));
+				return id;
+		}
+		function hdtime(id){
+				var h=parseInt(id/3600);
+				var m=parseInt((id-h*3600)/60);
+				var s=id-h*3600-60*m;
+				var x='';
+				if(h<10){
+					x=x+'0'+h;
+				}
+				else{
+					x=x+h;
+				}
+				if(m<10){
+					x=x+':0'+m;
+				}
+				else{
+					x=x+':'+m;
+				}
+				if(s<10){
+					x=x+':0'+s;
+				}
+				else{
+					x=x+':'+s;
+				}
+				return x
+		}
+	</script>
+	<script src="__PUBLIC__/js/common.js"></script>
+
+</body>
+</html>

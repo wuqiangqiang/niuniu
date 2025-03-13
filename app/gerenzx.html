@@ -1,0 +1,270 @@
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta name="msapplication-tap-highlight" content="no" /> 
+  <title>大番薯主页</title> 
+  <link rel="stylesheet" href="./css/public.css" /> 
+  <link rel="stylesheet" href="./css/alert.css" /> 
+  <link rel="stylesheet" href="./css/swiper-3.4.2.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="./css/bull_vue-1.0.0.css" /> 
+  <link rel="stylesheet" type="text/css" href="./css/bullalert.css" /> 
+  <link rel="stylesheet" type="text/css" href="./css/bullshop.css" /> 
+  <link rel="stylesheet" type="text/css" href="./css/common/alert.css" /> 
+  <link rel="stylesheet" type="text/css" href="./css/activity.css">
+  <script src="./js/homepage/jq.js" type="text/javascript"></script>  
+  <script src="./js/homepage/home.js" type="text/javascript"></script>  
+  <script src="./js/swiper-3.4.2.min.js" type="text/javascript"></script> 
+ </head> 
+ <body style="background-color: #0e0226"> 
+  
+  <div  class="main" >
+
+
+
+
+   <div id="valert" class="alert" style="display: none">
+   <div class="alertBack"></div> 
+   <div class="mainPart">
+    <div class="backImg">
+     <div class="blackImg"></div>
+    </div> 
+    <div class="alertText">
+     是否消耗100张房卡开启管理功能？
+    </div> 
+ 
+    <div style="">
+     <div class="buttonLeft" onclick="alertqx()">
+      取消
+     </div> 
+     <div class="buttonRight">
+      确定
+     </div>
+    </div> 
+   </div>
+  </div>
+
+
+
+   <div class='gerenzx-top-zt' >
+    <div class='gerenzx-top'>
+     <img class='gerenzx-yhimg' src="http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKCadqSJdzKVwmdwQZzqYtgfLvaZjf8kC1iaibodApB7GQMMP30mm7zzulNXRqVhEBz4VkHJostRUTQ/0" /> 
+     <div class='gerenzx-yhid'>
+       ID:413735 
+     </div>
+    </div> 
+    <div class='gerenzx-gg' >
+      　　　　　　 
+    </div> 
+    <img class='gerenzx-sjrz' src="./img/activity/homepage_phone.png" onclick="shoujibd()" /> 
+    <div class='gerenzx-xg' >
+      &nbsp;&nbsp;修改 
+    </div> 
+    <div class='gerenzx-fksl'>
+     <div class='gerenzx-fksls'>
+       11张 
+     </div> 
+     <div class='gerenzx-fk' >
+       房卡 
+     </div>
+    </div>
+   </div> 
+
+
+   <div class="sendRedpackage" onclick="opnemm('fangka','fasongfk')">
+    <img src="./img/activity/rc_icon_sendredpackage.png" class="rcIcon" /> 
+    <img src="./img/activity/rc_icon_rightarrow.png" class="rcArrow" /> 
+    <p class="rcContent">发送房卡</p>
+   </div> 
+
+
+   <div class="userList" style="top: 189.313px;" >
+    <img src="./img/activity/rc_group.png" class="rcIcon" /> 
+    <img src="./img/activity/rc_group_open.png" class="rcArrow grzxgl" style="display: none;" /> 
+    <img src="./img/activity/rc_group_close.png" class="rcArrow grzxgl" onclick="alertgl()" /> 
+    <p class="rcContent" id='guanlgn' onclick="guanlign()">管理功能</p> 
+    <img src="http://goss.fexteam.com/files/images/info.png" class="rcArrow grzxright"  />
+   </div> 
+
+
+
+
+
+   <div id="memberDiv" class="gameMenu" >
+    <div class='gameMenu-zt'>
+    	<div class="swiper-container swiper-container-horizontal swiper-container-free-mode">
+ 			 <div class="swiper-wrapper">
+
+			    <div class="swiper-slide" style="margin-right: 100px">
+				    <div class='daoluan'></div>
+
+					<div id="game9" class="gameListItem gameListItem1">
+				      <img class='gameListItems' src="./img/activity/rc_icon_bull9.png" /> 
+				      <div class='gameListItem-wz'>
+				       九人斗牛
+				      </div>
+				     </div>
+				</div>
+			    <div class="swiper-slide">
+				    <div class='daoluan'></div>
+					<div id="game5" class="gameListItem gameListItem2">
+				      <img class='gameListItems' src="./img/activity/rc_icon_bull.png"/> 
+				      <div class='gameListItem-wz'>
+				       六人斗牛
+				      </div>
+				     </div>
+			    </div>
+			    <div class="swiper-slide">
+				    <div class='daoluan'></div>
+					<div id="game1" class="gameListItem gameListItem3">
+				      <img class='gameListItems' src="./img/activity/rc_icon_flowerwap.png" /> 
+				      <div class='gameListItem-wz'>
+				       炸金花
+				      </div>
+				     </div>
+			    </div>
+			    <div class="swiper-slide">
+			    	<div class='daoluan'></div>
+					  <div id="game12" class="gameListItem gameListItem4" >
+				      <img class='gameListItems' src="./img/activity/rc_icon_sangong.png"  /> 
+				      <div class='gameListItem-wz'>
+				       三公
+				      </div>
+				     </div>
+			    </div>
+			    <div class="swiper-slide">
+			    <div class='daoluan'></div>
+					<div id="game11" class="gameListItem gameListItem5" >
+				      <img class='gameListItems' src="./img/activity/rc_icon_28gang.png"  /> 
+				      <div class='gameListItem-wz'>
+				       二八杠
+				      </div>
+				     </div>
+			    </div>
+			    <div class="swiper-slide">
+			    <div class='daoluan'></div>
+					<div id="game2" class="gameListItem gameListItem6">
+				      <img class='gameListItems' src="./img/activity/rc_icon_landlord.png"  /> 
+				      <div class='gameListItem-wz' >
+				       斗地主
+				      </div>
+				     </div>
+			    </div>
+			    <div class="swiper-slide">
+			    <div class='daoluan'></div>
+					 <div id="game10" class="gameListItem gameListItem7" >
+				      <img class='gameListItems' src="./img/activity/rc_icon_bullfight.png" /> 
+				      <div class='gameListItem-wz'">
+				       斗公牛
+				      </div>
+				     </div>
+			    </div>
+			    <div class="swiper-slide">
+			    <div class='daoluan'></div>
+					 <div id="game6" class="gameListItem gameListItem8" >
+				      <img class='gameListItems' src="./img/activity/rc_icon_majiang.png"  /> 
+				      <div class='gameListItem-wz'>
+				       广东麻将
+				      </div>
+				     </div>
+			    </div>
+  			</div>
+		</div>
+    </div>
+   </div> 
+
+
+
+
+   <div class="gameScoreTitle" style="top: 358.625px;">
+    <div class='gerenzx-fjh'>
+      房间号 
+    </div> 
+    <div  class='gerenzx-jssj'>
+      结束时间 
+    </div> 
+    <div class='gerenzx-dqjf gerenzx-fjh' >
+      当局积分 
+    </div>
+   </div> 
+
+	<div style="position: absolute; top: 409.375px; left: 0px; width: 100%;">
+	<div style="position: relative;"> 
+	<div id="moretext">
+	<div class='gerenzx-fjh gerenzx-fjh-color'>
+      房间号 
+    </div> 
+    <div  class='gerenzx-jssj'>
+      结束时间 
+    </div> 
+    <div class='gerenzx-dqjf gerenzx-fjh gerenzx-fjh-color' >
+      当局积分 
+    </div>
+	</div>
+	</div>
+	</div>
+
+
+
+
+
+
+   <div id="validePhone" style="display: none;">
+    <div class="phoneMask" ></div> 
+    <div class="phoneFrame">
+     <div style="height: 2.2vw;"></div> 
+     <!----> 
+     <div class='gerenzx-shouji'>
+       绑定手机号，房卡可找回。 
+     </div> 
+     <div  style="height: 2.2vw;"></div> 
+     <div class='gerenzx-shouji1' >
+      <input class='gerenzx-shouji1-1' type="number" name="phone" placeholder="输入手机号"  /> 
+      <div class='gerenzx-shouji1-2' id="authcode">
+        发送验证码 
+      </div>
+     </div> 
+     <div class='gerenzx-shouji1-3' >
+      <input class='gerenzx-shouji1-4' type="number" name="phone1" placeholder="输入验证码" />
+     </div> 
+     <div style="height: 2.2vw;"></div> 
+     <div class='gerenzx-shouji1-5' >
+      <div class='gerenzx-shouji1-6' >
+       立即绑定
+      </div>
+     </div> 
+     <div style="height: 4vw;"></div>
+    </div>
+
+
+   </div>
+  </div>  
+  
+
+
+
+
+
+ <div id="fasongfk"></div>
+<div id="fasongfking"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+ </body>
+ <script> 
+var mySwiper = new Swiper('.swiper-container', {
+	slidesPerView : 5,
+	freeMode : true,
+})
+</script>
+</html>

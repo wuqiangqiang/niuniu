@@ -1,0 +1,40 @@
+<?php
+return array (
+  'app' => 'Portal',
+  'model' => 'AdminUser',
+  'action' => 'code',
+  'data' => '',
+  'type' => '1',
+  'status' => '1',
+  'name' => '激活码管理',
+  'icon' => 'barcode',
+  'remark' => '',
+  'listorder' => '1',
+  'children' => 
+  array (
+    array (
+      'app' => 'Portal',
+      'model' => 'AdminUser',
+      'action' => 'makeActivationCode',
+      'data' => '',
+      'type' => '1',
+      'status' => '1',
+      'name' => '生成激活码',
+      'icon' => '',
+      'remark' => '',
+      'listorder' => '0',
+    ),
+    array (
+      'app' => 'Portal',
+      'model' => 'AdminUser',
+      'action' => 'activationCode',
+      'data' => '',
+      'type' => '1',
+      'status' => '1',
+      'name' => '激活码管理',
+      'icon' => '',
+      'remark' => '',
+      'listorder' => '0',
+    ),
+  ),
+);

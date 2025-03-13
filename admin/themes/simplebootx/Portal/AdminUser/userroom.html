@@ -1,0 +1,48 @@
+<php>
+    $types = [];
+    foreach(M('game')->select() as $v) {
+        $types[$v['id']] = $v;
+    }
+</php>
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap">
+    <div>
+        <p>
+            <img src="{$user_data.img}" width="25"/>
+            <strong>{$user_data.nickname}</strong> 近期战绩
+        </p>
+    </div>
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('AdminUser/index')}">所有会员</a></li>
+        <li class="active"><a href="{:U('AdminUser/userroom', ['id' => $user_data['id']])}">战绩</a></li>
+    </ul>
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="50">ID</th>
+            <th>游戏类型</th>
+            <th>房间号</th>
+            <th>输赢</th>
+            <th>结束时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="room_list" item="vo">
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$types[$vo['type']]['name']}</td>
+                <td>{$vo.room}</td>
+                <td>{$vo.jifen}</td>
+                <td>{:date('Y-m-d H:i:s',$vo['overtime'])}</td>
+                <td><a href="{:U('AdminUser/userroomdetail', ['id' => $vo['id']])}">详情</a></td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+</body>
+</html>

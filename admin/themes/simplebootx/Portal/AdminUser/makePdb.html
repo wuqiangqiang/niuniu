@@ -1,0 +1,48 @@
+<admintpl file="header" />
+</head>
+<body>
+    <div class="wrap">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">生成排单币</a></li>
+            <!--<li><a href="{:U('AdminUser/add')}"></a></li>-->
+        </ul>
+        <form class="well form-search" method="post" action="{:U('Portal/AdminUser/makePdb')}">
+            会员账号：
+            <input type="text" name="user_login" style="width: 200px;" value="" required placeholder="请输入会员账号">
+            数量:
+            <input type="number" name="number" style="width: 200px;" value="" required placeholder="请输入数量">
+            <!--            邮箱:
+                        <input type="text" name="user_email" style="width: 100px;" value="{:I('request.user_email/s','')}" placeholder="请输入{:L('EMAIL')}">-->
+            <input type="submit" class="btn btn-primary js-ajax-submit" value="提交" />
+            <!--<a class="btn btn-danger" href="{:U('User/index')}">清空</a>-->
+        </form>
+<!--            <table class="table table-hover table-bordered table-list">
+                <thead>
+                    <tr>
+                        <th width="50">ID</th>
+                        <th>会员</th>
+                        <th>数量</th>
+                        <th>时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                <foreach name="record" item="vo">
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.user_login}</td>
+                        <td>{$vo.number}</td>
+                        <td>{$vo.give_time}</td>
+                    </tr>
+                </foreach>
+
+
+                </tbody>
+
+            </table>
+            <div class="pagination">{$page}</div>-->
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+    
+</body>
+</html>

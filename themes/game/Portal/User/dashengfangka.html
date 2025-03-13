@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$titlexx}主页</title>
+    <link rel="stylesheet" type="text/css" href="/app/css/dasheng_fangka.css"/>
+</head>
+<body>
+<div class="wrap-bg">
+    <div class="container">
+        <div class="user-room-card">
+            我的房卡
+            <span><em>{$user.fk}</em>张</span>
+        </div>
+        <div class="room-card-in flex-cont">
+            <div>
+                放入房卡
+            </div>
+            <input class="flex-item" type="number" name="card-number" placeholder="填写房卡数" />
+            <div>
+                张
+            </div>
+        </div>
+        <div class="room-card-number">
+            <strong id="show-num">0</strong>张
+        </div>
+        <button class="making" onclick="shengchengfangka();">制作礼盒</button>
+        <div class="user-card-record">
+            <a href="checkRecord.html">我的房卡记录</a>
+        </div>
+        <a class="return" href="/"></a>
+    </div>
+</div>
+<script type="text/javascript" src="/app/js/jquery3.2.1.min.js"></script>
+<script type="text/javascript" src="/app/js/dasheng.js"></script>
+<script type="text/javascript">
+    $("[name=card-number]").keyup(function () {
+        $("#show-num").html($(this).val());
+    });
+    function shengchengfangka(){
+        var number = $('[name=card-number]').val();
+        if(number==''){
+            $.alert('请输入房卡数量');
+            return false;
+        }
+        var updataimgurl = '/index.php/portal/user/shengchengfangka';
+        $.ajax({
+            type:"post",
+            data:{ number:number},
+            url:updataimgurl,
+            dataType: "json",
+            success: function(suc){
+                console.log(suc);
+                if(suc.act=='1'){
+                    location.href = '/index.php/portal/user/dashengfangka_houxu/mis/'+suc.msg;
+                }else{
+                    $.alert(suc.msg);
+                }
+            }
+        });
+
+    }
+</script>
+</body>
+</html>

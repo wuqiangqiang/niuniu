@@ -1,0 +1,28 @@
+.erbaying{
+	position: absolute; line-height: 6vh; width: 100%; height: 6vh; text-align: center; color: rgb(234, 171, 55); font-size: 3vh; font-family: &quot;Helvetica 微软雅黑&quot;; -webkit-text-stroke: 1.3px; text-shadow: rgb(120, 42, 0) 1px 2px 2px; display: none;
+}
+.erbashu{
+	position: absolute; line-height: 6vh; width: 100%; height: 6vh; text-align: center; color: white; font-size: 3vh; font-family: &quot;Helvetica 微软雅黑&quot;; -webkit-text-stroke: 1.3px; text-shadow: rgb(2, 32, 85) 1px 2px 2px; display: none;
+}
+.erbaying1{
+	position: absolute;top: 6vh;line-height: 6vh;width: 100%;height: 6vh;text-align: center;color: rgb(234, 171, 55);font-size: 2.4vh;font-family: "Helvetica 微软雅黑";-webkit-text-stroke: 1.3px;text-shadow: rgb(120, 42, 0) 1px 2px 2px;display: none;
+}
+.erbashu1{
+	position: absolute;top: 6vh;line-height: 6vh;width: 100%;height: 6vh;text-align: center;color: white;font-size: 2.4vh;font-family: "Helvetica 微软雅黑";-webkit-text-stroke: 1.3px;text-shadow: rgb(2, 32, 85) 1px 2px 2px;display: none;
+}
+.erba-memberCoin{
+	width: 15px;
+    height: 15px;
+}
+
+.zmmyctime
+{
+    position: absolute;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.72);
+    color: red;
+    font-size: 0.2rem;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+}

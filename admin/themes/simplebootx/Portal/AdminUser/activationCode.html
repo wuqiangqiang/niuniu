@@ -1,0 +1,79 @@
+<admintpl file="header" />
+</head>
+<body>
+    <div class="wrap">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">加时卡管理</a></li>
+            <!--<li><a href="{:U('AdminUser/add')}"></a></li>-->
+        </ul>
+        <form class="well form-search" method="post" action="{:U('Portal/AdminUser/soCode')}">
+          <select name="term" style="width: 120px;">
+            <option value='0'>全部</option>
+                <option value='1' <if condition="$_GET[term] eq 1">selected</if>>时卡</option>
+                <option value='24' <if condition="$_GET[term] eq 24">selected</if>>日卡</option>
+                <option value='168' <if condition="$_GET[term] eq 168">selected</if>>周卡</option>
+                <option value='720' <if condition="$_GET[term] eq 720">selected</if>>月卡</option>
+                <option value='8760' <if condition="$_GET[term] eq 8760">selected</if>>年卡</option>
+            </select> &nbsp;&nbsp;
+            使用情况<select name="status" style="width: 120px;">
+                <option value='0'  >全部</option>
+                <option value='1' <if condition="$_GET[status] eq 1">selected</if> >未使用</option>
+                <option value='2' <if condition="$_GET[status] eq 2">selected</if> >已使用</option>
+            </select> &nbsp;&nbsp;
+            激活码:
+            <input type="text" name="card" style="width: 200px;" value="{$_GET[card]}" placeholder="请输入激活码">
+            <input type="submit" class="btn btn-primary js-ajax-submit" value="查找" />
+            <!-- <a class="btn btn-danger" href="{:U('Portal/AdminUser/expUser')}">导出Excel</a> -->
+        </form>
+            <table class="table table-hover table-bordered table-list">
+                <thead>
+                    <tr>
+                        <th width="50">ID</th>
+                        <th>类型</th>
+                        <th>激活码</th>
+                        <th>状态</th>
+                        <th>生成时间</th>
+                        <th>使用用户</th>
+                        <th>使用时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+               <php>
+                $num[1]='时卡';
+                $num[24]='日卡';
+                $num[168]='周卡';
+                $num[720]='月卡';
+                $num[8760]='年卡';
+                $status[0]='未使用';
+                $status[1]='已使用';
+                </php>
+                <foreach name="record" item="vo">
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$num[$vo['num']]}</td>
+                        <td>{$vo.card}</td>
+                        <td>{$status[$vo['status']]}</td>
+                        <td>{$vo.create_time}</td>
+                        <td>
+                           <php>
+                              if($vo['use_user']=='0'){
+                              $vo['use_user']='';
+                              }
+                          </php>
+                        {$vo.user_login}
+                        </td>
+                        <td>{$vo.usce_time}</td>
+                        <td>
+                            <a class="js-ajax-delete" href="{:U('Portal/AdminUser/deleteCode',array('id'=>$vo['id']))}">{:L('DELETE')}</a> 
+                        </td>
+                    </tr>
+                </foreach>
+                </tbody>
+            </table>
+            <div class="pagination">{$page}</div>
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+    
+</body>
+</html>

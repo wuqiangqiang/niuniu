@@ -1,0 +1,85 @@
+.main{
+      background:none !important;
+  }
+ .gerenzx-top-zt{
+ 	background-color: #193751 !important;
+    opacity: 0.85;
+ }
+ .sendRedpackage{
+ 	background-color: #193751 !important;
+    opacity: 0.85;
+ }
+ .userList{
+ 	background-color: #193751 !important;
+    opacity: 0.85;
+ }
+ .gameMenu{
+ 	background-color: #193751 !important;
+    opacity: 0.85;
+ }
+ .gameScoreTitle{
+ 	background-color: #193751 !important;
+    opacity: 0.85;
+ }
+ .gerenzx-fksl{
+ 	background-color: #193751 !important;
+    opacity: 0.85;
+ }
+ #moretext{
+ 	background-color: #193751 !important;
+    opacity: 0.85;
+ }
+ .groupMenuDetail{
+ 	background-color: #193751 !important;
+    opacity: 0.85;
+ }
+ .jiurenyaoqinghan{
+ 	position: absolute;
+    width: 50% !important;
+    height: 27.5vw;
+    text-align: center;
+    color: white;
+ }
+ .jiurenchengyuan{
+ 	position: absolute;
+    left: 50% !important;
+    width: 50% !important;
+    height: 27.5vw;
+    text-align: center;
+    color: white;
+ }
+ .jiuren-fuzhu{
+ 	position: absolute;
+    top: 7vw;
+    left: 50% !important;
+    width: 1px;
+    height: 13.5vw;
+    background-color: rgb(152, 140, 217);
+ }
+ .sendRedpackage{
+ 	    margin-top: 5vw !important;
+ }
+ .sendRedpackages{
+		position: relative;
+    width: 100%;
+    height: 13.75vw;
+    overflow: hidden;
+    margin-top: 1vw;
+    background-color: #193751 !important;
+    opacity: 0.85;
+ }
+.jiuren-jifenxq-yh{
+    background-color: #193751 !important;
+    opacity: 0.85;
+}
+.jiuren-zhangchangxq-yhmz{
+     background-color: #193751 !important;
+    opacity: 0.85;
+}
+.jiuren-zhangchangxq-yipai{
+    background-color: #193751 !important;
+    opacity: 0.85;
+}
+ .qun-bg{
+    position: relative; width: 100%; height: 18vw; background-color: #193751; text-align: center; margin-top: 2px; color: white; overflow: hidden;
+ }

@@ -1,0 +1,133 @@
+*{padding: 0;margin:0;}a {text-decoration: none;color: #fff;}ul {list-style: none;}input{border: none;outline:none}body{font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, Arial, sans-serif;cursor: default;}img{border: none;}
+
+
+
+
+.noty{position: fixed;background-color: rgba(0,0,0,0.8);width: 100%;height: 7vh;overflow: hidden;z-index: 9998;top:0;left:0;}
+.noty img{position: absolute;top: 1.5vh;left: 3vw;width: 4vh;height: 4vh;}
+#marquee{position: fixed;top: 0;left: 12vw;background-color: rgba(0,0,0,0);width: 88vw;height: 7vh;line-height: 7vh;color: white;font-size: 14px;overflow: hidden;z-index: 9999;}
+
+
+
+
+#validePhone .phoneMask{position: fixed;z-index: 98;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);}
+#validePhone .phoneFrame{position: fixed;z-index: 99;width: 80vw;max-width: 80vw; top: 50%; left: 50%;-webkit-transform:translate(-50%,-60%); background-color: #fff; text-align: center; border-radius: 8px; overflow: hidden;opacity: 1; color: white;}
+#validePhone .notyText{padding: 0vh;font-size: 3.5vw; line-height: 8vw; word-wrap: break-word;word-break: break-all;color: #000;background-color: white;}
+#validePhone .box{position: relative;height: 15vw;word-wrap: break-word;word-break: break-all;color: #000;background-color: white;border-top: solid;border-color: #e6e6e6;border-width: 0px;}
+#validePhone .box input{padding:0 12px 0 12px;position: absolute;top:  2.5vw;left: 4vw;width: 48vw;height: 11vw;line-height: 6.5vw;border-style: solid;border-width: 1px;border-radius: 0.5vh;border-color: #e6e6e6;font-size: 4vw;-webkit-appearance: none;}
+#validePhone .box #authcode{position: absolute;top:  2.5vw;right: 4vw; width: 22vw;height: 10vw;line-height: 10vw;background-color: rgb(211,211,211);font-size: 3.5vw;border-radius: 0.5vh;color: white;}
+#validePhone .smspwd{position: relative;height: 15vw;word-wrap: break-word;word-break: break-all;color: #000;background-color: white;border-top: solid;border-color: #e6e6e6;border-width: 0px;}
+#validePhone .smspwd input{padding:0 12px 0 12px;position: absolute;top: 1vw;left: 4vw;width: 72vw;height: 11vw;line-height: 6.5vw;border-style: solid;border-width: 1px;border-radius: 0.5vh;border-color: #e6e6e6;font-size: 4vw;-webkit-appearance: none;}
+#validePhone .rest{height: 2.2vw;}
+#validePhone .commitButton{position: relative; left: 4vw;width: 72vw;line-height: 10vw; font-size: 4vw;display: flex;border-radius: 2vw;}
+#validePhone .commitButton .inner{display: block;-webkit-box-flex:1;flex: 1;text-decoration: none;-webkit-tap-highlight-color:transparent;position: relative;margin-bottom: 0;color: rgb(255,255,255);border-top: solid;border-color: #e6e6e6;border-width: 0px;background-color: rgb(64,112,251);border-radius: 1vw;}
+
+
+
+.disconnect{position: fixed;top:45%;left: 0;width: 100%;text-align: center;z-index: 101;}
+.disconnect .background{width: 250px;height:27px;position: absolute;top:-2;left: 50%;margin-left: -125px;background: #000;opacity: .5;border-radius:15px;}
+.disconnect a{font-size: 16px;color: #fff;padding: 5px 14px;position:relative;}
+
+
+
+ 
+
+
+
+.audioRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.audioRoom .audioRoomBack{width: 100%;height:100%;background: #000;opacity:0.5;}  
+.audioRoom .mainPart{width: 38vh;height:27vh;top:44%;left:50%;margin-top:-16vh;margin-left: -19vh;position: absolute;} 
+.audioRoom .mainPart .createB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:url("http://goss.fexteam.com/files/images/center/alertBox.png");background-size:100% 100%;border-radius:10px; }  
+.audioRoom .mainPart .createTitle{position:relative;height:5vh;text-align: center;} 
+.audioRoom .mainPart .createTitle img{position:relative;height:2.6vh;margin-top: 1.2vh;}  
+.audioRoom .mainPart .cancelCreate{width: 5vh;height:5vh;top:-2.5vh;right:-2.5vh;position: absolute;}  
+.audioRoom .mainPart .createCommit{position: absolute;height: 6vh;width: 15vh;left:50%;margin-left:-7.5vh;bottom:-7vh;background:url("http://goss.fexteam.com/files/images/button/commit.png");background-size:100%;color: #fff;}  
+.audioRoom .mainPart .blueBack{width: 35vh;height: 13vh;background:#321c42;border-radius:4px;margin:0 auto;position: relative;    padding: 1vh 0; }
+.audioRoom .mainPart .blueBack .selectPart{width:100%;margin-top:4px;font-size:2.2vh;position: relative;color:#fff;background:#4e3c66;border-radius:0px;font-family:simHei; height:4vh;line-height:4vh;padding:0.8vh 0;}
+.audioRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:13vh;text-align: right; }
+.audioRoom .mainPart .blueBack .selectPart .selectList{float: right; width: 20vh}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:10px; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:2.2vh;width:2.2vh;border:1px solid #1d1045;border-radius:2px;background:#e1c5f9;margin-top:0.7vh;position: relative; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 2.8vh;height:2.8vh;left: 0;top:0;}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 0.8vh;}
+
+/*
+.activeButton{width: 100%;transition:width .1s,height .1s,left .1s,top .1s;position: absolute;top:0;left:0;width:100%;height: 100%;}  
+.activeButton:active{width:86%;height: 86%;left: 7%;top:7%}*/
+.activeButton{}  
+.activeButton:active{}
+.activeButton img{width: 100%;}
+.activeButton .activeInnerText{position: absolute;top:0;left:0;width: 100%;height:100%;text-align: center;}
+
+
+.watch{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 111;color: #fff;font-family: simHei;}
+.watch .watchBack{width: 100%;height:100%;background: #000;opacity:0.5;position: absolute;}
+
+.watch .mainPart{position: absolute;top: 42%;left: 50%;margin-left:-22.5vh ;width: 45vh;background:url("http://goss.fexteam.com/files/images/center/alertBoxNew.png");background-size:100% 100%;border-radius: 1.5vh; height: 59vh;margin-top: -29.5vh}
+.watch .mainPart .watchCancel{width: 5vh;height:5vh;top:-1.5vh;right:-1.5vh;position: absolute;}  		
+.watch .mainPart .watchTitle{width: 21vh;height:8vh;top:-2vh;left:-1vh;position: absolute;}  		
+.watch .mainPart .playerList{position: absolute;line-height: 3.5vh;font-size: 2.5vh;width: 39vh;left:50%;margin-left:-20vh;top:6.6vh;background: #311d40;padding: 1vh .5vh;border-radius:1.5vh;height: 42vh;}
+.watch .mainPart .playerItem{background:#725399;height: 6.55vh;margin-bottom: .5vh;border-radius: .5vh;position: relative; }
+.watch .mainPart .playerItem .playerAvatar{position: absolute;width: 5vh;height: 5vh;border-radius: 2.5vh;border: .1vh solid yellow;left: 1.5vh;top: .78vh; }
+.watch .mainPart .playerItem .playerName{position: absolute;    font-size: 2.4vh;line-height: 6.6vh;top: 0;left: 8vh;}
+.watch .mainPart .playerItem .playerIcon{position: absolute;right: 3vh;width: 3vh;height: 3vh;top:1.78vh}
+
+.watch .mainPart .buttonMiddle{position: absolute;width:100%;height: 6vh;width: 15vh;left:50%;margin-left:-7.5vh;bottom:1.2vh;}
+.watch .mainPart .buttonMiddle img{position: absolute;width:100%;height: 100%;top:0;left:0;}
+
+
+.createRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.createRoom .createRoomBack{width: 100%;height:100%;background: #000;opacity:0.5;}  
+.createRoom .mainPart{position: absolute;top: 12%;left: 50%;margin-left:-22.5vh ;width: 45vh;background:url("http://goss.fexteam.com/files/images/center/alertBoxNew.png");background-size:100% 100%;border-radius: 1.5vh; padding: 6.6vh 0 2vh 0;} 
+.createRoom .mainPart .createCancel{width: 5vh;height:5vh;top:-1.5vh;right:-1.5vh;position: absolute;}  	
+.createRoom .mainPart .createTitle{width: 24vh;height:8vh;top:-2vh;left:-1vh;position: absolute;} 
+
+.createRoom .mainPart .blueBack{position: relative;line-height: 3.5vh;font-size: 2.5vh;width: 40vh;margin:0 auto;background: #311d40;padding: 2vh 0;border-radius:1.5vh; }
+.createRoom .mainPart .blueBack .selectPart{width:100%;margin-top:4px;font-size:2vh;position: relative;color:#fff;background:#4e3c66;font-family:simHei;line-height:3.5vh;padding:1vh 0;height:3.5vh }
+.createRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:8vh;text-align: right; }
+.createRoom .mainPart .blueBack .selectPart .selectList{float: left; width: 30vh}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:25px; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:2vh;width:2vh;border:1px solid #1d1045;border-radius:2px;background:#78899d;margin-top:0.7vh;position: relative; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 2vh;height:2vh;left: 0;top:0.7vh;}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 0.8vh;}
+
+
+.message{position: fixed;width: 100%;height:100%;z-index: 110;top:0;left:0;}	
+.message .messageBack{width: 100%;height:100%;position: absolute;top:0;left:0;}	
+.message .textPartOuter{position: absolute;width: 38vh;height:46vh;bottom:7vh;right:2vh;border-radius: 2vh;background:url("http://goss.fexteam.com/files/images/center/alertBoxNew.png");background-size:100% 100%;}
+.message .textPart{position: absolute;width: 34vh;height:40vh;bottom:10.5vh;right:4.2vh;overflow: auto;border-radius: 1.5vh;}
+.message .textPart .textList {position: relative;background: #321b42;border-radius:10px;padding: 1vh 0;}
+.message .textPart .textList .textItem{width: 86%;height: 6vh;line-height: 6vh;font-size: 2.1vh;background: #725299;border-bottom:2px solid #321b42;color:#fff;padding:0 5%;position: relative;font-family: simHei;border-radius:.8vh;margin-left: 2%;}
+
+
+
+.alert{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 111;color: #fff;font-family: simHei;}
+.alert .alertBack{width: 100%;height:100%;background: #000;opacity:0.5;position: absolute;}
+.alert .mainPart{position: relative;top: 45%;left: 50%;margin-left:-22.5vh ;width: 45vh;background:url("http://goss.fexteam.com/files/images/center/alertBoxNew.png");background-size:100% 100%;border-radius: 1.5vh; }
+
+.alert .mainPart .id{position: absolute;top:-2.5vh;left:-1.2vh;}
+.alert .mainPart .id img{width: 37vh}
+.alert .mainPart .id .text{margin-top: -5vh;margin-left:6vh ;color: #fff;font-size: 2.5vh;text-shadow:#5b0d1b 1px 0 0,#5b0d1b 0 1px 0,#5b0d1b -1px 0 0,#5b0d1b 0 -1px 0;}
+
+
+.alert .mainPart .alertText{position: absolute;width:100%;line-height: 3.5vh;font-size: 2.5vh;width: 36vh;left:50%;margin-left:-20vh;top:5.6vh;text-align: center;background: #311d40;padding: 2vh;border-radius:1.5vh;}
+.alert .mainPart .alertText .rull{background: #4d3a67;width: 35vh;color: #90dfec;font-size:2.2vh;padding:1vh 2.5vh;margin-bottom: 1.5vh;text-align: left;margin-left: -2vh;}
+.alert .mainPart .alertText .rull a{color: #90dfec;font-size:2.2vh; }
+
+.alert .mainPart .aButton img{position: absolute;width:100%;height: 100%;top:0;left:0;}
+.alert .mainPart .buttonMiddle{position: absolute;width:100%;height: 6vh;width: 15vh;left:50%;margin-left:-7.5vh;bottom:1.5vh;}
+.alert .mainPart .buttonLeft{position: absolute;height: 6vh;width: 15vh;left:6vh;bottom:1.5vh;}
+.alert .mainPart .buttonRight{position: absolute;height: 6vh;width: 15vh;right:6vh;bottom:1.5vh;}		
+
+.alert1{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 111;color: #fff;font-family: simHei;}
+.alert1 .alertBack{width: 100%;height:100%;background: #000;opacity:0.5;position: absolute;}
+.alert1 .mainPart{position: relative;top: 45%;left: 50%;margin-top:-19vh ;margin-left:-22.5vh ;width: 45vh;height:32vh;background:url("http://goss.fexteam.com/files/images/center/alertBackNew.png");background-size:100% 100%; }
+.alert1 .mainPart .alertText{position: absolute;width:100%;line-height: 3.5vh;font-size: 2.5vh;width: 36vh;left:50%;margin-left:-18vh;top:5.6vh;text-align: center;height: 17vh;}
+.alert1 .mainPart .alertText table{height: 100%;color: #fff;width: 100%;text-align: center;}
+.alert1 .mainPart .alertText table td{height: 100%;color: #fff;width: 100%;text-align: center;}
+.alert1 .mainPart .aButton img{position: absolute;width:100%;height: 100%;top:0;left:0;}
+.alert1 .mainPart .buttonMiddle{position: absolute;width:100%;height: 6vh;width: 15vh;left:50%;margin-left:-7.5vh;bottom:1vh;}
+.alert1 .mainPart .buttonLeft{position: absolute;height: 6vh;width: 15vh;left:6vh;bottom:1vh;}
+.alert1 .mainPart .buttonRight{position: absolute;height: 6vh;width: 15vh;right:6vh;bottom:1vh;}
+
+

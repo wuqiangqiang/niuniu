@@ -1,0 +1,106 @@
+﻿.body{
+	max-width:640px;
+	margin:auto;
+	min-height:100%;
+	position:relative;
+    background-image:url(../images/6.png);
+}
+
+
+#topList_box ol{
+	pointer-events:none;
+}
+
+.navList_boxdp{
+	height:70px;
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	background:rgba(10,10,10,0.5);
+	z-index:2000;
+	max-width:640px;
+	margin:auto;
+	margin-top:-100%;
+	padding:5px 0;
+}
+#navList_box,.mainul{
+	position: relative;
+}
+.mainul li,#navList_box li{
+	display: block;
+	position: relative;
+	float: left;
+}
+#navList_box li>a{
+	width:25%;
+	float:left;
+	text-align:center;
+	color:#fff;
+	overflow:hidden;
+}
+#navList_box li>a img{
+	width:45px;
+	height:45px;
+	max-height:80%;
+	margin:5px 0;
+}
+
+ .mainpicshow {
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .mainpicarea {
+            height: 170px;
+        }
+
+            .mainpicarea table, .mainpicarea tr, .mainpicarea td {
+                border: none;
+                border-image-width: 0px;
+            }
+
+            .mainpicarea img {
+                height: 170px;
+            }
+
+        #ppoool {
+            height: 20px;
+            position: relative;
+            z-index: 10;
+            margin-top: 0px;
+            text-align: right;
+            padding-right: 15px;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+            #ppoool > li {
+                display: inline-block;
+                margin: 5px 0;
+                width: 8px;
+                height: 8px;
+                background-color: #757575;
+                border-radius: 8px;
+            }
+
+                #ppoool > li.on {
+                    background-color: #ffffff;
+                }
+
+        #playbox {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: url('../images/135eb43c73f745448e4af91ffd2e4f97.gif') no-repeat center center;
+            background-size: 100% auto;
+            position: fixed;
+            z-index: 100;
+            left: 15px;
+            top: 20px;
+            z-index: 99999;
+        }
+
+            #playbox.on {
+                background-image: url('../images/5d94195d5a154b62af8a095f3f467cd5.gif');
+            }

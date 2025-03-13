@@ -1,0 +1,48 @@
+<admintpl file="header" />
+</head>
+<body>
+    <div class="wrap">
+        <ul class="nav nav-tabs">
+            <li><a href="{:U('Portal/AdminOrder/menuOrder')}">选项管理</a></li>
+            <li  class="active"><a href="#" >采集配置</a></li>
+            <li ><a href="{:U("AdminOrder/add_cj",array("typeid"=>$_GET["id"]))}" >添加采集</a></li>
+        </ul>    
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th align="center">ID</th>
+                        <th>采集器名称</th>
+                         <th>采集器状态</th>
+                        <th style="vertical-align:middle; text-align:center;">采集器url</th>
+                        <th>最后运行时间</th>
+                        <th>备注</th>
+                        <th style="width:200px;" align="center">操作</th>
+                    </tr>
+                </thead>
+                <php>
+                    $zt[0]='关闭';
+                    $zt[1]='开启';
+                </php>
+                <tbody>
+                    <foreach name="list" item="vo">
+                    <tr>
+                        <td align="center">{$vo.id}</td>
+                        <td style="vertical-align:middle; text-align:center;">{$vo.name}</td>
+                        <td style="vertical-align:middle; text-align:center;">{$zt[$vo[zt]]}</td>
+                        <td style="vertical-align:middle; text-align:center;">{$vo.url}</td>
+                        <td style="vertical-align:middle; text-align:center;">{$vo.yxtime}</td>
+                        <td style="vertical-align:middle; text-align:center;">{$vo.bz}</td>
+                        <td align="center">
+                            <a href='{:U("AdminOrder/edit_cj",array("id"=>$vo["id"]))}'>设置</a> |
+                            <a href='{:U("AdminOrder/open_cj",array("id"=>$vo["id"]))}'>开启采集器</a> |
+                            <a href='{:U("AdminOrder/open_cj",array("id"=>$vo["id"]))}'>关闭采集器</a> |
+                            <a class="js-ajax-delete" href='{:U("AdminOrder/del_cj",array("id"=>$vo["id"]))}'>删除</a> 
+                        </td>
+                    </tr>
+                    </foreach>
+                </tbody>
+            </table>
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

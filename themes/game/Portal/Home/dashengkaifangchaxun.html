@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="renderer" content="webkit" />
+    <title>大圣娱乐大厅</title>
+    <meta name="apple-mobile-web-app-title" content="大圣娱乐大厅" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" type="text/css" href="/app/css/dashengkaifangchaxun.css"/>
+    <script type="text/javascript" src="/app/js/jquery3.2.1.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="top">
+        历史战绩
+        <div class="return" onclick="window.location.href='/'"></div>
+    </div>
+    <div class="pk-list">
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('.pk-list').on('scroll',
+            function() {
+                if ($(this).scrollTop() + $(this).height() > $(this).get(0).scrollHeight - 10 && !winScrollSock) {
+                    pkquery(Math.ceil($('.pk-item').length / 10 + 1));
+                }
+            });
+        pkquery(1);
+
+        var winScrollSock = false;
+        function pkquery(p) {
+            if(winScrollSock) return;
+            winScrollSock = true;
+            $.get('/index.php/portal/dasheng/gamerecord', {page: p}, function(d) {
+                if (d.length) {
+                    for (var i in d) {
+                        var code = '';
+                        var shareLink = getShareIconLink(d[i].type);
+                        if (d[i].type == 1) {
+                            code += '<div class="pk-item bull6" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        } else if (d[i].type == 2) {
+                            code += '<div class="pk-item niuniuNine" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        } else if (d[i].type == 3) {
+                            code += '<div class="pk-item sangong" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        } else if (d[i].type == 4) {
+                            code += '<div class="pk-item sangong9" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        } else if (d[i].type == 5) {
+                            code += '<div class="pk-item goldflower" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        } else if (d[i].type == 6) {
+                            code += '<div class="pk-item sangong" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        } else if (d[i].type == 7) {
+                            code += '<div class="pk-item fillingpit" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        } else if (d[i].type == 8) {
+                            code += '<div class="pk-item niuniuSix" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        } else if (d[i].type == 9) {
+                            code += '<div class="pk-item niuniuNine" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        } else if(d[i].type == 10) {
+                            code += '<div class="pk-item niuniuNine" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        }
+                        else if(d[i].type == 14) {
+                            code += '<div class="pk-item niuniuNine" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        }
+                        else if(d[i].type == 15) {
+                            code += '<div class="pk-item niuniuTen" onclick="location.href=\'/index.php/portal/home/xiangqing/room/' + d[i].room + '\'">';
+                        }
+                        else {
+                            code += '<div class="pk-item" onclick="location.href=\'pkdetailed.html?code=' + d[i].room + '\'">';
+                        }
+                        code += '    <div class="game-path">';
+                        code += '    <div class="game-img"><img src="' + shareLink + '"></div>';
+                        code += '    </div>';
+                        code += '    <div class="room-number">房间号：' + d[i].room + '</div>';
+                        code += '<div class="time">' + d[i].datetime + '</div>';
+                        if (parseInt(d[i].jifen) >= 0) {
+                            code += '<div class="score">' + parseInt(d[i].jifen) + '</div>';
+                        } else {
+                            code += '<div class="score lost">' + parseInt(d[i].jifen) + '</div>';
+                        }
+                        code += '    </div>';
+                        $('.pk-list').append(code);
+                    }
+                } else {
+                    $('.pk-list').off('scroll');
+                    if ($('.pk-item').length > 0) {
+                        $('<div class="pk-list-bottom">').html('<span>对局已完全加载</span>').appendTo('.pk-list');
+                    } else {
+                        $('<div class="pk-list-bottom">').html('<span>还没有参加过游戏，请前往游戏大厅开始游戏</span>').appendTo('.pk-list');
+                    }
+                }
+                winScrollSock = false;
+                $('.loader-mask').fadeOut('fast',
+                    function() {
+                        $('.loader-mask').remove();
+                    });
+            }, 'json');
+            var code = '<div class="loader-mask">';
+            code += '       <div class="pkquery-load">';
+            code += '           <div class="cube1"></div>';
+            code += '           <div class="cube2"></div>';
+            code += '       </div>';
+            code += '    </div>';
+            $(code).appendTo('.wrap').fadeIn(3000);
+        }
+
+        function getShareIconLink(game_id) {
+            var shareLinkJson = {
+                '1': 'niuniu',
+                '5': 'jinhua',
+                '20': 'shisanshui',
+                '4': 'sangong',
+                '15' : 'niuniuten',
+                '10' : 'niuniu',
+                '30': 'texasholdem',
+                '3': 'sangong',
+                '7': 'tiandakeng',
+                '8': 'bull6',
+                '2': 'bull9'
+            }
+            if(shareLinkJson[game_id])
+                return '/app/img/bull10/v2/' + 'share-' + shareLinkJson[game_id] + '.jpg';
+            else
+                return '/app/img/bull10/undefined-share-image.jpg';
+        }
+    });
+
+</script>
+</body>
+</html>

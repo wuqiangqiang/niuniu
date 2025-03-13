@@ -1,0 +1,59 @@
+<html onapp="app">
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta name="msapplication-tap-highlight" content="no" /> 
+  <title>游戏大厅</title> 
+  <link rel="stylesheet" href="./css/loading.css" /> 
+  <link rel="stylesheet" type="text/css" href="./css/homepage/homepage11-1.0.0.css" /> 
+  <link rel="stylesheet" href="./css/public.css" /> 
+  <link rel="stylesheet" href="css/app.css" /> 
+  <script src="./open/js/jweixin-1.0.0.js"></script> 
+  <script src="./js/homepage/jq.js" type="text/javascript"></script> 
+  <script src="./js/homepage/home.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+  <script src="/index.php/portal/index/gamejs" type="text/javascript"></script>  
+ </head> 
+ <body style="background: #000;" class="onscope"> 
+  <div class="main" > 
+   <div class="onhide"> 
+    <img class='onhide-img'  src="./files/d_13/images/common/alert_icon.png" /> 
+   </div> 
+   <div id="marquee" class="js-marquee-wrapper chuangjfj-top"> 
+    <div class="js-marquee"> 
+    </div> 
+    <div class="js-marquee"> 
+    </div> 
+   </div> 
+  </div> 
+  <div onclick="createRoom()" class="cjfj-puls"></div> 
+  <img class="chuangjfj-bj" src="./img/home/body1-1.jpg" /> 
+  <img class="chuangjfj-bj-img" src="./img/home/top-1.png"  /> 
+
+  
+  <div class="user chuangjfj-yonghuimg"> 
+     <img  class="avatars"  src="" id="userimg"/> 
+     <a class="name onbinding cjfj-name" id="nickname">--</a> 
+  </div> 
+  <div class="roomCard chuangjfj-fangka"> 
+   <img src="./img/public/roomCard.png" class="img1 cjfj-fk1" /> 
+   <a class="num onbinding cjfj-fk" id="fknum">--</a> 
+  </div> 
+  <div id="allgame">
+  </div>
+  <div class="createRoom" style="display: none" id="room"></div>
+
+  <script>
+     load('show');
+     if(dkxx){
+      connect(dkxx);
+    }
+    else{
+      load('hide');
+      prompt('服务器没开启,请稍后再试');
+      setTimeout("$('body').hide()",3000);
+    }
+  </script>
+</body>
+</html>

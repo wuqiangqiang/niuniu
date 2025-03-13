@@ -1,0 +1,2371 @@
+html {
+    font-size: 10px !important;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+html, body, div, span, em, img, b, i, dl, dt, dd, ol, ul, li, p, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section, figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "微软雅黑",Arial;
+    font-size: 0.12rem;
+    color: #555;
+    letter-spacing: 0px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+ul {
+    list-style: none
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    color: #555;
+    text-decoration: none;
+}
+
+input, textarea, button {
+    padding: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+em,i {
+    font-style: normal;
+}
+
+div[contenteditable="true"] {
+    line-height: 22px;
+    font-size: 12px;
+}
+
+div[contenteditable="true"] p {
+    margin: 0;
+    padding: 0;
+}
+
+pre {
+    font-family: "微软雅黑", Arial;
+}
+
+.flex-cont {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-cont .flex-item {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.search-number-box {
+    position: absolute;
+    z-index: 999999;
+}
+
+.room-gameover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    background-color: #000;
+}
+
+.room-gameover-ten {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    background-color: #000;
+}
+
+.spinner {
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 111000;
+    color: #666;
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+    width: 0.9em;
+    height: 0.9em;
+    background-color: #666;
+    border-radius: 100%;
+    position: absolute;
+    -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+    animation: bouncedelay 1.2s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.spinner-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container2 {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+.container3 {
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+}
+
+.circle1 {
+    top: 0;
+    left: 0;
+}
+
+.circle2 {
+    top: 0;
+    right: 0;
+}
+
+.circle3 {
+    right: 0;
+    bottom: 0;
+}
+
+.circle4 {
+    left: 0;
+    bottom: 0;
+}
+
+.container2 .circle1 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+    -webkit-animation-delay: -0.1s;
+    animation-delay: -0.1s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    40% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.loadings-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    text-align: center;
+}
+
+.loadings-text span {
+}
+
+.loadings-text span[data-item="1"] {
+    animation: loadingsText 3s linear infinite;
+}
+
+.loadings-text span[data-item="2"] {
+    animation: loadingsText 2s linear infinite 1s;
+}
+
+.loadings-text span[data-item="3"] {
+    animation: loadingsText 1s linear infinite 2s;
+}
+
+@-webkit-keyframes loadingsText {
+    0% {
+        color: #fff;
+    }
+
+    100% {
+        color: #000;
+    }
+}
+
+@keyframes loadingsText {
+    0% {
+        color: #fff;
+    }
+
+    100% {
+        color: #000;
+    }
+}
+
+#alertBox {
+    width: 2.2rem;
+    min-height: 1rem;
+    opacity: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.1rem;
+    transition: all 0.5s;
+    border-radius: 0.04rem;
+    padding-top: 0.96rem;
+    line-height: 0.16rem;
+    text-align: center;
+    font-size: 0.15rem;
+    color: rgba(0, 0, 0, 0.54);
+    box-shadow: 0 0 0.2rem rgba(0,0,0,0.3);
+    z-index: 100000;
+}
+
+#alertBox.success {
+    background: #fff url(http://cdn.lfzgame.com/images/alertBox_success.png) no-repeat center 0.384rem / 0.384rem 0.384rem;
+}
+
+#alertBox.error {
+    background: #fff url(http://cdn.lfzgame.com/images/alertBox_error.png) no-repeat center 0.384rem / 0.384rem 0.384rem;
+}
+
+#alertBox.puncherror {
+    background: #fff url(http://cdn.lfzgame.com/images/punch_caution.png) no-repeat center 0.384rem / 0.384rem 0.384rem;
+}
+
+#alertBox .context {
+    margin-bottom: 0.384rem;
+    padding: 0 0.1rem;
+}
+
+#alertBox .closed {
+    width: 2.2rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    display: inline-block;
+    font-size: 0.145rem;
+    color: #b39851;
+    text-align: center;
+    border-top: 0.01rem solid #f5f5f5;
+}
+
+.alertBoxLay {
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    transition: all 0.5s;
+}
+
+.dialogBoxLay {
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99990;
+    transition: all 0.5s;
+}
+
+#dialogBox {
+    min-height: 1.5rem;
+    opacity: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.1rem;
+    transition: all 0.5s;
+    border-radius: 0.02rem;
+    padding: 0.96rem 0 0.1rem;
+    line-height: 0.25rem;
+    text-align: center;
+    font-size: 0.15rem;
+    color: rgba(0, 0, 0, 0.54);
+    box-shadow: 0 0 0.2rem rgba(0,0,0,0.3);
+    z-index: 99998;
+    background: #fff url(http://cdn.lfzgame.com/images/dialog_icon.png) no-repeat center 0.384rem / 0.384rem 0.384rem;
+    display: flex;
+    display: -webkit-flex;
+}
+
+#dialogBox .sbox {
+    width: 2.2rem;
+    background: #fff;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 0.02rem;
+}
+
+#dialogBox .context {
+    margin-bottom: 0.65rem;
+    flex: 1;
+    padding: 0 .1200rem;
+}
+
+#dialogBox .closed {
+    position: absolute;
+    top: 0.03rem;
+    right: 0.03rem;
+    width: 0.2rem;
+    height: 0.2rem;
+    background: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    color: #aaa;
+    font-size: 0.14rem;
+    line-height: 0.18rem;
+    text-align: center;
+    text-indent: 0.01rem;
+    box-shadow: 0 0 0.01rem rgba(0, 0, 0, 0.2) inset;
+    text-shadow: 0.01rem 0.01rem 0.01rem #fff;
+}
+
+#dialogBox .btns {
+    width: 100%;
+    height: 0.4224rem;
+    flex: 1;
+    border-radius: 0 0 0.02rem 0.02rem;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border-top: 0.01rem solid #f5f5f5;
+}
+
+#dialogBox .btns button {
+    width: 1.05rem;
+    height: 0.4224rem;
+    border: none;
+    color: #888;
+    margin: 0;
+    background: none;
+}
+
+#dialogBox .btns:after {
+    content: '';
+    height: 0.4124rem;
+    width: 0.01rem;
+    position: absolute;
+    background: #f5f5f5;
+    top: 0;
+    left: 50%;
+}
+
+#dialogBox .btns button.agree {
+    color: #b39851;
+    font-size: 0.15rem;
+}
+
+#dialogBox .btns button.closeBtn {
+    color: #888;
+    font-size: 0.15rem;
+}
+
+.window-masks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    background-color: rgba(0,0,0,1);
+}
+
+.window-masks .border-opacity {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: .0048rem solid #a7a7a6;
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+    background-color: rgba(255,255,255,.3);
+    padding: .0720rem;
+}
+
+.window-masks .border-opacity .container {
+    position: relative;
+    background-color: #d1e2f6;
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+}
+
+.window-masks .border-opacity .container:before {
+    content: '';
+    position: absolute;
+    top: .0480rem;
+    left: .0480rem;
+    width: calc(100% - 0.0960rem);
+    height: calc(100% - 0.0960rem);
+    border: .0144rem solid #95b8e1;
+    -webkit-border-radius: .024rem;
+    -moz-border-radius: .024rem;
+    border-radius: .024rem;
+    z-index: 0;
+}
+
+.window-masks .border-opacity .container .mask-icon {
+    position: absolute;
+    width: .0816rem;
+    height: .0768rem;
+}
+
+.window-masks .border-opacity .container .mask-icon.mask-top {
+    top: .0480rem;
+    left: .0480rem;
+    background: url("http://cdn.lfzgame.com/images/index/mask-top.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks .border-opacity .container .mask-icon.mask-right {
+    top: .0480rem;
+    right: .0480rem;
+    background: url("http://cdn.lfzgame.com/images/index/mask-right.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks .border-opacity .container .mask-icon.mask-bottom {
+    bottom: .0480rem;
+    right: .0480rem;
+    background: url("http://cdn.lfzgame.com/images/index/mask-bottom.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks .border-opacity .container .mask-icon.mask-left {
+    bottom: .0480rem;
+    left: .0480rem;
+    background: url("http://cdn.lfzgame.com/images/index/mask-left.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks.agreement .border-opacity {
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 0;
+    width: 3.3648rem;
+    height: 2.8992rem;
+    background: url("http://cdn.lfzgame.com/images/common/agreement.png") no-repeat 0 0 / 100% 100%;
+}
+
+.window-masks.agreement .border-opacity-v2 {
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 0;
+    width: 3.1776rem;
+    height: 3.3600rem;
+    background: url("http://cdn.lfzgame.com/images/common/agreementV2.png") no-repeat 0 0 / 100% 100%;
+}
+
+.window-masks.agreement .border-opacity-thirteen {
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 0;
+    width: 3.0144rem;
+    height: 2.7792rem;
+    background: url("http://cdn.lfzgame.com/images/common/agreement2.png") no-repeat 0 0 / 100% 100%;
+}
+
+.window-masks.user-join .container {
+    position: relative;
+    padding: .3840rem .1440rem .0480rem;
+}
+
+.window-masks.user-join .user-id {
+    position: absolute;
+    left: -.0576rem;
+    top: 0;
+    z-index: 5;
+    padding-left: .1440rem;
+    width: 1.4016rem;
+    height: .3888rem;
+    line-height: 1.5;
+    color: #fff;
+    font-size: .1632rem;
+    background: url("http://cdn.lfzgame.com/images/common/join-game-title.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks.user-join .container .main {
+    overflow: hidden;
+    width: 2.6469rem;
+    margin-bottom: .0960rem;
+    border: .0048rem solid #fff;
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+    background-color: #69829e;
+    color: #fff;
+}
+
+.window-masks.user-join .container .main .rules {
+    line-height: 1.5;
+    padding: .0864rem;
+    font-size: .1344rem;
+}
+
+.window-masks.user-join .container .main .user-list {
+    width: 2.6400rem;
+    height: 1.6360rem;
+    padding: .2400rem .1200rem;
+    background: url("http://cdn.lfzgame.com/images/common/join-user-bg1.jpg") no-repeat;
+    background-size: 100% 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.window-masks.user-join .join-user-info {
+    width: .3840rem;
+    margin: 0 .0480rem;
+    text-align: center;
+}
+
+.join-user .join-info .user-text2 {
+    position: relative;
+    width: 2.8368rem;
+    height: 2.0880rem;
+    -webkit-border-radius: .0768rem;
+    -moz-border-radius: .0768rem;
+    border-radius: .0768rem;
+    margin: .0768rem;
+    background: url("http://cdn.lfzgame.com/images/niuniu/user-text-bg0.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.join-user .join-info .user-text {
+    position: relative;
+    width: 2.8368rem;
+    height: 1.5840rem;
+    -webkit-border-radius: .0768rem;
+    -moz-border-radius: .0768rem;
+    border-radius: .0768rem;
+    margin: .0768rem;
+    background: url("http://cdn.lfzgame.com/images/niuniu/user-text-bg1.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.join-user .join-info .user-text2 >div,.join-user .join-info .user-text >div {
+    text-align: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.window-masks.user-join .join-user-info img {
+    width: .3840rem;
+    height: .3840rem;
+    -webkit-border-radius: .0240rem;
+    -moz-border-radius: .0240rem;
+    border-radius: .0240rem;
+}
+
+.window-masks.user-join .join-user-info span {
+    display: block;
+    width: 100%;
+    height: .1200rem;
+    overflow: hidden;
+    line-height: .1200rem;
+    font-size: .1056rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.window-masks.user-join .container .button {
+    position: relative;
+    text-align: center;
+    margin-bottom: .0480rem;
+}
+
+.window-masks.user-join .container .join-game,.window-masks.user-join .container .return {
+    display: inline-block;
+    width: 1.1472rem;
+    height: .3312rem;
+    font-size: .1200rem;
+    line-height: 2.5;
+    text-align: center;
+    margin: 0 .0480rem;
+    color: #fff;
+}
+
+.window-masks.user-join .container .return {
+    background: url("http://cdn.lfzgame.com/images/common/button1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks.user-join .container .join-game {
+    background: url("http://cdn.lfzgame.com/images/common/button2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks.return-index .container {
+    border: .0096rem solid #afb0b2;
+}
+
+.window-masks.return-index .main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 2.3280rem;
+    min-height: 1.0560rem;
+    background-color: #69829e;
+    border: .0048rem solid #fff;
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+    margin: .1200rem;
+    padding: .0960rem;
+    color: #fff;
+    font-size: .1728rem;
+    text-align: justify;
+}
+
+.window-masks.return-index .container .button {
+    position: relative;
+    text-align: center;
+    margin-bottom: .0960rem;
+}
+
+.window-masks.return-index .container .sure,.window-masks.return-index .container .cancel {
+    display: inline-block;
+    width: 1.1472rem;
+    height: .3312rem;
+    font-size: .1200rem;
+    line-height: 2.5;
+    text-align: center;
+    margin: 0 .0480rem;
+    color: #fff;
+}
+
+.window-masks.return-index .container .sure {
+    background: url("http://cdn.lfzgame.com/images/common/button1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks.return-index .container .cancel {
+    background: url("http://cdn.lfzgame.com/images/common/button2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks .border-opacity-v2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: .0096rem solid rgba(234,202,137,.6);
+    -webkit-border-radius: .076rem;
+    -moz-border-radius: .076rem;
+    border-radius: .076rem;
+    background-color: rgba(35,42,68,.8);
+    padding: .0720rem;
+}
+
+.window-masks.return-index .border-opacity-v2 .main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 2.7280rem;
+    min-height: 1.2096rem;
+    background-color: rgba(68,68,174,.5);
+    border: .0048rem solid #19256d;
+    -webkit-border-radius: .076rem;
+    -moz-border-radius: .076rem;
+    border-radius: .076rem;
+    margin: .1200rem;
+    padding: .0960rem;
+    color: #e8b24c;
+    font-size: .2304rem;
+    text-align: justify;
+}
+
+.window-masks.return-index .border-opacity-v2 .container {
+    border: none;
+}
+
+.window-masks.return-index .border-opacity-v2 .container .button {
+    position: relative;
+    text-align: center;
+    margin-bottom: .0960rem;
+    margin-top: .16rem;
+    overflow-y: hidden;
+}
+
+.window-masks.return-index .border-opacity-v2 .container .sure,.window-masks.return-index .border-opacity-v2 .container .cancel {
+    display: inline-block;
+    width: 1.0272rem;
+    height: .3696rem;
+    font-size: .15441rem;
+    line-height: .38rem;
+    text-align: center;
+    margin: 0 .086rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.window-masks.return-index .border-opacity-v2 .container .sure {
+    background: url("http://cdn.lfzgame.com/images/decIndex/button1.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-text-stroke-width: 0.0048rem;
+    -webkit-text-stroke-color: #14309f;
+}
+
+.window-masks.return-index .border-opacity-v2 .container .cancel {
+    background: url("http://cdn.lfzgame.com/images/decIndex/button2.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-text-stroke-width: 0.0048rem;
+    -webkit-text-stroke-color: #9e5f0f;
+}
+
+.window-masks .border-opacity-thirteen {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: .076rem;
+    -moz-border-radius: .076rem;
+    border-radius: .076rem;
+    background-color: rgba(57,81,130,1);
+    padding: .0720rem .108rem;
+}
+
+.window-masks.return-index .border-opacity-thirteen .main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 2.7280rem;
+    min-height: 1.2096rem;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    -webkit-border-radius: .076rem;
+    -moz-border-radius: .076rem;
+    border-radius: .076rem;
+    margin: 0;
+    padding: .0960rem;
+    color: rgba(18,63,100,0.7);
+    font-size: .2304rem;
+    text-align: justify;
+}
+
+.window-masks.return-index .border-opacity-thirteen .container {
+    border: none;
+    background-color: #8ad5e4;
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+}
+
+.window-masks.return-index .border-opacity-thirteen .container .button {
+    position: relative;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: .16rem;
+    overflow-y: hidden;
+}
+
+.window-masks.return-index .border-opacity-thirteen .container .sure,.window-masks.return-index .border-opacity-thirteen .container .cancel {
+    display: inline-block;
+    width: 1.0272rem;
+    height: .3696rem;
+    margin: 0 .086rem;
+}
+
+.window-masks.return-index .border-opacity-thirteen .container .sure {
+    background: url("http://cdn.lfzgame.com/images/niuniuthirteen/return-index-btn.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.window-masks.return-index .border-opacity-thirteen .container .cancel {
+    background: url("http://cdn.lfzgame.com/images/niuniuthirteen/cancel.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.all-gonggao {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000000;
+    height: .2112rem;
+    overflow: hidden;
+    line-height: .2112rem;
+    font-size: .1056rem;
+    font-family: '宋体';
+    color: #fff;
+    background: url("http://cdn.lfzgame.com/images/index/gonggao-bg.png") no-repeat;
+    background-size: 100% 100%;
+    font-weight: bold;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.gonggao-icon {
+    display: inline-block;
+    width: .2112rem;
+    height: .2112rem;
+    margin-right: .0480rem;
+    background: url("http://cdn.lfzgame.com/images/index/gonggao-icon.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation: gonggaoanimate .5s linear infinite;
+    -o-animation: gonggaoanimate .5s linear infinite;
+    animation: gonggaoanimate .5s linear infinite;
+}
+
+@-webkit-keyframes gonggaoanimate {
+    0% {
+        background: url("http://cdn.lfzgame.com/images/index/gonggao-icon.png") no-repeat;
+        background-size: 100% 100%;
+    }
+
+    50% {
+        background: url("http://cdn.lfzgame.com/images/index/gonggao-icon1.png") no-repeat;
+        background-size: 100% 100%;
+    }
+
+    100% {
+        background: url("http://cdn.lfzgame.com/images/index/gonggao-icon2.png") no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes gonggaoanimate {
+    0% {
+        background: url("http://cdn.lfzgame.com/images/index/gonggao-icon.png") no-repeat;
+        background-size: 100% 100%;
+    }
+
+    50% {
+        background: url("http://cdn.lfzgame.com/images/index/gonggao-icon1.png") no-repeat;
+        background-size: 100% 100%;
+    }
+
+    100% {
+        background: url("http://cdn.lfzgame.com/images/index/gonggao-icon2.png") no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.scroll_div {
+    display: inline-block;
+    width: 2.5200rem;
+    height: .2112rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll_end,.scroll_begin {
+    display: inline-block;
+    position: absolute;
+}
+
+.scroll_end {
+}
+
+.qr-code {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+
+.qr-code .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.qr-code .container img {
+    width: 2.4432rem;
+}
+
+.qr-code .container .close-qr-code {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.5760rem;
+    margin: 0 auto;
+    width: .3264rem;
+    height: .3648rem;
+    background: url("http://cdn.lfzgame.com/images/index/ting-mask-close.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.app-share-masks {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(0,0,0,.8);
+    font-family: "微软雅黑", Arial;
+}
+
+.app-share-join {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: .0480rem;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 2.8800rem;
+    min-height: 1.6800rem;
+    background-color: rgba(255,255,255,.2);
+    border: .0096rem solid rgba(255,255,255,.7);
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+}
+
+.app-share-join .content-text {
+    width: 100%;
+    height: .9600rem;
+    font-size: .1920rem;
+    padding: .0480rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+
+.app-share-join .join-room {
+    width: 100%;
+    min-height: .2880rem;
+    font-size: .1680rem;
+    padding: .0480rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #003fa8;
+    text-decoration: underline;
+    margin-bottom: .0480rem;
+}
+
+.app-share-join .share-btn {
+    margin: 0 auto;
+    width: 1.1472rem;
+    height: .3312rem;
+    line-height: 1;
+    text-align: center;
+    padding-top: .0720rem;
+    font-size: .1440rem;
+    color: #fff;
+    background: url("http://cdn.lfzgame.com/images/common/agreement-sure.png") no-repeat 0 0 / 100% 100%;
+}
+
+.app-share-join .close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: translate(50% , -50%);
+    -moz-transform: translate(50% , -50%);
+    -ms-transform: translate(50% , -50%);
+    -o-transform: translate(50% , -50%);
+    transform: translate(50% , -50%);
+    width: .2688rem;
+    height: .2688rem;
+    background: url("http://cdn.lfzgame.com/images/index/niuniu-close.png") no-repeat 0 0 / 100% 100%;
+}
+
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+body {
+}
+
+.index {
+    overflow: hidden;
+    overflow-y: auto;
+    padding-top: .5856rem;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-bg1.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.more-mask2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0,0,0,.5);
+}
+
+.more-mask2 .content-mask {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: .0720rem;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.more-mask2 .content-mask .content-box {
+    position: relative;
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+    background-color: #232a44;
+    border: .0192rem solid #6e5d3e;
+    padding: .1440rem 0 .0480rem 0;
+    text-align: center;
+    font-size: 0;
+}
+
+.more-mask2 .content-mask .content-box .content-item {
+    position: relative;
+    width: 2.5440rem;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-line-bg.png") no-repeat center bottom;
+    background-size: 100% auto;
+    margin-bottom: .0480rem;
+    padding-bottom: .0480rem;
+}
+
+.more-mask2 .content-mask .content-box .content-item.last {
+    background: none;
+}
+
+.more-mask2 .content-mask .content-box .content-item .item {
+    display: inline-block;
+    width: 1.5360rem;
+    height: .3840rem;
+    line-height: 1;
+    font-size: .1920rem;
+    padding-top: .0960rem;
+    color: #ffc861;
+    background: url("http://cdn.lfzgame.com/images/common/more-btnV2.png") no-repeat 0 0 / 100% 100%;
+}
+
+.more-mask2 .content-mask .content-box .close-more,.picture-mask .picture-box .close-more {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.4800rem;
+    margin: 0 auto;
+    width: .3264rem;
+    height: .3264rem;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-close.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.picture-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0,0,0,.5);
+}
+
+.picture-mask .picture-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: .0096rem solid #a7a7a6;
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+    background-color: rgba(255,255,255,.3);
+}
+
+.picture-mask .picture-box .content {
+    padding: .0720rem;
+}
+
+.picture-mask .picture-box .content .content-bg {
+    position: relative;
+    min-height: 1.6320rem;
+    width: 2.5440rem;
+    padding: .1200rem .0720rem;
+    background-color: #d1e2f6;
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+    text-align: center;
+}
+
+.picture-mask .picture-box .content .content-bg .text {
+    position: relative;
+    margin: 0 auto;
+    width: 98%;
+    height: .5280rem;
+    background-color: #bdd3ed;
+    border: .0096rem solid #e6f1fb;
+    -webkit-box-shadow: 0 .0144rem 0 #91b3de inset;
+    -moz-box-shadow: 0 .0144rem 0 #91b3de inset;
+    box-shadow: 0 .0144rem 0 #91b3de inset;
+    -webkit-border-radius: .0240rem;
+    -moz-border-radius: .0240rem;
+    border-radius: .0240rem;
+    padding: .0960rem .0480rem;
+    resize: none;
+    color: #333;
+}
+
+.picture-mask .picture-box .content .content-bg .container {
+    position: relative;
+    min-height: 1rem;
+    text-align: left;
+    font-size: 0;
+    background: url("http://cdn.lfzgame.com/images/index/mask-tips-text.png") no-repeat center bottom;
+    background-size: 100% auto;
+}
+
+.picture-mask .picture-box .content .content-bg .container .pic {
+    display: inline-block;
+    width: .3936rem;
+    height: .3936rem;
+    -webkit-border-radius: .0240rem;
+    -moz-border-radius: .0240rem;
+    border-radius: .0240rem;
+    margin: 0.0420rem;
+    overflow: hidden;
+}
+
+.picture-mask .picture-box .content .content-bg .container .pic img {
+    float: left;
+}
+
+.picture-mask .picture-box .content .content-bg .container .upload {
+    position: relative;
+    display: inline-block;
+    border: .0192rem solid #bdd3ed;
+    width: .3936rem;
+    height: .3936rem;
+    -webkit-border-radius: .0240rem;
+    -moz-border-radius: .0240rem;
+    border-radius: .0240rem;
+    margin: 0.0420rem;
+}
+
+.picture-mask .picture-box .content .content-bg .upload:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: #bdd3ed;
+    width: .1920rem;
+    height: .0192rem;
+    -webkit-border-radius: .0240rem;
+    -moz-border-radius: .0240rem;
+    border-radius: .0240rem;
+}
+
+.picture-mask .picture-box .content .content-bg .upload:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: #bdd3ed;
+    height: .1920rem;
+    width: .0192rem;
+    -webkit-border-radius: .0240rem;
+    -moz-border-radius: .0240rem;
+    border-radius: .0240rem;
+}
+
+.picture-mask .picture-box .content .content-bg .container .upload.uploadColor {
+    border: .0192rem solid #d9e5f2;
+}
+
+.picture-mask .picture-box .content .content-bg .container .upload.uploadColor:before,.picture-mask .picture-box .content .content-bg .container .upload.uploadColor:after {
+    background-color: #d9e5f2;
+}
+
+.picture-mask .picture-box .content .content-bg .text::-webkit-input-placeholder {
+    color: #8f867e;
+}
+
+.picture-mask .picture-box .submit {
+    position: relative;
+    width: 1.2192rem;
+    height: .4032rem;
+    margin: .0960rem auto;
+    background: url("http://cdn.lfzgame.com/images/index/submit.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.picture-mask .picture-box .submit2 {
+    position: relative;
+    width: 1.2192rem;
+    height: .4032rem;
+    line-height: .4032rem;
+    text-align: center;
+    font-size: .1920rem;
+    background-color: #bdd3ed;
+    border: .0096rem solid #d1e2f6;
+    -webkit-border-radius: .2016rem;
+    -moz-border-radius: .2016rem;
+    border-radius: .2016rem;
+    margin: .0960rem auto;
+}
+
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: .5856rem;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/head-bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.top .user-img {
+    position: absolute;
+    top: .0576rem;
+    left: .1824rem;
+    width: .4608rem;
+    height: .4608rem;
+}
+
+.top .user-img img {
+    width: 100%;
+    height: 100%;
+    border: .0144rem solid #1d1c27;
+    -webkit-border-radius: .0480rem;
+    -moz-border-radius: .0480rem;
+    border-radius: .0480rem;
+}
+
+.top .user-info .name {
+    position: absolute;
+    left: .7536rem;
+    top: .0768rem;
+    line-height: 1;
+    font-size: .1152rem;
+    color: #fff;
+}
+
+.top .room-card {
+    position: absolute;
+    left: .7536rem;
+    top: .2544rem;
+}
+
+.top .room-card img {
+    position: relative;
+    right: -.0144rem;
+    width: .1920rem;
+    height: .2448rem;
+    vertical-align: middle;
+}
+
+.top .room-card span {
+    display: inline-block;
+    min-width: .5088rem;
+    height: .1920rem;
+    line-height: .1920rem;
+    text-align: right;
+    padding: 0 .0720rem 0 .048rem;
+    font-size: .1152rem;
+    color: #fff;
+    background-color: #1d2148;
+    -webkit-border-radius: 0 .0960rem .0960rem 0;
+    -moz-border-radius: 0 .0960rem .0960rem 0;
+    border-radius: 0 .0960rem .0960rem 0;
+    border: .0096rem solid #3f487d;
+    vertical-align: middle;
+}
+
+.top .user-id {
+    position: absolute;
+    left: .0480rem;
+    top: .3840rem;
+    font-size: 0;
+}
+
+.top .user-id span {
+    display: inline-block;
+    min-width: .5088rem;
+    height: .1440rem;
+    line-height: .1440rem;
+    text-align: right;
+    padding: 0 .0720rem 0 .0720rem;
+    font-size: .1152rem;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    -webkit-border-radius: .0960rem;
+    -moz-border-radius: .0960rem;
+    border-radius: .0960rem;
+    border: .0096rem solid #3f487d;
+    vertical-align: middle;
+}
+
+.top .issue-room-card ,.top .room-card-record {
+    position: absolute;
+    top: .0768rem;
+    width: .6528rem;
+    height: .4320rem;
+    font-family: 黑体;
+    font-size: 0;
+    color: #fff;
+}
+
+.top .issue-room-card {
+    right: .6816rem;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/money-card.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.top .room-card-record {
+    right: .0096rem;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-more.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list::-webkit-scrollbar {
+    display: none
+}
+
+.game-list {
+    overflow: hidden;
+    overflow-y: auto;
+    text-align: center;
+    font-size: 0;
+    position: absolute;
+    top: .9408rem;
+}
+
+.game-list .game-item {
+    display: inline-block;
+    position: relative;
+    width: 1.4496rem;
+    height: 1.4016rem;
+    margin: 0 .0720rem .2304rem;
+}
+
+.game-list .game-item button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 76%;
+    height: 100%;
+    font-size: 0;
+}
+
+.game-list .game-item.niuniu-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/bull1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list .game-item.niuniuSix-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/bull6.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list .game-item.niuniuNine-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/bull9.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list .game-item.goldflower-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/jinhua.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list .game-item.niuniuTen-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/bull10.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list .game-item.thirteencard-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/thirteen-card.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list .game-item.three-opens-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/sangong.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list .game-item.texas-poker-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/texas-poker.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list .game-item.fillingPitcard-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/filling-pit.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.game-list .game-item.thirteenoxen-bg {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/bull13.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.niuniuThirteen-mask,.niuniuNine-mask,.niuniuSix-mask,.niuniu-mask,.niuniuTen-mask {
+    display: none;
+}
+
+.pupop-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.85);
+}
+
+.pupop-container .niuniu-opacity {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -54%);
+    -moz-transform: translate(-50%, -54%);
+    -ms-transform: translate(-50%, -54%);
+    -o-transform: translate(-50%, -54%);
+    transform: translate(-50%, -54%);
+    padding: .0720rem;
+    width: 3.4464rem;
+}
+
+.pupop-container .tab {
+    font-size: 0;
+    text-align: center;
+    padding: 0 .0720rem;
+    display: -webkit-flex;
+    display: flex;
+    overflow: hidden;
+}
+
+.pupop-container .tab span {
+    position: relative;
+    display: inline-block;
+    padding-top: .0768rem;
+    width: .5664rem;
+    height: .4800rem;
+    line-height: 1;
+    font-size: .1440rem;
+    color: #fff0c3;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/tab-item01.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 .0096rem;
+}
+
+.pupop-container.threeOpens-mask .tab span {
+}
+
+.pupop-container .tab span[data-item='1'] {
+}
+
+.pupop-container .tab span.on {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/tab-item02.png") no-repeat;
+    background-size: 100% 100%;
+    font-weight: bold;
+    color: #fffbef;
+    text-shadow: 0 0 .005rem rgba(0,0,0,.7);
+}
+
+.pupop-container .tab span.on:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.0480rem;
+    z-index: 2;
+    margin: 0 auto;
+    width: .1536rem;
+    height: .1104rem;
+    background: url("http://cdn.lfzgame.com/images/index/niuniu-tab-after1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.pupop-container .content-box {
+    position: relative;
+    margin: auto;
+    padding: .0864rem .0864rem .2400rem .0864rem;
+    background-color: #232a44;
+    -webkit-border-radius: .0768rem;
+    -moz-border-radius: .0768rem;
+    border-radius: .0768rem;
+    border: .0096rem solid #6e5d3e;
+}
+
+.pupop-container .content-box:before,.picture-mask .picture-box .content .content-bg:before,.more-mask2 .content-box:before {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    width: 96%;
+    height: 98%;
+    border: .0144rem solid #95b8e1;
+    -webkit-border-radius: .024rem;
+    -moz-border-radius: .024rem;
+    border-radius: .024rem;
+    z-index: 0;
+}
+
+.picture-mask .picture-box .content .content-bg:before {
+    top: 2%;
+    height: 96%;
+}
+
+.pupop-container .content-item {
+    position: relative;
+    padding: .0720rem;
+}
+
+.pupop-container .content-item .mask-inning-card {
+    width: .2208rem;
+    height: .1488rem;
+    vertical-align: -.024rem;
+    margin: 0 .0240rem;
+}
+
+.pupop-container .content-box .niuniu-tit {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -.2688rem;
+    width: .8688rem;
+    height: .1968rem;
+    margin: auto;
+    background: url("http://cdn.lfzgame.com/images/index/niuniu-mask-tit.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.pupop-container .content-box .close-window {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.5760rem;
+    margin: 0 auto;
+    width: .3264rem;
+    height: .3264rem;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-close.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.pupop-container .text {
+    width: 100%;
+    text-align: center;
+    line-height: .2400rem;
+    font-size: .1200rem;
+    color: #e8b24c;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-line-bg.png")no-repeat left bottom;
+    background-size: 100% auto;
+    padding-bottom: .0576rem;
+}
+
+.pupop-container .content-box .createRoomBtn {
+    position: relative;
+    margin: .0960rem auto 0;
+    display: block;
+    width: 1.0368rem;
+    height: .3744rem;
+    font-size: 0;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/sure-btn01.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.pupop-container .content > .flex-cont ,.pupop-container .content .zhuang > .flex-cont,.pupop-container .content .zhuangType > .flex-cont {
+    width: 100%;
+    margin: 0 0 .0720rem 0;
+    padding: .0720rem 0 .0720rem .0720rem;
+    border-radius: .0672rem;
+    font-size: 0;
+    background-color: #4458ae;
+    -webkit-box-shadow: 0 .0144rem .0144rem #050712;
+    -moz-box-shadow: 0 .0144rem .0144rem #050712;
+    box-shadow: 0 .0144rem .0144rem #050712;
+}
+
+.pupop-container .content > .flex-cont label ,.pupop-container .content .zhuang > .flex-cont label ,.pupop-container .content .zhuangType > .flex-cont label {
+    font-size: .1296rem;
+    padding: .0480rem 0;
+    color: #e8b24c;
+    display: inline-block;
+}
+
+.pupop-container .content > .flex-cont label span,.pupop-container .content .zhuang > .flex-cont label span,.pupop-container .content .zhuangType > .flex-cont label span {
+    vertical-align: middle;
+}
+
+.pupop-container .flex-cont div span {
+    vertical-align: middle;
+}
+
+.pupop-container .content > .flex-cont .name,.pupop-container .content .zhuang > .flex-cont .name,.pupop-container .content .zhuangType > .flex-cont .name {
+    margin: 0 .048rem;
+    letter-spacing: .0240rem;
+    color: #e8b24c;
+    font-size: .1440rem;
+    line-height: 1.8;
+}
+
+.pupop-container .content > .flex-cont input,.pupop-container .content .zhuang > .flex-cont input,.pupop-container .content .zhuangType > .flex-cont input,.withGod,.withGodBoom {
+    margin: 0 .048rem 0 0;
+    width: .1584rem;
+    height: .1584rem;
+    vertical-align: middle;
+    position: relative;
+    padding: 0;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-radio01.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.withGod,.withGodBoom {
+    display: inline-block;
+}
+
+.pupop-container .content > .flex-cont input:checked ,.pupop-container .content .zhuang > .flex-cont input:checked ,.pupop-container .content .zhuangType > .flex-cont input:checked {
+    vertical-align: middle;
+}
+
+.pupop-container .content > .flex-cont input:checked + span ,.pupop-container .content .zhuang > .flex-cont input:checked + span,.pupop-container .content .zhuangType > .flex-cont input:checked + span {
+    color: #ffd380;
+}
+
+.pupop-container .content > .flex-cont input:checked:after ,.pupop-container .content .zhuang > .flex-cont input:checked:after ,.pupop-container .content .zhuangType > .flex-cont input:checked:after,.withGodChecked:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-radio.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 100%;
+}
+
+.withGodChecked+span {
+    color: #ffd380;
+}
+
+.pupop-container .content > .flex-cont.type input {
+    width: .1440rem;
+    height: .1440rem;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-checkbox01.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.pupop-container .content > .flex-cont.type input:checked:after {
+    background: none;
+}
+
+.pupop-container .content > .flex-cont.type input:checked:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: .1680rem;
+    height: .1584rem;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/game-checkbox.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.pupop-container .content > .flex-cont.innings label {
+    margin-right: .1440rem;
+}
+
+.pupop-container .content > .flex-cont.number {
+    position: relative;
+    font-size: .1200rem;
+    height: .6720rem;
+    padding: .2880rem .1440rem .0960rem .1440rem;
+}
+
+.pupop-container .content > .flex-cont.number > .flex-item {
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.pupop-container .content > .flex-cont.number .nameText {
+    position: absolute;
+    left: 0;
+    top: .1440rem;
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    color: #e8b24c;
+    font-size: .1440rem;
+}
+
+.pupop-container .content > .flex-cont.number .prev2,.pupop-container .content > .flex-cont.number .next2,.pupop-container .content > .flex-cont.number .prev,.pupop-container .content > .flex-cont.number .next {
+    position: relative;
+    width: .2880rem;
+    height: .2880rem;
+    border: .0240rem solid #e8b24c;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 0;
+}
+
+.pupop-container .content > .flex-cont.number .next {
+}
+
+.pupop-container .content > .flex-cont.number .prev2:after ,.pupop-container .content > .flex-cont.number .next2:after ,.pupop-container .content > .flex-cont.number .next2:before,.pupop-container .content > .flex-cont.number .prev:after ,.pupop-container .content > .flex-cont.number .next:after ,.pupop-container .content > .flex-cont.number .next:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: .1344rem;
+    height: .0240rem;
+    background-color: #e8b24c;
+    -webkit-border-radius: .0240rem;
+    -moz-border-radius: .0240rem;
+    border-radius: .0240rem;
+}
+
+.pupop-container .content > .flex-cont.number .next2:before,.pupop-container .content > .flex-cont.number .next:before {
+    width: .0240rem;
+    height: .1344rem;
+}
+
+.pupop-container .content > .flex-cont.number .radio {
+    position: relative;
+    margin: 0 .1200rem;
+    height: .1248rem;
+    line-height: .1248rem;
+    background-color: #2f4191;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: .0960rem;
+}
+
+.pupop-container .content > .flex-cont.number .radio div {
+    position: relative;
+    width: .2400rem;
+    height: .2400rem;
+    z-index: 3;
+    background: none;
+}
+
+.pupop-container .content > .flex-cont.number .radio div:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: .0480rem;
+    height: .0480rem;
+    border-radius: 100%;
+    background-color: #e8b24c;
+}
+
+.pupop-container .content > .flex-cont.number .radio div.on {
+    z-index: 1;
+}
+
+.pupop-container .content > .flex-cont.number .showNumber {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 2;
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+    transform: translatey(-50%);
+    -webkit-transition: width .01s;
+    -moz-transition: width .01s;
+    -ms-transition: width .01s;
+    -o-transition: width .01s;
+    transition: width .01s;
+    width: .0960rem;
+    height: .1248rem;
+    background-color: #5e78e6;
+    -webkit-border-radius: .0960rem;
+    -moz-border-radius: .0960rem;
+    border-radius: .0960rem;
+}
+
+.pupop-container .content > .flex-cont.number .showNumber[data-pos="1"],.pupop-container .content > .flex-cont.number .showNumber[data-item="2"],.pupop-container .content > .flex-cont.number .showNumber[data-item="5"],.pupop-container.thirteencard-mask .content > .flex-cont.number .showNumber[data-item="1"],.pupop-container.threeOpens-mask .content > .flex-cont.number .showNumber[data-pos="1"],.pupop-container.threeOpens-mask .content > .flex-cont.number .showNumber[data-item="5"],.pupop-container.fillingPitcard-mask .content > .flex-cont.number .showNumber[data-item="1"] {
+    width: .0960rem;
+}
+
+.pupop-container .content > .flex-cont.number .showNumber[data-pos="2"],.pupop-container.threeOpens-mask .content > .flex-cont.number .showNumber[data-pos="2"] {
+    width: 27%;
+}
+
+.pupop-container .content > .flex-cont.number .showNumber[data-pos="3"],.pupop-container .content > .flex-cont.number .showNumber[data-item="4"],.pupop-container .content > .flex-cont.number .showNumber[data-item="10"],.pupop-container.thirteencard-mask .content > .flex-cont.number .showNumber[data-item="3"],.pupop-container.threeOpens-mask .content > .flex-cont.number .showNumber[data-pos="3"],.pupop-container.threeOpens-mask .content > .flex-cont.number .showNumber[data-item="10"],.pupop-container.fillingPitcard-mask .content > .flex-cont.number .showNumber[data-item="3"] {
+    width: 52%;
+}
+
+.pupop-container .content > .flex-cont.number .showNumber[data-pos="4"],.pupop-container.threeOpens-mask .content > .flex-cont.number .showNumber[data-pos="4"] {
+    width: 75%;
+}
+
+.pupop-container .content > .flex-cont.number .showNumber[data-pos="5"],.pupop-container .content > .flex-cont.number .showNumber[data-item="8"],.pupop-container .content > .flex-cont.number .showNumber[data-item="20"],.pupop-container.thirteencard-mask .content > .flex-cont.number .showNumber[data-item="5"],.pupop-container.threeOpens-mask .content > .flex-cont.number .showNumber[data-pos="5"],.pupop-container.threeOpens-mask .content > .flex-cont.number .showNumber[data-item="20"],.pupop-container.fillingPitcard-mask .content > .flex-cont.number .showNumber[data-item="5"] {
+    width: 100%;
+}
+
+.pupop-container .content > .flex-cont.number .showNumber i {
+    position: absolute;
+    right: 0;
+    top: -50%;
+    -webkit-transform: translatex(30%);
+    -moz-transform: translatex(30%);
+    -ms-transform: translatex(30%);
+    -o-transform: translatex(30%);
+    transform: translatex(30%);
+    width: .2160rem;
+    height: .2160rem;
+    line-height: .2160rem;
+    text-align: center;
+    font-family: Arial;
+    font-size: .1440rem;
+    color: #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #5f7bf4;
+    -webkit-box-shadow: 0 .0144rem .0144rem#1a2574;
+    -moz-box-shadow: 0 .0144rem .0144rem#1a2574;
+    box-shadow: 0 .0144rem .0144rem#1a2574;
+}
+
+.pupop-container .content > .flex-cont.number input:checked:after {
+    content: normal;
+}
+
+.goldflower-number label,.pupop-container .content .zhuang label {
+    margin-right: .1440rem;
+}
+
+.pupop-container .content .zhuang {
+}
+
+.goldflower-mask {
+    display: none;
+}
+
+.goldflower-mask .opacity,.texas-poker-mask .opacity {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -54%);
+    -moz-transform: translate(-50%, -54%);
+    -ms-transform: translate(-50%, -54%);
+    -o-transform: translate(-50%, -54%);
+    transform: translate(-50%, -54%);
+    padding: .0720rem;
+    width: 3.4464rem;
+    border: .0048rem solid #9d9d9e;
+    -webkit-border-radius: .0768rem;
+    -moz-border-radius: .0768rem;
+    border-radius: .0768rem;
+    background-color: rgba(255,255,255,.2);
+}
+
+.thirteencard-mask {
+    display: none;
+}
+
+.pupop-container.thirteencard-mask .tab span {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.thirteencard-mask .thirteencard-tips {
+    color: #8f5936;
+    font-size: .1296rem;
+    text-align: center;
+}
+
+.pupop-container.thirteencard-mask .content > .flex-cont.type label {
+    width: 33.333%;
+}
+
+.pupop-container.thirteencard-mask .content > .flex-cont.innings label {
+    margin: 0;
+    width: 50%;
+}
+
+.threeOpens-mask {
+    display: none;
+}
+
+.pupop-container.threeOpens-mask .tab {
+    background: none;
+}
+
+.pupop-container.threeOpens-mask .tab span {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 0 .0144rem;
+    padding: 0;
+    height: .4800rem;
+    line-height: 2.5;
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/tab-item01.png") no-repeat;
+    background-size: 100% 100%;
+    font-size: .1680rem;
+    color: #fff0c3;
+}
+
+.pupop-container.threeOpens-mask .tab span.on {
+    background: url("http://cdn.lfzgame.com/images/liuliuxianyue/tab-item02.png") no-repeat;
+    background-size: 100% 100%;
+    font-weight: bold;
+    color: #fffbef;
+    text-shadow: 0 0 .005rem rgba(0,0,0,.7);
+}
+
+.pupop-container.threeOpens-mask .content > .flex-cont label,.pupop-container .content .zhuangType > .flex-cont label {
+    width: 45%;
+}
+
+.texas-poker-mask {
+    display: none;
+}
+
+.texas-poker-mask .content > .flex-cont {
+    position: relative;
+    padding-top: .1920rem;
+    padding-left: 0;
+    margin-bottom: .1440rem;
+}
+
+.texas-poker-mask .content > .flex-cont .title-text {
+    color: #e8b24c;
+    font-size: .1440rem;
+    width: .7200rem;
+    text-align: right;
+    margin-right: .1200rem;
+    padding: .0480rem 0;
+}
+
+.texas-poker-mask .content > .flex-cont label {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.fillingPitcard-mask {
+    display: none;
+}
+
+.pupop-container.fillingPitcard-mask .tab span {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.fillingPitcard-mask .fillingPitcard-tips {
+    color: #8f5936;
+    font-size: .1296rem;
+    text-align: center;
+}
+
+.pupop-container.fillingPitcard-mask .content > .flex-cont.type label {
+    width: 100%;
+}
+
+.pupop-container.fillingPitcard-mask .content > .flex-cont.loves label {
+    margin: 0;
+    width: 25%;
+}
+
+.pupop-container.fillingPitcard-mask .content > .flex-cont.others .flex-item div {
+    margin: 0;
+    width: 50%;
+    font-size: .1296rem;
+    padding: .0480rem 0;
+    color: #e8b24c;
+    display: inline-block;
+}
+
+.pupop-container.fillingPitcard-mask .content > .flex-cont.innings label {
+    margin: 0;
+    width: 50%;
+}
+
+.pupop-container.fillingPitcard-mask .content-box .close-window {
+    bottom: -.4800rem;
+}
+
+.phone-number-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background-color: rgba(0,0,0,.8);
+}
+
+.phone-number-box input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.phone-number-box .phone-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 2.9856rem;
+    height: 2.2464rem;
+    background: rgba(255,255,255,.2) url('http://cdn.lfzgame.com/images/index/phone-number-bg1.png') repeat-x left bottom;
+    background-size: auto .5520rem;
+    -webkit-border-radius: .0720rem;
+    -moz-border-radius: .0720rem;
+    border-radius: .0720rem;
+}
+
+.phone-number-box .phone-number-content {
+    width: 2.8320rem;
+    height: 1.5360rem;
+    margin: .0720rem;
+    background-color: #fff2d8;
+    -webkit-border-radius: .0720rem;
+    -moz-border-radius: .0720rem;
+    border-radius: .0720rem;
+}
+
+.phone-number-box .phone-number .tips-text {
+    padding: .1440rem 0 .2400rem 0;
+    color: #844830;
+    text-align: center;
+    line-height: 1;
+}
+
+.phone-number-box .phone,.phone-number-box .phone-code {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 2.5056rem;
+    height: .3936rem;
+}
+
+.phone-number-box .phone {
+    top: .5280rem;
+}
+
+.phone-number-box .phone-code {
+    top: 1.0560rem;
+}
+
+.phone-number-box .phone-code input,.phone-number-box .phone input {
+    position: absolute;
+    width: 2.5056rem;
+    height: .3936rem;
+    background: #ebc1a8;
+    padding: 0 .1440rem;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    border-radius: .2rem;
+    color: #fff;
+    font-size: .1152rem;
+}
+
+input::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.phone-number-box .phone-code input {
+    padding-right: 1.2000rem;
+}
+
+.phone-number-box .phone-btn2 ,.phone-number-box .phone-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: .9120rem;
+    height: .3840rem;
+    line-height: .3840rem;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+
+.phone-number-box .phone-btn {
+    background: url("http://cdn.lfzgame.com/images/index/phone-btn.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.phone-number-box .phone-btn2 {
+    color: #dcdcdc;
+    background: url("http://cdn.lfzgame.com/images/index/phone-btn1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.phone-number-box .phone-sure {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: .0144rem;
+    margin: 0 auto;
+    width: 1.200rem;
+    height: .4272rem;
+    background: url("http://cdn.lfzgame.com/images/index/btn.png") no-repeat;
+    background-size: 100% 100%;
+    font-family: 黑体;
+    color: #feead2;
+    font-size: .1920rem;
+}
+
+.qr-code {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+
+.qr-code .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.qr-code .container img {
+    width: 2.4432rem;
+}
+
+.qr-code .container .close-qr-code {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.5760rem;
+    margin: 0 auto;
+    width: .3264rem;
+    height: .3648rem;
+    background: url("http://cdn.lfzgame.com/images/index/ting-mask-close.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}

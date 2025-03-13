@@ -1,0 +1,84 @@
+.sangong9-fk{position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: rgb(0, 0, 0); opacity: 0.6; border-radius: 1.5vh;}
+.sangong9-fk1{position: relative; padding: 0px 1.5vh 0px 5vh;}
+.cardDeal .sangong9-index2{z-index: 14; display: none;}
+.cardDeal .sangong9-index1{z-index: 15; display: none;}
+.cardDeal .sangong9-index3{z-index: 13; display: none;}
+
+.cardOver .sangong9-index2{z-index: 9; display: none;}
+.cardOver .sangong9-index4{z-index: 11; display: none;}
+.cardOver .sangong9-index3{z-index: 10; display: none;}
+.sangong9-index4s{z-index: 12; display: none;}
+.sangong9-memberScoreText2{  color: white; font-size: 3vh; font-family: &quot;Helvetica 微软雅黑&quot;; -webkit-text-stroke: 1.3px; text-shadow: rgb(2, 32, 85) 1px 2px 2px; display: none;}
+.sangong9-memberScoreText1{  color: rgb(234, 171, 55); font-size: 3vh; font-family: &quot;Helvetica 微软雅黑&quot;; -webkit-text-stroke: 1.3px; text-shadow: rgb(120, 42, 0) 1px 2px 2px; display: none;}
+.sangong9-banker0{position: absolute; top: -0.2vh; left: -0.2vh; width: 6.4vh; height: 6.4vh; display: none;}
+.sangong9-background{position: absolute; top: -6%; left: -6%; width: 2.6vh; height: 2.6vh; display: none;}
+.sangong9-bankerAnimate1{position: absolute; top: -0.2vh; left: -0.2vh; width: 6.4vh; height: 6.4vh; display: none;}
+.sangong9-memberCoin{position: absolute;width: 2.5vh;height: 2.5vh; z-index: 100}
+.sangong9-Text{position: absolute;top: 33%;left: 0px;width: 100%;height: 30px;}
+.sangong9-ziti{color: white;font-size: 10pt;width: 100%;height: 30px;line-height: 30px;text-align: center;font-family: "Helvetica 微软雅黑";}
+.cardDeal .cardopen {
+    background: url(/app/files/d_10/images/game/cards.jpg);
+    background-size: 59.8vh 25.6vh;
+    box-shadow: 1px 1px 5px #333;
+}
+
+
+.clock{width: 40px;height:42px;top:40%;left:50%;margin-top:-26px;margin-left: -20px;position: absolute;background:url("http://goss.fexteam.com/files/d_10/images/game/time.png");background-size:40px 53px;text-align: center;line-height: 42px;font-size: 18px;padding-top: 11px;}
+.jiurenniuniu-qiangzhuang{position: absolute; top: 32%;}
+
+
+
+
+
+.cardDeal .cardA1{background-position: 0 -19.2vh;}
+.cardDeal .cardA2{background-position: -4.6vh -19.2vh;}
+.cardDeal .cardA3{background-position: -9.2vh -19.2vh;}
+.cardDeal .cardA4{background-position: -13.8vh -19.2vh;}
+.cardDeal .cardA5{background-position: -18.4vh -19.2vh;}
+.cardDeal .cardA6{background-position: -23vh -19.2vh;}
+.cardDeal .cardA7{background-position: -27.6vh -19.2vh;}
+.cardDeal .cardA8{background-position: -32.2vh -19.2vh;}
+.cardDeal .cardA9{background-position: -36.8vh -19.2vh;}
+.cardDeal .cardA10{background-position: -41.4vh -19.2vh;}
+.cardDeal .cardA11{background-position: -46vh -19.2vh;}
+.cardDeal .cardA12{background-position: -50.6vh -19.2vh;}
+.cardDeal .cardA13{background-position: -55.2vh -19.2vh;}
+.cardDeal .cardB1{background-position: 0 -12.8vh;}
+.cardDeal .cardB2{background-position: -4.6vh -12.8vh;}
+.cardDeal .cardB3{background-position: -9.2vh -12.8vh;}
+.cardDeal .cardB4{background-position: -13.8vh -12.8vh;}
+.cardDeal .cardB5{background-position: -18.4vh -12.8vh;}
+.cardDeal .cardB6{background-position: -23vh -12.8vh;}
+.cardDeal .cardB7{background-position: -27.6vh -12.8vh;}
+.cardDeal .cardB8{background-position: -32.2vh -12.8vh;}
+.cardDeal .cardB9{background-position: -36.8vh -12.8vh;}
+.cardDeal .cardB10{background-position: -41.4vh -12.8vh;}
+.cardDeal .cardB11{background-position: -46vh -12.8vh;}
+.cardDeal .cardB12{background-position: -50.6vh -12.8vh;}
+.cardDeal .cardB13{background-position: -55.2vh -12.8vh;}
+.cardDeal .cardC1{background-position: 0 0;}
+.cardDeal .cardC2{background-position: -4.6vh 0;}
+.cardDeal .cardC3{background-position: -9.2vh  0;}
+.cardDeal .cardC4{background-position: -13.8vh 0;}
+.cardDeal .cardC5{background-position: -18.4vh 0;}
+.cardDeal .cardC6{background-position: -23vh 0;}
+.cardDeal .cardC7{background-position: -27.6vh 0;}
+.cardDeal .cardC8{background-position: -32.2vh 0;}
+.cardDeal .cardC9{background-position: -36.8vh 0;}
+.cardDeal .cardC10{background-position: -41.4vh 0;}
+.cardDeal .cardC11{background-position: -46vh 0;}
+.cardDeal .cardC12{background-position: -50.6vh 0;}
+.cardDeal .cardC13{background-position: -55.2vh 0;}
+.cardDeal .cardD1{background-position: 0 -6.4vh;}
+.cardDeal .cardD2{background-position: -4.6vh -6.4vh;}
+.cardDeal .cardD3{background-position: -9.2vh -6.4vh;}
+.cardDeal .cardD4{background-position: -13.8vh -6.4vh;}
+.cardDeal .cardD5{background-position: -18.4vh -6.4vh;}
+.cardDeal .cardD6{background-position: -23vh -6.4vh;}
+.cardDeal .cardD7{background-position: -27.6vh -6.4vh;}
+.cardDeal .cardD8{background-position: -32.2vh -6.4vh;}
+.cardDeal .cardD9{background-position: -36.8vh -6.4vh;}
+.cardDeal .cardD10{background-position: -41.4vh -6.4vh;}
+.cardDeal .cardD11{background-position: -46vh -6.4vh;}
+.cardDeal .cardD12{background-position: -50.6vh -6.4vh;}
+.cardDeal .cardD13{background-position: -55.2vh -6.4vh;}

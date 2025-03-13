@@ -1,0 +1,1228 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body { font-family: "微软雅黑",Arial; }
+.load4 .loader {
+  font-size: 20px;
+ top: 40%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -.5em;
+  margin-top: -.5em;
+  text-indent: -9999em;
+  -webkit-animation: load4 1.2s infinite linear;
+  animation: load4 1.2s infinite linear;
+  transform:scale(.7);
+}
+@-webkit-keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0em -3em 0em 0.2em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  12.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 0.2em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  25% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 0.2em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  37.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 0.2em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  50% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 0.2em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  62.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 0.2em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  75% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0.2em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 0.2em #ffffff;
+  }
+}
+@keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0em -3em 0em 0.2em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  12.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 0.2em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  25% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 0.2em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  37.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 0.2em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  50% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 0.2em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  62.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 0.2em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  75% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0.2em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 0.2em #ffffff;
+  }
+}
+
+*{padding: 0;margin:0;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-overflow-scrolling: touch;}a {text-decoration: none;color: #fff;}ul {list-style: none;}input{border: none;outline:none}body{cursor: default;}
+img{border: none;}
+.backImg1{background:url("http://goss.fexteam.com/files/d_10/images//game/pic1.png"); }
+.roomCard{position: fixed;top:1.15vh;left: 3vh;;z-index:90;height: 4.5vh;}
+.roomCard img{height: 3.8vh;position: absolute;left: 0;top:0;z-index: 90;}
+.roomCard .num{height: 3vh;line-height: 3vh;text-align: right;color:#fff;font-size:2.3vh;margin-top:0.15vh;position:relative;}
+.roomCard .num .jiurenniuniu-fk-1 { text-indent: 2vw; }
+.round{position: absolute;top:0;left: 50%;width: 25vw;line-height: 24px;font-size:2.4vmax;margin-left: -12.5vw;color:#FFF;z-index: 91;text-align: center;opacity: 1.0;}
+.tableTab{position: fixed;top:0px;left: 0px;width: 100%;z-index:90;}
+.tableHead{position: fixed;top:0;left: 0;width: 100%;z-index: 81;}
+.addFriend{position: fixed;bottom:0.75vh;right: 15vh;width: 4.5vh;z-index:90;}
+.return{position: fixed;top:1.75vh;right: 8.5vw;width: 4.5vh;z-index:90;}
+.bGameRule{position: fixed;top:1.75vh;right: 6vw;width: 4.5vh;z-index:90;}
+.bottom{position: fixed;bottom:0;left: 0;width: 100%;z-index:90;}
+
+.tabBottom{position: fixed;top: 0;left: 0;width: 100%;height: 8vh;z-index: 89;}
+
+.myCardTypeBG{position: absolute;bottom: 1%;left: 38%;width: 24%;z-index:8;text-align: center;color: #fff;height: 3.8vh;line-height: 3.8vh; background-color: black; border-radius: 1.8vh;opacity: 0.5}
+.myCardType{position: absolute;bottom: 1%;left: 38%;width: 24%;z-index:8;text-align: center;color: #fff;height: 3.8vh;line-height: 3.8vh;border-radius: 1.8vh;font-size: 2.5vh;}
+
+.bottomMessage{position: fixed;bottom: 12.75vh;right: 5vw;width: 10vw; height: 10vw;z-index:91;}
+.bottomHistory{position: fixed;bottom: 2.75vh;right: 5vw;width: 10vw; height: 10vw;z-index:90;}
+
+.invite{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;}
+.invite .inviteBack{width: 100%;height:100%;background: #000;opacity:0.8;position: absolute;}
+.invite .invite1{width: 80px;position: absolute; top:20px;right: 10px;}
+.invite .inviteText{margin: 0 auto;margin-top:140px;width:80%;line-height: 40px;font-size: 18px;color: #fff;font-family: simHei;position: relative;}
+.invite .inviteText .num{float: left;line-height:24px;height:24px;width:24px;text-align: center;border-radius:12px;background:#b42020;position: relative;margin: 8px 5px 0 0}
+.invite .inviteText img{vertical-align: middle;height: 28px;margin:0 3px;}
+.invite .inviteText .invite2{font-size:17px;color:#cdbc48; }
+
+.main{width: 100%;position: relative;background: #fff;margin:0 auto;}
+
+.title{overflow: hidden;word-break:break-all;}
+
+.member-list-vacancy .vacancy {
+    position: absolute;
+    width: 7.26vh;
+    height: 7.26vh;
+    line-height: 7.26vh;
+    text-align: center;
+    font-size: 2.2vmax;
+    color: rgba(255,255,255,.5);
+    border-radius: 2vw;
+    background-color: rgba(0,0,0,.5);
+    border: 0.2vw solid rgba(255,255,255,.5);
+}
+.member-list-vacancy .vacancy1 { width: 6.26vh; height: 6.26vh; display: none;  }
+.member-list-vacancy .vacancy1, .member1 {  bottom:8%; left: 2vw;  }
+.member-list-vacancy .vacancy2, .member2 {  top:62%; right: 2vh;  }
+.member-list-vacancy .vacancy3, .member3 {  top:48%; right: 2vh; }
+.member-list-vacancy .vacancy4, .member4 {  top:34%; right: 2vh;  }
+.member-list-vacancy .vacancy5, .member5 {  top:20%; right: 2vh;  }
+.member-list-vacancy .vacancy6, .member6 {  top:4.5%; left:38vw;  }
+.member-list-vacancy .vacancy7, .member7 {  top:20%; left:2vh;  }
+.member-list-vacancy .vacancy8, .member8 {  top:34%; left:2vh;  }
+.member-list-vacancy .vacancy9, .member9 {  top:48%; left:2vh;  }
+.member-list-vacancy .vacancy10, .member10 {  top:62%; left:2vh; }
+
+.member{position: absolute;text-align: center;width: 7.26vh;height: 13.1vh;}
+.member .background{width: 100%;position: absolute;top:0;}
+.member .banker{left:-0.2vh; top: -0.2vh;width: 7.86vh; height: 7.86vh;position: absolute;}
+.member .title{color: #fff;font-size: 10px;text-align: center;line-height: 16px;position: relative;margin: 0 auto;margin-top: 15%;height:16px;width: 47px;}
+.member .score{color: #fff;font-size: 12px;text-align: center;line-height: 12px;position: absolute;background: #1f1732;width:66%;border-radius:7px;margin:0 auto;bottom: 11%;left:18%;}
+.member .avatar{width: 100%;min-height: 7.66vh;position: relative;border-radius:2vw;}
+.member .bottom{position: absolute; top: 66%; left: 0;width: 100%; height: auto;}
+.member .bottom .bname{position: absolute; top: 1px; left: 0px;width: 100%; line-height: 2vh;text-align: center;color: white;font-size: 1.5vh;}
+.member .bottom .bscore{position: absolute; top: 2.2vh; left: 0px;width: 100%; height: 2.5vh; line-height: 2.5vh; text-align: center;color: orange;font-size: 2.2vh;}
+
+.memberMine{position: absolute;text-align: center;width: 150px;height: 110px;}
+
+.member .isReady{position: absolute;color: #ffdc18; width:13vw;font-size:5vw;text-shadow: 0 0 .05vw rgba(0,0,0,.7); -webkit-text-stroke: .05vw rgba(0,0,0,.8);  text-stroke: .05vw rgba(0,0,0,.8);}
+.member .isReady .ready{height: 3vh;}
+.member .isReady .ready.ss{border:2px solid #3ae8ad;}
+
+
+.member1{bottom:2%; width: 12.26vw;height: 23.6vw;}
+.member1 .title{font-size:14px;line-height:20px;height: 20px;width: 58px;}
+.member1 .score{bottom: 12%;line-height:14px;}
+.member1 .isReady{top:-50px;left: -18px;width: 110px;text-align:center;}
+.member1 .isReady .unready{width: 110px;}
+.member1 .isReady .ready{margin-top: 20px;width:6vh;}
+
+.member2{}
+.member2 .isReady{top:4vh;right: 9vh;}
+.member2 .isReady .ready{width:6vh;}
+.member2 .jiurenniuniu-background1,
+.member3 .jiurenniuniu-background1,
+.member4 .jiurenniuniu-background1,
+.member5 .jiurenniuniu-background1 {top: -8% !important;left: -8% !important;}
+
+.member3{}
+.member3 .isReady{top:4vh;right: 9vh;}
+.member3 .isReady .ready{width:6vh;}
+
+.member4{}
+.member4 .isReady{top:4vh;right: 9vh;}
+.member4 .isReady .ready{width:6vh;}
+
+.member5{}
+.member5 .isReady{top:20%;right: 10.63vh;}
+.member5 .isReady .ready{width:6vh;}
+
+.member6{height: 7.26vh;}
+.member6 .isReady{top:8vh;left: 1vh;}
+.member6 .isReady .ready{width:6vh;}
+.member6 .bottom { left: 8vh; top: 2.8vh; }
+
+.member7{}
+.member7 .isReady{top:4vh;left: 9vh;}
+.member7 .isReady .ready{width:6vh;}
+
+.member8{}
+.member8 .isReady{top:4vh;left: 9vh;}
+.member8 .isReady .ready{width:6vh;}
+
+.member9{}
+.member9 .isReady{top:4vh;left: 9vh;}
+.member9 .isReady .ready{width:6vh;}
+
+.member10{}
+.member10 .isReady{top:4vh;left: 9vh;}
+.member10 .isReady .ready{width:6vh;}
+
+/* 玩家金币 */
+.memberCoin{position: absolute;width: 1.5vh;height: 1.5vh; z-index: 100}
+.memberCoin10{top: 82%; left: 4.5vh}
+.memberCoin11{top: 82%; left: 4.5vh}
+.memberCoin12{top: 82%; left: 4.5vh}
+.memberCoin13{top: 82%; left: 4.5vh}
+.memberCoin14{top: 82%; left: 4.5vh}
+.memberCoin15{top: 82%; left: 4.5vh}
+.memberCoin16{top: 82%; left: 4.5vh}
+.memberCoin17{top: 82%; left: 4.5vh}
+
+.memberCoin20{top: 59%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin21{top: 59%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin22{top: 59%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin23{top: 59%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin24{top: 59%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin25{top: 59%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin26{top: 59%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin27{top: 59%; /*left: 49vh*/right: 4.5vh;}
+
+.memberCoin30{top: 43%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin31{top: 43%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin32{top: 43%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin33{top: 43%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin34{top: 43%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin35{top: 43%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin36{top: 43%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin37{top: 43%; /*left: 49vh*/right: 4.5vh;}
+
+.memberCoin40{top: 27%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin41{top: 27%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin42{top: 27%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin43{top: 27%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin44{top: 27%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin45{top: 27%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin46{top: 27%; /*left: 49vh*/right: 4.5vh;}
+.memberCoin47{top: 27%; /*left: 49vh*/right: 4.5vh;}
+
+.memberCoin50{top: 6%; /*left:38vh*/right: 13vh;}
+.memberCoin51{top: 6%; /*left:38vh*/right: 13vh;}
+.memberCoin52{top: 6%; /*left:38vh*/right: 13vh;}
+.memberCoin53{top: 6%; /*left:38vh*/right: 13vh;}
+.memberCoin54{top: 6%; /*left:38vh*/right: 13vh;}
+.memberCoin55{top: 6%; /*left:38vh*/right: 13vh;}
+.memberCoin56{top: 6%; /*left:38vh*/right: 13vh;}
+.memberCoin57{top: 6%; /*left:38vh*/right: 13vh;}
+
+.memberCoin60{top: 6%; left: 15vh}
+.memberCoin61{top: 6%; left: 15vh}
+.memberCoin62{top: 6%; left: 15vh}
+.memberCoin63{top: 6%; left: 15vh}
+.memberCoin64{top: 6%; left: 15vh}
+.memberCoin65{top: 6%; left: 15vh}
+.memberCoin66{top: 6%; left: 15vh}
+.memberCoin67{top: 6%; left: 15vh}
+
+.memberCoin70{top: 27%; left: 4.5vh}
+.memberCoin71{top: 27%; left: 4.5vh}
+.memberCoin72{top: 27%; left: 4.5vh}
+.memberCoin73{top: 27%; left: 4.5vh}
+.memberCoin74{top: 27%; left: 4.5vh}
+.memberCoin75{top: 27%; left: 4.5vh}
+.memberCoin76{top: 27%; left: 4.5vh}
+.memberCoin77{top: 27%; left: 4.5vh}
+
+.memberCoin80{top: 43%; left: 4.5vh}
+.memberCoin81{top: 43%; left: 4.5vh}
+.memberCoin82{top: 43%; left: 4.5vh}
+.memberCoin83{top: 43%; left: 4.5vh}
+.memberCoin84{top: 43%; left: 4.5vh}
+.memberCoin85{top: 43%; left: 4.5vh}
+.memberCoin86{top: 43%; left: 4.5vh}
+.memberCoin87{top: 43%; left: 4.5vh}
+
+.memberCoin90{top: 59%; left: 4.5vh}
+.memberCoin91{top: 59%; left: 4.5vh}
+.memberCoin92{top: 59%; left: 4.5vh}
+.memberCoin93{top: 59%; left: 4.5vh}
+.memberCoin94{top: 59%; left: 4.5vh}
+.memberCoin95{top: 59%; left: 4.5vh}
+.memberCoin96{top: 59%; left: 4.5vh}
+.memberCoin97{top: 59%; left: 4.5vh}
+
+/* 显示是否抢庄 */
+.memberRobText1{position: absolute; top: 79%; left: 10.5vh; width: 6vh; height: 3.12vh; z-index: 100;}
+.memberRobText2{position: absolute; top: 61%; right: 10.5vh; width: 6vh; height: 3.12vh; z-index: 100;}
+.memberRobText3{position: absolute; top: 47%; right: 10.5vh; width: 6vh; height: 3.12vh; z-index: 100;}
+.memberRobText4{position: absolute; top: 33%; right: 10.5vh; width: 6vh; height: 3.12vh; z-index: 100;}
+.memberRobText5{position: absolute; top: 19%; right: 10.5vh; width: 6vh; height: 3.12vh; z-index: 100;}
+.memberRobText6{position: absolute; top: 4%; left: 30vh; width: 6vh; height: 3.12vh; z-index: 100;}
+.memberRobText7{position: absolute; top: 19%; left: 10.5vh; width: 6vh; height: 3.12vh; z-index: 100;}
+.memberRobText8{position: absolute; top: 33%; left: 10.5vh; width: 6vh; height: 3.12vh; z-index: 100;}
+.memberRobText9{position: absolute; top: 47%; left: 10.5vh; width: 6vh; height: 3.12vh; z-index: 100;}
+.memberRobText10{position: absolute; top: 61%; left: 10.5vh; width: 6vh; height: 3.12vh; z-index: 100;}
+
+.memberGoText1{position: absolute; top: 79%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText2{position: absolute; top: 65%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText3{position: absolute; top: 51%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText4{position: absolute; top: 37%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText5{position: absolute; top: 23%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText6{position: absolute; top: 18%; left: 29vh; width: 5vh; height: 2.6vh;}
+.memberGoText7{position: absolute; top: 23%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText8{position: absolute; top: 37%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText9{position: absolute; top: 51%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText10{position: absolute; top: 65%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+
+.memberFreeRobText1{position: absolute; top: 79%; left: 60%; width: 8vh; height: 4.16vh;}
+.memberFreeRobText2{position: absolute; top: 62%; right: 10.5vh; width: 8vh; height: 4.16vh;}
+.memberFreeRobText3{position: absolute; top: 48%; right: 10.5vh; width: 8vh; height: 4.16vh;}
+.memberFreeRobText4{position: absolute; top: 34%; right: 10.5vh; width: 8vh; height: 4.16vh;}
+.memberFreeRobText5{position: absolute; top: 20%; right: 10.5vh; width: 8vh; height: 4.16vh;}
+.memberFreeRobText6{position: absolute; top: 9.5%; left: 13vh; width: 8vh; height: 4.16vh;}
+.memberFreeRobText7{position: absolute; top: 20%; left: 10.5vh; width: 8vh; height: 4.16vh;}
+.memberFreeRobText8{position: absolute; top: 34%; left: 10.5vh; width: 8vh; height: 4.16vh;}
+.memberFreeRobText9{position: absolute; top: 48%; left: 10.5vh; width: 8vh; height: 4.16vh;}
+.memberFreeRobText10{position: absolute; top: 62%; left: 10.5vh; width: 8vh; height: 4.16vh;}
+
+.memberGoTimesText1{position: absolute; top: 79%; left: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText2{position: absolute; top: 61%; right: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText3{position: absolute; top: 48%; right: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText4{position: absolute; top: 34%; right: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText5{position: absolute; top: 20%; right: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText6{position: absolute; top: 16%; left: 24vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText7{position: absolute; top: 21%; left: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText8{position: absolute; top: 35%; left: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText9{position: absolute; top: 49%; left: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText10{position: absolute; top: 62%; left: 10.5vh; width: 2.6vh; height: 2.6vh;}
+
+/* 投注倍数 11111*/
+.memberTimesText {
+    height: .1584rem;
+    line-height: 1;
+    text-align: center;
+    font-size: 3vh;
+    font-weight: bold;
+    color: #FFDC18;
+    letter-spacing: -.05vh;
+    font-family: arial , 微软雅黑;
+    -webkit-text-stroke: .05vh rgba(0,0,0,.8);
+    text-stroke: .05vh rgba(0,0,0,.8);
+    white-space: nowrap;
+}
+.memberTimesText1{position: absolute;  top: 78%;  left: 10.5vh;  width: 4vh;  height: 4.3vh; z-index: 100;}
+.memberTimesText2{position: absolute; top: 60%; right: 9.5vh; width: 4vh; height: 4.3vh; z-index: 100;}
+.memberTimesText3{position: absolute; top: 46%; right: 9.5vh; width: 4vh; height: 4.3vh; z-index: 100;}
+.memberTimesText4{position: absolute; top: 32%; right: 9.5vh; width: 4vh; height: 4.3vh; z-index: 100;}
+.memberTimesText5{position: absolute; top: 18%; right: 9.5vh; width: 4vh; height: 4.3vh; z-index: 100;}
+.memberTimesText6{position: absolute; top: 4%; left: 31vh;  width: 4vh; height: 4.3vh; z-index: 100;}
+.memberTimesText7{position: absolute; top: 18%; left: 9.5vh; width: 4vh; height: 4.3vh; z-index: 100;}
+.memberTimesText8{position: absolute; top: 32%; left: 9.5vh; width: 4vh; height: 4.3vh; z-index: 100;}
+.memberTimesText9{position: absolute; top: 46%; left: 9.5vh; width: 4vh; height: 4.3vh; z-index: 100;}
+.memberTimesText10{position: absolute; top: 60%; left: 9.5vh; width: 4vh; height: 4.3vh; z-index: 100;}
+
+/* 显示牛几图片 */
+.memberBull1{position: absolute;bottom: 7%; left: 43%; width: 23vh; height: 6.346vh; z-index: 190;margin-left: -6.285vh}
+.memberBull2{position: absolute;top: 69%; right: 11.5vh; width: 12.45vh; height: 3.43vh; z-index: 190;}
+.memberBull3{position: absolute;top: 55%; right: 11.5vh; width: 12.45vh; height: 3.43vh; z-index: 190;}
+.memberBull4{position: absolute;top: 41%; right: 11.5vh; width: 12.45vh; height: 3.43vh; z-index: 190;}
+.memberBull5{position: absolute;top: 27%; right: 11.5vh; width: 12.45vh; height: 3.43vh; z-index: 190;}
+.memberBull6{position: absolute;top: 15%; left: 38vw; width: 12.45vh; height: 3.43vh; z-index: 190;}
+.memberBull7{position: absolute;top: 27%; left: 11.5vh; width: 12.45vh; height: 3.43vh; z-index: 190;}
+.memberBull8{position: absolute;top: 41%; left: 11.5vh; width: 12.45vh; height: 3.43vh; z-index: 190;}
+.memberBull9{position: absolute;top: 55%; left: 11.5vh; width: 12.45vh; height: 3.43vh; z-index: 190;}
+.memberBull10{position: absolute;top: 69%; left: 11.5vh; width: 12.45vh; height: 3.43vh; z-index: 190;}
+
+ /* 一局完毕显示得分 
+ .memberScoreText1{position: absolute;top: 67%; left: 43%; width: 150px; height: 40px; z-index: 99;} */
+
+.memberScoreText1{position: absolute;/*top: 73.5%; left: 2%;*/ width: 10vh; height: 4vh; z-index: 99;}
+.memberScoreText2{position: absolute;/*top: 56%; right: 9vh;*/ width: 10vh; height: 4vh; z-index: 99;}
+.memberScoreText3{position: absolute;/*top: 43%; right: 9vh;*/ width: 10vh; height: 4vh; z-index: 99;}
+/*.memberScoreText4{position: absolute;top: 20%; left: 43%; width: 150px; height: 40px; z-index: 99;}*/
+.memberScoreText4{position: absolute;/*top: 29%; right:9vh;*/ width: 10vh; height: 4vh; z-index: 99;}
+.memberScoreText5{position: absolute;/*top: 15%; right: 11vh;*/ width: 10vh; height: 4vh; z-index: 99;}
+.memberScoreText6{position: absolute;/*top: 16%; left: 11vh;*/ width: 10vh; height: 4vh; z-index: 99;}
+.memberScoreText7{position: absolute;/*top: 15%; left: 9vh;*/ width: 10vh; height: 4vh; z-index: 99;}
+.memberScoreText8{position: absolute;/*top: 29%; left: 9vh;*/ width: 10vh; height: 4vh; z-index: 99;}
+.memberScoreText9{position: absolute;/*top: 43%; left: 9vh;*/ width: 10vh; height: 4vh; z-index: 99;}
+.memberScoreText10{position: absolute;/*top: 57%; left: 9vh;*/ width: 10vh; height: 4vh; z-index: 99;}
+
+ .quitBack{position: absolute;width: 7.4vh;height: 7.4vh;border-radius:4px;top:0px;left:0;background:#000;opacity:0.45;}
+
+ .member1 .quitBack{position: absolute;width: 58px;height: 88px;border-radius:4px;top:12px;left:8px;background:#000;opacity:0.45;}
+ .colorBorder{position: absolute;text-align: center;width: 45px;height: 69px;border:2px solid #df0000;border-radius:4px;top:9px;left:6px;}
+ .colorBorder .backColor{background:#df0000;opacity:0.45;height:100%;position: absolute;bottom:0;left:0;width:100%;}
+ .colorBorder1{width: 56px;height: 86px;border:3px solid #df0000;border-radius:6px;top:10px;left:6px; }
+ @keyframes mycolor1{0% {border-color: #04c120;}50% {border-color: #ffff3c;}100% {border-color: #df0000;}}
+ @-webkit-keyframes mycolor1 {0% {border-color: #04c120;}50% {border-color: #ffff3c;}100% {border-color: #df0000;}}
+ @keyframes mycolor2{0% {background:#04c120;height: 0;}50% {background:#ffff3c;}100% {background:#df0000;height: 100%;}}
+ @-webkit-keyframes mycolor2{0% {background:#04c120;height: 0;}50% {background:#ffff3c;}100% {background:#df0000;height: 100%;}}
+
+
+ .place{width:120px;height:120px;position: absolute;top:30%;left:165px;}
+ .place .scoresArea{position: relative;width: 100%;height:100%;}
+ .place .totalScore{position: absolute;top:-25px;left: 20px;width: 80px;}
+ .place .totalScore img{position: absolute;width: 20px;left: 0;top:0;}
+ .place .totalScore .scores{height: 20px;line-height: 20px;text-align: right;padding: 0 13px;border-radius:10px;background: #376e8d;color:#fff;font-size:14px;width:40%;}
+
+.coin{width: 28px;height:28px;background:url("http://goss.fexteam.com/files/d_10/images/game/round.png");background-size:818px 97px;position: absolute;}
+.coin1{left:40px;top:250px;}
+.coin2{left:150px;top:70px;}
+.coin3{left:150px;top:-30px;}
+.coin4{left:40px;top:-80px;}
+.coin5{left:-60px;top:-30px;}
+.coin6{left:-60px;top:70px;}
+.coinType2{background-position:-194 -4;}
+.coinType4{background-position:-2 -4;}
+.coinType8{background-position:-31 -4;}
+.coinType10{background-position:-223 -4;}
+.coinType16{background-position:-59 -4;}
+.coinType20{background-position:-87 -4;}
+
+.myButton{position: absolute;top:55%;width:100%;}
+.myButton .scoreList{width:300px;margin:0 auto; }
+.myButton .scoreList .scoreItem{width: 50px;height:54px;background:url("http://goss.fexteam.com/files/d_10/images/game/round.png");background-size:801px 95px;float: left;margin-left: 20px;}
+.myButton .scoreList .scoreItem11{background-position:-174 -36;}
+.myButton .scoreList .scoreItem10{background-position:-397 -36;}
+.myButton .scoreList .scoreItem21{background-position:-117 -36;}
+.myButton .scoreList .scoreItem20{background-position:-341 -36;}
+.myButton .scoreList .scoreItem31{background-position:-61 -36;}
+.myButton .scoreList .scoreItem30{background-position:-286 -36;}
+.myButton .scoreList .scoreItem41{background-position:-3 -36;}
+.myButton .scoreList .scoreItem51{background-position:-627 -36;}
+.myButton .scoreList .scoreItem50{background-position:-741 -36;}
+.myButton .scoreList .scoreItem61{background-position:-685 -36;}
+
+.myButton .doubleButton{width:220px;margin:0 auto;}
+.myButton .doubleButton .isSee{margin-top: 160px;}
+.myButton .doubleButton .isSee .leftButton{width: 70px;float: left;margin-left: -10px;}
+.myButton .doubleButton .isSee .rightButton{width:70px;float: right;margin-right: -10px;}
+.myButton .doubleButton .isSee img{width: 100%;}
+.myButton .doubleButton .isOver{margin-top: 150px;}
+.myButton .doubleButton .isOver .button{width: 50px;height:50px;background:url("http://goss.fexteam.com/files/d_10/images/game/round.png");background-size:801px 95px;}
+.myButton .doubleButton .isOver .leftButton{float: left;background-position:-512 -36;}
+.myButton .doubleButton .isOver .rightButton1{float: right;background-position:-569 -36;}
+.myButton .doubleButton .isOver .rightButton{float: right;background-position:-454 -36;}
+
+
+.messageSay{position: absolute;height: 3vh;font-size: 2vh;color: #fff;background: #060408;border-radius:1.5vh;padding: 0 1.5vh;opacity: .75;line-height: 3vh;z-index: 97}
+.messageSay1{top:77.5%;left: 3%;}
+.messageSay1 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay2{top:56%;right: 3%;}
+.messageSay2 .triangle{position: absolute;top:3vh;right:3vh;width:0;height:0;border-top: 6px solid #060408;border-left: 12px solid transparent;}
+.messageSay3{top:42%;right: 3%;}
+.messageSay3 .triangle{position: absolute;top:3vh;right:3vh;width:0;height:0;border-top: 6px solid #060408;border-left: 12px solid transparent;}
+.messageSay4{top:28%;right: 3%;}
+.messageSay4 .triangle{position: absolute;top:3vh;right:3vh;width:0;height:0;border-top: 6px solid #060408;border-left: 12px solid transparent;}
+.messageSay5{top:14%;right: 3%;}
+.messageSay5 .triangle{position: absolute;top:3vh;right:7vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay6{top:7.4%;left: 17%;}
+.messageSay6 .triangle{position: absolute;top:3vh;left:5vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay7{top:14%;left: 3%;}
+.messageSay7 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay8{top:28%;left: 3%;}
+.messageSay8 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay9{top:43%;left: 3%;}
+.messageSay9 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay10{top:56%;left: 3%;}
+.messageSay10 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+
+
+/* 26 37 */
+/*.cardDeal{position: absolute; top: 19%; left: 18%; width: 64%; height: 70%;}*/
+.cardDeal{position: absolute; width: 100%; height: 100%;}
+.card{width: 4.6vh;height:6.4vh;background:url("/app/img/bull10/card/card-bg.png");background-size:4.6vh 6.4vh;position: absolute;}
+.isQuit{width: 32px;height:32px;background:url("http://goss.fexteam.com/files/d_10/images/game/round.png");background-size:818px 97px;background-position:-160 -1;position: absolute;}
+.isLose{width: 32px;height:32px;background:url("http://goss.fexteam.com/files/d_10/images/game/round.png");background-size:818px 97px;background-position:-256 -1;position: absolute;}
+.isSeen{width: 32px;height:32px;background:url("http://goss.fexteam.com/files/d_10/images/game/round.png");background-size:818px 97px;background-position:-123 -1;position: absolute;}
+
+.isQuit1{left:25%;top:5;width: 47px;height:47px;background-size:1282px 152px;background-position:-252 -4;z-index: 96;}
+.isLose1{left:25%;top:5;width: 47px;height:47px;background-size:1282px 152px;background-position:-402 -4;z-index: 96;}
+.myQuitBack{left:0;top:0;width:100%;height:100%;border-radius:4px;background:#000;opacity: .4;position: absolute;z-index: 92;}
+.isSeen1{display: none;}
+
+/* 1号位置暗牌 */
+.card11{animation:mymove11 .2s ;-webkit-animation:mymove11 .2s ;left:16vw;bottom:6%;width: 13vw;height:20.46vw;background-size:100% 100%;box-shadow:1px 1px 5px #333;}
+@keyframes mymove11{from {left:30%;bottom:40%;opacity: 0;}to {left:16vw;bottom:6%;opacity: 1;}}
+@-webkit-keyframes mymove11 {from {left:30%;bottom:40%;opacity: 0;}to {left:16vw;bottom:6%;opacity: 1;}}
+
+.card12{animation:mymove12 .2s ;-webkit-animation:mymove12 .2s ;left:30vw;bottom:6%;width: 13vw;height:20.46vw;background-size:100% 100%;box-shadow:1px 1px 5px #333;}
+@keyframes mymove12{from {left:35%;bottom:40%;opacity: 0;}to {left:30vw;bottom:6%;opacity: 1;}}
+@-webkit-keyframes mymove12 {from {left:35%;bottom:40%;opacity: 0;}to {left:30vw;bottom:6%;opacity: 1;}}
+
+.card13{animation:mymove13 .2s ;-webkit-animation:mymove13 .2s ;left:44vw;bottom:6%;width: 13vw;height:20.46vw;background-size:100% 100%;box-shadow:1px 1px 5px #333;}
+@keyframes mymove13{from {left:40%;bottom:40%;opacity: 0;}to {left:44vw;bottom:6%;opacity: 1;}}
+@-webkit-keyframes mymove13{from {left:40%;bottom:40%;opacity: 0;}to {left:44vw;bottom:6%;opacity: 1;}}
+
+.card14{animation:mymove14 .2s ;-webkit-animation:mymove14 .2s ;left:58vw;bottom:6%;width: 13vw;height:20.46vw;background-size:100% 100%;box-shadow:1px 1px 5px #333;}
+@keyframes mymove14{from {left:45%;bottom:40%;opacity: 0;}to {left:58vw;bottom:6%;opacity: 1;}}
+@-webkit-keyframes mymove14{from {left:50%;bottom:40%;opacity: 0;}to {left:58vw;bottom:6%;opacity: 1;}}
+
+.card15{animation:mymove15 .2s ;-webkit-animation:mymove15 .2s ;left:72vw;bottom:6%;width: 13vw;height:20.46vw;background-size:100% 100%;box-shadow:1px 1px 5px #333;}
+@keyframes mymove15{from {left:50%;bottom:40%;opacity: 0;}to {left:72vw;bottom:6%;opacity: 1;}}
+@-webkit-keyframes mymove15{from {left:50%;bottom:40%;opacity: 0;}to {left:72vw;bottom:6%;opacity: 1;}}
+
+.isQuit2{right:3%;top:37.5%;}
+.isLose2{right:3%;top:37.5%;}
+.isSeen2{right:3%;top:37.5%;}
+/* 2号位置暗牌 */
+.card21{animation:mymove21 .2s ;-webkit-animation:mymove21 .2s ;right:10.5vh;top:65%;}
+@keyframes mymove21{from {right:50%;top:40%;opacity: 0;}to {right:10.5vh;top:65%;opacity: 1;}}
+@-webkit-keyframes mymove21 {from {right:50%;top:40%;opacity: 0;}to {right:10.5vh;top:65%;opacity: 1;}}
+
+.card22{animation:mymove22 .2s ;-webkit-animation:mymove22 .2s ;right:12.5vh;top:65%;}
+@keyframes mymove22{from {right:50%;top:40%;opacity: 0;}to {right:12.5vh;top:65%;opacity: 1;}}
+@-webkit-keyframes mymove22 {from {right:50%;top:40%;opacity: 0;}to {right:12.5vh;top:65%;opacity: 1;}}
+
+.card23{animation:mymove23 .2s ;-webkit-animation:mymove23 .2s ;right:14.5vh;top:65%;}
+@keyframes mymove23{from {right:50%;top:40%;opacity: 0;}to {right:14.5vh;top:65%;opacity: 1;}}
+@-webkit-keyframes mymove23{from {right:50%;top:40%;opacity: 0;}to {right:14.5vh;top:65%;opacity: 1;}}
+
+.card24{animation:mymove24 .2s ;-webkit-animation:mymove24 .2s ;right:16.5vh;top:65%;}
+@keyframes mymove24{from {right:50%;top: 40%;opacity: 0;}to {right: 16.5vh;top: 65%;opacity: 1;}}
+@-webkit-keyframes mymove24{from {right: 50%;top: 40%;opacity: 0;}to {right: 16.5vh;top: 65%;opacity: 1;}}
+
+.card25{animation:mymove25 .2s ;-webkit-animation:mymove25 .2s ;right:18.5vh;top:65%;}
+@keyframes mymove25{from {right:50%;top: 40%;opacity: 0;}to {right: 18.5vh;top: 65%;opacity: 1;}}
+@-webkit-keyframes mymove25{from {right: 50%;top: 40%;opacity: 0;}to {right: 18.5vh;top: 65%;opacity: 1;}}
+
+/* 2号位置摊牌 */
+.card211{right:10.5vh;top:65%;}
+.card221{right:12.5vh;top:65%;}
+.card231{right:14.5vh;top:65%;}
+.card241{right:16.5vh;top:65%;}
+.card251{right:18.5vh;top:65%;}
+
+
+.isQuit3{right:3%;top:11%;}
+.isLose3{right:3%;top:11%;}
+.isSeen3{right:3%;top:11%;}
+/* 3号位置暗牌 */
+.card31{animation:mymove31 .2s ;-webkit-animation:mymove31 .2s ;right:10.5vh;top:52%;}
+@keyframes mymove31{from {right:50%;top:40%;opacity: 0;}to {right:10.5vh;top:52%;opacity: 1;}}
+@-webkit-keyframes mymove31 {from {right:50%;top:40%;opacity: 0;}to {right:10.5vh;top:52%;opacity: 1;}}
+
+.card32{animation:mymove32 .2s ;-webkit-animation:mymove32 .2s ;right:12.5vh;top:52%;}
+@keyframes mymove32{from {right:50%;top:40%;opacity: 0;}to {right:12.5vh;top:52%;opacity: 1;}}
+@-webkit-keyframes mymove32 {from {right:50%;top:40%;opacity: 0;}to {right:12.5vh;top:52%;opacity: 1;}}
+
+.card33{animation:mymove33 .2s ;-webkit-animation:mymove33 .2s ;right:14.5vh;top:52%;}
+@keyframes mymove33{from {right:50%;top:40%;opacity: 0;}to {right:14.5vh;top:52%;opacity: 1;}}
+@-webkit-keyframes mymove33{from {right:50%;top:40%;opacity: 0;}to {right:14.5vh;top:52%;opacity: 1;}}
+
+.card34{animation:mymove34 .2s ;-webkit-animation:mymove34 .2s ;right:16.5vh;top:52%;}
+@keyframes mymove34{from {right:50%;top:40%;opacity: 0;}to {right:16.5vh;top:52%;opacity: 1;}}
+@-webkit-keyframes mymove34{from {right:50%;top:40%;opacity: 0;}to {right:16.5vh;top:52%;opacity: 1;}}
+
+.card35{animation:mymove35 .2s ;-webkit-animation:mymove35 .2s ;right:18.5vh;top:52%;}
+@keyframes mymove35{from {right:50%;top:40%;opacity: 0;}to {right:18.5vh;top:52%;opacity: 1;}}
+@-webkit-keyframes mymove35{from {right:50%;top:40%;opacity: 0;}to {right:18.5vh;top:52%;opacity: 1;}}
+
+/* 3号位置摊牌牌 */
+.card311{right:10.5vh;top:52%;}
+.card321{right:12.5vh;top:52%;}
+.card331{right:14.5vh;top:52%;}
+.card341{right:16.5vh;top:52%;}
+.card351{right:18.5vh;top:52%;}
+
+.isQuit4{left:44%;top:1%;}
+.isLose4{left:44%;top:1%;}
+.isSeen4{left:44%;top:1%;}
+/* 4号位置暗牌 */
+.card41{animation:mymove45 .2s ;-webkit-animation:mymove41 .2s ;right:10.5vh;top:38%;}
+@keyframes mymove41{from {left:50%;top:40%;opacity: 0;}to {right:10.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove41{from {left:50%;top:40%;opacity: 0;}to {right:10.5vh;top:38%;opacity: 1;}}
+
+.card42{animation:mymove44 .2s ;-webkit-animation:mymove42 .2s ;right:12.5vh;top:38%;}
+@keyframes mymove42{from {left:50%;top:40%;opacity: 0;}to {right:12.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove42{from {left:50%;top:40%;opacity: 0;}to {right:12.5vh;top:38%;opacity: 1;}}
+
+.card43{animation:mymove43 .2s ;-webkit-animation:mymove43 .2s ;right:14.5vh;top:38%;}
+@keyframes mymove43{from {left:50%;top:40%;opacity: 0;}to {right:14.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove43 {from {left:50%;top:40%;opacity: 0;}to {right:14.5vh;top:38%;opacity: 1;}}
+
+.card44{animation:mymove44 .2s ;-webkit-animation:mymove44 .2s ;right:16.5vh;top:38%;}
+@keyframes mymove44{from {left:50%;top:40%;opacity: 0;}to {right:16.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove44 {from {left:50%;top:40%;opacity: 0;}to {right:16.5vh;top:38%;opacity: 1;}}
+
+.card45{animation:mymove45 .2s ;-webkit-animation:mymove45 .2s ;right:18.5vh;top:38%;}
+@keyframes mymove45{from {left:50%;top:40%;opacity: 0;}to {right:18.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove45{from {left:50%;top:40%;opacity: 0;}to {right:18.5vh;top:38%;opacity: 1;}}
+
+/* 4号位置摊牌 */
+.card411{right:10.5vh;top:38%;}
+.card421{right:12.5vh;top:38%;}
+.card431{right:14.5vh;top:38%;}
+.card441{right:16.5vh;top:38%;}
+.card451{right:18.5vh;top:38%;}
+
+.isQuit5{left:3%;top:11%;}
+.isLose5{left:3%;top:11%;}
+.isSeen5{left:3%;top:11%;}
+/* 5号位置暗牌 */
+.card51{animation:mymove51 .2s ;-webkit-animation:mymove51 .2s ;right:10.63vh;top:25%;}
+@keyframes mymove51{from {left:50%;top:40%;opacity: 0;}to {right:10.63vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove51{from {left:50%;top:40%;opacity: 0;}to {right:10.63vh;top:25%;opacity: 1;}}
+
+.card52{animation:mymove52 .2s ;-webkit-animation:mymove52 .2s ;right:12.63vh;top:25%;}
+@keyframes mymove52{from {left:50%;top:40%;opacity: 0;}to {right:12.63vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove52{from {left:50%;top:40%;opacity: 0;}to {right:12.63vh;top:25%;opacity: 1;}}
+
+.card53{animation:mymove53 .2s ;-webkit-animation:mymove53 .2s ;right:14.63vh;top:25%;}
+@keyframes mymove53{from {left:50%;top:40%;opacity: 0;}to {right:14.63vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove53 {from {left:50%;top:40%;opacity: 0;}to {right:14.63vh;top:25%;opacity: 1;}}
+
+.card54{animation:mymove54 .2s ;-webkit-animation:mymove54 .2s ;right:16.63vh;top:25%;}
+@keyframes mymove54{from {left:50%;top:40%;opacity: 0;}to {right:16.63vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove54 {from {left:50%;top:40%;opacity: 0;}to {right:16.63vh;top:25%;opacity: 1;}}
+
+.card55{animation:mymove55 .2s ;-webkit-animation:mymove55 .2s ;right:18.63vh;top:25%;}
+@keyframes mymove55{from {left:50%;top:40%;opacity: 0;}to {right:18.63vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove55{from {left:50%;top:40%;opacity: 0;}to {right:18.63vh;top:25%;opacity: 1;}}
+
+/* 5号位置摊牌 */
+.card511{right:10.63vh;top:25%;}
+.card521{right:12.63vh;top:25%;}
+.card531{right:14.63vh;top:25%;}
+.card541{right:16.63vh;top:25%;}
+.card551{right:18.63vh;top:25%;}
+
+.isQuit6{left:3%;top:37.5%;}
+.isLose6{left:3%;top:37.5%;}
+.isSeen6{left:3%;top:37.5%;}
+/* 6号位置暗牌 */
+.card61{animation:mymove61 .2s ;-webkit-animation:mymove61 .2s ;left:38vw;top:12%;}
+@keyframes mymove61{from {left:50%;top:40%;opacity: 0;}to {left:38vw;top:12%;opacity: 1;}}
+@-webkit-keyframes mymove61 {from {left:50%;top:40%;opacity: 0;}to {left:38vw;top:12%;opacity: 1;}}
+
+.card62{animation:mymove62 .2s ;-webkit-animation:mymove62 .2s ;left:42vw;top:12%;}
+@keyframes mymove62{from {left:50%;top:40%;opacity: 0;}to {left:42vw;top:12%;opacity: 1;}}
+@-webkit-keyframes mymove62 {from {left:50%;top:40%;opacity: 0;}to {left:42vw;top:12%;opacity: 1;}}
+
+.card63{animation:mymove63 .2s ;-webkit-animation:mymove63 .2s ;left:46vw;top:12%;}
+@keyframes mymove63{from {left:50%;top:40%;opacity: 0;}to {left:46vw;top:12%;opacity: 1;}}
+@-webkit-keyframes mymove63{from {left:50%;top:40%;opacity: 0;}to {left:46vw;top:12%;opacity: 1;}}
+
+.card64{animation:mymove64 .2s ;-webkit-animation:mymove64 .2s ;left:50vw;top:12%;}
+@keyframes mymove64{from {left:50%;top:40%;opacity: 0;}to {left:50vw;top:12%;opacity: 1;}}
+@-webkit-keyframes mymove64{from {left:50%;top:40%;opacity: 0;}to {left:50vw;top:12%;opacity: 1;}}
+
+.card65{animation:mymove65 .2s ;-webkit-animation:mymove65 .2s ;left:54vw;top:12%;}
+@keyframes mymove65{from {left:50%;top:40%;opacity: 0;}to {left:54vw;top:12%;opacity: 1;}}
+@-webkit-keyframes mymove65{from {left:50%;top:40%;opacity: 0;}to {left:54vw;top:12%;opacity: 1;}}
+
+/* 6号位置摊牌 */
+.card611{left:38vw;top:12%;}
+.card621{left:42vw;top:12%;}
+.card631{left:46vw;top:12%;}
+.card641{left:50vw;top:12%;}
+.card651{left:54vw;top:12%;}
+
+/* 7号位置暗牌 */
+.card71{animation:mymove71 .2s ;-webkit-animation:mymove71 .2s ;left:10.5vh;top:25%;}
+@keyframes mymove71{from {left:50%;top:40%;opacity: 0;}to {left:10.5vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove71 {from {left:50%;top:40%;opacity: 0;}to {left:10.5vh;top:25%;opacity: 1;}}
+
+.card72{animation:mymove72 .2s ;-webkit-animation:mymove72 .2s ;left:12.5vh;top:25%;}
+@keyframes mymove72{from {left:50%;top:40%;opacity: 0;}to {left:12.5vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove72 {from {left:50%;top:40%;opacity: 0;}to {left:12.5vh;top:25%;opacity: 1;}}
+
+.card73{animation:mymove73 .2s ;-webkit-animation:mymove73 .2s ;left:14.5vh;top:25%;}
+@keyframes mymove73{from {left:50%;top:40%;opacity: 0;}to {left:14.5vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove73{from {left:50%;top:40%;opacity: 0;}to {left:14.5vh;top:25%;opacity: 1;}}
+
+.card74{animation:mymove74 .2s ;-webkit-animation:mymove74 .2s ;left:16.5vh;top:25%;}
+@keyframes mymove74{from {left:50%;top:40%;opacity: 0;}to {left:16.5vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove74{from {left:50%;top:40%;opacity: 0;}to {left:16.5vh;top:25%;opacity: 1;}}
+
+.card75{animation:mymove75 .2s ;-webkit-animation:mymove75 .2s ;left:18.5vh;top:25%;}
+@keyframes mymove75{from {left:50%;top:40%;opacity: 0;}to {left:18.5vh;top:25%;opacity: 1;}}
+@-webkit-keyframes mymove75{from {left:50%;top:40%;opacity: 0;}to {left:18.5vh;top:25%;opacity: 1;}}
+
+/* 7号位置摊牌 */
+.card711{left:10.5vh;top:25%;}
+.card721{left:12.5vh;top:25%;}
+.card731{left:14.5vh;top:25%;}
+.card741{left:16.5vh;top:25%;}
+.card751{left:18.5vh;top:25%;}
+
+/* 8号位置暗牌 */
+.card81{animation:mymove81 .2s ;-webkit-animation:mymove81 .2s ;left:10.5vh;top:38%;}
+@keyframes mymove81{from {left:50%;top:40%;opacity: 0;}to {left:10.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove81 {from {left:50%;top:40%;opacity: 0;}to {left:10.5vh;top:38%;opacity: 1;}}
+
+.card82{animation:mymove82 .2s ;-webkit-animation:mymove82 .2s ;left:12.5vh;top:38%;}
+@keyframes mymove82{from {left:50%;top:40%;opacity: 0;}to {left:12.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove82 {from {left:50%;top:40%;opacity: 0;}to {left:12.5vh;top:38%;opacity: 1;}}
+
+.card83{animation:mymove83 .2s ;-webkit-animation:mymove83 .2s ;left:14.5vh;top:38%;}
+@keyframes mymove83{from {left:50%;top:40%;opacity: 0;}to {left:14.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove83{from {left:50%;top:40%;opacity: 0;}to {left:14.5vh;top:38%;opacity: 1;}}
+
+.card84{animation:mymove84 .2s ;-webkit-animation:mymove84 .2s ;left:16.5vh;top:38%;}
+@keyframes mymove84{from {left:50%;top:40%;opacity: 0;}to {left:16.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove84{from {left:50%;top:40%;opacity: 0;}to {left:16.5vh;top:38%;opacity: 1;}}
+
+.card85{animation:mymove85 .2s ;-webkit-animation:mymove85 .2s ;left:18.5vh;top:38%;}
+@keyframes mymove85{from {left:50%;top:40%;opacity: 0;}to {left:18.5vh;top:38%;opacity: 1;}}
+@-webkit-keyframes mymove85{from {left:50%;top:40%;opacity: 0;}to {left:18.5vh;top:38%;opacity: 1;}}
+
+/* 8号位置摊牌 */
+.card811{left:10.5vh;top:38%;}
+.card821{left:12.5vh;top:38%;}
+.card831{left:14.5vh;top:38%;}
+.card841{left:16.5vh;top:38%;}
+.card851{left:18.5vh;top:38%;}
+
+/* 9号位置暗牌 */
+.card91{animation:mymove91 .2s ;-webkit-animation:mymove91 .2s ;left:10.5vh;top:51%;}
+@keyframes mymove91{from {left:50%;top:40%;opacity: 0;}to {left:10.5vh;top:51%;opacity: 1;}}
+@-webkit-keyframes mymove91 {from {left:50%;top:40%;opacity: 0;}to {left:10.5vh;top:51%;opacity: 1;}}
+
+.card92{animation:mymove92 .2s ;-webkit-animation:mymove92 .2s ;left:12.5vh;top:51%;}
+@keyframes mymove92{from {left:50%;top:40%;opacity: 0;}to {left:12.5vh;top:51%;opacity: 1;}}
+@-webkit-keyframes mymove92 {from {left:50%;top:40%;opacity: 0;}to {left:12.5vh;top:51%;opacity: 1;}}
+
+.card93{animation:mymove93 .2s ;-webkit-animation:mymove93 .2s ;left:14.5vh;top:51%;}
+@keyframes mymove93{from {left:50%;top:40%;opacity: 0;}to {left:14.5vh;top:51%;opacity: 1;}}
+@-webkit-keyframes mymove93{from {left:50%;top:40%;opacity: 0;}to {left:14.5vh;top:51%;opacity: 1;}}
+
+.card94{animation:mymove94 .2s ;-webkit-animation:mymove94 .2s ;left:16.5vh;top:51%;}
+@keyframes mymove94{from {left:50%;top:40%;opacity: 0;}to {left:16.5vh;top:51%;opacity: 1;}}
+@-webkit-keyframes mymove94{from {left:50%;top:40%;opacity: 0;}to {left:16.5vh;top:51%;opacity: 1;}}
+
+.card95{animation:mymove95 .2s ;-webkit-animation:mymove95 .2s ;left:18.5vh;top:51%;}
+@keyframes mymove95{from {left:50%;top:40%;opacity: 0;}to {left:18.5vh;top:51%;opacity: 1;}}
+@-webkit-keyframes mymove95{from {left:50%;top:40%;opacity: 0;}to {left:18.5vh;top:51%;opacity: 1;}}
+
+/* 9号位置摊牌 */
+.card911{left:10.5vh;top:51%;}
+.card921{left:12.5vh;top:51%;}
+.card931{left:14.5vh;top:51%;}
+.card941{left:16.5vh;top:51%;}
+.card951{left:18.5vh;top:51%;}
+
+/* 10号位置暗牌 */
+.card101{animation:mymove101 .2s ;-webkit-animation:mymove101 .2s ;left:10.5vh;top:65%;}
+@keyframes mymove101{from {left:50%;top:40%;opacity: 0;}to {left:10.5vh;top:65%;opacity: 1;}}
+@-webkit-keyframes mymove101 {from {left:50%;top:40%;opacity: 0;}to {left:10.5vh;top:65%;opacity: 1;}}
+
+.card102{animation:mymove102 .2s ;-webkit-animation:mymove102 .2s ;left:12.5vh;top:65%;}
+@keyframes mymove102{from {left:50%;top:40%;opacity: 0;}to {left:12.5vh;top:65%;opacity: 1;}}
+@-webkit-keyframes mymove102 {from {left:50%;top:40%;opacity: 0;}to {left:12.5vh;top:65%;opacity: 1;}}
+
+.card103{animation:mymove103 .2s ;-webkit-animation:mymove103 .2s ;left:14.5vh;top:65%;}
+@keyframes mymove103{from {left:50%;top:40%;opacity: 0;}to {left:14.5vh;top:65%;opacity: 1;}}
+@-webkit-keyframes mymove103{from {left:50%;top:40%;opacity: 0;}to {left:14.5vh;top:65%;opacity: 1;}}
+
+.card104{animation:mymove104 .2s ;-webkit-animation:mymove104 .2s ;left:16.5vh;top:65%;}
+@keyframes mymove104{from {left:50%;top:40%;opacity: 0;}to {left:16.5vh;top:65%;opacity: 1;}}
+@-webkit-keyframes mymove104{from {left:50%;top:40%;opacity: 0;}to {left:16.5vh;top:65%;opacity: 1;}}
+
+.card105{animation:mymove105 .2s ;-webkit-animation:mymove105 .2s ;left:18.5vh;top:65%;}
+@keyframes mymove105{from {left:50%;top:40%;opacity: 0;}to {left:18.5vh;top:65%;opacity: 1;}}
+@-webkit-keyframes mymove105{from {left:50%;top:40%;opacity: 0;}to {left:18.5vh;top:65%;opacity: 1;}}
+
+/* 10号位置摊牌 */
+.card1011{left:10.5vh;top:65%;}
+.card1021{left:12.5vh;top:65%;}
+.card1031{left:14.5vh;top:65%;}
+.card1041{left:16.5vh;top:65%;}
+.card1051{left:18.5vh;top:65%;}
+
+/********************************* 翻牌   ***********************************************/
+.cardOver{position: absolute;height: 100%;top:0;}
+.cardOver .cardResult{position: relative;height: 100%;}
+.cardOver .name{color: #fff;font-size: 10px;text-align: center;line-height: 16px;position: absolute;top: 15%;width: 100%;left:0;}
+
+.cardOver .openCard{position: absolute;width: 100%;top: 34%;left: 15%;}
+.cardOver .cards{width: 4.6vh;height: 6.4vh;position: absolute;}
+.cardOver .face{width: 4.6vh;height: 6.4vh;border-radius:3px;position: absolute;-webkit-backface-visibility: hidden;backface-visibility: hidden;-webkit-transition:all .6s;transition: all .6s;}
+.cardOver .front{background: url("/app/img/bull10/card/card-bg.png");background-size:4.6vh 6.4vh;z-index: 92;}
+.cardOver .back{/*background:url("/app/img/bull10/cards_bg.jpg");*/-webkit-transform:rotateY(-180deg);transform:rotateY(-180deg);z-index: 91;/*background-size:59.8vh 25.6vh;*/box-shadow:1px 1px 5px #333;}
+/*牌面定位样式*//*
+.cardOver .card{background: url("/app/img/bull10/card/card-bg.png");background-size:4.6vh 6.4vh;}
+.cardOver .cardundefined{background: url("/app/img/bull10/card/card-bg.png");background-size:4.6vh 6.4vh;}
+.cardOver .card-1{background: url("/app/img/bull10/card/card-bg.png");background-size:4.6vh 6.4vh;}
+.cardOver .cardA1{background-position: 0 -19.2vh;}
+.cardOver .cardA2{background-position: -4.6vh -19.2vh;}
+.cardOver .cardA3{background-position: -9.2vh -19.2vh;}
+.cardOver .cardA4{background-position: -13.8vh -19.2vh;}
+.cardOver .cardA5{background-position: -18.4vh -19.2vh;}
+.cardOver .cardA6{background-position: -23vh -19.2vh;}
+.cardOver .cardA7{background-position: -27.6vh -19.2vh;}
+.cardOver .cardA8{background-position: -32.2vh -19.2vh;}
+.cardOver .cardA9{background-position: -36.8vh -19.2vh;}
+.cardOver .cardA10{background-position: -41.4vh -19.2vh;}
+.cardOver .cardA11{background-position: -46vh -19.2vh;}
+.cardOver .cardA12{background-position: -50.6vh -19.2vh;}
+.cardOver .cardA13{background-position: -55.2vh -19.2vh;}
+.cardOver .cardB1{background-position: 0 -12.8vh;}
+.cardOver .cardB2{background-position: -4.6vh -12.8vh;}
+.cardOver .cardB3{background-position: -9.2vh -12.8vh;}
+.cardOver .cardB4{background-position: -13.8vh -12.8vh;}
+.cardOver .cardB5{background-position: -18.4vh -12.8vh;}
+.cardOver .cardB6{background-position: -23vh -12.8vh;}
+.cardOver .cardB7{background-position: -27.6vh -12.8vh;}
+.cardOver .cardB8{background-position: -32.2vh -12.8vh;}
+.cardOver .cardB9{background-position: -36.8vh -12.8vh;}
+.cardOver .cardB10{background-position: -41.4vh -12.8vh;}
+.cardOver .cardB11{background-position: -46vh -12.8vh;}
+.cardOver .cardB12{background-position: -50.6vh -12.8vh;}
+.cardOver .cardB13{background-position: -55.2vh -12.8vh;}
+.cardOver .cardC1{background-position: 0 0;}
+.cardOver .cardC2{background-position: -4.6vh 0;}
+.cardOver .cardC3{background-position: -9.2vh  0;}
+.cardOver .cardC4{background-position: -13.8vh 0;}
+.cardOver .cardC5{background-position: -18.4vh 0;}
+.cardOver .cardC6{background-position: -23vh 0;}
+.cardOver .cardC7{background-position: -27.6vh 0;}
+.cardOver .cardC8{background-position: -32.2vh 0;}
+.cardOver .cardC9{background-position: -36.8vh 0;}
+.cardOver .cardC10{background-position: -41.4vh 0;}
+.cardOver .cardC11{background-position: -46vh 0;}
+.cardOver .cardC12{background-position: -50.6vh 0;}
+.cardOver .cardC13{background-position: -55.2vh 0;}
+.cardOver .cardD1{background-position: 0 -6.4vh;}
+.cardOver .cardD2{background-position: -4.6vh -6.4vh;}
+.cardOver .cardD3{background-position: -9.2vh -6.4vh;}
+.cardOver .cardD4{background-position: -13.8vh -6.4vh;}
+.cardOver .cardD5{background-position: -18.4vh -6.4vh;}
+.cardOver .cardD6{background-position: -23vh -6.4vh;}
+.cardOver .cardD7{background-position: -27.6vh -6.4vh;}
+.cardOver .cardD8{background-position: -32.2vh -6.4vh;}
+.cardOver .cardD9{background-position: -36.8vh -6.4vh;}
+.cardOver .cardD10{background-position: -41.4vh -6.4vh;}
+.cardOver .cardD11{background-position: -46vh -6.4vh;}
+.cardOver .cardD12{background-position: -50.6vh -6.4vh;}
+.cardOver .cardD13{background-position: -55.2vh -6.4vh;}*/
+
+.cardOver .card-flipped .front{z-index: 91;-webkit-transform: rotateY(180deg);transform: rotateY(180deg);}
+.cardOver .card-flipped .back{z-index: 92;-webkit-transform: rotateY(0deg);transform: rotateY(0deg);}
+
+
+.back:before, .cardopen:before {
+    display: block;
+    font-weight: bold;
+    left: 12%;
+    top: 2%;
+    content: "";
+    color: #000;
+    position: absolute;
+    font-size: 2.2vw;
+    font-family: Arial;
+}
+/*自己牌字样大小*/
+.myCards .back:before {
+    font-size: 4vw;
+}
+
+.cardB1:before, .cardB2:before, .cardB3:before, .cardB4:before, .cardB5:before,
+.cardB6:before, .cardB7:before, .cardB8:before, .cardB9:before, .cardB10:before,
+.cardB11:before, .cardB12:before, .cardB13:before {
+    color: #E20001;
+}
+
+.cardD1:before, .cardD2:before, .cardD3:before, .cardD4:before, .cardD5:before,
+.cardD6:before, .cardD7:before, .cardD8:before, .cardD9:before, .cardD10:before,
+.cardD11:before, .cardD12:before, .cardD13:before {
+    color: #E20001;
+}
+
+.cardA1:before, .cardB1:before, .cardC1:before, .cardD1:before {content: "A";}
+.cardA2:before, .cardB2:before, .cardC2:before, .cardD2:before {content: "2";}
+.cardA3:before, .cardB3:before, .cardC3:before, .cardD3:before {content: "3";}
+.cardA4:before, .cardB4:before, .cardC4:before, .cardD4:before {content: "4";}
+.cardA5:before, .cardB5:before, .cardC5:before, .cardD5:before {content: "5";}
+.cardA6:before, .cardB6:before, .cardC6:before, .cardD6:before {content: "6";}
+.cardA7:before, .cardB7:before, .cardC7:before, .cardD7:before {content: "7";}
+.cardA8:before, .cardB8:before, .cardC8:before, .cardD8:before {content: "8";}
+.cardA9:before, .cardB9:before, .cardC9:before, .cardD9:before {content: "9";}
+.cardA10:before, .cardB10:before, .cardC10:before, .cardD10:before {content: "10";left: 3%;}
+.cardA11:before, .cardB11:before, .cardC11:before, .cardD11:before {content: "J";}
+.cardA12:before, .cardB12:before, .cardC12:before, .cardD12:before {content: "Q";}
+.cardA13:before, .cardB13:before, .cardC13:before, .cardD13:before {content: "K";}
+
+
+
+
+
+
+
+/*40 自己牌尺寸 57*/
+.myCards {position: absolute;width: 100%;height:20.46vw;bottom: 6%;}
+.myCards .winText{position: absolute;width: 100%;top:-50px;}
+.myCards .winText img{width: 120%;margin-left: -10%;}
+.myCards .cards{width: 13vw;height: 20.46vw;position: absolute; }
+.myCards .face{width: 13vw;height: 20.46vw;border-radius:4px;position: absolute; transform-style: preserve-3d;-webkit-backface-visibility: hidden;backface-visibility: hidden;-webkit-transition:all .6s; transition:all .6s;}
+.myCards .front{background: url("/app/img/bull10/card/card-bg.png");-webkit-transform: rotateY(0deg);transform: rotateY(0deg);background-size:100% 100%;z-index: 92;}
+/*519 228*/
+.myCards .back{/*background:url("/app/img/bull10/cards_bg.jpg");*/-webkit-transform: rotateY(180deg);transform: rotateY(180deg);z-index: 91;/*background-size:169vw 73.84vw;*/box-shadow:1px 1px 5px #333;}
+
+.myCards .card-flipped .front{z-index: 91;-webkit-transform: rotateY(180deg);transform: rotateY(180deg);}
+.myCards .card-flipped .back{z-index: 92;-webkit-transform: rotateY(0deg);transform: rotateY(0deg);}
+
+/*牌面定位样式*/
+.myCards .card{background: url("/app/img/bull10/card/card-bg.png");background-size:100% 100%;}
+.myCards .cardundefined{background: url("/app/img/bull10/card/card-bg.png");background-size:100% 100%;}
+.myCards .card-1{background: url("/app/img/bull10/card/card-bg.png");background-size:100% 100%;}
+
+/**
+.myCards .cardA1{background-position: 0 -55.38vw;}
+.myCards .cardA2{background-position: -13vw -55.38vw;}
+.myCards .cardA3{background-position: -26vw -55.38vw;}
+.myCards .cardA4{background-position: -39vw -55.38vw;}
+.myCards .cardA5{background-position: -52vw -55.38vw;}
+.myCards .cardA6{background-position: -65vw -55.38vw;}
+.myCards .cardA7{background-position: -78vw -55.38vw;}
+.myCards .cardA8{background-position: -91vw -55.38vw;}
+.myCards .cardA9{background-position: -104vw -55.38vw;}
+.myCards .cardA10{background-position: -117vw -55.38vw;}
+.myCards .cardA11{background-position: -130vw -55.38vw;}
+.myCards .cardA12{background-position: -143vw -55.38vw;}
+.myCards .cardA13{background-position: -156vw -55.38vw;}
+.myCards .cardB1{background-position: 0 -36.92vw;}
+.myCards .cardB2{background-position: -13vw -36.92vw;}
+.myCards .cardB3{background-position: -26vw -36.92vw;}
+.myCards .cardB4{background-position: -39vw -36.92vw;}
+.myCards .cardB5{background-position: -52vw -36.92vw;}
+.myCards .cardB6{background-position: -65vw -36.92vw;}
+.myCards .cardB7{background-position: -78vw -36.92vw;}
+.myCards .cardB8{background-position: -91vw -36.92vw;}
+.myCards .cardB9{background-position: -104vw -36.92vw;}
+.myCards .cardB10{background-position: -117vw -36.92vw;}
+.myCards .cardB11{background-position: -130vw -36.92vw;}
+.myCards .cardB12{background-position: -143vw -36.92vw;}
+.myCards .cardB13{background-position: -156vw -36.92vw;}
+.myCards .cardC1{background-position: 0 0;}
+.myCards .cardC2{background-position: -13vw 0;}
+.myCards .cardC3{background-position: -26vw  0;}
+.myCards .cardC4{background-position: -39vw 0;}
+.myCards .cardC5{background-position: -52vw 0;}
+.myCards .cardC6{background-position: -65vw 0;}
+.myCards .cardC7{background-position: -78vw 0;}
+.myCards .cardC8{background-position: -91vw 0;}
+.myCards .cardC9{background-position: -104vw 0;}
+.myCards .cardC10{background-position: -117vw 0;}
+.myCards .cardC11{background-position: -130vw 0;}
+.myCards .cardC12{background-position: -143vw 0;}
+.myCards .cardC13{background-position: -156vw 0;}
+.myCards .cardD1{background-position: 0 -18.46vw;}
+.myCards .cardD2{background-position: -13vw -18.46vw;}
+.myCards .cardD3{background-position: -26vw -18.46vw;}
+.myCards .cardD4{background-position: -39vw -18.46vw;}
+.myCards .cardD5{background-position: -52vw -18.46vw;}
+.myCards .cardD6{background-position: -65vw -18.46vw;}
+.myCards .cardD7{background-position: -78vw -18.46vw;}
+.myCards .cardD8{background-position: -91vw -18.46vw;}
+.myCards .cardD9{background-position: -104vw -18.46vw;}
+.myCards .cardD10{background-position: -117vw -18.46vw;}
+.myCards .cardD11{background-position: -130vw -18.46vw;}
+.myCards .cardD12{background-position: -143vw -18.46vw;}
+.myCards .cardD13{background-position: -156vw -18.46vw;}*/
+
+.cardA1, .cardA2, .cardA3, .cardA4, .cardA5, .cardA6, .cardA7, .cardA8, .cardA9, .cardA10, .cardA11, .cardA12, .cardA13 {
+    background: url("/app/img/bull10/card/card0.png") no-repeat;
+    background-color: rgba(255,255,255,1);
+}
+.cardB1, .cardB2, .cardB3, .cardB4, .cardB5, .cardB6, .cardB7, .cardB8, .cardB9, .cardB10, .cardB11, .cardB12, .cardB13 {
+    background: url("/app/img/bull10/card/card1.png") no-repeat;
+    background-color: rgba(255,255,255,1);
+}
+.cardC1, .cardC2, .cardC3, .cardC4, .cardC5, .cardC6, .cardC7, .cardC8, .cardC9, .cardC10, .cardC11, .cardC12, .cardC13 {
+    background: url("/app/img/bull10/card/card2.png") no-repeat;
+    background-color: rgba(255,255,255,1);
+}
+.cardD1, .cardD2, .cardD3, .cardD4, .cardD5, .cardD6, .cardD7, .cardD8, .cardD9, .cardD10, .cardD11, .cardD12, .cardD13 {
+    background: url("/app/img/bull10/card/card3.png") no-repeat;
+    background-color: rgba(255,255,255,1);
+}
+
+.cardA11 {background-image: url("/app/img/bull10/card/card011.png");}
+.cardA12 {background-image: url("/app/img/bull10/card/card012.png");}
+.cardA13 {background-image: url("/app/img/bull10/card/card013.png");}
+
+.cardB11 {background-image: url("/app/img/bull10/card/card111.png");}
+.cardB12 {background-image: url("/app/img/bull10/card/card112.png");}
+.cardB13 {background-image: url("/app/img/bull10/card/card113.png");}
+
+.cardC11 {background-image: url("/app/img/bull10/card/card211.png");}
+.cardC12 {background-image: url("/app/img/bull10/card/card212.png");}
+.cardC13 {background-image: url("/app/img/bull10/card/card213.png");}
+
+.cardD11 {background-image: url("/app/img/bull10/card/card311.png");}
+.cardD12 {background-image: url("/app/img/bull10/card/card312.png");}
+.cardD13 {background-image: url("/app/img/bull10/card/card313.png");}
+
+/*牌面小花色*/
+.cardA1:after, .cardA2:after, .cardA3:after, .cardA4:after, .cardA5:after, .cardA6:after, .cardA7:after, .cardA8:after, .cardA9:after, .cardA10:after, .cardA11:after, .cardA12:after, .cardA13:after{
+    background: url("/app/img/bull10/card/card00.png") no-repeat rgba(255,255,255,1);content:"";position: absolute;display: block;background-size: 100% 100%;
+}
+.cardB1:after, .cardB2:after, .cardB3:after, .cardB4:after, .cardB5:after, .cardB6:after, .cardB7:after, .cardB8:after, .cardB9:after, .cardB10:after, .cardB11:after, .cardB12:after, .cardB13:after{
+    background: url("/app/img/bull10/card/card01.png") no-repeat rgba(255,255,255,1);content:"";position: absolute;display: block;background-size: 100% 100%;
+}
+.cardC1:after, .cardC2:after, .cardC3:after, .cardC4:after, .cardC5:after, .cardC6:after, .cardC7:after, .cardC8:after, .cardC9:after, .cardC10:after, .cardC11:after, .cardC12:after, .cardC13:after{
+    background: url("/app/img/bull10/card/card02.png") no-repeat rgba(255,255,255,1);content:"";position: absolute;display: block;background-size: 100% 100%;
+}
+.cardD1:after, .cardD2:after, .cardD3:after, .cardD4:after, .cardD5:after, .cardD6:after, .cardD7:after, .cardD8:after, .cardD9:after, .cardD10:after, .cardD11:after, .cardD12:after, .cardD13:after{
+    background: url("/app/img/bull10/card/card03.png") no-repeat rgba(255,255,255,1);content:"";position: absolute;display: block;background-size: 100% 100%;
+}
+
+
+/*其他玩家牌面大花色定位*/
+.cardA1, .cardA2, .cardA3, .cardA4, .cardA5, .cardA6, .cardA7, .cardA8, .cardA9, .cardA10, .cardA11,
+.cardB1, .cardB2, .cardB3, .cardB4, .cardB5, .cardB6, .cardB7, .cardB8, .cardB9, .cardB10, .cardB11,
+.cardC1, .cardC2, .cardC3, .cardC4, .cardC5, .cardC6, .cardC7, .cardC8, .cardC9, .cardC10, .cardC11,
+.cardD1, .cardD2, .cardD3, .cardD4, .cardD5, .cardD6, .cardD7, .cardD8, .cardD9, .cardD10, .cardD11
+{ background-position: center 4.5vw; background-size: 4.6vw 4.432vw; }
+
+.cardA11, .cardA12, .cardA13,
+.cardB11, .cardB12, .cardB13,
+.cardC11, .cardC12, .cardC13,
+.cardD11, .cardD12, .cardD13{
+    background-size: 5.75vw 7.705vw; background-position: center 3vw;
+}
+
+/*其他玩家牌面小花色定位*/
+.cardA1:after, .cardA2:after, .cardA3:after, .cardA4:after, .cardA5:after, .cardA6:after, .cardA7:after, .cardA8:after, .cardA9:after, .cardA10:after, .cardA11:after, .cardA12:after, .cardA13:after,
+.cardB1:after, .cardB2:after, .cardB3:after, .cardB4:after, .cardB5:after, .cardB6:after, .cardB7:after, .cardB8:after, .cardB9:after, .cardB10:after, .cardB11:after, .cardB12:after, .cardB13:after,
+.cardC1:after, .cardC2:after, .cardC3:after, .cardC4:after, .cardC5:after, .cardC6:after, .cardC7:after, .cardC8:after, .cardC9:after, .cardC10:after, .cardC11:after, .cardC12:after, .cardC13:after,
+.cardD1:after, .cardD2:after, .cardD3:after, .cardD4:after, .cardD5:after, .cardD6:after, .cardD7:after, .cardD8:after, .cardD9:after, .cardD10:after, .cardD11:after, .cardD12:after, .cardD13:after {
+    width: 2vw; height: 1.93vw; left: 0.8vw; top: 3vw;
+}
+
+
+
+/*牌面大花色定位*/
+.myCards .cardA1, .myCards .cardA2, .myCards .cardA3, .myCards .cardA4, .myCards .cardA5, .myCards .cardA6, .myCards .cardA7, .myCards .cardA8, .myCards .cardA9, .myCards .cardA10, .myCards .cardA11,
+.myCards .cardB1, .myCards .cardB2, .myCards .cardB3, .myCards .cardB4, .myCards .cardB5, .myCards .cardB6, .myCards .cardB7, .myCards .cardB8, .myCards .cardB9, .myCards .cardB10, .myCards .cardB11,
+.myCards .cardC1, .myCards .cardC2, .myCards .cardC3, .myCards .cardC4, .myCards .cardC5, .myCards .cardC6, .myCards .cardC7, .myCards .cardC8, .myCards .cardC9, .myCards .cardC10, .myCards .cardC11,
+.myCards .cardD1, .myCards .cardD2, .myCards .cardD3, .myCards .cardD4, .myCards .cardD5, .myCards .cardD6, .myCards .cardD7, .myCards .cardD8, .myCards .cardD9, .myCards .cardD10, .myCards .cardD11
+{ background-position: center 11.5vw; background-size: 8vw 7.709vw; }
+
+.myCards .cardA11, .myCards .cardA12, .myCards .cardA13,
+.myCards .cardB11, .myCards .cardB12, .myCards .cardB13,
+.myCards .cardC11, .myCards .cardC12, .myCards .cardC13,
+.myCards .cardD11, .myCards .cardD12, .myCards .cardD13{
+    background-size: 10vw 13.4vw; background-position: center 5.5vw;
+}
+
+/*牌面小花色定位*/
+.myCards .cardA1:after, .myCards .cardA2:after, .myCards .cardA3:after, .myCards .cardA4:after, .myCards .cardA5:after, .myCards .cardA6:after, .myCards .cardA7:after, .myCards .cardA8:after, .myCards .cardA9:after, .myCards .cardA10:after, .cardA11:after, .myCards .cardA12:after, .myCards .cardA13:after,
+.myCards .cardB1:after, .myCards .cardB2:after, .myCards .cardB3:after, .myCards .cardB4:after, .myCards .cardB5:after, .myCards .cardB6:after, .myCards .cardB7:after, .myCards .cardB8:after, .myCards .cardB9:after, .myCards .cardB10:after, .cardB11:after, .myCards .cardB12:after, .myCards .cardB13:after,
+.myCards .cardC1:after, .myCards .cardC2:after, .myCards .cardC3:after, .myCards .cardC4:after, .myCards .cardC5:after, .myCards .cardC6:after, .myCards .cardC7:after, .myCards .cardC8:after, .myCards .cardC9:after, .myCards .cardC10:after, .cardC11:after, .myCards .cardC12:after, .myCards .cardC13:after,
+.myCards .cardD1:after, .myCards .cardD2:after, .myCards .cardD3:after, .myCards .cardD4:after, .myCards .cardD5:after, .myCards .cardD6:after, .myCards .cardD7:after, .myCards .cardD8:after, .myCards .cardD9:after, .myCards .cardD10:after, .cardD11:after, .myCards .cardD12:after, .myCards .cardD13:after {
+    width: 4vw; height: 3.861vw; left: 1vw; top: 5vw;
+}
+
+
+/*自己牌，发完之后*/
+.myCards .card0{top: 0;left: 16vw;}
+.myCards .card1{top: 0;left: 30vw;}
+.myCards .card2{top: 0;left: 44vw;}
+.myCards .card3{top: 0;left: 58vw;}
+.myCards .card4{top: 0;left: 72vw;}
+
+/*自己牌，摊牌之后*/
+.myCards .card00{top: 0;left: 16vw;}
+.myCards .card01{top: 0;left: 30vw;}
+.myCards .card02{top: 0;left: 44vw;}
+.myCards .card03{top: 0;left: 58vw;}
+.myCards .card04{top: 0;left: 72vw;}
+
+.cardOver1{display: none;}
+.cardOver2{right: 0;}
+.cardOver3{right: 0;}
+.cardOver4{left: -14px;}
+.cardOver5{left:0;}
+.cardOver6{left:0;} 
+
+
+.ranking{position: absolute;width: 200%;height:200%;top:0;left:0;z-index: 110;display: none;}  
+.ranking .roundEndShow{display: none;}  
+.ranking .rankBack{width: 100%;height:100%;background: #000;opacity:1.0}
+.ranking .rankBack .bg{position: absolute;width: 100%;height:100%;background: #000;opacity:1.0}  
+.ranking .rankText{width: 100%;position: absolute;top:10%;left: 0;}   
+.ranking .rankText .title{width: 100%;} 
+.ranking .rankText .time{text-align: center;margin-top: 24px;margin-bottom: 20px;}
+.ranking .rankText .time a{border-radius: 5vw;border: 2px solid #f7d92b;color:#f7d92b;padding: 1vw 4vw;width: 400px;font-size: 6vw;}
+.ranking .rankText .scoresItem{width:129vw;margin:0 auto; margin-top: 6px;height:18vw;line-height:18vw;font-size:8vw;position: relative;background-color: #1b160c; }
+.ranking .rankText .scoresItemWhite{color:#fff; }
+.ranking .rankText .scoresItemWhite a{color:#fff; }
+.ranking .rankText .scoresItemYellow{color:#f7d92b;}
+.ranking .rankText .scoresItemYellow a{color:#f7d92b;}
+.ranking .rankText .scoresItem .name{left: 16%;width: 50%;height: 18vw;overflow: hidden;word-break:break-all;position: absolute;top:0;}
+.ranking .rankText .scoresItem .currentScores{width:25%;text-align: left;position: absolute;right: 0;top:0;}
+.ranking  .button{width:100%;position: absolute;bottom:8%; }
+.ranking  .button img{width:33%;}
+
+/* 玩家消息 */
+/*.message{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 112;}  
+.message .messageBack{width: 100%;height:100%;} 
+.message .textPart{width: 100%;position: absolute;left: 0;bottom:0;height:0; }  
+.message .textPart .head{width: 100%;}  
+.message .textPart .head img{width: 100%;height: 30px;} 
+.message .textPart .textItem{width: 80%;height: 40px;line-height: 40px;font-size: 14px;background: #150e2d;border-bottom:1px solid #322b4c;color:#bbb;padding:0 10%; }*/
+
+.message .messageBack{width: 100%;height:100%;position: absolute;top:0;left:0;} 
+.message .textPartOuter{position: absolute;width: 34vh;height:40vh;bottom:7vh;right:2vh;padding: 1vh 1vh 1vh 1vh;border: 0.2vh solid #a684f2;background: #634fa6;border-radius: 1vh;}
+.message .textPart{position: absolute;width: 34vh;height:40vh !important;bottom:8.5vh;right:3.2vh;overflow: auto;} 
+.message .textPart .outline{position: absolute;background: #634fa6;opacity: 1;width: 98%;height:100%;border:0.2vh solid #a684f2;border-radius:10px;top:-0.5vh;left: .5%;}
+.message .textPart .textList {border:1px solid #a684f2;position: relative;box-sizing: border-box;}
+.message .textPart .textList .textItem{width: 90%;height: 6vh;line-height: 6vh;font-size: 2.1vh;background: #150e2d;border-bottom:1px solid #666;color:#fff;padding:0 5%;position: relative;font-family: simHei;}
+
+.erweima{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;}
+.erweima .inviteBack{width: 100%;height:100%;background: #000;opacity:0.8;position: absolute;}
+.erweima .inviteText{margin: 0 auto;margin-top:30%;width:300px;line-height: 40px;font-size: 18px;color: #fff;font-family: simHei;position: relative;}
+.erweima .inviteText .invite1{width: 60px;position: absolute; top:240px;left: 140px;}
+
+.createRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.createRoom .createRoomBack{width: 100%;height:100%;background: #000;opacity:0.6;}  
+.createRoom .mainPart{width: 45vh;height:65vh;top:44%;left:50%;margin-top:-30vh;margin-left: -22.5vh;position: absolute;} 
+.createRoom .mainPart .createB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:#634fa6;border:1px solid #a684f2;border-radius:10px; }  
+.createRoom .mainPart .createTitle{position:relative;height:5vh;text-align: center;} 
+.createRoom .mainPart .createTitle img{position:relative;height:2.6vh;margin-top: 1.2vh;}  
+.createRoom .mainPart .cancelCreate{width: 5vh;height:5vh;top:-2.5vh;right:-2.5vh;position: absolute;}  
+.createRoom .mainPart .createCommit{position: absolute;line-height: 5.5vh;height: 5.5vh;font-size: 2.5vh;width: 17vh;left:50%;margin-left:-8.5vh;bottom:-7vh;text-align: center;background:url("http://goss.fexteam.com/files/d_10/images/game/button2.png");background-size:100%;color: #fff;}  
+.createRoom .mainPart .blueBack{width: 42vh;height: 46vh;background:#111431;border:1px solid #a684f2;border-radius:4px;margin:0 auto;position: relative; }
+.createRoom .mainPart .blueBack .selectPart{width:100%;margin-top:4px;line-height:36px;font-size:2vh;position: relative;color:#111431;background:#bbbff1;border-radius:0px;font-family:simHei; }
+.createRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:8vh;text-align: right; }
+.createRoom .mainPart .blueBack .selectPart .selectList{float: left; width: 34vh}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:25px; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:2vh;width:2vh;border:1px solid #1d1045;border-radius:2px;background:#78899d;margin-top:0.7vh;position: relative; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 2vh;height:2vh;left: 0;top:0.7vh;}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 0.8vh;}
+
+.bankerSelected{position: absolute;width: 8.1vh;height: 5.5vh;border-style: solid;border-width: 0px;border-color: #392c62;color: #653604;text-align: center;font-size: 1.7vh;overflow: hidden;}
+.bankerSelected .img{position: absolute;top: 0;left: 0;width:  8.1vh;height: 5.5vh;border-style: solid;border-width: 0.5px;border-color: #392c62;}
+.bankerUnSelected{position: absolute;width:  8.1vh;height: 5.5vh;border-style: solid;border-width: 0px;border-color: #e8c007;color: #9a6b3a;text-align: center;font-size: 1.7vh;overflow: hidden;}
+.bankerUnSelected .img{position: absolute;top: 0;left: 0;width:  8.1vh;height: 5.5vh;border-style: solid;border-width: 0.5px;border-color: #e8c007;}
+
+
+.audioRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.audioRoom .audioRoomBack{width: 100%;height:100%;background: #000;opacity:0.6;}  
+.audioRoom .mainPart{width: 38vh;height:27vh;top:44%;left:50%;margin-top:-16vh;margin-left: -19vh;position: absolute;} 
+.audioRoom .mainPart .createB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:#634fa6;border:1px solid #a684f2;border-radius:10px; }  
+.audioRoom .mainPart .createTitle{position:relative;height:5vh;text-align: center;} 
+.audioRoom .mainPart .createTitle img{position:relative;height:2.6vh;margin-top: 1.2vh;}  
+.audioRoom .mainPart .cancelCreate{width: 5vh;height:5vh;top:-2.5vh;right:-2.5vh;position: absolute;}  
+.audioRoom .mainPart .createCommit{position: absolute;line-height: 5.5vh;height: 5.5vh;font-size: 2.5vh;width: 17vh;left:50%;margin-left:-8.5vh;bottom:-7vh;text-align: center;background:url("http://goss.fexteam.com/files/d_10/images/game/button2.png");background-size:100%;color: #fff;}  
+.audioRoom .mainPart .blueBack{width: 35vh;height: 14vh;background:#111431;border:1px solid #a684f2;border-radius:4px;margin:0 auto;position: relative; }
+.audioRoom .mainPart .blueBack .selectPart{width:100%;margin-top:4px;line-height:36px;font-size:2.2vh;position: relative;color:#111431;background:#bbbff1;border-radius:0px;font-family:simHei; }
+.audioRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:13vh;text-align: right; }
+.audioRoom .mainPart .blueBack .selectPart .selectList{float: right; width: 20vh}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:25px; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:2.2vh;width:2.2vh;border:1px solid #1d1045;border-radius:2px;background:#78899d;margin-top:0.7vh;position: relative; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 2.8vh;height:2.8vh;left: 0;top:0;}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 0.8vh;}
+
+
+body.modal-show {position: fixed;width: 100%;}
+        .cards3D .cards{overflow:hidden;}
+    .record{position: fixed;top:0;left:0;height:100%;width:100%; z-index: 150;} 
+    .record .recordBack{position: fixed;top:0;left:0;height:100%;width:100%;background: #0d0a12;opacity:.7;}  
+    .record .leftLine{position: fixed;left: 0%;margin-left:20px;height:100%;width: 0;border-left:1px solid #ecb700;}  
+    .record .mainPart{position: absolute;top:0;left:0;height:100%;width:100%;overflow: auto;} 
+    .record .mainPart .recordList{position: relative;margin-left: 40px;margin-top: 20px;} 
+    .record .mainPart .recordList .recordTime{color:#ecb700;font-size: 14px;} 
+    .record .mainPart .recordList .yellowPoint{position: absolute;width:30px;height:30px;top:10px;left:-35px; } 
+    .record .mainPart .recordList .yellowPoint .point{background:#ecb700;position: absolute;height:6px;width:6px;border-radius:3px;top:12px;left:12px; }  
+
+    .record .mainPart .recordList .recordInfo{background:#cfced0;position: relative;width:80%;border-radius:6px;margin-top:5px;padding:5px 15px; }    
+    .record .mainPart .recordList .recordInfo .recordItem{height:40px;font-family:simHei; border-top:1px solid #ababab;line-height: 40px;font-size: 16px;}  
+    .record .mainPart .recordList .recordInfo .recordItem .name{float: left;height: 40px;width:120px;overflow: hidden;margin-left: 15px;} 
+    .record .mainPart .recordList .recordInfo .recordItem .score{float: right;width:80px;overflow: hidden;right: 15px;}
+    .record .mainPart .recordList .recordInfo .borderNone{border: none;}
+
+
+.cardDeal .cardopen{
+  /*background:url("/app/img/bull10/cards_bg.jpg");
+  background-size:59.8vh 25.6vh;*/
+  box-shadow:1px 1px 5px #333;
+}
+
+/*
+.cardDeal .cardA1{background-position: 0 -19.2vh;}
+.cardDeal .cardA2{background-position: -4.6vh -19.2vh;}
+.cardDeal .cardA3{background-position: -9.2vh -19.2vh;}
+.cardDeal .cardA4{background-position: -13.8vh -19.2vh;}
+.cardDeal .cardA5{background-position: -18.4vh -19.2vh;}
+.cardDeal .cardA6{background-position: -23vh -19.2vh;}
+.cardDeal .cardA7{background-position: -27.6vh -19.2vh;}
+.cardDeal .cardA8{background-position: -32.2vh -19.2vh;}
+.cardDeal .cardA9{background-position: -36.8vh -19.2vh;}
+.cardDeal .cardA10{background-position: -41.4vh -19.2vh;}
+.cardDeal .cardA11{background-position: -46vh -19.2vh;}
+.cardDeal .cardA12{background-position: -50.6vh -19.2vh;}
+.cardDeal .cardA13{background-position: -55.2vh -19.2vh;}
+.cardDeal .cardB1{background-position: 0 -12.8vh;}
+.cardDeal .cardB2{background-position: -4.6vh -12.8vh;}
+.cardDeal .cardB3{background-position: -9.2vh -12.8vh;}
+.cardDeal .cardB4{background-position: -13.8vh -12.8vh;}
+.cardDeal .cardB5{background-position: -18.4vh -12.8vh;}
+.cardDeal .cardB6{background-position: -23vh -12.8vh;}
+.cardDeal .cardB7{background-position: -27.6vh -12.8vh;}
+.cardDeal .cardB8{background-position: -32.2vh -12.8vh;}
+.cardDeal .cardB9{background-position: -36.8vh -12.8vh;}
+.cardDeal .cardB10{background-position: -41.4vh -12.8vh;}
+.cardDeal .cardB11{background-position: -46vh -12.8vh;}
+.cardDeal .cardB12{background-position: -50.6vh -12.8vh;}
+.cardDeal .cardB13{background-position: -55.2vh -12.8vh;}
+.cardDeal .cardC1{background-position: 0 0;}
+.cardDeal .cardC2{background-position: -4.6vh 0;}
+.cardDeal .cardC3{background-position: -9.2vh  0;}
+.cardDeal .cardC4{background-position: -13.8vh 0;}
+.cardDeal .cardC5{background-position: -18.4vh 0;}
+.cardDeal .cardC6{background-position: -23vh 0;}
+.cardDeal .cardC7{background-position: -27.6vh 0;}
+.cardDeal .cardC8{background-position: -32.2vh 0;}
+.cardDeal .cardC9{background-position: -36.8vh 0;}
+.cardDeal .cardC10{background-position: -41.4vh 0;}
+.cardDeal .cardC11{background-position: -46vh 0;}
+.cardDeal .cardC12{background-position: -50.6vh 0;}
+.cardDeal .cardC13{background-position: -55.2vh 0;}
+.cardDeal .cardD1{background-position: 0 -6.4vh;}
+.cardDeal .cardD2{background-position: -4.6vh -6.4vh;}
+.cardDeal .cardD3{background-position: -9.2vh -6.4vh;}
+.cardDeal .cardD4{background-position: -13.8vh -6.4vh;}
+.cardDeal .cardD5{background-position: -18.4vh -6.4vh;}
+.cardDeal .cardD6{background-position: -23vh -6.4vh;}
+.cardDeal .cardD7{background-position: -27.6vh -6.4vh;}
+.cardDeal .cardD8{background-position: -32.2vh -6.4vh;}
+.cardDeal .cardD9{background-position: -36.8vh -6.4vh;}
+.cardDeal .cardD10{background-position: -41.4vh -6.4vh;}
+.cardDeal .cardD11{background-position: -46vh -6.4vh;}
+.cardDeal .cardD12{background-position: -50.6vh -6.4vh;}
+.cardDeal .cardD13{background-position: -55.2vh -6.4vh;}*/

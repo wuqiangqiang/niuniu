@@ -1,0 +1,796 @@
+.load4 .loader {
+  font-size: 20px;
+ top: 40%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -.5em;
+  margin-top: -.5em;
+  text-indent: -9999em;
+  -webkit-animation: load4 1.3s infinite linear;
+  animation: load4 1.3s infinite linear;
+  transform:scale(.7);
+}
+}
+@-webkit-keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0em -3em 0em 0.2em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  12.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 0.2em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  25% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 0.2em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  37.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 0.2em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  50% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 0.2em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  62.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 0.2em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  75% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0.2em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 0.2em #ffffff;
+  }
+}
+@keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0em -3em 0em 0.2em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  12.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 0.2em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  25% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 0.2em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  37.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 0.2em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  50% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 0.2em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  62.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 0.2em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  75% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0.2em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 0.2em #ffffff;
+  }
+}
+
+*{padding: 0;margin:0;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-backface-visibility: hidden;backface-visibility: hidden;-webkit-overflow-scrolling: touch;}a {text-decoration: none;color: #fff;}ul {list-style: none;}input{border: none;outline:none}body{font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, Arial, sans-serif;cursor: default;}
+img{border: none;}
+.backImg1{background:url("http://goss.fexteam.com/files/d_10/images//game/pic1.png"); }
+.roomCard{position: fixed;bottom:0.75vh;left: 2vh;;z-index:90;height: 4.5vh;}
+.roomCard img{height: 4.5vh;position: absolute;left: 0;top:0;z-index: 90;}
+.roomCard .num{height: 3vh;line-height: 3vh;text-align: right;color:#fff;font-size:2.2vh;margin-top:0.75vh;position:relative;}
+.round{position: absolute;top:1%;right: 3%;width: 80px;line-height: 24px;font-size:16px;color:#fff;z-index: 91;text-align: right;opacity: 1.0;}
+.tableTab{position: fixed;top:0px;left: 0px;width: 100%;z-index:90;}
+.tableHead{position: fixed;top:0;left: 0;width: 100%;z-index: 81;}
+.addFriend{position: fixed;bottom:0.75vh;right: 15vh;width: 4.5vh;z-index:90;}
+.return{position: fixed;bottom:0.75vh;right: 8.5vh;width: 4.5vh;z-index:90;}
+.bGameRule{position: fixed;bottom:0.75vh;right: 28vh;width: 4.5vh;z-index:112;}
+.bottom{position: fixed;bottom:0;left: 0;width: 100%;z-index:90;}
+
+.tabBottom{position: fixed;bottom:0;left: 0;width: 100%;height: 6vh;z-index: 89;}
+
+.myCardTypeBG{position: absolute;top: 1.5%;left: 3%;width: 24%;z-index:91;text-align: center;color: #fff;height: 3.2vh;line-height: 3.2vh; background-color: black; border-radius: 1.8vh;opacity: 0.5}
+.myCardType{position: absolute;top: 1.5%;left: 3%;width: 24%;z-index:91;color: #fff;height: 3.2vh;line-height: 3.2vh;border-radius: 1.8vh;font-size: 2vh;text-align: center;}
+
+.bottomMessage{position: fixed;bottom: 0.75vh;right: 2vh;width: 4.5vh; height: 4.5vh;z-index:91;}
+.bottomHistory{position: fixed;bottom: 0.75vh;right: 21.5vh;width: 4.5vh; height: 4.5vh;z-index:112;}
+
+
+.main{width: 100%;position: relative;background: #fff;margin:0 auto;}
+.title{overflow: hidden;word-break:break-all;}
+
+.area{position: absolute;top:45%;height: 64vw;width: 64vw;left: 18%;margin-top: -32vw;}
+.area .shai{position: absolute;top:1vw;width: 9vw}
+.area .shai .dian{width: 9vw;height: 9vw;}
+.area .shai .tu{margin-top: 1vw;}
+.area .shai .tu img{width: 9vw;height: 9vw;}
+.area .shai1{left:17.5vw;}
+.area .shai2{left:50%;margin-left: -4.5vw;}
+.area .shai3{right:17.5vw;}
+
+.area .light{position: absolute;width: 9vw;height: 9vw;z-index: 10;left: 0;}
+.area .light11{top:0;}
+.area .light12{top:10vw;}
+.area .light21{top:0;}
+.area .light22{top:10vw;}
+.area .light31{top:0;}
+.area .light32{top:10vw;}
+.area .lightMove{position: absolute;animation: light .8s;width: 9vw;height: 9vw;top:0;left:0;opacity: 0;}
+ @keyframes light{
+ 	0% {opacity: .3;left: 2vw;top:2vw;width: 5vw;height: 5vw;transform:  rotate(0);}
+ 	25% {opacity: 1;left: -4.5vw;top:-4.5vw;width: 18vw;height: 18vw;}
+ 	60% {opacity: .5;left: -4.5vw;top:-4.5vw;width: 18vw;height: 18vw;}
+ 	75% {opacity: 1;left: -4.5vw;top:-4.5vw;width: 18vw;height: 18vw;}
+ 	90% {opacity: 0.8;left: -3vw;top:-3vw;width: 15vw;height: 15vw;}
+ 	100% {opacity: 0.3;left:1vw;top:0vw;width: 7vw;height: 7vw;transform:  rotate(150deg);}
+ }
+
+
+
+.area .zhong1{position: absolute;top:13vw;left: 21vw;width: 22vw;height: 28vw;}
+.area .zhong2{position: absolute;top:13vw;left: 21vw;width: 22vw;}
+.area .zhong .top{width: 22vw;position: absolute;z-index: 4;left: 0;top:0;}
+.area .zhong .bottom{width: 22vw;position: absolute;z-index: 1;left: 0;top:13.6vw;}
+.area .zhong .img1{width: 5.2vw;position: absolute;z-index: 3;left: 5vw;top:18vw;}
+.area .zhong .img2{width: 5.2vw;position: absolute;z-index: 2;left: 8vw;top:14.5vw;}
+.area .zhong .img3{width: 5.2vw;position: absolute;z-index: 2;left: 12vw;top:17.5vw;}
+.area .move{
+    animation: move .5s linear;
+    opacity: 0;top:-20vw;left: 5vw;
+}
+
+ @keyframes move{
+ 	0% {opacity: 1;left: 0;top:0;}
+ 	70% {opacity: 1;top:-20vw;left: 3vw;transform:  rotate(3.5deg);}
+ 	90% {opacity: 1;top:-30vw;left: 5vw;transform:  rotate(8.5deg);}
+ 	100% {opacity: 0;top:-30vw;left: 5vw;transform: rotate(8.5deg);}
+ }
+ 
+.area .ground{border:.2vw solid #32ffd6;position: absolute;height: 22vw;width: 15vw;line-height: 3.5vw;font-size: 3vw;text-align: center;}
+.area .ground .clickArea{position: absolute;height: 100%;width: 100%;top:0;left:0;z-index: 11;}
+.area .ground .totalScore{height: 3.5vw;color: #ffb22c;background: #0d4e42;}
+.area .ground .middleArea{height: 15vw;width: 15vw;position: relative;}
+.area .ground img{height: 15vw;width: 15vw;position: relative;}
+.area .ground .background{position: absolute;top:0;left: 0;width: 100%;height: 100%;background: #000;opacity: 0.15;}
+.area .ground .backgroundSelect{position: absolute;top:0;left: 0;width: 100%;height: 100%;background: #4efad4;opacity: 0.6;}
+.area .ground .singleScore{height: 3.5vw;color: #3effec;background: #0d4e42;}
+
+.area .ground1{top:23.2vw;left: 0;}
+.area .ground2{top:46.3vw;left: 0;}
+.area .ground3{top:46.3vw;left: 16.2vw;}
+.area .ground4{top:46.3vw;right: 16.2vw;}
+.area .ground5{top:46.3vw;right:0;}
+.area .ground6{top:23.2vw;right:0;}
+.area .ground7{top:0;right:0;}
+.area .ground8{top:0;left: 0;}
+.area .middleBack{top:23.2vw;left: 16.2vw;width: 31.2vw;color: #ffb22d;font-size: 5.5vw;line-height:9vw;}
+.area .middleBack .background{position: absolute;top:0;left: 0;width: 100%;height: 100%;background: #000;opacity: 0.15;}
+
+
+
+.betArea  .coinType5{background:url("http://goss.fexteam.com/files/d_30/images/fish/c53.png");}
+.betArea  .coinType10{background:url("http://goss.fexteam.com/files/d_30/images/fish/c103.png");}
+.betArea  .coinType20{background:url("http://goss.fexteam.com/files/d_30/images/fish/c203.png");}
+.betArea  .coinType50{background:url("http://goss.fexteam.com/files/d_30/images/fish/c503.png");}
+.betArea  .coinType100{background:url("http://goss.fexteam.com/files/d_30/images/fish/c1003.png");}
+
+.betArea .coin{width: 5vw;height:5vw;position: absolute;background-size: 5vw 5vw;z-index: 10;}
+
+.betArea .position1{top:79vh;left:47.5vw;}
+
+.betArea .position2{top:61vh;left:81vw;}
+.betArea .position3{top:49.5vh;left:81vw;}
+.betArea .position4{top:38vh;left:81vw;}
+.betArea .position5{top:26.5vh;left:81vw;}
+
+.betArea .position6{top:15vh;left:73vw;}
+.betArea .position7{top:12vh;left:47.5vw;}
+.betArea .position8{top:15vh;left:22vw;}
+
+.betArea .position9{top:26.5vh;left:14vw;}
+.betArea .position10{top:38vh;left:14vw;}
+.betArea .position11{top:49.5vh;left:14vw;}
+.betArea .position12{top:61vh;left:14vw;}
+
+
+.clock{position: absolute; top: 43%;margin-top: -32vw ;width: 44px; height: 42px;}
+.clock .clockText{position: absolute;top: -30px; left: 50%; width:200px; height: 30px;margin-left: -100px;}
+.clock .clockText p{color: white; font-size: 2vh;width: 100%;height: 30px; line-height: 30px; text-align: center;font-family:'Helvetica 微软雅黑';}
+
+.coins{width: 72vw;margin: 0 auto;margin-top: 2vw;position: relative;}
+.coin img{width: 16vw;height: 16vw;float: left;margin: 0 1vw;}
+.coin .selected{margin-top: -3vw}
+
+.shortAlert{position: absolute;top:80%;width:130px;left: 50%;margin-left: -65px;color: #fff;height: 22px;line-height: 22px;font-size: 14px;text-align: center;z-index:13; }
+.shortAlert .back{position: absolute;top: 0;left: 0;background: #000;opacity: .6;width: 100%;height: 100%;border-radius:11px;}
+.shortAlert .text{position: relative;}
+
+.last6{position: absolute;top:6%;left:3%;z-index: 99;}
+.last6 .back{position: absolute;width:100%;height:100%;opacity:.5;background:#000;border-radius:1vw;}
+.last6 .left{position: relative; width: 1vw;height: 27vw;float: left;}
+.last6 .eachRound{position: relative; width: 5vw;height: 27vw;margin: 0 .8vw; float: left;text-align: center;color: #ffb22d;font-size: 3.5vw;line-height: 5vw;}
+.last6 .eachRound .roundNum{position: relative; }
+.last6 .eachRound .shai img{position: relative; width: 5vw;height: 5vw;margin-top: .5vw;}
+.last6 .eachRound .bol{position: relative;margin-top: .5vw; }
+.last6Back{position: absolute;width:100%;height:100%;top:0;left:0;z-index: 100;}
+
+
+
+.member{position: absolute;text-align: center;width: 6vh;height: 10.2vh;}
+.member .background{width: 100%;position: absolute;top:0;left:0;}
+.member .banker{left:-0.2vh; top: -0.2vh;width: 6.4vh; height: 6.4vh;position: absolute;}
+.member .title{color: #fff;font-size: 10px;text-align: center;line-height: 16px;position: relative;margin: 0 auto;margin-top: 15%;height:16px;width: 47px;}
+.member .score{color: #fff;font-size: 12px;text-align: center;line-height: 12px;position: absolute;background: #1f1732;width:66%;border-radius:7px;margin:0 auto;bottom: 11%;left:18%;}
+.member .avatar{width: 100%;position: relative;border-radius:3px;}
+.member .bottom{position: absolute; top: 63%; left: 0;width: 100%; height: 3.6vh}
+.member .bottom .bname{position: absolute; top: 1px; left: 0px;width: 100%; height: 2vh; line-height: 2vh;text-align: center;color: white;font-size: 1.5vh;}
+.member .bottom .bscore{position: absolute; top: 2vh; left: 0px;width: 100%; height: 2vh; line-height: 2vh; text-align: center;color: orange;font-size: 1.6vh;}
+
+.memberMine{position: absolute;text-align: center;width: 150px;height: 110px;}
+
+.member .isReady{position: absolute;}
+.member .ready{position: absolute;width: 6vh;height: 6vh;border-radius: 4px;top: 0px;left: 0;}
+
+
+
+.member1{top:79vh;left:2vh;}
+.member1 .isReady{top:-50px;left: -18px;width: 110px;text-align:center;}
+.member1 .isReady .unready{width: 110px;}
+
+.member2{top:59%;right:2vh;}
+.member3{top:47.5%;right:2vh;}
+.member4{top:36%;right:2vh;}
+.member5{top:24.5%;right:2vh;}
+.member6{top:5.5%;right:7vh;}
+.member7{top:2%;left:50%;margin-left: -3vh;}
+.member8{top:5.5%;left:7vh;}
+.member9{top:24.5%;left:2vh;}
+.member10{top:36%;left:2vh;}
+.member11{top:47.5%;left:2vh;}
+.member12{top:59%;left:2vh;}
+
+
+/* 玩家金币 */
+.memberCoin{position: absolute;width: 2.5vh;height: 2.5vh; z-index: 100}
+.memberCoin10{top: 82%; left: 4.5vh}
+.memberCoin11{top: 82%; left: 4.5vh}
+.memberCoin12{top: 82%; left: 4.5vh}
+.memberCoin13{top: 82%; left: 4.5vh}
+.memberCoin14{top: 82%; left: 4.5vh}
+.memberCoin15{top: 82%; left: 4.5vh}
+.memberCoin16{top: 82%; left: 4.5vh}
+.memberCoin17{top: 82%; left: 4.5vh}
+
+.memberCoin20{top: 62%; left: 90%}
+.memberCoin21{top: 62%; left: 90%}
+.memberCoin22{top: 62%; left: 90%}
+.memberCoin23{top: 62%; left: 90%}
+.memberCoin24{top: 62%; left: 90%}
+.memberCoin25{top: 62%; left: 90%}
+.memberCoin26{top: 62%; left: 90%}
+.memberCoin27{top: 62%; left: 90%}
+
+.memberCoin30{top: 50%; left: 90%}
+.memberCoin31{top: 50%; left: 90%}
+.memberCoin32{top: 50%; left: 90%}
+.memberCoin33{top: 50%; left: 90%}
+.memberCoin34{top: 50%; left: 90%}
+.memberCoin35{top: 50%; left: 90%}
+.memberCoin36{top: 50%; left: 90%}
+.memberCoin37{top: 50%; left: 90%}
+
+.memberCoin40{top: 39%; left: 90%}
+.memberCoin41{top: 39%; left: 90%}
+.memberCoin42{top: 39%; left: 90%}
+.memberCoin43{top: 39%; left: 90%}
+.memberCoin44{top: 39%; left: 90%}
+.memberCoin45{top: 39%; left: 90%}
+.memberCoin46{top: 39%; left: 90%}
+.memberCoin47{top: 39%; left: 90%}
+
+.memberCoin50{top: 27%; left: 90%}
+.memberCoin51{top: 27%; left: 90%}
+.memberCoin52{top: 27%; left: 90%}
+.memberCoin53{top: 27%; left: 90%}
+.memberCoin54{top: 27%; left: 90%}
+.memberCoin55{top: 27%; left: 90%}
+.memberCoin56{top: 27%; left: 90%}
+.memberCoin57{top: 27%; left: 90%}
+
+.memberCoin60{top: 9%; left: 80%}
+.memberCoin61{top: 9%; left: 80%}
+.memberCoin62{top: 9%; left: 80%}
+.memberCoin63{top: 9%; left: 80%}
+.memberCoin64{top: 9%; left: 80%}
+.memberCoin65{top: 9%; left: 80%}
+.memberCoin69{top: 9%; left: 80%}
+.memberCoin67{top: 9%; left: 80%}
+
+.memberCoin70{top: 4%; left: 47%}
+.memberCoin71{top: 4%; left: 47%}
+.memberCoin72{top: 4%; left: 47%}
+.memberCoin73{top: 4%; left: 47%}
+.memberCoin74{top: 4%; left: 47%}
+.memberCoin75{top: 4%; left: 47%}
+.memberCoin76{top: 4%; left: 47%}
+.memberCoin77{top: 4%; left: 47%}
+
+.memberCoin80{top: 9%; left: 8vh}
+.memberCoin81{top: 9%; left: 8vh}
+.memberCoin82{top: 9%; left: 8vh}
+.memberCoin83{top: 9%; left: 8vh}
+.memberCoin84{top: 9%; left: 8vh}
+.memberCoin85{top: 9%; left: 8vh}
+.memberCoin86{top: 9%; left: 8vh}
+.memberCoin87{top: 9%; left: 8vh}
+
+.memberCoin90{top: 27%; left: 4.5vh}
+.memberCoin91{top: 27%; left: 4.5vh}
+.memberCoin92{top: 27%; left: 4.5vh}
+.memberCoin93{top: 27%; left: 4.5vh}
+.memberCoin94{top: 27%; left: 4.5vh}
+.memberCoin95{top: 27%; left: 4.5vh}
+.memberCoin96{top: 27%; left: 4.5vh}
+.memberCoin97{top: 27%; left: 4.5vh}
+
+.memberCoin100{top: 39%; left: 4.5vh}
+.memberCoin101{top: 39%; left: 4.5vh}
+.memberCoin102{top: 39%; left: 4.5vh}
+.memberCoin103{top: 39%; left: 4.5vh}
+.memberCoin104{top: 39%; left: 4.5vh}
+.memberCoin105{top: 39%; left: 4.5vh}
+.memberCoin106{top: 39%; left: 4.5vh}
+.memberCoin107{top: 39%; left: 4.5vh}
+
+.memberCoin110{top: 50%; left: 4.5vh}
+.memberCoin111{top: 50%; left: 4.5vh}
+.memberCoin112{top: 50%; left: 4.5vh}
+.memberCoin113{top: 50%; left: 4.5vh}
+.memberCoin114{top: 50%; left: 4.5vh}
+.memberCoin115{top: 50%; left: 4.5vh}
+.memberCoin116{top: 50%; left: 4.5vh}
+.memberCoin117{top: 50%; left: 4.5vh}
+
+.memberCoin120{top: 62%; left: 4.5vh}
+.memberCoin121{top: 62%; left: 4.5vh}
+.memberCoin122{top: 62%; left: 4.5vh}
+.memberCoin123{top: 62%; left: 4.5vh}
+.memberCoin124{top: 62%; left: 4.5vh}
+.memberCoin125{top: 62%; left: 4.5vh}
+.memberCoin126{top: 62%; left: 4.5vh}
+.memberCoin127{top: 62%; left: 4.5vh}
+
+/* 显示是否抢庄 */
+.memberRobText1{position: absolute; top: 79%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberRobText2{position: absolute; top: 60%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberRobText3{position: absolute; top: 48%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberRobText4{position: absolute; top: 37%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberRobText5{position: absolute; top: 25%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberRobText6{position: absolute; top: 17%; right: 12vh; width: 5vh; height: 2.6vh;margin-right: -5vh}
+.memberRobText7{position: absolute; top: 13%; left: 50%; width: 5vh; height: 2.6vh;margin-left: -2.5vh}
+.memberRobText8{position: absolute; top: 17%; left: 12vh; width: 5vh; height: 2.6vh;margin-left: -5vh}
+.memberRobText9{position: absolute; top: 25%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberRobText10{position: absolute; top: 37%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberRobText11{position: absolute; top: 48%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberRobText12{position: absolute; top: 60%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+
+.memberGoText1{position: absolute; top: 79%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText2{position: absolute; top: 60%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText3{position: absolute; top: 44%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText4{position: absolute; top: 28%; right: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText5{position: absolute; top: 17%; right: 19vh; width: 5vh; height: 2.6vh;margin-right: -5vh}
+.memberGoText6{position: absolute; top: 17%; left: 19vh; width: 5vh; height: 2.6vh;margin-left: -5vh}
+.memberGoText7{position: absolute; top: 28%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText8{position: absolute; top: 44%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText9{position: absolute; top: 60%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText10{position: absolute; top: 60%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText11{position: absolute; top: 60%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+.memberGoText12{position: absolute; top: 60%; left: 10.5vh; width: 5vh; height: 2.6vh;}
+
+
+
+.memberFreeRobText1{position: absolute; top: 79%; left: 60%; width: 5vh; height: 2.6vh;}
+.memberFreeRobText2{position: absolute; top: 58.5%; right: 11.6vh; width: 5vh; height: 2.6vh;}
+.memberFreeRobText3{position: absolute; top: 47%; right: 11.6vh; width: 5vh; height: 2.6vh;}
+.memberFreeRobText4{position: absolute; top: 36%; right: 11.6vh; width: 5vh; height: 2.6vh;}
+.memberFreeRobText5{position: absolute; top: 24.5%; right: 11.6vh; width: 5vh; height: 2.6vh;}
+.memberFreeRobText6{position: absolute; top: 12.5%; right: 16vh; width: 5vh; height: 2.6vh;}
+.memberFreeRobText7{position: absolute; top: 8%; left: 50%; width: 5vh; height: 2.6vh;margin-left: 3.5vh;}
+.memberFreeRobText8{position: absolute; top: 12.5%; left: 13.6vh; width: 5vh; height: 2.6vh;}
+.memberFreeRobText9{position: absolute; top: 24.5%; left: 9vh; width: 5vh; height: 2.6vh;}
+.memberFreeRobText10{position: absolute; top: 36%; left: 9vh; width: 5vh; height: 2.6vh;}
+.memberFreeRobText11{position: absolute; top: 47%; left: 9vh; width: 5vh; height: 2.6vh;}
+.memberFreeRobText12{position: absolute; top: 58.5%; left: 9vh; width: 5vh; height: 2.6vh;}
+
+.memberGoTimesText1{position: absolute; top: 79%; left: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText2{position: absolute; top: 58.5%; right: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText3{position: absolute; top: 47%; right: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText4{position: absolute; top: 36%; right: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText5{position: absolute; top: 24.5%; right: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText6{position: absolute; top: 12.5%; right: 13.5vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText7{position: absolute; top: 8%; left: 50%; width: 2.6vh; height: 2.6vh;margin-left: 9vh;}
+.memberGoTimesText8{position: absolute; top: 12.5%; left: 19vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText9{position: absolute; top: 24.5%; left: 14.2vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText10{position: absolute; top: 36%; left: 14.2vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText11{position: absolute; top: 47%; left: 14.2vh; width: 2.6vh; height: 2.6vh;}
+.memberGoTimesText12{position: absolute; top: 58.5%; left: 14.2vh; width: 2.6vh; height: 2.6vh;}
+
+/* 投注倍数 */
+.memberTimesText1{position: absolute; top: 79%; left: 10.5vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText2{position: absolute; top: 58.5%; right: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText3{position: absolute; top: 47%; right: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText4{position: absolute; top: 36%; right: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText5{position: absolute; top: 24.5%; right: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText6{position: absolute; top: 12.5%; right: 13.5vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText7{position: absolute; top: 8%; left: 50%;margin-left: 3vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText8{position: absolute; top: 12.5%; left: 13.5vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText9{position: absolute; top: 24.5%; left: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText10{position: absolute; top: 36%; left: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText11{position: absolute; top: 47%; left: 9vh; width: 2.6vh; height: 2.6vh;}
+.memberTimesText12{position: absolute; top: 58.5%; left: 9vh; width: 2.6vh; height: 2.6vh;}
+
+/* 显示牛几图片 */
+.memberBull1{position: absolute;top: 72%; left: 50%; width: 16.57vh; height: 6vh; z-index: 90;margin-left: -8.285vh}
+.memberBull2{position: absolute;top: 65%; right: 10vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull3{position: absolute;top: 54%; right: 10vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull4{position: absolute;top: 43%; right: 10vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull5{position: absolute;top: 31.5%; right: 10vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull6{position: absolute;top: 19%; right: 4vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull7{position: absolute;top: 16%; left: 50%;margin-left:-6.2vh ;width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull8{position: absolute;top: 19%; left: 4vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull9{position: absolute;top: 31.5%; left: 10vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull10{position: absolute;top: 43%; left: 10vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull11{position: absolute;top: 54%; left: 10vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+.memberBull12{position: absolute;top: 65%; left: 10vh; width: 12.45vh; height: 4.5vh; z-index: 90;}
+
+ /* 一局完毕显示得分 
+ .memberScoreText1{position: absolute;top: 67%; left: 43%; width: 150px; height: 40px; z-index: 99;} */
+
+ .memberScoreText1{position: absolute;top: 73.5%; left: 0; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText2{position: absolute;top: 63%; right: 10vh; text-align: right; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText3{position: absolute;top: 51%; right: 10vh; text-align: right; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText4{position: absolute;top: 40%; right:10vh; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText5{position: absolute;top: 28.5%; right: 10vh; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText6{position: absolute;top: 17%; right: 8vh; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText7{position: absolute;top: 14%; left: 50%;margin-left: -5.5vh; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText8{position: absolute;top: 17%; left: 8vh; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText9{position: absolute;top: 28.5%; left: 10vh; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText10{position: absolute;top: 40%; left: 10vh; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText11{position: absolute;top: 51%; left: 10vh; width: 11vh; height: 4vh; z-index: 99;}
+ .memberScoreText12{position: absolute;top: 63%; left: 10vh; width: 11vh; height: 4vh; z-index: 99;}
+
+ .quitBack{position: absolute;width: 6vh;height: 6vh;border-radius:4px;top:0px;left:0;background:#000;opacity:0.45;}
+
+ .member1 .quitBack{position: absolute;width: 58px;height: 88px;border-radius:4px;top:12px;left:8px;background:#000;opacity:0.45;}
+ .colorBorder{position: absolute;text-align: center;width: 45px;height: 69px;border:2px solid #df0000;border-radius:4px;top:9px;left:6px;}
+ .colorBorder .backColor{background:#df0000;opacity:0.45;height:100%;position: absolute;bottom:0;left:0;width:100%;}
+ .colorBorder1{width: 56px;height: 86px;border:3px solid #df0000;border-radius:6px;top:10px;left:6px; }
+ @keyframes mycolor1{0% {border-color: #04c120;}50% {border-color: #ffff3c;}100% {border-color: #df0000;}}
+ @-webkit-keyframes mycolor1 {0% {border-color: #04c120;}50% {border-color: #ffff3c;}100% {border-color: #df0000;}}
+ @keyframes mycolor2{0% {background:#04c120;height: 0;}50% {background:#ffff3c;}100% {background:#df0000;height: 100%;}}
+ @-webkit-keyframes mycolor2{0% {background:#04c120;height: 0;}50% {background:#ffff3c;}100% {background:#df0000;height: 100%;}}
+
+
+}
+
+.coin{width: 28px;height:28px;background:url("http://goss.fexteam.com/files/d_10/images/game/round.png");background-size:818px 97px;position: absolute;}
+.coin1{left:40px;top:250px;}
+.coin2{left:150px;top:70px;}
+.coin3{left:150px;top:-30px;}
+.coin4{left:40px;top:-80px;}
+.coin5{left:-60px;top:-30px;}
+.coin6{left:-60px;top:70px;}
+.coinType2{background-position:-194 -4;}
+.coinType4{background-position:-2 -4;}
+.coinType8{background-position:-31 -4;}
+.coinType10{background-position:-223 -4;}
+.coinType16{background-position:-59 -4;}
+.coinType20{background-position:-87 -4;}
+
+.myButton{position: absolute;top:55%;width:100%;}
+.myButton .scoreList{width:300px;margin:0 auto; }
+.myButton .scoreList .scoreItem{width: 50px;height:54px;background:url("http://goss.fexteam.com/files/d_10/images/game/round.png");background-size:801px 95px;float: left;margin-left: 20px;}
+.myButton .scoreList .scoreItem11{background-position:-174 -36;}
+.myButton .scoreList .scoreItem10{background-position:-397 -36;}
+.myButton .scoreList .scoreItem21{background-position:-117 -36;}
+.myButton .scoreList .scoreItem20{background-position:-341 -36;}
+.myButton .scoreList .scoreItem31{background-position:-61 -36;}
+.myButton .scoreList .scoreItem30{background-position:-286 -36;}
+.myButton .scoreList .scoreItem41{background-position:-3 -36;}
+.myButton .scoreList .scoreItem51{background-position:-627 -36;}
+.myButton .scoreList .scoreItem50{background-position:-741 -36;}
+.myButton .scoreList .scoreItem61{background-position:-685 -36;}
+
+.myButton .doubleButton{width:220px;margin:0 auto;}
+.myButton .doubleButton .isSee{margin-top: 160px;}
+.myButton .doubleButton .isSee .leftButton{width: 70px;float: left;margin-left: -10px;}
+.myButton .doubleButton .isSee .rightButton{width:70px;float: right;margin-right: -10px;}
+.myButton .doubleButton .isSee img{width: 100%;}
+.myButton .doubleButton .isOver{margin-top: 150px;}
+.myButton .doubleButton .isOver .button{width: 50px;height:50px;background:url("http://goss.fexteam.com/files/d_10/images/game/round.png");background-size:801px 95px;}
+.myButton .doubleButton .isOver .leftButton{float: left;background-position:-512 -36;}
+.myButton .doubleButton .isOver .rightButton1{float: right;background-position:-569 -36;}
+.myButton .doubleButton .isOver .rightButton{float: right;background-position:-454 -36;}
+
+
+.messageSay{position: absolute;height: 3vh;font-size: 2vh;color: #fff;background: #060408;border-radius:1.5vh;padding: 0 1.5vh;opacity: .75;line-height: 3vh;z-index: 97}
+.messageSay1{top:74.5%;left: 3%;}
+.messageSay1 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay2{top:54.4%;right: 3%;}
+.messageSay2 .triangle{position: absolute;top:3vh;right:3vh;width:0;height:0;border-top: 6px solid #060408;border-left: 12px solid transparent;}
+.messageSay3{top:42.4%;right: 3%;}
+.messageSay3 .triangle{position: absolute;top:3vh;right:3vh;width:0;height:0;border-top: 6px solid #060408;border-left: 12px solid transparent;}
+.messageSay4{top:31.4%;right: 3%;}
+.messageSay4 .triangle{position: absolute;top:3vh;right:3vh;width:0;height:0;border-top: 6px solid #060408;border-left: 12px solid transparent;}
+.messageSay5{top:19.4%;right: 3%;}
+.messageSay5 .triangle{position: absolute;top:3vh;right:3vh;width:0;height:0;border-top: 6px solid #060408;border-left: 12px solid transparent;}
+.messageSay6{top:1.4%;right: 12%;}
+.messageSay6 .triangle{position: absolute;top:3vh;right:3vh;width:0;height:0;border-top: 6px solid #060408;border-left: 12px solid transparent;}
+
+.messageSay7{top:12.4%;left: 45%;}
+.messageSay7 .triangle{position: absolute;top:-6px;left:3vh;width:0;height:0;border-bottom: 6px solid #060408;border-right: 12px solid transparent;}
+
+.messageSay8{top:1.4%;left: 12%;}
+.messageSay8 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay9{top:19.4%;left: 3%;}
+.messageSay9 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay10{top:31.4%;left: 3%;}
+.messageSay10 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay11{top:42.4%;left: 3%;}
+.messageSay11 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay12{top:54.4%;left: 3%;}
+.messageSay12 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+
+/* 26 37 */
+.ranking{position: absolute;width: 200%;height:200%;top:0;left:0;z-index: 110;display: none;}  
+.ranking .roundEndShow{display: none;}  
+.ranking .rankBack{width: 100%;height:100%;background: #000;opacity:1.0}
+.ranking .rankBack .bg{position: absolute;width: 100%;height:100%;background: #000;opacity:1.0}  
+.ranking .rankText{width: 100%;position: absolute;top:3%;left: 0;}   
+.ranking .rankText .title{width: 100%;} 
+.ranking .rankText .time{text-align: center;margin-top: 24px;margin-bottom: 20px;}
+.ranking .rankText .time a{border-radius: 5vw;color:#fff2d4;padding: 1vw 8vw;width: 400px;font-size: 6vw;background: #b4aaa0;}
+.ranking .rankText .scoresItem{width:146vw;margin:0 auto; margin-top: 1.2vw;height:14.2vw;line-height:15vw;font-size:7vw;position: relative;background: #dccdae;border:.5vw solid #aaa;border-radius: 3vw;}
+.ranking .rankText .scoresItemWhite{color:#000; }
+.ranking .rankText .scoresItemWhite a{color:#000; }
+.ranking .rankText .scoresItemYellow{color:#000; background: #fdc652;}
+.ranking .rankText .scoresItemYellow a{color:#000;background: #fdc652;}
+.ranking .rankText .scoresItem .id{left: 10%;width: 25%;height: 15vw;overflow: hidden;word-break:break-all;position: absolute;top:0;}
+.ranking .rankText .scoresItem .name{left: 36%;width: 42%;height: 15vw;overflow: hidden;word-break:break-all;position: absolute;top:0;}
+.ranking .rankText .scoresItem .currentScores{width:18%;text-align: left;position: absolute;right: 0;top:0;}
+.ranking  .button{width:100%;position: absolute;bottom:3%; }
+.ranking  .button img{width:33%;}
+
+/* 玩家消息 */
+
+.message .messageBack{width: 100%;height:100%;position: absolute;top:0;left:0;}	
+.message .textPartOuter{position: absolute;width: 34vh;height:40vh;bottom:7vh;right:2vh;padding: 1vh 1vh 1vh 1vh;border: 0.2vh solid #a684f2;background: #634fa6;border-radius: 1vh;}
+.message .textPart{position: absolute;width: 34vh;height:40vh;bottom:8.5vh;right:3.2vh;overflow: hidden;} 
+.message .textPart .outline{position: absolute;background: #634fa6;opacity: 1;width: 98%;height:100%;border:0.2vh solid #a684f2;border-radius:10px;top:-0.5vh;left: .5%;}
+.message .textPart .textList {border:1px solid #a684f2;position: relative;}
+.message .textPart .textList .textItem{width: 90%;height: 6vh;line-height: 6vh;font-size: 2.1vh;background: #150e2d;border-bottom:1px solid #666;color:#fff;padding:0 5%;position: relative;font-family: simHei;}
+
+
+.createRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.createRoom .createRoomBack{width: 100%;height:100%;background: #000;opacity:0.6;}  
+.createRoom .mainPart{width: 45vh;height:65vh;top:44%;left:50%;margin-top:-30vh;margin-left: -22.5vh;position: absolute;} 
+.createRoom .mainPart .createB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:#634fa6;border:1px solid #a684f2;border-radius:10px; }  
+.createRoom .mainPart .createTitle{position:relative;height:5vh;text-align: center;} 
+.createRoom .mainPart .createTitle img{position:relative;height:2.6vh;margin-top: 1.2vh;}  
+.createRoom .mainPart .cancelCreate{width: 5vh;height:5vh;top:-2.5vh;right:-2.5vh;position: absolute;}  
+.createRoom .mainPart .createCommit{position: absolute;line-height: 5.5vh;height: 5.5vh;font-size: 2.5vh;width: 17vh;left:50%;margin-left:-8.5vh;bottom:-7vh;text-align: center;background:url("http://goss.fexteam.com/files/d_10/images/game/button2.png");background-size:100%;color: #fff;}  
+.createRoom .mainPart .blueBack{width: 42vh;height: 46vh;background:#111431;border:1px solid #a684f2;border-radius:4px;margin:0 auto;position: relative; }
+.createRoom .mainPart .blueBack .selectPart{width:100%;margin-top:4px;line-height:36px;font-size:2vh;position: relative;color:#111431;background:#bbbff1;border-radius:0px;font-family:simHei; }
+.createRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:8vh;text-align: right; }
+.createRoom .mainPart .blueBack .selectPart .selectList{float: left; width: 34vh}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:25px; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:2vh;width:2vh;border:1px solid #1d1045;border-radius:2px;background:#78899d;margin-top:0.7vh;position: relative; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 2vh;height:2vh;left: 0;top:0.7vh;}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 0.8vh;}
+
+
+.bankerSelected{position: absolute;width: 8.1vh;height: 5.5vh;border-style: solid;border-width: 0px;border-color: #392c62;color: #653604;text-align: center;font-size: 1.7vh;overflow: hidden;}
+.bankerSelected .img{position: absolute;top: 0;left: 0;width:  8.1vh;height: 5.5vh;border-style: solid;border-width: 0.5px;border-color: #392c62;}
+.bankerUnSelected{position: absolute;width:  8.1vh;height: 5.5vh;border-style: solid;border-width: 0px;border-color: #e8c007;color: #9a6b3a;text-align: center;font-size: 1.7vh;overflow: hidden;}
+.bankerUnSelected .img{position: absolute;top: 0;left: 0;width:  8.1vh;height: 5.5vh;border-style: solid;border-width: 0.5px;border-color: #e8c007;}
+
+
+.audioRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.audioRoom .audioRoomBack{width: 100%;height:100%;background: #000;opacity:0.6;}  
+.audioRoom .mainPart{width: 38vh;height:27vh;top:44%;left:50%;margin-top:-16vh;margin-left: -19vh;position: absolute;} 
+.audioRoom .mainPart .createB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:#634fa6;border:1px solid #a684f2;border-radius:10px; }  
+.audioRoom .mainPart .createTitle{position:relative;height:5vh;text-align: center;} 
+.audioRoom .mainPart .createTitle img{position:relative;height:2.6vh;margin-top: 1.2vh;}  
+.audioRoom .mainPart .cancelCreate{width: 5vh;height:5vh;top:-2.5vh;right:-2.5vh;position: absolute;}  
+.audioRoom .mainPart .createCommit{position: absolute;line-height: 5.5vh;height: 5.5vh;font-size: 2.5vh;width: 17vh;left:50%;margin-left:-8.5vh;bottom:-7vh;text-align: center;background:url("http://goss.fexteam.com/files/d_10/images/game/button2.png");background-size:100%;color: #fff;}  
+.audioRoom .mainPart .blueBack{width: 35vh;height: 14vh;background:#111431;border:1px solid #a684f2;border-radius:4px;margin:0 auto;position: relative; }
+.audioRoom .mainPart .blueBack .selectPart{width:100%;margin-top:4px;line-height:36px;font-size:2.2vh;position: relative;color:#111431;background:#bbbff1;border-radius:0px;font-family:simHei; }
+.audioRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:13vh;text-align: right; }
+.audioRoom .mainPart .blueBack .selectPart .selectList{float: right; width: 20vh}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:25px; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:2.2vh;width:2.2vh;border:1px solid #1d1045;border-radius:2px;background:#78899d;margin-top:0.7vh;position: relative; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 2.8vh;height:2.8vh;left: 0;top:0;}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 0.8vh;}
+
+
+body.modal-show {position: fixed;width: 100%;}
+.cards3D .cards{overflow:hidden;}
+.record{position: fixed;top:0;left:0;height:100%;width:100%; z-index: 150;}	
+.record .recordBack{position: fixed;top:0;left:0;height:100%;width:100%;background: #0d0a12;opacity:.7;}	
+.record .leftLine{position: fixed;left: 0%;margin-left:20px;height:100%;width: 0;border-left:1px solid #ecb700;}	
+.record .mainPart{position: absolute;top:0;left:0;height:100%;width:100%;overflow: auto;}	
+.record .mainPart .recordList{position: relative;margin-left: 40px;margin-top: 20px;}	
+.record .mainPart .recordList .recordTime{color:#ecb700;font-size: 14px;}	
+.record .mainPart .recordList .yellowPoint{position: absolute;width:30px;height:30px;top:10px;left:-35px; }	
+.record .mainPart .recordList .yellowPoint .point{background:#ecb700;position: absolute;height:6px;width:6px;border-radius:3px;top:12px;left:12px; }	
+
+.record .mainPart .recordList .recordInfo{background:#cfced0;position: relative;width:80%;border-radius:6px;margin-top:5px;padding:5px 15px; }		
+.record .mainPart .recordList .recordInfo .recordItem{height:40px;font-family:simHei; border-top:1px solid #ababab;line-height: 40px;font-size: 16px;}	
+.record .mainPart .recordList .recordInfo .recordItem .name{float: left;height: 40px;width:120px;overflow: hidden;margin-left: 15px;}	
+.record .mainPart .recordList .recordInfo .recordItem .score{float: right;width:80px;overflow: hidden;right: 15px;}
+.record .mainPart .recordList .recordInfo .borderNone{border: none;}
+		
+
+.shake-rotate {
+
+    animation-name: shake-rotate;
+
+    animation-duration: 200ms;
+
+    animation-iteration-count: infinite;
+
+    animation-timing-function: ease-in-out;
+
+    animation-delay: 0s;
+
+    animation-play-state: running
+}
+
+@keyframes shake-rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    2% {
+        transform: rotate(3.5deg)
+    }
+    4% {
+        transform: rotate(-6deg)
+    }
+    6% {
+        transform: rotate(3.5deg)
+    }
+    8% {
+        transform: rotate(10deg)
+    }
+    10% {
+        transform: rotate(-7deg)
+    }
+    12% {
+        transform: rotate(-5deg)
+    }
+    14% {
+        transform: rotate(-3deg)
+    }
+    16% {
+        transform: rotate(-2.5deg)
+    }
+    18% {
+        transform: rotate(5deg)
+    }
+    20% {
+        transform: rotate(-2deg)
+    }
+    22% {
+        transform: rotate(11deg)
+    }
+    24% {
+        transform: rotate(2deg)
+    }
+    26% {
+        transform: rotate(-7deg)
+    }
+    28% {
+        transform: rotate(-6deg)
+    }
+    30% {
+        transform: rotate(-2.5deg)
+    }
+    32% {
+        transform: rotate(3.5deg)
+    }
+    34% {
+        transform: rotate(1.5deg)
+    }
+    36% {
+        transform: rotate(7.5deg)
+    }
+    38% {
+        transform: rotate(-11deg)
+    }
+    40% {
+        transform: rotate(4.5deg)
+    }
+    42% {
+        transform: rotate(-5.5deg)
+    }
+    44% {
+        transform: rotate(6.5deg)
+    }
+    46% {
+        transform: rotate(3.5deg)
+    }
+    48% {
+        transform: rotate(3.5deg)
+    }
+    50% {
+        transform: rotate(9deg)
+    }
+    52% {
+        transform: rotate(-2.5deg)
+    }
+    54% {
+        transform: rotate(6.5deg)
+    }
+    56% {
+        transform: rotate(-10deg)
+    }
+    58% {
+        transform: rotate(3.5deg)
+    }
+    60% {
+        transform: rotate(7.5deg)
+    }
+    62% {
+        transform: rotate(2.5deg)
+    }
+    64% {
+        transform: rotate(-10deg)
+    }
+    66% {
+        transform: rotate(-3.5deg)
+    }
+    68% {
+        transform: rotate(4.5deg)
+    }
+    70% {
+        transform: rotate(-5.5deg)
+    }
+    72% {
+        transform: rotate(3.5deg)
+    }
+    74% {
+        transform: rotate(3.5deg)
+    }
+    76% {
+        transform: rotate(-5deg)
+    }
+    78% {
+        transform: rotate(-1.5deg)
+    }
+    80% {
+        transform: rotate(-6deg)
+    }
+    82% {
+        transform: rotate(6.5deg)
+    }
+    84% {
+        transform: rotate(-2.5deg)
+    }
+    86% {
+        transform: rotate(-2.5deg)
+    }
+    88% {
+        transform: rotate(7deg)
+    }
+    90% {
+        transform: rotate(7.5deg)
+    }
+    92% {
+        transform: rotate(5.5deg)
+    }
+    94% {
+        transform: rotate(-2.5deg)
+    }
+    96% {
+        transform: rotate(5deg)
+    }
+    98% {
+        transform: rotate(-9.5deg)
+    }
+}

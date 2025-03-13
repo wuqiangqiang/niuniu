@@ -1,0 +1,125 @@
+<admintpl file="header"/>
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('AdminOrder/addPlan')}">添加计划</a></li>
+		</ul>
+		<form class="well form-search" method="post" action="{:U('Portal/AdminOrder/addPlanPost/')}">
+			计划名称：<input type="text" name="post[plan_name]" value="" id="rolename"/>
+			<div class="form-actions">
+                <div style="float:left;" id="gen">
+                    彩票类型： 
+                    <select  name="post[type_id]" style="width: 120px;" onchange="xztype($(this).val(),'gen2');$('#gen3').hide();$('#gen32').hide();$('#gen4').hide();$('#gen5').hide();" required>
+                        <option value=''>请选择</option>
+                        <foreach name="src" item="vo">
+                        <option value='{$vo.id}'>{$vo.name}</option>
+                        </foreach>
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div style="float:left;display:none;" id="gen2">
+                    定位： 
+                    <select  name="post[location]" style="width: 120px;" onchange="xztype2($(this).val(),'gen32');xztype($(this).val(),'gen3');$('#gen4').hide();$('#gen5').hide();" required>
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div id="gen32" style="float:left; display:none">
+                    位置： 
+                    <select  name="post[weizhi]"  style=" width: 120px;"  onchange="sfrx($(this).val())" required>
+                       
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div id="gen3" style="float:left; display:none">
+                    类型： 
+                    <select  name="post[sort]"  style=" width: 120px;" onchange="$('#gen4').show();$('#gen5').hide();$('#gen4 select').val(0);" required>
+                       
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div id="gen4" style="float:left; display:none" >
+                    期数： 
+                    <select name="post[stages]" style="width: 120px;"onchange="$('#gen5').show();" required>
+                        <option value=''>请选择期数</option>
+                        <option value='1'>一期</option>
+                        <option value='2'>二期</option>
+                        <option value='3'>三期</option>
+                        <option value='4'>四期</option>
+                        <option value='5'>五期</option>
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div id="gen5" style="float:left; display:none">
+			        <label class="control-label">出号：</label>
+        			<input type="number" name="post[number]" value="" id="rolename" placeholder="出号参数,特殊方案请填入参数值否则随机出号"/>
+                    <input type="submit" class="btn btn-primary" value="添加" />
+                </div>
+                <div id="gen6" style="float:left; display:none">
+                    <label class="control-label">选择任选位置：</label>
+                    <input type="checkbox" name="post[rx][]" value="0" />个位
+                    <input type="checkbox" name="post[rx][]" value="1" />十位
+                    <input type="checkbox" name="post[rx][]" value="2" />百位
+                    <input type="checkbox" name="post[rx][]" value="3" />千位
+                    <input type="checkbox" name="post[rx][]" value="4" />万位
+                </div>
+            
+        </div>
+
+            <!-- <select id="masu" name="post[masu]" style=" display:none; width: 120px;" onchange="set_city(this, document.getElementById('city')); WYL();">
+                    
+            </select> -->
+        </form>
+
+
+
+
+	</div>
+<script src="__PUBLIC__/js/common.js"></script>
+<script type="text/javascript">
+var xzid;
+function sfrx(n){
+    if(n==6666){
+        $('#gen6').show();
+    }
+    else{
+       $('#gen6').hide(); 
+    }
+}
+function xztype(value,id) {
+    if(value){
+    var html="";
+    $('#'+id+' select').html("");
+    xzid=id;
+    $.ajax({
+        type:'post',
+        url:"{:U('Portal/AdminOrder/ajaxtype')}",
+        data:{id:value},
+        dataType:'json',
+        success:function(data){
+            $('#'+id+' select').append("<option value=''>请选择</option>");
+            $.each(data,function(i,n){
+                $('#'+id+' select').append("<option value='"+n.id+"'>"+n.name+"</option>");
+            })
+            $('#'+xzid).show();
+        }
+    })
+    }
+}
+function xztype2(value,id) {
+    if(value){
+    var html="";
+    $('#'+id+' select').html("");
+    $.ajax({
+        type:'post',
+        url:"{:U('Portal/AdminOrder/ajaxtype2')}",
+        data:{id:value},
+        dataType:'json',
+        success:function(data){
+            $('#'+id+' select').append("<option value=''>请选择</option>");
+            $.each(data,function(i,n){
+                $('#'+id+' select').append("<option value='"+n.id+"'>"+n.name+"</option>");
+            })
+            $('#'+id).show();
+        }
+    })
+    }
+} 
+</script>
+</body>
+</html>

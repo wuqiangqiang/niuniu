@@ -1,0 +1,40 @@
+<?php
+return array (
+  'app' => 'Portal',
+  'model' => 'AdminBonus',
+  'action' => 'default',
+  'data' => '',
+  'type' => '1',
+  'status' => '1',
+  'name' => '奖金管理',
+  'icon' => 'money',
+  'remark' => '',
+  'listorder' => '195',
+  'children' => 
+  array (
+    array (
+      'app' => 'Portal',
+      'model' => 'AdminBonus',
+      'action' => 'bonusSet',
+      'data' => '',
+      'type' => '1',
+      'status' => '1',
+      'name' => '奖金设置',
+      'icon' => '',
+      'remark' => '',
+      'listorder' => '0',
+    ),
+    array (
+      'app' => 'Portal',
+      'model' => 'AdminBonus',
+      'action' => 'extractSet',
+      'data' => '',
+      'type' => '1',
+      'status' => '1',
+      'name' => '提现设置',
+      'icon' => '',
+      'remark' => '',
+      'listorder' => '0',
+    ),
+  ),
+);

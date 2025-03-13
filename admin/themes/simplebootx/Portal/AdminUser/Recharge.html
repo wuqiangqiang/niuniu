@@ -1,0 +1,27 @@
+<admintpl file="header" />
+</head>
+<body>
+    <div class="wrap">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">账号充值</a></li>
+           
+        </ul>
+        <form class="well form-search" method="post" action="{:U('Portal/AdminUser/uprecharge')}">
+            会员账号：
+            <input type="text" name="user_login" style="width: 200px;" value="{$user['user_login']}" required placeholder="请输入会员账号">
+			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <select name="term" style="width: 120px;">
+                <option value='0'>添加</option>
+                <option value='1'>减少</option>
+            </select> 
+            
+            <input type="number" name="number" style="width: 200px;" value="" required placeholder="请输入数量">小时
+            &nbsp;&nbsp;
+            <input type="submit" class="btn btn-primary js-ajax-submit" value="提交" />
+          
+        </form>
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+    
+</body>
+</html>

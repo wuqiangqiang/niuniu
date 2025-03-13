@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+.pad_right{ padding-right:2em;}
+.scroll_div {overflow: hidden;white-space: nowrap;width:96%;margin-left:10px;}
+.scroll_begin,.scroll_end {display: inline;}
+.scroll_begin{float: left;color: #fff;line-height:4vh;height: 3vh;font-size: 1.5vh;}
+.gb-img{width: 3.5%;text-align: center; float: left;margin-top: 0.5vh;}
+.guangbo{height: 3vh;background: black;position: fixed;top: 0;}
+	</style>
+
+
+
+
+</head>
+<body>
+
+<div id='guangbo' class='guangbo'>
+		<div class='gb-img'>
+				<img src="./alert_icon.png" alt=""  style="width: 53%;" > 
+		</div>
+		<div id="scroll_div" class="fl scroll_div">
+	  <div id="scroll_begin" class='scroll_begin' >
+	   平台增加所选模式下的历史最高分及获得时间，该模式游戏总局数。若这些基础数据发现异常，极大可能是坑人的山寨游戏！公司奖励外挂发现者20万永久有效。
+	  </div> 
+	  <div id="scroll_end" class="scroll_end"></div>
+	 </div> 
+
+</div>
+
+<script>
+
+
+	//文字横向滚动
+function ScrollImgLeft(){ 
+ var speed=50;
+  var MyMar = null;
+ var scroll_begin = document.getElementById("scroll_begin"); 
+ var scroll_end = document.getElementById("scroll_end"); 
+ var scroll_div = document.getElementById("scroll_div"); 
+ var guangbo = document.getElementById("guangbo"); 
+ scroll_end.innerHTML=scroll_begin.innerHTML; 
+ function Marquee(){ 
+  if(scroll_end.offsetWidth-scroll_div.scrollLeft<=0) 
+   guangbo.remove();
+  else
+   scroll_div.scrollLeft++; 
+  } 
+  MyMar=setInterval(Marquee,speed); 
+  scroll_div.onmouseover = function(){
+　　　　　　　clearInterval(MyMar);
+　　　　　}
+ 　　　　scroll_div.onmouseout = function(){
+　　　　　　　MyMar = setInterval(Marquee,speed); 　　　　
+　　　　　}  
+}
+ScrollImgLeft();
+
+
+
+
+</script>
+</body>
+</html>

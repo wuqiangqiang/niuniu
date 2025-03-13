@@ -1,0 +1,206 @@
+	<div class="createRoomBack"></div>
+	<div class="mainPart" style="height: 71vh;">			
+		<div class="createB"></div>
+		<div class="createTitle">
+			<img src="./files/d_11/images/common/createroom2.png">
+		</div>				
+		<img src="./files/d_11/images/common/cancel.png" class="cancelCreate" onclick="cancelCreate()">
+
+		<!-- ngIf: createInfo.ishiden==3 -->
+		<div  class="scope xuanzefj-nav">
+			<div  id="selectBanker1" onclick="selectBankerMode(1,id)" class="bankerUnSelected">
+				<img  class="img niuniusz"  src="./img/banker_selected.png">
+				<p class='xuanzefj-nav-1'>牛牛</p>
+				<p class='xuanzefj-nav-2' style="">上庄</p>
+			</div>
+			<div  id="selectBanker2" onclick="selectBankerMode(2,id)" class="bankerUnSelected">
+				<img src="./img/banker_unselected.png" class="img" src="./img/banker_unselected.png">
+				<p  class='xuanzefj-nav-1' >固定</p>
+				<p  class='xuanzefj-nav-2'>庄家</p>
+			</div>
+			<div class="bankerUnSelected" id="selectBanker3"  onclick="selectBankerMode(3,id)" >
+				<img  class="img"  src="./img/banker_unselected.png">
+				<p  class='xuanzefj-nav-1' >自由</p>
+				<p  class='xuanzefj-nav-2' >抢庄</p>
+			</div>
+			<div class='bankerUnSelected' id="selectBanker4"  onclick="selectBankerMode(4,id)">
+				<img src="./img/banker_unselected.png" class="img" src="./img/banker_unselected.png">
+				<p  class='xuanzefj-nav-1' >明牌</p>
+				<p  class='xuanzefj-nav-2' >抢庄</p>
+			</div>
+			<div class='bankerUnSelected' id="selectBanker5" onclick="selectBankerMode(5,id)" >
+				<img src="./img/banker_unselected.png" class="img" style="border-top-right-radius:4px;">
+				<p  class='xuanzefj-nav-1'>通比</p>
+				<p  class='xuanzefj-nav-2'>牛牛</p>
+			</div>
+		</div><!-- end ngIf: createInfo.isShow==3 -->
+
+		<!-- ngIf: createInfo.isShow==5 -->
+
+		<!-- ngIf: createInfo.isShow==7 -->
+
+		<!-- ngIf: createInfo.isShow==8 -->
+
+		<div class="blueBack" style="height: 50vh;">
+			<div class="selectPart xuanzefj-top-zt" style="">
+				<div class="selectTitle xuanzefj-top">
+				    创建房间,游戏未进行,不消耗房卡
+				</div>
+			</div>	
+
+			<!-- ngIf: createInfo.isShow==1 -->
+
+			<!-- ngIf: createInfo.isShow==2 -->
+
+			<!-- ngIf: createInfo.isShow==3 -->
+			<div class="bullRull scope">	
+				<div class="selectPart hide" style="height:9vh;">
+					<div class="selectTitle">底分：</div>
+					<div class="selectList">
+						<div class="selectItem df" id="df1" onclick="selectChange('df','df1',1)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png"   class="hide">
+							<div class="selectText">1分</div>
+						</div>							
+						<div class="selectItem df" id="df2" onclick="selectChange('df','df2',2)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none"  class="hide">
+							<div class="selectText">2分</div>
+						</div>
+					<div class="selectItem df" id="df3" onclick="selectChange('df','df3',3)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none"  class="hide">
+							<div class="selectText">3分</div>
+						</div>
+						<div class="selectItem df" id="df4" onclick="selectChange('df','df4',4)">
+						
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none"  class="hide">
+							<div class="selectText">4分</div>
+
+						</div>							
+						<div class="selectItem df" id="df5" onclick="selectChange('df','df5',5)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none" class="hide">
+							<div class="selectText">5分</div>
+						</div>
+					</div>
+				</div>
+				<div class="selectPart" style="height:4.5vh; display: none" >
+					<div class="selectTitle">底分：</div>
+					<div class="selectList">						
+						<div class="selectItem df" id="df6" onclick="selectChange('df','df6',6)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png"  class="hide">
+							<div class="selectText">5分</div>
+						</div>
+						<div class="selectItem df" id="df7" onclick="selectChange('df','df7',7)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none"  class="">
+							<div class="selectText">10分</div>
+						</div>
+						<div class="selectItem df" id="df8" onclick="selectChange('df','df8',8)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none" class="hide">
+							<div class="selectText">20分</div>
+						</div>
+					</div>
+				</div>		
+
+				<div class="selectPart" style="height:9vh;">
+					<div class="selectTitle">规则：</div>
+					<div class="selectList">
+						<div class="selectItem gz" id="gz1" onclick="selectChange('gz','gz1',1)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png"  >
+							<div class="selectText">牛牛x3牛九x2牛八x2</div>
+						</div>							
+						<div class="selectItem gz" id="gz2" onclick="selectChange('gz','gz2',2)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none"  class="hide">
+							<div class="selectText">牛牛x4牛九x3牛八x2牛七x2</div>
+						</div>
+					</div>
+				</div>	
+
+				<div class="selectPart" style="height:9vh;">
+					<div class="selectTitle">牌型：</div>
+					<div class="selectList">
+						<div class="selectItem paix" id="paix1" onclick="selectChanges('paix','paix1',1)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none" class="hide">
+							<div class="selectText">五花牛(5倍)</div>
+						</div>
+						<div class="selectItem paix" id="paix2" onclick="selectChanges('paix','paix2',2)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none"  class="hide">
+							<div class="selectText">炸弹牛(6倍)</div>
+						</div>				
+						<div class="selectItem paix" id="paix3" onclick="selectChanges('paix','paix3',3)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none"  class="hide">
+							<div class="selectText">五小牛(8倍)</div>
+						</div>
+					</div>
+				</div>	
+
+				<div class="selectPart" style="height:4.5vh;">
+					<div class="selectTitle">局数：</div>
+					<div class="selectList">
+						<div class="selectItem jushu" id="jushu1"  onclick="selectChange('jushu','jushu1',1)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" >
+							<div class="selectText">10局X2房卡</div>
+						</div>							
+						<div class="selectItem jushu" id="jushu2" onclick="selectChange('jushu','jushu2',2)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none" class="hide">
+							<div class="selectText">20局X4房卡</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="selectPart " style="height:4.5vh;display: none">
+					<div class="selectTitle">上庄：</div>
+					<div class="selectList">
+						<div class="selectItem sz" id='sz1' onclick="selectChange('sz','sz1',1)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none">
+							<div class="selectText">无</div>
+						</div>							
+						<div class="selectItem sz" id='sz2' style="margin-left: 1.5vh;" onclick="selectChange('sz','sz2',1)"  >
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none">
+							<div class="selectText">300</div>
+						</div>
+						<div class="selectItem sz" id='sz3' style="margin-left: 1.5vh;" onclick="selectChange('sz','sz3',1)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none">
+							<div class="selectText">500</div>
+						</div>
+						<div class="selectItem sz" id='sz4' style="margin-left: 1.5vh;" onclick="selectChange('sz','sz4',1)">
+							<div class="selectBox"></div>
+							<img src="./files/d_19/images/common/gou.png" style="display:none">
+							<div class="selectText">1000</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ngIf: createInfo.bull.banker_mode==5 -->
+
+			</div><!-- end ngIf: createInfo.isShow==3 -->
+
+			<!-- ngIf: createInfo.isShow==4 -->
+
+			<!-- ngIf: createInfo.isShow==5 -->
+			
+			<!-- ngIf: createInfo.isShow==6 -->
+
+			<!-- ngIf: createInfo.isShow==7 -->
+
+			<!-- ngIf: createInfo.isShow==8 -->
+
+		</div>
+
+		<div class="createCommit" onclick="createCommit()">确定</div>
+	</div>

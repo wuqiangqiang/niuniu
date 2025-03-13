@@ -1,0 +1,55 @@
+<?php
+return array (
+  'app' => 'Api',
+  'model' => 'Guestbookadmin',
+  'action' => 'default',
+  'data' => '',
+  'type' => '1',
+  'status' => '1',
+  'name' => '留言管理',
+  'icon' => 'comments',
+  'remark' => '',
+  'listorder' => '0',
+  'children' => 
+  array (
+    array (
+      'app' => 'Api',
+      'model' => 'Guestbookadmin',
+      'action' => 'index',
+      'data' => '',
+      'type' => '1',
+      'status' => '1',
+      'name' => '未处理留言',
+      'icon' => '',
+      'remark' => '',
+      'listorder' => '0',
+      'children' => 
+      array (
+        array (
+          'app' => 'Api',
+          'model' => 'Guestbookadmin',
+          'action' => 'delete',
+          'data' => '',
+          'type' => '1',
+          'status' => '0',
+          'name' => '删除网站留言',
+          'icon' => '',
+          'remark' => '',
+          'listorder' => '0',
+        ),
+      ),
+    ),
+    array (
+      'app' => 'Api',
+      'model' => 'Guestbookadmin',
+      'action' => 'yes',
+      'data' => '',
+      'type' => '1',
+      'status' => '1',
+      'name' => '已处理留言',
+      'icon' => '',
+      'remark' => '',
+      'listorder' => '0',
+    ),
+  ),
+);

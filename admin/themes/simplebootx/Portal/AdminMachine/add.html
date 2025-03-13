@@ -1,0 +1,86 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('AdminMachine/index')}">所有机器人</a></li>
+        <li class="active"><a href="#">添加机器人</a></li>
+    </ul>
+    <form class="form-horizontal " action="{:U('AdminUser/add_post')}" method="post">
+        <fieldset>
+            <input type="hidden" name="is_machine" value="1"/>
+            <div class="control-group" >
+                <label class="control-label">昵称</label>
+                <div class="controls" >
+                    <input type="hidden" name="user_login" value="machine{:time()}"/>
+                    <input type="text" style="color: red" name="nickname" value="{$post.nickname}" required/>
+                </div>
+            </div>
+            <div class="control-group" >
+                <label class="control-label">头像</label>
+                <div class="controls" >
+                    <input type='hidden' name='img' id='thumb' value="{$post.img|default=''}">
+                    <a href="javascript:upload_one_image('图片上传','#thumb');">
+                        <if condition="empty($post['img'])">
+                            <img src="__TMPL__Public/assets/images/default-thumbnail.png" id='thumb-preview' width='135' height='113' style='cursor: hand' />
+                            <else />
+                            <img src="{:sp_get_image_preview_url($post['img'])}" id='thumb-preview' width='135' height='113' style='cursor: hand' />
+                        </if>
+                    </a>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">手机号码</label>
+                <div class="controls">
+                    <input type="text" name="mobile" value="{$post.mobile}"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">输赢概率</label>
+                <div class="controls">
+                    <input type="text" name="gailv" value="{$post.gailv}"/>
+                </div>
+            </div>
+            <div class="control-group" >
+                <label class="control-label">token</label>
+                <div class="controls" >
+                    <input type="text" style="color: red" name="token" value="{:md5(time())}" required/>
+                </div>
+            </div>
+
+            <div class="control-group" >
+                <label class="control-label">密码</label>
+                <div class="controls" >
+                    <input type="password" style="color: red" name="password" value="test" required/>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">会员状态</label>
+                <div class="controls">
+                    <php>$active_true_checked=($post['state']==0)?"checked":"";</php>
+                    <label class="radio inline" for="status_yes">
+                        <input type="radio" name="state" value="0" {$active_true_checked} id="status_yes"/>正常
+                    </label>
+                    <php>$active_false_checked=($post['state']==1)?"checked":"";</php>
+                    <label class="radio inline" for="status_no">
+                        <input type="radio" name="state" value="1" id="status_no"{$active_false_checked}>封号
+                    </label>
+                    <php>$active_false_checked=($post['state']==2)?"checked":"";</php>
+                    <label class="radio inline" for="active_false">
+                        <input type="radio" name="state" value="2" id="active_false"{$active_false_checked}>限制登录
+                    </label>
+                </div>
+            </div>
+
+        </fieldset>
+        <div class="form-actions">
+            <input type="hidden" name="id" value="{$post.id}"/>
+            <button type="submit" class="btn btn-primary  js-ajax-submit">{:L('SAVE')}</button>
+            <a class="btn" href="javascript:history.back(-1);">{:L('BACK')}</a>
+        </div>
+    </form>
+</div>
+<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

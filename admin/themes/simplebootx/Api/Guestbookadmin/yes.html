@@ -1,0 +1,45 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('guestbookadmin/index')}">已处理留言</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th width="50">ID</th>
+						<th width="100">会员</th>
+						<th width="">留言分类</th>
+						<th>标题</th>
+						<th width="">留言内容</th>
+						<th width="120">留言时间</th>
+						<!--<th width="">图片</th>-->
+						<th width="100">处理状态</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="guestmsgs" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo.user_login}</td>
+						<td>{$vo.type}</td>
+						<td>{$vo.title}</td>
+						<td>{$vo.msg}</td>
+						<td>{$vo.create_time}</td>
+						<!--<td>{$vo.img}</td>-->
+						<td>
+							<a href="{:U('guestbookadmin/reply',array('id'=>$vo['id']))}" class="">回复</a>
+							<a href="{:U('guestbookadmin/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">{:L('DELETE')}</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js?"></script>
+</body>
+</html>

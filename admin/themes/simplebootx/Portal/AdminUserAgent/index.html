@@ -1,0 +1,88 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('AdminUser/index')}">所有会员</a></li>
+        <!--<li><a href="{:U('AdminUser/addUser')}">添加会员</a></li>-->
+    </ul>
+    <form class="well form-search" method="get" action="{:U('Portal/AdminUserAgent/index')}">
+        <div style="margin-top: 5px;">
+            用户ID：
+            <input type="number" name="id" style="width: 100px;" value="{$id}" placeholder="请输入用户名"/>
+            昵称：
+            <input type="text" name="nickname" style="width: 100px;" value="{$nickname}" placeholder="请输入昵称"/>
+            <input type="submit" class="btn btn-primary" value="搜索" />
+        </div>
+    </form>
+
+    <form class="well form-search" method="post" action="{:U('Portal/AdminUserAgent/op')}">
+        用户ID：
+        <input type="number" name="id" style="width: 100px;" value="" required placeholder="请输入会员ID"/>
+        <select name="op" style="width: 70px;">
+            <option value="incre">增加</option>
+            <option value="reduce">减少</option>
+        </select>
+        天卡：
+        <input type="number" name="daycard" style="width: 100px;" value="" required placeholder="请输数量"/>
+        到期：
+        <input type="text" style="width: 150px;" name="expire" class="js-datetime" value="{:date('Y-m-d H:i:s', strtotime('+3 days'))}" autocomplete="off"/>
+        <input type="submit" class="btn btn-primary js-ajax-submit" value="提交">
+    </form>
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <!--<th width="50">{:L('SORT')}</th>-->
+            <th width="50">ID</th>
+            <th>用户名</th>
+            <th>昵称</th>
+            <th>头像</th>
+            <th>是否透视</th>
+            <th>房卡数量</th>
+            <th>天卡数量</th>
+            <th>输赢概率</th>
+            <th>授权用户ID</th>
+            <th>到期时间</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <php>
+            $user_status[0]='正常';
+            $user_status[1]='管理';
+            $user_status[2]='限制登录';
+
+            $ts[0]='无';
+            $ts[1]='透视';
+        </php>
+        <foreach name="users" item="vo">
+            <tr>
+                <td>{$vo.uid}</td>
+                <td>{$vo.user_login}</td>
+                <td>{$vo.nickname}</td>
+                <td><img src="{:sp_get_image_preview_url($vo['img'])}" width='30' height='30'/></td>
+                <td>{$ts[$vo['is_grade']]}</td>
+                <td>{$vo.fk}</td>
+                <td>{$vo.daycard}</td>
+                <td>{$vo.gailv}</td>
+                <td>{$vo.from_uid}</td>
+                <td>{:date('Y-m-d H:i:s',$vo['expire'])}</td>
+                <td>{$user_status[$vo['status']]}</td>
+                <td>
+                    <a class="js-ajax-delete" href="{:U('Portal/AdminUserAgent/delete',['id'=>$vo['uid']])}">删除代理</a>
+                </td>
+
+            </tr>
+        </foreach>
+
+
+        </tbody>
+
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

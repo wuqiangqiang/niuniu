@@ -1,0 +1,171 @@
+<admintpl file="header" />
+</head>
+<body>
+    <div class="wrap js-check-wrap">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="javascript:;">计划列表</a></li>
+        </ul>
+        <form class="well form-search" method="post" action="{:U('Portal/AdminOrder/index')}">
+             <div style="float:left;" id="gen">
+                    彩票类型： 
+                    <select  name="type_id" style="width: 120px;" onchange="xztype($(this).val(),'gen2');$('#gen3').hide();" >
+                        <option value=''>请选择</option>
+                        <foreach name="src" item="vo">
+                        <option value='{$vo.id}' <if condition="$vo[id] eq $_GET[type_id]">selected</if>>{$vo.name}</option>
+                        </foreach>
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div style="float:left;<if condition="!$src2">display:none</if> " id="gen2">
+                    定位： 
+                    <select  name="location" style="width: 120px;" onchange="xztype($(this).val(),'gen3');" >
+                        <option value=''>请选择</option>
+                        <foreach name="src2" item="vo">
+                        <option value='{$vo.id}' <if condition="$vo[id] eq $_GET[location]">selected</if> >{$vo.name}</option>
+                        </foreach>
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div id="gen3" style="float:left; <if condition="!$src3">display:none</if> ">
+                    类型： 
+                    <select  name="sort"  style=" width: 120px;"  >
+                        <option value=''>请选择</option>
+                       <foreach name="src3" item="vo">
+                        <option value='{$vo.id}' <if condition="$vo[id] eq $_GET[sort]">selected</if> >{$vo.name}</option>
+                        </foreach>
+                    </select> &nbsp;&nbsp;
+                </div>
+            计划名:
+            <input type="text" name="plan_name" style="width: 200px;" value="{$_GET[plan_name]}" placeholder="请输入计划名">
+            <input type="submit" class="btn btn-primary js-ajax-submit" value="查找" />
+            <!-- <a class="btn btn-danger" href="{:U('Portal/AdminUser/expUser')}">导出Excel</a> -->
+        </form>
+        <form class="js-ajax-form" action="" method="post">
+
+            <table class="table table-hover table-bordered table-list">
+                <thead>
+                <tr>    
+                <th width="50">ID</th>
+                <th>计划名</th>
+                <th>定位</th>
+                <th>类型</th>
+                <th>期数</th>
+                <th>参数</th>
+                <th>{:L('ACTIONS')}</th>
+                </tr>
+                </thead>
+
+                <foreach name="posts" item="vo">
+                    <tr>
+                    <td><b>{$vo.id}</b></td>
+                    <td>{$vo.plan_name}</td>
+                    <td>{$vo.location|wfname=###}</td>
+                    <td>{$vo.sort|wfname=###}</td>
+                    <td>{$vo.stages}</td>
+                    <td>{$vo.number}</td>
+                    <td>
+                        <!-- <a href="{:U('AdminPost/edit',array('id'=>$vo['id']))}">{:L('EDIT')}</a> | --> 
+                    
+                        <a href="{:U('AdminOrder/editPlan',array('id'=>$vo['id']))}" >修改</a> 
+
+                        <a href="{:U('AdminOrder/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">{:L('DELETE')}</a>
+                    </td>
+                    </tr>
+                </foreach>
+               
+            </table>
+            <div class="pagination">{$page}</div>
+        </form>
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+    <script>
+        function refersh_window() {
+            var refersh_time = getCookie('refersh_time');
+            if (refersh_time == 1) {
+                window.location = "{:U('AdminPost/index',$formget)}";
+            }
+        }
+        setInterval(function() {
+            refersh_window();
+        }, 2000);
+        $(function() {
+            setCookie("refersh_time", 0);
+            Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+                //批量复制
+                $('.js-articles-copy').click(function(e) {
+                    var ids = [];
+                    $("input[name='ids[]']").each(function() {
+                        if ($(this).is(':checked')) {
+                            ids.push($(this).val());
+                        }
+                    });
+
+                    if (ids.length == 0) {
+                        art.dialog.through({
+                            id: 'error',
+                            icon: 'error',
+                            content: '您没有勾选信息，无法进行操作！',
+                            cancelVal: '关闭',
+                            cancel: true
+                        });
+                        return false;
+                    }
+
+                    ids = ids.join(',');
+                    art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=copy&ids=" + ids, {
+                        title: "批量复制",
+                        width: "300px"
+                    });
+                });
+                //批量移动
+                $('.js-articles-move').click(function(e) {
+                    var ids = [];
+                    $("input[name='ids[]']").each(function() {
+                        if ($(this).is(':checked')) {
+                            ids.push($(this).val());
+                        }
+                    });
+
+                    if (ids.length == 0) {
+                        art.dialog.through({
+                            id: 'error',
+                            icon: 'error',
+                            content: '您没有勾选信息，无法进行操作！',
+                            cancelVal: '关闭',
+                            cancel: true
+                        });
+                        return false;
+                    }
+
+                    ids = ids.join(',');
+                    art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&old_term_id={$term.term_id|default=0}&ids=" + ids, {
+                        title: "批量移动",
+                        width: "300px"
+                    });
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+var xzid;
+function xztype(value,id) {
+    if(value){
+    var html="";
+    $('#'+id+' select').html("");
+    xzid=id;
+    $.ajax({
+        type:'post',
+        url:"{:U('Portal/AdminOrder/ajaxtype')}",
+        data:{id:value},
+        dataType:'json',
+        success:function(data){
+            $('#'+id+' select').append("<option value=''>请选择</option>");
+            $.each(data,function(i,n){
+                $('#'+id+' select').append("<option value='"+n.id+"'>"+n.name+"</option>");
+            })
+            $('#'+xzid).show();
+        }
+    })
+    }
+} 
+</script>
+</body>
+</html>

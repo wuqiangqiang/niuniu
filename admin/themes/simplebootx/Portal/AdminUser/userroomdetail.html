@@ -1,0 +1,133 @@
+<php>
+    $types = [];
+    foreach(M('game')->select() as $v) {
+        $types[$v['id']] = $v;
+    }
+</php>
+<admintpl file="header" />
+<style type="text/css">
+    th, td {text-align: center;}
+    /*牌面定位样式*/
+    .card { margin: 0 7px 7px 0; display:inline-block; background:url("/themes/game/Public/img/cards.jpg");background-size:88.4vh 38.624vh;width: 6.8vh;height: 9.656vh;box-shadow:1px 1px 5px #333; }
+    .cardA1{background-position: 0 -28.968vh;}
+    .cardA2{background-position: -6.8vh -28.968vh;}
+    .cardA3{background-position: -13.6vh -28.968vh;}
+    .cardA4{background-position: -20.4vh -28.968vh;}
+    .cardA5{background-position: -27.2vh -28.968vh;}
+    .cardA6{background-position: -34vh -28.968vh;}
+    .cardA7{background-position: -40.8vh -28.968vh;}
+    .cardA8{background-position: -47.6vh -28.968vh;}
+    .cardA9{background-position: -54.4vh -28.968vh;}
+    .cardA10{background-position: -61.2vh -28.968vh;}
+    .cardA11{background-position: -68vh -28.968vh;}
+    .cardA12{background-position: -74.8vh -28.968vh;}
+    .cardA13{background-position: -81.6vh -28.968vh;}
+    .cardB1{background-position: 0 -19.312vh;}
+    .cardB2{background-position: -6.8vh -19.312vh;}
+    .cardB3{background-position: -13.6vh -19.312vh;}
+    .cardB4{background-position: -20.4vh -19.312vh;}
+    .cardB5{background-position: -27.2vh -19.312vh;}
+    .cardB6{background-position: -34vh -19.312vh;}
+    .cardB7{background-position: -40.8vh -19.312vh;}
+    .cardB8{background-position: -47.6vh -19.312vh;}
+    .cardB9{background-position: -54.4vh -19.312vh;}
+    .cardB10{background-position: -61.2vh -19.312vh;}
+    .cardB11{background-position: -68vh -19.312vh;}
+    .cardB12{background-position: -74.8vh -19.312vh;}
+    .cardB13{background-position: -81.6vh -19.312vh;}
+    .cardC1{background-position: 0 0;}
+    .cardC2{background-position: -6.8vh 0;}
+    .cardC3{background-position: -13.6vh 0;}
+    .cardC4{background-position: -20.4vh 0;}
+    .cardC5{background-position: -27.2vh 0;}
+    .cardC6{background-position: -34vh 0;}
+    .cardC7{background-position: -40.8vh 0;}
+    .cardC8{background-position: -47.6vh 0;}
+    .cardC9{background-position: -54.4vh 0;}
+    .cardC10{background-position: -61.2vh 0;}
+    .cardC11{background-position: -68vh 0;}
+    .cardC12{background-position: -74.8vh 0;}
+    .cardC13{background-position: -81.6vh 0;}
+    .cardD1{background-position: 0 -9.656vh;}
+    .cardD2{background-position: -6.8vh -9.656vh;}
+    .cardD3{background-position: -13.6vh -9.656vh;}
+    .cardD4{background-position: -20.4vh -9.656vh;}
+    .cardD5{background-position: -27.2vh -9.656vh;}
+    .cardD6{background-position: -34vh -9.656vh;}
+    .cardD7{background-position: -40.8vh -9.656vh;}
+    .cardD8{background-position: -47.6vh -9.656vh;}
+    .cardD9{background-position: -54.4vh -9.656vh;}
+    .cardD10{background-position: -61.2vh -9.656vh;}
+    .cardD11{background-position: -68vh -9.656vh;}
+    .cardD12{background-position: -74.8vh -9.656vh;}
+    .cardD13{background-position: -81.6vh -9.656vh;}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <div>
+        <p>
+            <img src="{$user_data.img}" width="25"/>
+            <strong>{$user_data.nickname}</strong>
+            {$user_room.room}号
+            <strong>{$types[$user_room['type']]['name']}</strong>房间详情
+        </p>
+    </div>
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('AdminUser/userroom', ['id' => $user_data['id']])}">返回战绩列表</a></li>
+        <li class="active"><a href="{:U('AdminUser/userroomdetail', ['id' => $user_room['id']])}">详情</a></li>
+    </ul>
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="50">ID</th>
+            <th width="80">局数</th>
+            <th width="120">用户</th>
+            <th width="40%">牌型</th>
+            <th>得分</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="dj_room" item="vo">
+            <php>
+                $djxx = json_decode($vo['djxx'], TRUE);
+            </php>
+            <?php foreach( $djxx as $k => $v ): ?>
+            <?php if($k == 0): ?>
+            <tr>
+                <th rowspan="{:count($djxx)}" style="vertical-align: top;">{$vo.id}</th>
+                <th rowspan="{:count($djxx)}" style="vertical-align: top;">{$vo.js}/{$room_data.zjs}</th>
+                <td>{:usernickname($v['user']['id'])}</td>
+                <td>
+                    <?php foreach( $v['user']['card'] as $card ): ?>
+                    <div class="card card{$card['card']}"></div>
+                    <?php endforeach; ?>
+                </td>
+                <td>{$v.jf}</td>
+            </tr>
+            <?php else: ?>
+            <tr>
+                <td>{:usernickname($v['user']['id'])}</td>
+                <td>
+                    <?php foreach( $v['user']['card'] as $card ): ?>
+                    <div class="card card{$card['card']}"></div>
+                    <?php endforeach; ?>
+                </td>
+                <td>{$v.jf}</td>
+            </tr>
+            <?php endif; ?>
+            <?php endforeach; ?>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+

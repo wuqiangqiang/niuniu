@@ -1,0 +1,474 @@
+.load4 .loader {
+  font-size: 20px;
+ top: 40%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -.5em;
+  margin-top: -.5em;
+  text-indent: -9999em;
+  -webkit-animation: load4 1.3s infinite linear;
+  animation: load4 1.3s infinite linear;
+  transform:scale(.7);
+}
+@-webkit-keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0em -3em 0em 0.2em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  12.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 0.2em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  25% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 0.2em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  37.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 0.2em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  50% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 0.2em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  62.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 0.2em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  75% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0.2em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 0.2em #ffffff;
+  }
+}
+@keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0em -3em 0em 0.2em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  12.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 0.2em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  25% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 0.2em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  37.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 0.2em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  50% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 0.2em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  62.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 0.2em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 -0.5em #ffffff;
+  }
+  75% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0.2em #ffffff, -2em -2em 0 0em #ffffff;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 0.2em #ffffff;
+  }
+}
+
+*{padding: 0;margin:0;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-backface-visibility: hidden;}a {text-decoration: none;color: #fff;}ul {list-style: none;}input{border: none;outline:none}body{font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, Arial, sans-serif;cursor: default;}
+img{border: none;}
+.backImg1{background:url("http://goss.fexteam.com/files/d_8/images/game/pic1.png"); }
+
+
+.bottom{position: fixed;bottom:0;left: 0;width: 100%;z-index:90;height: 7.4vh;}
+
+.roomCard{position: fixed;bottom:.7vh;left: 2vh;z-index:90;height:5.8vh;}
+.roomCard img{height:5.8vh;position: absolute;left: 0;top:0;z-index: 9;}
+.roomCard .num{height: 3.6vh;line-height:3.6vh;text-align: right;color:#fff;font-size:2vh;margin-top:1.1vh;position:relative;}
+.gameRound{position: fixed;bottom:1.4vh;right: 2vh;line-height: 4.4vh;font-size:3vh;color:#fff;height: 4.4vh;z-index: 91;}
+
+.roundButton{position: fixed;bottom:0.8vh;width: 5.6vh; height: 5.6vh;z-index:90;}
+.bottomGameRule{right: 1vh;}
+.bottomGameHistory{right: 8.5vh;}
+.addFriend{right: 16vh;}
+.bottomGameMessage{right: 23.5vh;}
+.bottomGameNote{right: 31vh;}
+
+
+.fish{position: absolute;;width: 94%;top:1vh;height:7vh;left: 3%;border-radius:1vh;background:#000;color:#eee;opacity:.5;text-align: center;line-height:7vh;font-size:2.5vh; }
+/*.main{width: 100%;position: relative;background: #fff;margin:0 auto;}*/
+
+.table{position: relative;width:100%;height:100%;z-index: 80;}
+.table .tableBack{position: absolute;top:0;left: 0;width: 100vw;height: 100vh}
+
+.title{overflow: hidden;word-break:break-all;}
+
+.memberUp{position: absolute;width:25%; top:0;color:#fff;font-size: 1.6vh;}
+.memberUp5{left: 0;}
+.memberUp6{left: 25%;}
+.memberUp7{left: 50%;}
+.memberUp8{left: 75%;}
+.memberUp .avatar{position: absolute;left:1vh;top:1vh;width: 6vh;height: 6vh;border-radius:3vh;z-index: 2;}
+.memberUp .info{position: absolute;left:4.6vh;top:1.6vh;width: 6.5vh;height:4.4vh;padding:.2vh .2vh 0 3vh;line-height:2.2vh }
+.memberUp .info .back{position: absolute;top:0;left:0;width: 100%;height:100%;background:#000;opacity:.6;}
+.memberUp .info .name{position: relative;overflow: hidden;height: 2.2vh;word-break: keep-all;width: 6.3vh;}
+.memberUp .info .score{position: relative;}
+
+
+
+
+.member{position: absolute;text-align: center;width: 10vh;height: 15vh;}
+.member .background{width: 100%;height:100%;position: absolute;top:0;left:0;}
+.member .title{color: #fff;font-size: 1.8vh;text-align: center;line-height: 2.4vh;position: relative;margin: 0 auto;margin-top: 18%;height:2.4vh;width: 7.1vh;}
+.member .score{color: #fff;font-size: 1.8vh;text-align: center;line-height: 1.8vh;position: absolute;background: #1f1732;width:66%;border-radius:1vh;margin:0 auto;bottom: 13%;left:18%;}
+.member .avatar{width: 6.6vh;max-height: 6.6vh;position: relative;border-radius:.5vh;}
+.member .status{width: 3.4vh;height: 3.4vh;position: absolute;border-radius:1.5vh;z-index: 10;top:0;left:-.3vh }
+.member .scorePlace{width: 9vh;position: absolute;border-radius:.5vh;top:1.6vh;left:9.4vh;padding:.2vh 0 .2vh 1vh;color:#fff;line-height: 2.6vh;font-size: 1.7vh;text-align: left;}
+.member .scorePlace .back{position: absolute;width: 100%;height: 100%;top:0;left:0;border-radius:.5vh;background:#000;opacity:.6;}
+.member .scorePlace .totalScore{position: relative;width: 10vh;}
+.member .scorePlace .myScore{position: relative;color:Yellow;width: 10vh;}
+.member .scorePlace .myScoreImg{position: absolute;width: 7vh;top: 4vh;left: 2vh;}
+
+.member .gameStatus{position: absolute;left:11vh ;top:6vh;}
+.member .gameStatus .ready{height: 3vh;}
+.member .gameStatus .banker{height: 4.4vh;}
+.member .gameStatus .pointArea{width: 11vh;position: relative;margin-top: 5vh;z-index: 12;margin-left: -1.9vh;}
+.member .gameStatus .pointArea img{width: 11vh;position: absolute;bottom:-.3vh;left: 0;}
+.member .gameStatus .pointArea .point{font-size: 2.8vh;color: #ffe534;font-weight: bold;text-align: center;position: relative;text-shadow: .2vh 0 0 #670b0b;}
+.member1 .gameStatus .pointArea{margin-left: -19.5vh;width: 15vh;margin-top:-10vh;left:50vw;}
+.member1 .gameStatus .pointArea img{width: 15vh;bottom:-.8vh;}
+.member1 .gameStatus .pointArea .point{font-size: 3.4vh;text-shadow: .4vh 0 0 #670b0b;}
+.member2 .gameStatus .pointArea{margin-left: -2.9vh;}
+
+
+.member .PKbox{position: absolute;top:-.5vh;left:-.5vh;height: 15vh;width:21vh;z-index: 15;color: #3ae8ad;}
+.member .PKbox .PKboxBack{position: absolute;top:0;left:0;height: 100%;width:100%;background: #3ae8ad;opacity: 0.15}
+
+.member .PKbox::before,.member .PKbox::after{position: absolute;top: 0;bottom: 0;left: 0;right: 0;  box-shadow: inset 0 0 0 .4vh;content: '';animation: clipMe 8s linear infinite;  clip: rect(0,  21vh, .4vh, 0)}
+.member .PKbox::before {animation-delay: -4s;}
+@keyframes clipMe {
+    0%, 100% {clip: rect(0,  21vh, .4vh, 0);}
+    25% {clip: rect(0, .4vh, 15vh, 0);}
+    50% {clip: rect(14.6vh,  21vh,  15vh, 0);}
+    75% {clip: rect(0,  21vh, 15vh,  20.6vh);}
+}
+
+
+/*.member1{top:73vh;left:50%;width: 74px;height: 110px;margin-left: -37px;}*/
+.member1{bottom:8vh;left:1vh;}
+
+.member2{bottom:52vh;left:100%;margin-left: -11vh;}
+.member2 .status{left:7vh;}
+.member2 .scorePlace{left: -9.4vh;}
+.member2 .PKbox{left:-10.5vh;}
+.member2 .gameStatus{top:6vh;left: -7vh;}
+.member2 .banker{margin-left: -5vh;}
+
+.member3{bottom:72vh;left:50%;margin-left: -11vh;}
+
+.member4{bottom:52vh;left:1vh; }
+
+.member .majiang .outer{z-index: 11;}
+.member4 .majiang{position: absolute;bottom:1.3vh;left: 10vh;}
+.member4 .majiang .outer{width:4vh;position: absolute;bottom:0;left:0;margin-bottom:-15.8vh;}
+.member4 .majiang .moved{left:0;bottom:1.5vh;}
+
+.member3 .majiang {position: absolute;bottom:1.3vh;left: 10vh;}
+.member3 .majiang .outer{width:4vh;position: absolute;bottom:0;left:0;margin-bottom:-35.8vh;}
+.member3 .majiang .moved{left:0;bottom:1.5vh;}
+
+.member2 .majiang {position: absolute;bottom:1.3vh;right: 10vh;}
+.member2 .majiang .outer{width:4vh;position: absolute;bottom:0;right:0;margin-bottom:-15.8vh;}
+.member2 .majiang .moved{right:0;bottom:1.5vh;}
+
+
+.member1 .majiang {position: absolute;bottom:1vh;left: 50vw;margin-left: -10vh;}
+.member1 .majiang .outer{width:4vh;position: absolute;bottom:0;left:0;margin-bottom:28.5vh;}
+.member1 .majiang .moved{left:0;bottom:2.7vh;}
+
+
+.member .majiang .majiangSet .outer{width:4.3vh;margin-bottom:0;}
+.member1 .majiang .majiangSet .outer{width:8vh;}
+.member1 .majiang .majiangSet .moved{left: 10vh;bottom:0;}
+
+.member2 .majiang .majiangSet .moved{right: 4.8vh;bottom:0;}
+.member3 .majiang .majiangSet .moved{left: 4.8vh;bottom:0;}
+.member4 .majiang .majiangSet .moved{left: 4.8vh;bottom:0;}
+
+.member .majiang .majiangSet .inner{position: absolute;width:84%;height:74%;top:3%;left:8%; }
+.member .majiang .majiangSet .ani{width:4.3vh}
+.member1 .majiang .majiangSet .ani{width:8vh}
+
+.member .majiang .majiangTemp1 .outer{width:4.3vh;margin-bottom:0;}
+.member1 .majiang .majiangTemp1 .outer{width:8vh;}
+.member1 .majiang .majiangTemp1 .moved{animation: majiangMove1 .5s;left: 10vh;bottom:0;}
+.member2 .majiang .majiangTemp1 .moved{animation: majiangMove2 .5s;right: 4.8vh;bottom:0;}
+.member3 .majiang .majiangTemp1 .moved{animation: majiangMove3 .5s;left: 4.8vh;bottom:0;}
+.member4 .majiang .majiangTemp1 .moved{animation: majiangMove3 .5s;left: 4.8vh;bottom:0;}
+@keyframes majiangMove1 {
+    0%{left:0;bottom:2.7vh;}
+    70%{left:10vh;bottom:2.7vh;}
+    100% {left: 10vh;bottom:0;}
+}
+@keyframes majiangMove2 {
+    0%{right:0;bottom:1.5vh;}
+    70%{right:4.8vh;bottom:1.5vh;}
+    100% {right: 4.8vh;bottom:0;}
+}
+@keyframes majiangMove3 {
+    0%{left:0;bottom:1.5vh;}
+    70%{left:4.8vh;bottom:1.5vh;}
+    100% {left: 4.8vh;bottom:0;}
+}
+
+
+.scorePlace .coinType10{background:url("http://goss.fexteam.com/files/d_10/images/scroll/coin10.png");}
+.scorePlace .coinType20{background:url("http://goss.fexteam.com/files/d_10/images/scroll/coin20.png");}
+.scorePlace .coinType30{background:url("http://goss.fexteam.com/files/d_10/images/scroll/coin30.png");}
+.scorePlace .coinType50{background:url("http://goss.fexteam.com/files/d_10/images/scroll/coin50.png");}
+.scorePlace .coinType80{background:url("http://goss.fexteam.com/files/d_10/images/scroll/coin80.png");}
+.scorePlace .coinType100{background:url("http://goss.fexteam.com/files/d_10/images/scroll/coin100.png");}
+
+.scorePlaceBanker .coin{width: 3.4vh;height:3.4vh;position: absolute;background-size: 3.4vh 3.4vh;top:45%;left:34%;}
+.scorePlace1 .coin{margin-top:-48vh;margin-left: 13vh;}
+.scorePlace2 .coin{margin-top:-5vh;margin-left: -12vh;}
+.scorePlace3 .coin{margin-top:16vh;margin-left: -3vh;}
+.scorePlace4 .coin{margin-top:-5vh;margin-left: 13vh;}
+
+
+
+.cardList{position: absolute;top:0;left:50%;height:100%;width:50vh;margin-left: -25vh;}
+.cardUp{width: 4vh;position: absolute;bottom:39vh;left: 6vh;z-index: 10;}
+.cardUp img{width: 100%;}
+.cardDown{width: 4vh;position: absolute;bottom:36.2vh;left: 6vh;z-index: 10;}
+.cardDown img{width: 100%;}
+.majiangShow .card{animation: majiangShow .3s;}
+@keyframes majiangShow {
+    0%{margin-bottom:3vh;}
+    100% {margin-bottom:0;}
+}
+
+.quitBack{position: absolute;width: 7.8vh;height: 12vh;border-radius:.6vh;top:1.7vh;left:1vh;background:#000;opacity:0.45;}
+.member1 .quitBack{position: absolute;width: 8.6vh;height: 13.2vh;border-radius:.8vh;top:1.8vh;left:1.2vh;background:#000;opacity:0.45;}
+
+.first_half_cards{position: absolute;width: 11.5vh;height:12vh;padding-left:.5vh;left:0;margin-left: 2vh;bottom:73vh;}
+.first_half_cards .back{position: absolute;width: 100%;height:100%;left:0;top:0;background: #000;opacity: .6;border-radius: 1vh;}
+.first_half_cards .title{position: relative;text-align: center;color: eee;font-size: 2vh;height:3.8vh;line-height:3.8vh;margin-left: -.25vh}
+.first_half_cards .cards{position: relative;float: left;margin:0 .1vh .6vh .2vh;width: 2.4vh;height: 3.4vh;background: #fff;border-radius:.3vh;}
+.first_half_cards .cards .inner{position: absolute;top:10%;height:85%;left:3%;width:94%;}
+
+.waitingText{position: absolute;width: 16vh;left:50%;margin-left: -8vh;bottom:57.5vh;text-align: center;color: eee;font-size: 1.8vh; }
+.clock{width: 6vh;height:6.2vh;bottom:49vh;left:50%;margin-left: -3vh;position: absolute;background:url("http://goss.fexteam.com/files/d_8/images/game/time.png");background-size:6vh 8vh;text-align: center;line-height: 6.3vh;font-size: 2.7vh;padding-top: 1.6vh;}
+
+.dice{position: absolute;bottom:50vh;width: 100%;left: 0;}
+.dice img{width: 10vh;}
+.dice .dice1{left: 50%;margin-left: -11vh;position: absolute;bottom:0;}
+.dice .dice2{left: 50%;margin-left: 1vh;position: absolute;bottom:0;}
+
+
+#operationButton{position: absolute;bottom:25vh;left: 0;width:100%;color: #fff;font-size: 2.5vh;}
+#operationButton .buttonCenter{text-align: center;}
+#operationButton .buttonCenter .unready{height: 5.7vh}
+#operationButton .buttonCenter .ready{height: 3vh;}
+#operationButton .buttonCenter .bankerStatus{height: 4.4vh;}
+
+#operationButton .buttonMiddle{position: absolute;height: 5.4vh;width: 18vh;left:50%;margin-left:-9vh;bottom:0;text-align: center;background:url("http://goss.fexteam.com/files/d_8/images/common/button2.png");background-size:100%;line-height: 5.4vh;}
+#operationButton .buttonLeft{position: absolute;height: 5.4vh;width: 18vh;left:50%;margin-left: -20vh;bottom:0;text-align: center;background:url("http://goss.fexteam.com/files/d_8/images/common/button1.png");background-size:100%;line-height: 5.4vh;}
+#operationButton .buttonRight{position: absolute;height: 5.4vh;width: 18vh;right:50%;margin-right: -20vh;bottom:0;text-align: center;background:url("http://goss.fexteam.com/files/d_8/images/common/button2.png");background-size:100%;line-height: 5.4vh;}
+
+#operationButton .buttonRound{height: 8vh;width: 8vh;margin: 0 .5vh;}
+
+.setScore{position: fixed;top:0;left:0;width:100%;height:100%;z-index:20; }
+.setScore .clickBack{position: absolute;top:0;left:0;width:100%;height:100%;}
+.setScore .area{position: absolute;padding: 2vh;width:44vh;height:7vh;text-align: center;}
+.setScore1 .area{bottom:23.5vh;left:4vh;}
+.setScore2 .area{bottom:46.5vh;right:4vh;}
+.setScore3 .area{bottom:66.5vh;left:50%;margin-left: -24vh;}
+.setScore4 .area{bottom:46.5vh;left:4vh;}
+.setScore .area .back{position: absolute;width:100%;height:100%;top:0;left:0;border-radius:1vh;background:#000;opacity:.7;}
+.setScore .area .buttonRound{height: 7vh;width: 7vh;margin: 0 1vh;position:relative;}
+.setScore .area .buttonRound1{height: 6vh;width: 6vh;margin: 0 1vh;position:relative;}
+
+.setScore .area .triangle{position: absolute;width:0;height:0;border-right: 1.2vh solid transparent;border-left: 1.2vh solid transparent;opacity:.7;}
+.setScore1 .area .triangle{top:11vh;left:10vh;border-top: 2vh solid #000;}
+.setScore2 .area .triangle{top:-2vh;border-bottom: 2vh solid #000;right:10vh}
+.setScore3 .area .triangle{top:-2vh;border-bottom: 2vh solid #000;left:26vh}
+.setScore4 .area .triangle{top:-2vh;border-bottom: 2vh solid #000;left:10vh}
+
+
+/* 玩家金币 */
+.memberCoin{position: absolute;width: 15px;height: 15px; z-index: 100}
+.memberCoin10{bottom: 14vh; left: 5vh;margin-left:0;}
+.memberCoin11{bottom: 14vh; left: 5vh;margin-left:0;}
+.memberCoin12{bottom: 14vh; left: 5vh;margin-left:0;}
+.memberCoin13{bottom: 14vh; left: 5vh;margin-left:0;}
+.memberCoin14{bottom: 14vh; left: 5vh;margin-left:0;}
+.memberCoin15{bottom: 14vh; left: 5vh;margin-left:0;}
+.memberCoin16{bottom: 14vh; left: 5vh;margin-left:0;}
+.memberCoin17{bottom: 14vh; left: 5vh;margin-left:0;}
+
+.memberCoin20{bottom: 58vh; left: 100%;margin-left:-7vh;}
+.memberCoin21{bottom: 58vh; left: 100%;margin-left:-7vh;}
+.memberCoin22{bottom: 58vh; left: 100%;margin-left:-7vh;}
+.memberCoin23{bottom: 58vh; left: 100%;margin-left:-7vh;}
+.memberCoin24{bottom: 58vh; left: 100%;margin-left:-7vh;}
+.memberCoin25{bottom: 58vh; left: 100%;margin-left:-7vh;}
+.memberCoin26{bottom: 58vh; left: 100%;margin-left:-7vh;}
+.memberCoin27{bottom: 58vh; left: 100%;margin-left:-7vh;}
+
+.memberCoin30{bottom: 77vh; left: 50%;margin-left:-7vh;}
+.memberCoin31{bottom: 77vh; left: 50%;margin-left:-7vh;}
+.memberCoin32{bottom: 77vh; left: 50%;margin-left:-7vh;}
+.memberCoin33{bottom: 77vh; left: 50%;margin-left:-7vh;}
+.memberCoin34{bottom: 77vh; left: 50%;margin-left:-7vh;}
+.memberCoin35{bottom: 77vh; left: 50%;margin-left:-7vh;}
+.memberCoin36{bottom: 77vh; left: 50%;margin-left:-7vh;}
+.memberCoin37{bottom: 77vh; left: 50%;margin-left:-7vh;}
+
+.memberCoin40{bottom: 58vh; left: 5vh;margin-left:0;}
+.memberCoin41{bottom: 58vh; left: 5vh;margin-left:0;}
+.memberCoin42{bottom: 58vh; left: 5vh;margin-left:0;}
+.memberCoin43{bottom: 58vh; left: 5vh;margin-left:0;}
+.memberCoin44{bottom: 58vh; left: 5vh;margin-left:0;}
+.memberCoin45{bottom: 58vh; left: 5vh;margin-left:0;}
+.memberCoin46{bottom: 58vh; left: 5vh;margin-left:0;}
+.memberCoin47{bottom: 58vh; left: 5vh;margin-left:0;}
+
+
+
+.messageSay{position: absolute;height: 3vh;font-size: 2vh;color: #fff;background: #060408;border-radius:1.5vh;padding: 0 1.5vh;opacity: .75;line-height: 3vh;z-index: 97}
+.messageSay1{bottom: 22.5vh;left: 2vh;}
+.messageSay1 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay2{bottom:66.5vh;right: 2vh;}
+.messageSay2 .triangle{position: absolute;top:3vh;right:3vh;width:0;height:0;border-top: 6px solid #060408;border-left: 12px solid transparent;}
+.messageSay3{bottom:86.5vh;left: 50%;margin-left: -11vh}
+.messageSay3 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay4{bottom:66.5vh;left: 2vh;}
+.messageSay4 .triangle{position: absolute;top:3vh;left:3vh;width:0;height:0;border-top: 6px solid #060408;border-right: 12px solid transparent;}
+
+
+.messageSay5{top:8vh;margin-left: 1vh;left: 0;height: 2.2vh;font-size: 1.4vh;border-radius:1.1vh;padding: 0 1vh;line-height: 2.2vh;}
+.messageSay5 .triangle{position: absolute;top:-6px;left:3vh;width:0;height:0;border-bottom: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay6{top:8vh;margin-left: 1vh;left: 25%;height: 2.2vh;font-size: 1.4vh;border-radius:1.1vh;padding: 0 1vh;line-height: 2.2vh;}
+.messageSay6 .triangle{position: absolute;top:-6px;left:3vh;width:0;height:0;border-bottom: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay7{top:8vh;margin-left: 1vh;left: 50%;height: 2.2vh;font-size: 1.4vh;border-radius:1.1vh;padding: 0 1vh;line-height: 2.2vh;}
+.messageSay7 .triangle{position: absolute;top:-6px;left:3vh;width:0;height:0;border-bottom: 6px solid #060408;border-right: 12px solid transparent;}
+.messageSay8{top:8vh;margin-left: 1vh;left: 75%;height: 2.2vh;font-size: 1.4vh;border-radius:1.1vh;padding: 0 1vh;line-height: 2.2vh;}
+.messageSay8 .triangle{position: absolute;top:-6px;left:3vh;width:0;height:0;border-bottom: 6px solid #060408;border-right: 12px solid transparent;}
+
+
+
+.invite{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;}
+.invite .inviteBack{width: 100%;height:100%;background: #000;opacity:0.8;position: absolute;}
+.invite .invite1{width: 80px;position: absolute; top:20px;right: 10px;}
+.invite .inviteText{margin: 0 auto;margin-top:140px;width:80%;line-height: 40px;font-size: 18px;color: #fff;font-family: simHei;position: relative;}
+.invite .inviteText .num{float: left;line-height:24px;height:24px;width:24px;text-align: center;border-radius:12px;background:#b42020;position: relative;margin: 8px 5px 0 0}
+.invite .inviteText img{vertical-align: middle;height: 28px;margin:0 3px;}
+.invite .inviteText .invite2{font-size:17px;color:#cdbc48; }
+
+
+
+.ranking{position: absolute;width: 200%;height:200%;top:0;left:0;z-index: 110;display: none;}  
+.ranking .roundEndShow{display: none;}  
+.ranking .rankBack{width: 100%;height:100%;background: #000;opacity:1.0}
+.ranking .rankBack .bg{position: absolute;width: 100%;height:100%;background: #000;opacity:1.0}  
+.ranking .rankText{width: 100%;position: absolute;top:10%;left: 0;}   
+.ranking .rankText .title{width: 100%;} 
+.ranking .rankText .time{text-align: center;}
+.ranking .rankText .time a{border-radius: 5vw;color:#f7d92b;padding: 1vw 4vw;width: 400px;font-size: 6vw;}
+.ranking .rankText .scoresItem{width:140vw;margin:0 auto; margin-top: 1vh;height:19.5vw;line-height:19.5vw;font-size:8vw;position: relative;background-color: #064942; }
+.ranking .rankText .scoresItemWhite{color:#fff; }
+.ranking .rankText .scoresItemWhite a{color:#fff; }
+.ranking .rankText .scoresItemYellow{color:#f7d92b;}
+.ranking .rankText .scoresItemYellow a{color:#f7d92b;}
+.ranking .rankText .scoresItem .name{left: 16%;width: 52%;overflow: hidden;word-break:break-all;position: absolute;top:0;}
+.ranking .rankText .scoresItem .currentScores{width:25%;text-align: left;position: absolute;right: 0;top:0;}
+.ranking  .button{width:100%;position: absolute;bottom:14vh; }
+.ranking  .button img{width:33%;}
+
+
+.message{position: fixed;width: 100%;    box-sizing: border-box;height:100%;z-index: 110;top:0;left:0;}    
+.message .messageBack{width: 100%;height:100%;position: absolute;top:0;left:0;} 
+/*.message .textPart{position: absolute;width: 34vh;height:40vh;bottom:7vh;right:2vh;padding:1.5vh; }   */
+.message .textPartOuter{position: absolute;width: 34vh;height:40vh;bottom:7vh;right:2vh;padding: 1vh 1vh 1vh 1vh;border: 0.2vh solid #a684f2;background: #634fa6;border-radius: 1vh;}
+.message .textPart{position: absolute;width: 34vh;height:40vh !important;bottom:8.5vh;right:3.2vh;overflow: auto;} 
+.message .textPart .outline{position: absolute;background: #634fa6;opacity: 1;width: 98%;height:100%;border:0.2vh solid #a684f2;border-radius:10px;top:-0.5vh;left: .5%;}
+/*.message .textPart .textList {border:1px solid #a684f2;position: relative;height:39vh;overflow: auto;}*/
+.message .textPart .textList {    box-sizing: border-box;border:1px solid #a684f2;position: relative;}
+.message .textPart .textList .textItem{width: 90%;height: 6vh;line-height: 6vh;font-size: 2.1vh;background: #150e2d;border-bottom:1px solid #666;color:#fff;padding:0 5%;position: relative;font-family: simHei;}
+
+    
+.shop{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 110;}   
+.shop .shopBack{width: 100%;height:100%;background: #000;opacity:0.6;}  
+.shop .shopBody{width: 100%;position: absolute;bottom: 0;left:0;height: 0; }    
+.shop .shopBody .shopReturn{width: 15%;float: left;margin-top:6.3%;margin-left:5%;position: relative;}  
+.shop .shopBody .shopBuy{width: 34%;float: right;margin-top:8.3%;margin-right:33%;position: relative;}  
+.shop .shopBody .shopGoods{width: 34%;position: relative;padding: 3px;} 
+.shop .shopBody .shopGoods img{width: 100%;border-radius: 10px;}    
+.shop .shopBody .shopGoods .title{position: absolute;top: 3;font-size: 14px;left: 0;width: 100%;text-align: center;color: #fff;}    
+.shop .shopBody .shopGoods .price{position: absolute;bottom: 3;font-size: 20px;left: 0;width: 100%;text-align: center;color: #f1c818;line-height: 36px;}
+.shop .shopBody .goodsBack{border:3px solid #fada23;padding: 0;border-radius: 14px;}
+.shop .shopBody .goodsBack .title{top: 0;}  
+.shop .shopBody .goodsBack .price{bottom: 0;}
+.shop .shopBody .goodsBack .background{position: absolute;top:0;left: 0;width:100%;height:100%;background:#fada23;opacity:.15; }
+.shop .shopBody .shopGoods1{margin-top:39%;margin-left: 11.2%;float: left;} 
+.shop .shopBody .shopGoods2{margin-top:39%;margin-right: 11.2%;float: right;}   
+.shop .shopBody .shopGoods3{margin-top:7.2%;margin-left: 11.2%;float: left;}    
+.shop .shopBody .shopGoods4{margin-top:7.2%;margin-right: 11.2%;float: right;}
+.shop .shopLoading{width: 100%;position: absolute;left: 0;top:0;height: 100%;z-index: 9;}
+
+
+
+.createRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.createRoom .createRoomBack{width: 100%;height:100%;background: #000;opacity:0.6;}  
+.createRoom .mainPart{width: 300px;height:410px;top:44%;left:50%;margin-top:-165px;margin-left: -150px;position: absolute;} 
+.createRoom .mainPart .createB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:#634fa6;border:1px solid #a684f2;border-radius:10px; }  
+.createRoom .mainPart .createTitle{position:relative;height:36px;text-align: center;}   
+.createRoom .mainPart .createTitle img{position:relative;height:20px;margin-top: 8px;}  
+.createRoom .mainPart .cancelCreate{width: 36px;height:36px;top:-16px;right:-16px;position: absolute;}  
+.createRoom .mainPart .createCommit{position: absolute;line-height: 40px;height: 38px;font-size: 18px;width: 118px;left:50%;margin-left:-59px;bottom:-48px;text-align: center;background:url("http://goss.fexteam.com/files/d_8/images/game/button2.png");background-size:100%;color: #fff;}    
+.createRoom .mainPart .blueBack{width: 280px;height: 316px;background:#111431;border:1px solid #a684f2;border-radius:4px;margin:0 auto;position: relative; }
+.createRoom .mainPart .blueBack .selectPart{width:100%;margin-top:4px;line-height:36px;font-size:14px;position: relative;color:#111431;background:#bbbff1;border-radius:0px;font-family:simHei; }
+.createRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:55px;text-align: right; }
+.createRoom .mainPart .blueBack .selectPart .selectList{float: left; width: 220px}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:25px; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:14px;width:14px;border:1px solid #1d1045;border-radius:2px;background:#78899d;margin-top:9px;position: relative; }
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 20px;height:20px;left: 0;top:2px;}
+.createRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 5px;}
+
+
+.record{position: fixed;top:0;left:0;height:100%;width:100%; z-index: 150;} 
+.record .recordBack{position: fixed;top:0;left:0;height:100%;width:100%;background: #0d0a12;opacity:.7;}    
+.record .leftLine{position: fixed;left: 0%;margin-left:20px;height:100%;width: 0;border-left:1px solid #ecb700;}    
+.record .mainPart{position: absolute;top:0;left:0;height:100%;width:100%;overflow: auto;}   
+.record .mainPart .recordList{position: relative;margin-left: 40px;margin-top: 20px;}   
+.record .mainPart .recordList .recordTime{color:#ecb700;font-size: 14px;}   
+.record .mainPart .recordList .yellowPoint{position: absolute;width:30px;height:30px;top:10px;left:-35px; } 
+.record .mainPart .recordList .yellowPoint .point{background:#ecb700;position: absolute;height:6px;width:6px;border-radius:3px;top:12px;left:12px; }    
+
+.record .mainPart .recordList .recordInfo{background:#cfced0;position: relative;width:80%;border-radius:6px;margin-top:5px;padding:5px 15px; }      
+.record .mainPart .recordList .recordInfo .recordItem{height:40px;font-family:simHei; border-top:1px solid #ababab;line-height: 40px;font-size: 16px;}  
+.record .mainPart .recordList .recordInfo .recordItem .name{float: left;height: 40px;width:120px;overflow: hidden;margin-left: 15px;}   
+.record .mainPart .recordList .recordInfo .recordItem .score{float: right;width:80px;overflow: hidden;right: 15px;}
+.record .mainPart .recordList .recordInfo .borderNone{border: none;}
+
+
+.audioRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.audioRoom .audioRoomBack{width: 100%;height:100%;background: #000;opacity:0.6;}  
+.audioRoom .mainPart{width: 38vh;height:27vh;top:44%;left:50%;margin-top:-16vh;margin-left: -19vh;position: absolute;} 
+.audioRoom .mainPart .createB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:#634fa6;border:1px solid #a684f2;border-radius:10px; }  
+.audioRoom .mainPart .createTitle{position:relative;height:5vh;text-align: center;} 
+.audioRoom .mainPart .createTitle img{position:relative;height:2.6vh;margin-top: 1.2vh;}  
+.audioRoom .mainPart .cancelCreate{width: 5vh;height:5vh;top:-2.5vh;right:-2.5vh;position: absolute;}  
+.audioRoom .mainPart .createCommit{position: absolute;line-height: 5.5vh;height: 5.5vh;font-size: 2.5vh;width: 17vh;left:50%;margin-left:-8.5vh;bottom:-7vh;text-align: center;background:url("http://goss.fexteam.com/files/d_10/images/game/button2.png");background-size:100%;color: #fff;}  
+.audioRoom .mainPart .blueBack{width: 35vh;height: 14vh;background:#111431;border:1px solid #a684f2;border-radius:4px;margin:0 auto;position: relative; }
+.audioRoom .mainPart .blueBack .selectPart{width:100%;margin-top:4px;line-height:36px;font-size:2.2vh;position: relative;color:#111431;background:#bbbff1;border-radius:0px;font-family:simHei; }
+.audioRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:13vh;text-align: right; }
+.audioRoom .mainPart .blueBack .selectPart .selectList{float: right; width: 20vh}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:25px; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:2.2vh;width:2.2vh;border:1px solid #1d1045;border-radius:2px;background:#78899d;margin-top:0.7vh;position: relative; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 2.8vh;height:2.8vh;left: 0;top:0;}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 0.8vh;}
+
+.ruleRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.ruleRoom .ruleRoomBack{width: 100%;height:100%;background: #000;opacity:0.6;}  
+.ruleRoom .ruleRoomMainPart{width: 50vh;height:64vh;top:44%;left:50%;margin-top:-27vh;margin-left: -25vh;position: absolute;} 
+.ruleRoom .ruleRoomMainPart .ruleB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:#634fa6;border:1px solid #a684f2;border-radius:10px; }  
+.ruleRoom .ruleRoomMainPart .ruleTitle{position:absolute;width: 100%;height:5vh;text-align: center;} 
+.ruleRoom .ruleRoomMainPart .ruleTitle img{position:absolute;width: 9vh;height:2.6vh;left: 50%;margin-top: 1.2vh;margin-left: -4.5vh;}  
+.ruleRoom .ruleRoomMainPart .cancelRule{width: 5vh;height:5vh;top:-2.5vh;right:-2.5vh;position: absolute;}  
+.ruleRoom .ruleRoomMainPart .frameBack{top: 5vh;left: 1.5vh;width: 47vh;height: 56vh;background:#3b2f63;border:1px solid #a684f2;border-radius:4px;margin:0 auto;position: absolute;overflow: auto}
+.ruleRoom .ruleRoomMainPart .frameBack .ruleItem{position: relative;margin-top: 2.1vh;left: 5%;width: 90%;color: #efd0a4;font-size: 2.1vh;text-align: left;line-height: 3vh;}

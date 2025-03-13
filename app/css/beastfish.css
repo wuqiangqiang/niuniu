@@ -1,0 +1,81 @@
+*{padding: 0;margin:0;}a {text-decoration: none;color: #fff;}ul {list-style: none;}input{border: none;outline:none}body{font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', ΢���ź�, Arial, sans-serif;cursor: default;}img{border: none;}
+
+
+.alert{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;color: #fff;font-family: simHei;}
+.alert .alertBack{width: 100%;height:100%;background: #000;opacity:0.8;position: absolute;}
+.alert .mainPart{position: relative;top: 45%;left: 50%;margin-top:-19vh ;margin-left:-22.5vh ;width: 45vh;height:38vh; }
+.alert .mainPart .id{position: absolute;top:-1.3vh;left:0;width:45vh;text-align: center;}
+.alert .mainPart .id img{width: 36vh}
+.alert .mainPart .id .text{margin-top: -4.5vh;color: #000;font-size: 2.5vh;}
+
+
+.alert .mainPart .alertText{position: absolute;width:100%;line-height: 3.5vh;font-size: 2.5vh;width: 36vh;left:50%;margin-left:-18vh;top:5.6vh;text-align: center;}
+.alert .mainPart .alertText .rull{background: #4e3e7c;width: 37.4vh;margin-left: -2vh;color: #d6bba7;font-size:2.4vh;padding: 1.5vh;margin-bottom: 1.5vh;text-align: left;}
+.alert .mainPart .alertText .rull a{color: #d6bba7;font-size:2.2vh; }
+.alert .mainPart .buttonMiddle{position: absolute;width:100%;line-height: 5.4vh;height: 5.4vh;font-size: 2.5vh;width: 18vh;left:50%;margin-left:-9vh;bottom:2.2vh;text-align: center;background:url("http://goss.fexteam.com/files/common/images/y1.png");background-size:100%;}
+.alert .mainPart .buttonLeft{position: absolute;width:100%;line-height: 5.4vh;height: 5.4vh;font-size: 2.5vh;width: 18vh;left:3vh;bottom:2.2vh;text-align: center;background:url("http://goss.fexteam.com/files/common/images/b1.png");background-size:100%;}
+.alert .mainPart .buttonRight{position: absolute;width:100%;line-height: 5.4vh;height: 5.4vh;font-size: 2.5vh;width: 18vh;right:3vh;bottom:2.2vh;text-align: center;background:url("http://goss.fexteam.com/files/common/images/y1.png");background-size:100%;}
+.alert .mainPart .backImg{position: absolute;width:100%;height:100%;border-radius: 1.5vh;border:0.1vh solid #de51f1;top:0;left:0;background: #6d4ba8;}
+.alert .mainPart .backImg .blackImg{position: absolute;width:40.6vh;height:25vh;border-radius: 1.5vh;border:0.1vh solid #ae71cb;top:2.2vh;left:2.2vh;background: #281d45;}
+
+
+
+
+.noty{position: fixed;background-color: rgba(0,0,0,0.8);width: 100%;height: 7vh;overflow: hidden;z-index: 9998;top:0;left:0;}
+.noty img{position: absolute;top: 1.5vh;left: 3vw;width: 4vh;height: 4vh;}
+#marquee{position: fixed;top: 0;left: 12vw;background-color: rgba(0,0,0,0);width: 88vw;height: 7vh;line-height: 7vh;color: white;font-size: 14px;overflow: hidden;z-index: 9999;}
+
+
+
+
+#validePhone .phoneMask{position: fixed;z-index: 98;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);}
+#validePhone .phoneFrame{position: fixed;z-index: 99;width: 80vw;max-width: 80vw; top: 50%; left: 50%;-webkit-transform:translate(-50%,-60%); background-color: #fff; text-align: center; border-radius: 8px; overflow: hidden;opacity: 1; color: white;}
+#validePhone .notyText{padding: 0vh;font-size: 3.5vw; line-height: 8vw; word-wrap: break-word;word-break: break-all;color: #000;background-color: white;}
+#validePhone .box{position: relative;height: 15vw;word-wrap: break-word;word-break: break-all;color: #000;background-color: white;border-top: solid;border-color: #e6e6e6;border-width: 0px;}
+#validePhone .box input{padding:0 12px 0 12px;position: absolute;top:  2.5vw;left: 4vw;width: 48vw;height: 11vw;line-height: 6.5vw;border-style: solid;border-width: 1px;border-radius: 0.5vh;border-color: #e6e6e6;font-size: 4vw;-webkit-appearance: none;}
+#validePhone .box #authcode{position: absolute;top:  2.5vw;right: 4vw; width: 22vw;height: 10vw;line-height: 10vw;background-color: rgb(211,211,211);font-size: 3.5vw;border-radius: 0.5vh;color: white;}
+#validePhone .smspwd{position: relative;height: 15vw;word-wrap: break-word;word-break: break-all;color: #000;background-color: white;border-top: solid;border-color: #e6e6e6;border-width: 0px;}
+#validePhone .smspwd input{padding:0 12px 0 12px;position: absolute;top: 1vw;left: 4vw;width: 72vw;height: 11vw;line-height: 6.5vw;border-style: solid;border-width: 1px;border-radius: 0.5vh;border-color: #e6e6e6;font-size: 4vw;-webkit-appearance: none;}
+#validePhone .rest{height: 2.2vw;}
+#validePhone .commitButton{position: relative; left: 4vw;width: 72vw;line-height: 10vw; font-size: 4vw;display: flex;border-radius: 2vw;}
+#validePhone .commitButton .inner{display: block;-webkit-box-flex:1;flex: 1;text-decoration: none;-webkit-tap-highlight-color:transparent;position: relative;margin-bottom: 0;color: rgb(255,255,255);border-top: solid;border-color: #e6e6e6;border-width: 0px;background-color: rgb(64,112,251);border-radius: 1vw;}
+
+
+
+.disconnect{position: fixed;top:45%;left: 0;width: 100%;text-align: center;z-index: 101;}
+.disconnect .background{width: 250px;height:27px;position: absolute;top:-2;left: 50%;margin-left: -125px;background: #000;opacity: .5;border-radius:15px;}
+.disconnect a{font-size: 16px;color: #fff;padding: 5px 14px;position:relative;}
+
+
+
+.audioRoom{position: fixed;width: 100%;height:100%;top:0;left:0;z-index: 109;} 
+.audioRoom .audioRoomBack{width: 100%;height:100%;background: #000;opacity:0.6;}  
+.audioRoom .mainPart{width: 38vh;height:27vh;top:44%;left:50%;margin-top:-16vh;margin-left: -19vh;position: absolute;} 
+.audioRoom .mainPart .createB{width: 100%;height:100%;top:0%;left:0%;position: absolute;background:#634fa6;border:1px solid #a684f2;border-radius:10px; }  
+.audioRoom .mainPart .createTitle{position:relative;height:5vh;text-align: center;} 
+.audioRoom .mainPart .createTitle img{position:relative;height:2.6vh;margin-top: 1.2vh;}  
+.audioRoom .mainPart .cancelCreate{width: 5vh;height:5vh;top:-2.5vh;right:-2.5vh;position: absolute;}  
+.audioRoom .mainPart .createCommit{position: absolute;line-height: 5.4vh;height: 5.4vh;font-size: 2.5vh;width: 18vh;left:50%;margin-left:-9vh;bottom:-7.3vh;text-align: center;background:url("http://goss.fexteam.com/files/common/images/y1.png");background-size:100%;color: #fff;}  
+.audioRoom .mainPart .blueBack{width: 35vh;height: 14vh;background:#111431;border:1px solid #a684f2;border-radius:4px;margin:0 auto;position: relative; }
+.audioRoom .mainPart .blueBack .selectPart{width:100%;margin-top:4px;font-size:2.2vh;position: relative;color:#111431;background:#bbbff1;border-radius:0px;font-family:simHei; height:4vh;line-height:4vh;padding:0.8vh 0;}
+.audioRoom .mainPart .blueBack .selectPart .selectTitle{float: left;width:13vh;text-align: right; }
+.audioRoom .mainPart .blueBack .selectPart .selectList{float: right; width: 20vh}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem{float: left;position:relative;margin-left:10px; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectBox{float: left;height:2.2vh;width:2.2vh;border:1px solid #1d1045;border-radius:2px;background:#78899d;margin-top:0.7vh;position: relative; }
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem img{position: absolute;width: 2.8vh;height:2.8vh;left: 0;top:0;}
+.audioRoom .mainPart .blueBack .selectPart .selectList .selectItem .selectText{float: left;margin-left: 0.8vh;}
+
+/*
+.activeButton{width: 100%;transition:width .1s,height .1s,left .1s,top .1s;position: absolute;top:0;left:0;width:100%;height: 100%;}  
+.activeButton:active{width:86%;height: 86%;left: 7%;top:7%}*/
+.activeButton{}  
+.activeButton:active{}
+.activeButton img{width: 100%;}
+.activeButton .activeInnerText{position: absolute;top:0;left:0;width: 100%;height:100%;text-align: center;}
+
+
+
+
+
+
+

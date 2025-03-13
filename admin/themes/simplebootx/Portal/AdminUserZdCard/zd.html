@@ -1,0 +1,172 @@
+<admintpl file="header" />
+<style type="text/css">
+    /*牌面定位样式*/
+    .card { margin: 0 7px 7px 0; display:inline-block; background:url("/themes/game/Public/img/cards.jpg");background-size:88.4vh 38.624vh;width: 6.8vh;height: 9.656vh;box-shadow:1px 1px 5px #333; }
+    div.select-card div.select{ opacity: 1; }
+    div.select-card .card { opacity: 0.5; }
+    .cardA1{background-position: 0 -28.968vh;}
+    .cardA2{background-position: -6.8vh -28.968vh;}
+    .cardA3{background-position: -13.6vh -28.968vh;}
+    .cardA4{background-position: -20.4vh -28.968vh;}
+    .cardA5{background-position: -27.2vh -28.968vh;}
+    .cardA6{background-position: -34vh -28.968vh;}
+    .cardA7{background-position: -40.8vh -28.968vh;}
+    .cardA8{background-position: -47.6vh -28.968vh;}
+    .cardA9{background-position: -54.4vh -28.968vh;}
+    .cardA10{background-position: -61.2vh -28.968vh;}
+    .cardA11{background-position: -68vh -28.968vh;}
+    .cardA12{background-position: -74.8vh -28.968vh;}
+    .cardA13{background-position: -81.6vh -28.968vh;}
+    .cardB1{background-position: 0 -19.312vh;}
+    .cardB2{background-position: -6.8vh -19.312vh;}
+    .cardB3{background-position: -13.6vh -19.312vh;}
+    .cardB4{background-position: -20.4vh -19.312vh;}
+    .cardB5{background-position: -27.2vh -19.312vh;}
+    .cardB6{background-position: -34vh -19.312vh;}
+    .cardB7{background-position: -40.8vh -19.312vh;}
+    .cardB8{background-position: -47.6vh -19.312vh;}
+    .cardB9{background-position: -54.4vh -19.312vh;}
+    .cardB10{background-position: -61.2vh -19.312vh;}
+    .cardB11{background-position: -68vh -19.312vh;}
+    .cardB12{background-position: -74.8vh -19.312vh;}
+    .cardB13{background-position: -81.6vh -19.312vh;}
+    .cardC1{background-position: 0 0;}
+    .cardC2{background-position: -6.8vh 0;}
+    .cardC3{background-position: -13.6vh 0;}
+    .cardC4{background-position: -20.4vh 0;}
+    .cardC5{background-position: -27.2vh 0;}
+    .cardC6{background-position: -34vh 0;}
+    .cardC7{background-position: -40.8vh 0;}
+    .cardC8{background-position: -47.6vh 0;}
+    .cardC9{background-position: -54.4vh 0;}
+    .cardC10{background-position: -61.2vh 0;}
+    .cardC11{background-position: -68vh 0;}
+    .cardC12{background-position: -74.8vh 0;}
+    .cardC13{background-position: -81.6vh 0;}
+    .cardD1{background-position: 0 -9.656vh;}
+    .cardD2{background-position: -6.8vh -9.656vh;}
+    .cardD3{background-position: -13.6vh -9.656vh;}
+    .cardD4{background-position: -20.4vh -9.656vh;}
+    .cardD5{background-position: -27.2vh -9.656vh;}
+    .cardD6{background-position: -34vh -9.656vh;}
+    .cardD7{background-position: -40.8vh -9.656vh;}
+    .cardD8{background-position: -47.6vh -9.656vh;}
+    .cardD9{background-position: -54.4vh -9.656vh;}
+    .cardD10{background-position: -61.2vh -9.656vh;}
+    .cardD11{background-position: -68vh -9.656vh;}
+    .cardD12{background-position: -74.8vh -9.656vh;}
+    .cardD13{background-position: -81.6vh -9.656vh;}
+    
+</style>
+</head>
+<body>
+    <div class="wrap js-check-wrap">
+        <?php $souser_data = unserialize(session('souser_data')); ?>
+        <form action="<?php if(!empty($souser_data)): ?>{:U('Portal/AdminUser/soUser')}<?php else: ?>{:U('Portal/AdminUser/index')}<?php endif; ?>" id="back-form" method="post" style="display: none;">
+            <?php foreach( $souser_data as $k=>$v ): ?>
+            <input type="hidden" name="{$k}" value="{$v}"/>
+            <?php endforeach; ?>
+        </form>
+        <ul class="nav nav-tabs">
+            <li><a href="JavaScript:;" id="back-souser">返回前列表</a></li>
+            <li class="active"><a href="#">指定发牌</a></li>
+        </ul>
+        <form class="form-horizontal" id="zd-form" action="{:U('AdminUserZdCard/zd_save')}" method="post">
+            <fieldset>
+                <div class="control-group" >
+                    <label class="control-label">账户</label>
+                    <div class="controls" >
+                        <input type="hidden" name="id" value="{$user.id}">
+                        <input type="text" style="color: red" name="user_login" value="{$user.user_login}" disabled/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">昵称</label>
+                    <div class="controls" >
+                        <input type="text" style="color: red" name="nickname" value="{$user.nickname}" disabled/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <input name="select_card" id="select_card" type="hidden" value=""/>
+                    <label class="control-label">选牌</label>
+                    <div class="controls">
+                        <div class="select-card">
+                            <?php foreach( explode(',', $cards) as $k=>$card ): ?>
+                            <?php if($k%13==0 && $k!=0): ?>
+                            <div style="clear: both;" class="clear"></div>
+                            <?php endif; ?>
+                            <div class="card card{$card}" data-card="{$card}"></div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary  js-ajax-submit">确认发牌</button>
+                </div>
+            </fieldset>
+        </form>
+        <?php if( ! empty( $history ) ): ?>
+        <div style="margin-bottom: 10px;">
+            <table class="table table-hover table-bordered table-list" style="width: 80%; margin: 0 auto;">
+                <thead>
+                <tr>
+                    <th>牌型</th>
+                    <th>状态</th>
+                    <th>添加时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach( $history as $v ): ?>
+                <tr>
+                    <td>
+                        <?php foreach( explode(',', $v['cards']) as $cv ): ?>
+                        <div class="card card<?php echo $cv; ?>"></div>
+                        <?php endforeach; ?>
+                    </td>
+                    <td><?php echo $v['is_complete'] == '1' ? '已完成' : '-'; ?></td>
+                    <td><?php echo $v['created']; ?></td>
+                    <td><a href="{:U('adminUserZdCard/zd_delete',array('id'=>$v['id']))}">删除</a></td>
+                </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php endif; ?>
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#back-souser").click(function (e) {
+                e.preventDefault();
+                $("#back-form").submit();
+            });
+
+            $("div.select-card div.card").click(function () {
+                $(this).toggleClass("select");
+                if($("div.select-card div.card.select").length>4) {
+                    $("div.select-card div").each(function (i, item) {
+                        if(!$(item).hasClass("select"))
+                            $(item).css("display", "none");
+                    });
+                }
+                else {
+                    $("div.select-card div").each(function (i, item) {
+                        $(item).css("display", $(item).hasClass("clear") ? "block" : "inline-block");
+                    });
+                }
+            });
+
+            $("#zd-form").submit(function (e) {
+                var $select = $("div.select-card div.card.select");
+                if($select.length < 3) return e.preventDefault();
+                var cards = [];
+                $select.each(function (i, item) {
+                    cards.push($(item).attr("data-card"));
+                });
+                $("#select_card").val(cards.join(","));
+            });
+        });
+    </script>
+</body>
+</html>

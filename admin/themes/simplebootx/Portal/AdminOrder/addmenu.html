@@ -1,0 +1,54 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('AdminOrder/menuOrder')}">选项管理</a></li>
+			<li class="active"><a href="{:U('AdminOrder/addmenu')}">添加选项</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form" action="{:U('AdminOrder/addmenu')}" method="post">
+			<fieldset>
+                <div class="control-group" >
+					<label class="control-label">上级:</label>
+					<div class="controls" >
+						<select id="parentid" name="parentid" onchange="fangfa(this)">
+							<option value="0">作为一级菜单</option>
+							{$select_categorys}
+						</select>
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label">名称:</label>
+					<div class="controls" >
+                        <input type="text" style="color: red" name="name" value="" required >
+					</div>
+				</div>
+				<div id="appear"  class="control-group">
+                    <label class="control-label">函数:</label>
+                    <div class="controls">
+                        <input type="text" name="appear" value="" required >
+                    </div>
+                </div> 
+                <div id="method"  class="control-group">
+                    <label class="control-label">备注:</label>
+                    <div class="controls">
+                        <input type="text" name="method" value="" required >
+                    </div>
+                </div>
+                <div id="method"  class="control-group">
+                    <label class="control-label">选项:</label>
+                    <div class="controls">
+                        <input type="text" name="select" value="" >
+                    </div>
+                </div>                            
+			</fieldset>
+			<div class="form-actions">
+				
+				<button type="submit" class="btn btn-primary  js-ajax-submit">添加</button>
+				<a class="btn" href="javascript:history.back(-1);">返回</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

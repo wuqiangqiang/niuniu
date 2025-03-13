@@ -1,0 +1,135 @@
+<admintpl file="header"/>
+</head>
+<body>
+    <div class="wrap js-check-wrap">
+        <ul class="nav nav-tabs">
+            <li><a href="{:U('AdminOrder/addPlan')}">添加时时彩</a></li>
+            <li class="active"><a href="{:U('AdminOrder/addPk10')}">添加北京赛PK10</a></li>
+        </ul>
+        <form class="well form-search" method="post" action="{:U('Portal/AdminOrder/addPk10Post/type/ssc')}">
+            <input type="text" style="display:none" name="post[type_id]" value="2"/>
+            计划名称：<input type="text" name="post[plan_name]" value="" id="rolename"/>
+            <div class="form-actions">
+                <div style="float:left;">
+                    定位： 
+                    <select id="gen" name="post[location]" style="width: 120px;" onchange="set_city(this,$('#city')); WYL();">
+                        <option value=''>请选择</option>
+                        <foreach name="src" item="vo">
+                        <option value='{$vo.name}'>{$vo.name}</option>
+                        </foreach>
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div id="div_leixing" style="float:left; display:none">
+                    类型： 
+                    <select id="city" name="post[sort]"  style=" width: 120px;" onchange="set_leixing($('#gen'),this,$('#div_qishu'), $('#masu')); WYL();">
+                       
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div id="div_qishu" style="float:left; display:none" >
+                    期数： 
+                    <select name="post[stages]" style="width: 120px;" onchange="set_qishu(this);">
+                        <option value='1'>一期</option>
+                        <option value='2'>二期</option>
+                        <option value='3'>三期</option>
+                        <option value='4'>四期</option>
+                        <option value='5'>五期</option>
+                    </select> &nbsp;&nbsp;
+                </div>
+                <div id="div_chuhao" style="float:left; display:none">
+                    <label class="control-label">出号：</label>
+                    <input type="text" name="post[number]" value="" id="rolename" placeholder="默认随机出号"/>
+                    <input type="submit" class="btn btn-primary" value="添加" />
+                </div>
+            
+        </div>
+
+            <!-- <select id="masu" name="post[masu]" style=" display:none; width: 120px;" onchange="set_city(this, document.getElementById('city')); WYL();">
+                    
+            </select> -->
+        </form>
+
+
+
+
+    </div>
+<script src="__PUBLIC__/js/common.js"></script>
+<script type="text/javascript">
+
+function set_city(province,citys) {
+    name=province.value;
+    var html="";
+    document.getElementById("city").options.length=0;
+    $.ajax({
+        type:'post',
+        url:"{:U('Portal/AdminOrder/ajaxtype')}",
+        data:{name:name},
+        dataType:'json',
+        success:function(data){
+            $.each(data,function(i,n){
+                document.getElementById("city").options.add(new Option(n.name,n.name));
+            })
+        }
+    })
+
+    $('#div_leixing').css('display','block');
+} 
+
+function set_leixing(gen,province, back,city){
+    gen=gen.value;
+    province=province.value;
+    // val=str.split(',');
+    var html = '';
+    city.innerHTML="";
+    $(city).css('display','none');
+    $(back).css('display','block');
+    if(province=='单式'){
+       
+        if(gen=='后二'||val=='前二'){
+            if(province != ''){
+            for(i=1;i<10;i++){
+                if(city.value == i+'x'){
+                    html = html + '<option value="'+i+'x" selected>'+i+'x</option>'
+                }else{
+                    html = html + '<option value="'+i+'x" >'+i+'x</option>'
+                }
+            }
+            $(city).append(html);
+            }
+        }
+        else if(gen=='后三'||val=='前三'){
+            if(province != ''){
+            for(i=1;i<10;i++){
+                if(city.value == i+'x'){
+                    html = html + '<option value="'+i+'xx" selected>'+i+'xx</option>'
+                }else{
+                    html = html + '<option value="'+i+'xx" >'+i+'xx</option>'
+                }
+            }
+            $(city).append(html);
+            }
+        }
+        $(city).css('display','block');
+    }
+    if(province=='复式'||province=='直选'){
+        if(province != ''){
+            for(i=0;i<10;i++){
+                if(city.value == i+'x'){
+                    html = html + '<option value="'+i+'" selected>'+i+'</option>'
+                }else{
+                    html = html + '<option value="'+i+'" >'+i+'</option>'
+                }
+            }
+            $(city).append(html);
+            }
+        
+        $(city).css('display','block');
+    }
+}
+function set_qishu(){
+    $('#div_chuhao').css('display','block');
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<html>
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="./css/bull_vue-2.0.3.css">
+<link rel="stylesheet" type="text/css" href="./css/common/alert-1.1.css">
+<link rel="stylesheet" type="text/css" href="./css/bullshop-1.0.css">
+<link rel="stylesheet" type="text/css" href="./css/public.css">
+ <link rel="stylesheet" href="css/app.css" /> 
+
+<script src="./js/homepage/jq.js" type="text/javascript"></script> 
+<script src="./js/homepage/home.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/app/js/base64.js"></script>
+<script src="js/app.js" type="text/javascript"></script>
+
+
+</head>
+
+<html>
+ <head></head>
+ <body> 
+
+
+   <div class="roomCard">
+    <img src="./img/game/roomCard.png" /> 
+    <div class="num">
+     <div class='jiurenniuniu-fk'></div> 
+     <div class='jiurenniuniu-fk-1' id="fknum">--</div>
+    </div>
+   </div>
+
+   <img src="./img/bull9/tab_bottom.png" alt="" class="tabBottom" /> 
+   <div class="round jiurenniuniu-round" style="" id="jsxx">
+    --
+   </div> 
+   <img src="./img/bull9/btn_game_home.png" class="return"  onclick="opnemm('fangjian-fanhuisy','tishi')" /> 
+   <img src="./img/common/note5.png" class="return jiurenniuniu-return" onclick="opnemm('fangjian-tishi','tishi')"/> 
+   <img src="./img/bull9/btn_game_rule.png" class="bGameRule jiurenniuniu-bGameRule" onclick="opnemm('fangjian-gz','vroomRule')" /> 
+
+   <div class="myCardTypeBG"></div> 
+   <div class="myCardType">
+    <div id="df">
+     --
+    </div>
+   </div> 
+   <div class="bottomMessage"  onclick="opnemm('fangjian-kj','message')">
+    <img src="./img/bull9/bull_message.png" class='jiurenniuniu-bottomMessage-img'  />
+   </div> 
+   <div class="bottomHistory jiurenniuniu-bottomHistory" onclick="opnemm('fangjian-yinyue','vaudioRoom')">
+    <img class='jiurenniuniu-bottomHistory-img' src="./img/common/icon_sound91.png"/>
+   </div> 
+
+  <div id="messageSay">
+  </div>
+  <div id="tishi" class="alert" style="display: none;"></div> 	
+  <div id="vaudioRoom" class="audioRoom" style="display: none;"></div> 
+  <div id="vroomRule" class="createRoom" style="display: none;"></div>
+  <div id='message' class="message" style="display: none;"></div> 
+
+   <div id="table" class="table">
+    <img src="./img/bull9/table.jpg" class="tableBack" /> 
+    <div class="cardDeal" id="userfp"></div> 
+
+
+     <div class="myCards" style="display: none;"></div>
+
+
+  <div class="myCards" style="display: none;"></div>
+
+ <div class="myCards" style="display: none;"></div>
+
+
+
+    <div class="cardOver" style="position: absolute; width: 100%; height: 100%; overflow: hidden;"></div> 
+
+    <div id="memberTimesText"></div> 
+    
+    <div id="memberRobText"></div>
+    
+    <div id="memberBull"></div>
+    
+
+    <div id="memberScoreText1"></div>
+    
+    <div id="member"></div> 
+
+
+    <div id="jinbi"></div> 
+
+
+    <div>
+      <div class="triangle"></div>
+    </div>
+
+
+    <div id="divRobBankerText" class='jiurenniuniu-qiangzhuang'></div> 
+    <div id="" class="clock jiurenniuniu-clock">
+     <img src="./img/bull9/bull_clock.png" class='jiurenniuniu-memberCoin' /> 
+     <p id='djs' class='jiurenniuniu-clock1'> 10 </p>
+    </div> 
+
+    <div id="operationButton">
+    </div>
+
+    <div class='gongg' style="display: none">
+    </div>
+    
+    </div>
+    <div id="overtime" style="display: none">
+    <canvas id="myCanvas" width="696" height="1224" style="display: none"></canvas>
+    </div>
+
+
+
+
+ </body>
+ <script>
+      var dkxx=Request('dk');
+     load('show');
+     if(dkxx){
+      connect(dkxx);
+    }
+    else{
+      load('hide');
+      prompt('服务器没开启,请稍后再试');
+      setTimeout("$('body').hide()",3000);
+    }
+  </script>
+
+
+
+
+
+
+
+  <audio onended="mp3playandpause('mp3niu0');" id="mp3niu0" src="video/nan_niu0.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu1');" id="mp3niu1" src="video/nan_niu1.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu2');" id="mp3niu2" src="video/nan_niu2.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu3');" id="mp3niu3" src="video/nan_niu3.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu4');" id="mp3niu4" src="video/nan_niu4.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu5');" id="mp3niu5" src="video/nan_niu5.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu6');" id="mp3niu6" src="video/nan_niu6.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu7');" id="mp3niu7" src="video/nan_niu7.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu8');" id="mp3niu8" src="video/nan_niu8.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu9');" id="mp3niu9" src="video/nan_niu9.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu10');" id="mp3niu10" src="video/nan_niuniu.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu11');" id="mp3niu11" src="video/nan_wuhua.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu12');" id="mp3niu12" src="video/nan_zha.mp3"></audio>
+<audio onended="mp3playandpause('mp3niu13');" id="mp3niu13" src="video/nan_wuxiao.mp3"></audio>
+
+<audio onended="mp3playandpause('mp3daojishi');" id="mp3daojishi" src="video/daojishi.mp3"></audio>
+<audio onended="mp3playandpause('mp3gold');" id="mp3gold" src="video/gold.mp3"></audio>
+<audio onended="mp3playandpause('mp3kaiju');" id="mp3kaiju" src="video/kaiju.mp3"></audio>
+<audio onended="mp3playandpause('mp3xiazhu');" id="mp3xiazhu" src="video/xiazhu.mp3"></audio>
+<audio onended="mp3playandpause('mp3fapai');" id="mp3fapai" src="video/fapai.mp3"></audio>
+
+<audio onended="mp3playandpause('message1');" id="message1" src="message/message1.mp3"></audio>
+<audio onended="mp3playandpause('message2');" id="message2" src="message/message2.mp3"></audio>
+<audio onended="mp3playandpause('message3');" id="message3" src="message/message3.mp3"></audio>
+<audio onended="mp3playandpause('message4');" id="message4" src="message/message4.mp3"></audio>
+<audio onended="mp3playandpause('message5');" id="message5" src="message/message5.mp3"></audio>
+<audio onended="mp3playandpause('message6');" id="message6" src="message/message6.mp3"></audio>
+<audio onended="mp3playandpause('message7');" id="message7" src="message/message7.mp3"></audio>
+<audio onended="mp3playandpause('message8');" id="message8" src="message/message8.mp3"></audio>
+<audio onended="mp3playandpause('message9');" id="message9" src="message/message9.mp3"></audio>
+<audio onended="mp3playandpause('message10');" id="message10" src="message/message10.mp3"></audio>
+<audio onended="mp3playandpause('message11');" id="message11" src="message/message11.mp3"></audio>
+<audio onended="mp3playandpause('message12');" id="message12" src="message/message12.mp3"></audio>
+
+<audio id="background" autoplay="autoplay" loop="loop" src="video/background.mp3" autoplay preload></audio>
+<!--下注抢庄-->
+<audio onended="mp3playandpause('xia1');" id="xia1" src="video/zhuang/1.mp3"></audio>
+<audio onended="mp3playandpause('xia2');" id="xia2" src="video/zhuang/2.mp3"></audio>
+<audio onended="mp3playandpause('xia4');" id="xia4" src="video/zhuang/4.mp3"></audio>
+<audio onended="mp3playandpause('xia5');" id="xia5" src="video/zhuang/5.mp3"></audio>
+<audio onended="mp3playandpause('qiangzhuang');" id="qiangzhuang" src="video/zhuang/qiangzhuang.mp3"></audio>
+<audio onended="mp3playandpause('buqiang');" id="buqiang" src="video/zhuang/buqiang.mp3"></audio>
+
+<script>
+    function mp3play(id){
+        document.getElementById(id).play();
+    }
+    function mp3pause(id){
+        document.getElementById(id).pause();
+    }
+
+    function mp3playandpause(id){
+        mp3play(id);
+        mp3pause(id);
+    }
+
+</script>
+<script>
+    function audioAutoPlay(id){
+        var audio = document.getElementById(id),
+                play = function(){
+                    audio.play();
+                };
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            play();
+            mp3pause(id);
+        }, false);
+        document.addEventListener('YixinJSBridgeReady', function() {
+            play();
+            mp3pause(id);
+        }, false);
+    }
+
+    audioAutoPlay('mp3niu0');
+    audioAutoPlay('mp3niu1');
+    audioAutoPlay('mp3niu2');
+    audioAutoPlay('mp3niu3');
+    audioAutoPlay('mp3niu4');
+    audioAutoPlay('mp3niu5');
+    audioAutoPlay('mp3niu6');
+    audioAutoPlay('mp3niu7');
+    audioAutoPlay('mp3niu8');
+    audioAutoPlay('mp3niu9');
+    audioAutoPlay('mp3niu10');
+    audioAutoPlay('mp3niu11');
+    audioAutoPlay('mp3niu12');
+    audioAutoPlay('mp3niu13');
+    audioAutoPlay('background');
+
+    audioAutoPlay('mp3daojishi');
+    audioAutoPlay('mp3gold');
+    audioAutoPlay('mp3kaiju');
+    audioAutoPlay('mp3xiazhu');
+
+    audioAutoPlay('mp3fapai');
+
+
+
+    audioAutoPlay('message1');
+    audioAutoPlay('message2');
+    audioAutoPlay('message3');
+    audioAutoPlay('message4');
+    audioAutoPlay('message5');
+    audioAutoPlay('message6');
+    audioAutoPlay('message7');
+    audioAutoPlay('message8');
+    audioAutoPlay('message9');
+    audioAutoPlay('message10');
+    audioAutoPlay('message11');
+    audioAutoPlay('message12');
+
+
+    audioAutoPlay('xia1');
+    audioAutoPlay('xia2');
+    audioAutoPlay('xia4');
+    audioAutoPlay('xia5');
+    audioAutoPlay('qiangzhuang');
+    audioAutoPlay('buqiang');
+
+
+
+setTimeout(function(){
+    mp3play('background');
+},2000)
+
+
+
+</script>
+</html>

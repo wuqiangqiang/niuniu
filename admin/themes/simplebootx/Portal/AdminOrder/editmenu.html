@@ -1,0 +1,50 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		
+		<form class="form-horizontal js-ajax-form" action="{:U('AdminOrder/editmenu_post')}" method="post">
+			<fieldset>
+				<input type="text" name="id" value="{$data.id}" style="display:none">
+                <div class="control-group" >
+					<label class="control-label">上级:</label>
+					<div class="controls">
+						<input type="text" style="color: red" name="name" value="{$parent.name}"  readonly required >
+					</div>
+				</div>
+
+				<div class="control-group" >
+					<label class="control-label">名称:</label>
+					<div class="controls" >
+                        <input type="text" style="color: red" name="name" value="{$data.name}" required >
+					</div>
+				</div> 
+                <div id="appear"  class="control-group">
+                    <label class="control-label">函数:</label>
+                    <div class="controls">
+                        <input type="text" name="appear" value="{$data.appear}" required >
+                    </div>
+                </div>
+                <div id="method"  class="control-group">
+                    <label class="control-label">备注:</label>
+                    <div class="controls">
+                        <input type="text" name="method" value="{$data.method}" required >
+                    </div>
+                </div>
+                <div id="method"  class="control-group">
+                    <label class="control-label">选项:</label>
+                    <div class="controls">
+                        <input type="text" name="select" value="{$data.select}" >
+                    </div>
+                </div> 
+			</fieldset>
+			<div class="form-actions">
+				
+				<button type="submit" class="btn btn-primary">更改</button>
+				<a class="btn" href="javascript:history.back(-1);">返回</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

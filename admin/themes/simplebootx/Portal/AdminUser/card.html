@@ -1,0 +1,77 @@
+<admintpl file="header" />
+</head>
+<body>
+    <div class="wrap">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">排单币管理</a></li>
+            <!--<li><a href="{:U('AdminUser/add')}"></a></li>-->
+        </ul>
+        <form class="well form-search" method="post" action="{:U('Portal/AdminUser/socard')}">
+            类别：
+            <input type="text" name="user_login" style="width: 200px;" value="{:I('request.user_login/s','')}" required placeholder="请输入会员账号">
+<!--            数量:
+            <input type="number" name="number" style="width: 200px;" value="" required placeholder="请输入数量">-->
+            <!--            邮箱:
+                        <input type="text" name="user_email" style="width: 100px;" value="{:I('request.user_email/s','')}" placeholder="请输入{:L('EMAIL')}">-->
+
+            <select name="term" style="width: 120px;">
+                <option value='1'>1小时</option>
+                <option value='2'>2小时</option>
+                <option value='5'>5小时</option>
+                <option value='10'>10小时</option>
+                <option value='24'>24小时</option>
+                <option value='48'>48小时</option>
+            </select> &nbsp;&nbsp;
+            <input type="submit" class="btn btn-primary js-ajax-submit" value="查找" />
+            <!--<a class="btn btn-danger" href="{:U('User/index')}">清空</a>-->
+        </form>
+            <table class="table table-hover table-bordered table-list">
+                <thead>
+                    <tr>
+                        <th width="50">ID</th>
+                        <th>会员</th>
+                        <th>排单币</th>
+                        <th>状态</th>
+                        <th>生成时间</th>
+<!--                        <th>使用用户</th>
+                        <th>使用时间</th>-->
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+               <php>
+                   $status[0]='未使用';
+                   $status[1]='已使用';
+               </php>
+                <foreach name="record" item="vo">
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.user_login}</td>
+                        <td>{$vo.activation_code}</td>
+                        <td>{$status[$vo['status']]}</td>
+                        <td>{$vo.create_time}</td>
+<!--                        <td>
+                               <php>
+                                  if($vo['use_user']=='0'){
+                                  $vo['use_user']='';
+                                  }
+                              </php>
+                            {$vo.use_user}
+                        </td>
+                        <td>{$vo.use_time}</td>-->
+                        <td>
+                            <a class="js-ajax-delete" href="{:U('Portal/AdminUser/deletecard',array('id'=>$vo['id']))}">{:L('DELETE')}</a> 
+                        </td>
+                    </tr>
+                </foreach>
+
+
+                </tbody>
+
+            </table>
+            <div class="pagination">{$page}</div>
+    </div>
+    <script src="__PUBLIC__/js/common.js"></script>
+    
+</body>
+</html>

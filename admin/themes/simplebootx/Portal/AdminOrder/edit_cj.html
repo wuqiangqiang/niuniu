@@ -1,0 +1,65 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Portal/AdminOrder/menuOrder')}">选项管理</a></li>
+            <li class="active"><a href="#" >设置采集</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form" action="{:U('Portal/AdminOrder/edit_cjpost')}" method="post">
+						<fieldset>  
+                <div class="control-group" >
+					<label class="control-label">采集器名称</label>
+					<div class="controls" >
+                        <input type="text" style="color: red" name="name"value="{$post.name}" required>
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label">采集url</label>
+					<div class="controls" >
+                        <input type="text"  name="url" value="{$post.url}" required>
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label">采集gz</label>
+					<div class="controls" >
+                        <input type="text"  name="gz" value="{$post.gz}" required>
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label">期数对应数字</label>
+					<div class="controls" >
+                        <input type="number"  name="qs" value="{$post.qs}" required>
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label">数据对应数字</label>
+					<div class="controls" >
+                        <input type="number"  name="sj" value="{$post.sj}" required>
+					</div>
+				</div> 
+				<div class="control-group" >
+					<label class="control-label">采集数据分割符</label>
+					<div class="controls" >
+                        <input type="text"  name="fg" value="{$post.fg}" required>
+					</div>
+				</div> 
+				<div class="control-group" >
+					<label class="control-label">上次运行时间</label>
+					<div class="controls" >
+                        <input type="text"  name="yxtime" value="{$post.yxtime}" required>
+					</div>
+				</div>                                        
+                     
+			</fieldset>
+			<div class="form-actions">
+				<input type="hidden" name="id" value="{$post.id}"/>
+				<input type="hidden" name="typeid" value="{$type.id}"/>
+				<button type="submit" class="btn btn-primary">{:L('SAVE')}</button>
+				<a class="btn" href="javascript:history.back(-1);">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

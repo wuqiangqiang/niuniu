@@ -1,0 +1,489 @@
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta name="msapplication-tap-highlight" content="no" /> 
+  <title>567120号金花房间</title> 
+  <link rel="stylesheet" type="text/css" href="css/flower-2.0.3.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/alert-1.1.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/zjh.css" /> 
+  <script src="./js/homepage/jq.js" type="text/javascript"></script> 
+  <script src="./js/homepage/home.js" type="text/javascript"></script> 
+  <script src="./js/zjh.js" type="text/javascript"></script> 
+ </head> 
+ <body> 
+ 
+  <div class="roomCard">
+   <img src="img/roomCard.png" /> 
+   <div class="num">
+    <div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: rgb(255, 255, 255); opacity: 0.2; border-radius: 10px;"></div> 
+    <div style="position: relative; padding: 0px 10px 0px 35px;">
+     13张
+    </div>
+   </div>
+  </div> 
+  <div class="round">
+   0&nbsp;/&nbsp;10&nbsp;局
+  </div> 
+  <img src="img/home.png" class="return" style="right: 10px;" onclick="opnemm('fangjian-fanhuisy','tishi')" /> 
+  <img src="img/note4.png" class="return" style="right: 60px;" /> 
+  <img src="img/footer_bull.png" usemap="#planetmap" class="bottom" /> 
+  <img src="img/icon_game_rule.png" class="bottomGameRule" style="z-index: 110;" /> 
+  <img src="img/icon_sound61.png" class="bottomGameHistory" style="z-index: 110;" /> 
+  <img src="img/icon_game_message.png" class="bottomGameMessage" /> 
+
+
+  <div class="myCardType">
+   <div style="display: none;">
+    高牌
+   </div> 
+  <!--  <div style="display: none;">
+    对子
+   </div> 
+   <div style="display: none;">
+    顺子
+   </div> 
+   <div style="display: none;">
+    同花
+   </div> 
+   <div style="display: none;">
+    同花顺
+   </div> 
+   <div style="display: none;">
+    三条
+   </div> -->
+  </div> 
+
+
+
+  <div id="table" class="table" style="width: 100%; height: 100%;">
+   <img src="img/table-zhajinhua.jpg" class="tableBack" /> 
+   <div class="place" style="display: none; width: 99.0566px; height: 99.0566px; top: 191.038px;left: 0;
+    right: 0;
+    margin: auto;">
+    <div class="totalScore">
+     <div class="scores">
+      0
+     </div> 
+     <img src="img/totalScore.png" />
+    </div> 
+   </div> 
+
+   <div class="scoresArea"></div>
+   <div class="cardDeal" >
+    <div id='userfp'>
+      <!--  <div class="card card11" ></div> 
+       <div class="card card12" style="display: none;"></div> 
+       <div class="card card13" style="display: none;"></div> 
+       <div class="isSeen isSeen1" style="display: none;"></div> 
+       <div class="isQuit isQuit1" style="display: none;"></div> 
+       <div class="isLose isLose1" style="display: none;"></div> -->
+
+    </div>
+     
+   
+    <div class="myCards" style="display: none;">
+     <div class="winText" style="display: none;">
+      <img src="img/winner.png" /> 
+      <div class="winScore" style="width: 100%; left: 0px; text-align: center; font-size: 16px; display: none;">
+        + 
+      </div>
+     </div> 
+     <div class="cards card0">
+      <div class="face front"></div> 
+      <div class="face back cardundefined"></div> 
+      <div class="myQuitBack" style="display: none;"></div>
+     </div> 
+     <div class="cards card1">
+      <div class="face front"></div> 
+      <div class="face back cardundefined"></div> 
+      <div class="myQuitBack" style="display: none;"></div>
+     </div> 
+     <div class="cards card2">
+      <div class="face front"></div> 
+      <div class="face back cardundefined"></div> 
+      <div class="myQuitBack" style="display: none;"></div>
+     </div> 
+     <div style="width: 70px; height: 20px; position: absolute; top: 17px; left: 50%; margin-left: -40px; z-index: 95; text-align: center; color: rgb(255, 255, 255); font-size: 15px; padding: 1px 5px; display: none;">
+      <img src="img/lookcard.png" style="width: 70px; height: 20px;" />
+     </div> 
+     <div class="isQuit isQuit1" style="display: none;"></div> 
+     <div class="isLose isLose1" style="display: none;"></div>
+    </div>
+   </div> 
+   <div class="member member1">
+    <img src="img/player.png" class="background" /> 
+    <img src="img/playerWin.png" class="background" style="display: none;" /> 
+    <div class="title">
+     　　　　　　
+    </div> 
+    <div class="avatar">
+     <img src="http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKCadqSJdzKVwmdwQZzqYtgfLvaZjf8kC1iaibodApB7GQMMP30mm7zzulNXRqVhEBz4VkHJostRUTQ/0" style="position: absolute; left: 25%; width: 100%; border-radius: 3px;" /> 
+     <img src="img/avatar_timer.jpg" style="position: absolute; left: 25%; width: 100%; border-radius: 3px; display: none;" /> 
+     <!----> 
+     <div style="position: absolute; top: 0px; left: 25%; width: 100%; line-height: 52px; text-align: center; color: rgb(96, 38, 3); font-size: 20px; display: none;">
+      0
+     </div>
+    </div> 
+    <div class="score">
+     0
+    </div> 
+    <div class="quitBack" style="display: none;"></div> 
+    <div class="isReady" onclick="ready()">
+     <img src="img/readyButton.png" class="unready" /> 
+     <img src="img/ready.png" class="ready" style="display: none;" />
+    </div> 
+    <!----> 
+    <div class="PKbox" style="display: none;">
+     <div class="PKboxBack"></div>
+    </div>
+   </div>
+   <div class="member member2" >
+    <img src="img/player.png" class="background" /> 
+    <img src="img/playerWin.png" class="background" style="display: none;" /> 
+    <div class="title"></div> 
+    <div class="avatar">
+     <img src="" style="position: absolute; left: 25%; width: 100%; border-radius: 3px;" /> 
+     <img src="img/avatar_timer.jpg" style="position: absolute; left: 25%; width: 100%; border-radius: 3px; display: none;" /> 
+     <div style="position: absolute; top: 0px; left: 25%; width: 100%; line-height: 42px; text-align: center; color: rgb(96, 38, 3); font-size: 20px; display: none;">
+      0
+     </div> 
+     <!---->
+    </div> 
+    <div class="score">
+     0
+    </div> 
+    <div class="quitBack"></div> 
+    <div class="isReady">
+     <img src="img/readyButton.png" class="unready" style="display: none;" /> 
+     <img src="img/ready.png" class="ready" style="display: none;" />
+    </div> 
+    <div class="cardOver cardOver2" style="display: none;">
+     <img src="img/cardBox.png" class="cardResult" /> 
+     <img src="img/cardBoxWin.png" class="cardResult" style="display: none;" /> 
+     <div class="name"></div> 
+     <div class="openCard">
+      <div class="cards card0">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card1">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card2">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div> 
+     <div class="winText" style="display: none;">
+      <div class="winType winType0"></div> 
+      <div class="winScore winType0">
+       +
+      </div>
+     </div>
+    </div> 
+    <div class="PKbox" style="display: none;">
+     <div class="PKboxBack"></div>
+    </div>
+   </div>
+   <div class="member member3" >
+    <img src="img/player.png" class="background" /> 
+    <img src="img/playerWin.png" class="background" style="display: none;" /> 
+    <div class="title"></div> 
+    <div class="avatar">
+     <img src="" style="position: absolute; left: 25%; width: 100%; border-radius: 3px;" /> 
+     <img src="img/avatar_timer.jpg" style="position: absolute; left: 25%; width: 100%; border-radius: 3px; display: none;" /> 
+     <div style="position: absolute; top: 0px; left: 25%; width: 100%; line-height: 42px; text-align: center; color: rgb(96, 38, 3); font-size: 20px; display: none;">
+      0
+     </div> 
+     <!---->
+    </div> 
+    <div class="score">
+     0
+    </div> 
+    <div class="quitBack"></div> 
+    <div class="isReady">
+     <img src="img/readyButton.png" class="unready" style="display: none;" /> 
+     <img src="img/ready.png" class="ready" style="display: none;" />
+    </div> 
+    <div class="cardOver cardOver3" style="display: none;">
+     <img src="img/cardBox.png" class="cardResult" /> 
+     <img src="img/cardBoxWin.png" class="cardResult" style="display: none;" /> 
+     <div class="name"></div> 
+     <div class="openCard">
+      <div class="cards card0">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card1">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card2">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div> 
+     <div class="winText" style="display: none;">
+      <div class="winType winType0"></div> 
+      <div class="winScore winType0">
+       +
+      </div>
+     </div>
+    </div> 
+    <div class="PKbox" style="display: none;">
+     <div class="PKboxBack"></div>
+    </div>
+   </div>
+   <div class="member member4" style="top: 4.87744%;">
+    <img src="img/player.png" class="background" /> 
+    <img src="img/playerWin.png" class="background" style="display: none;" /> 
+    <div class="title"></div> 
+    <div class="avatar">
+     <img src="" style="position: absolute; left: 25%; width: 100%; border-radius: 3px;" /> 
+     <img src="img/avatar_timer.jpg" style="position: absolute; left: 25%; width: 100%; border-radius: 3px; display: none;" /> 
+     <div style="position: absolute; top: 0px; left: 25%; width: 100%; line-height: 42px; text-align: center; color: rgb(96, 38, 3); font-size: 20px; display: none;">
+      0
+     </div> 
+     <!---->
+    </div> 
+    <div class="score">
+     0
+    </div> 
+    <div class="quitBack"></div> 
+    <div class="isReady">
+     <img src="img/readyButton.png" class="unready" style="display: none;" /> 
+     <img src="img/ready.png" class="ready" style="display: none;" />
+    </div> 
+    <div class="cardOver cardOver4" style="display: none;">
+     <img src="img/cardBox.png" class="cardResult" /> 
+     <img src="img/cardBoxWin.png" class="cardResult" style="display: none;" /> 
+     <div class="name"></div> 
+     <div class="openCard">
+      <div class="cards card0">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card1">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card2">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div> 
+     <div class="winText" style="display: none;">
+      <div class="winType winType0"></div> 
+      <div class="winScore winType0">
+       +
+      </div>
+     </div>
+    </div> 
+    <div class="PKbox" style="display: none;">
+     <div class="PKboxBack"></div>
+    </div>
+   </div>
+   <div class="member member5" >
+    <img src="img/player.png" class="background" /> 
+    <img src="img/playerWin.png" class="background" style="display: none;" /> 
+    <div class="title"></div> 
+    <div class="avatar">
+     <img src="" style="position: absolute; left: 25%; width: 100%; border-radius: 3px;" /> 
+     <img src="img/avatar_timer.jpg" style="position: absolute; left: 25%; width: 100%; border-radius: 3px; display: none;" /> 
+     <div style="position: absolute; top: 0px; left: 25%; width: 100%; line-height: 42px; text-align: center; color: rgb(96, 38, 3); font-size: 20px; display: none;">
+      0
+     </div> 
+     <!---->
+    </div> 
+    <div class="score">
+     0
+    </div> 
+    <div class="quitBack"></div> 
+    <div class="isReady">
+     <img src="img/readyButton.png" class="unready" style="display: none;" /> 
+     <img src="img/ready.png" class="ready" style="display: none;" />
+    </div> 
+    <div class="cardOver cardOver5" style="display: none;">
+     <img src="img/cardBox.png" class="cardResult" /> 
+     <img src="img/cardBoxWin.png" class="cardResult" style="display: none;" /> 
+     <div class="name"></div> 
+     <div class="openCard">
+      <div class="cards card0">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card1">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card2">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div> 
+     <div class="winText" style="display: none;">
+      <div class="winType winType0"></div> 
+      <div class="winScore winType0">
+       +
+      </div>
+     </div>
+    </div> 
+    <div class="PKbox" style="display: none;">
+     <div class="PKboxBack"></div>
+    </div>
+   </div>
+   <div class="member member6" >
+    <img src="img/player.png" class="background" /> 
+    <img src="img/playerWin.png" class="background" style="display: none;" /> 
+    <div class="title"></div> 
+    <div class="avatar">
+     <img src="" style="position: absolute; left: 25%; width: 100%; border-radius: 3px;" /> 
+     <img src="img/avatar_timer.jpg" style="position: absolute; left: 25%; width: 100%; border-radius: 3px; display: none;" /> 
+     <div style="position: absolute; top: 0px; left: 25%; width: 100%; line-height: 42px; text-align: center; color: rgb(96, 38, 3); font-size: 20px; display: none;">
+      0
+     </div> 
+     <!---->
+    </div> 
+    <div class="score">
+     0
+    </div> 
+    <div class="quitBack"></div> 
+    <div class="isReady">
+     <img src="img/readyButton.png" class="unready" style="display: none;" /> 
+     <img src="img/ready.png" class="ready" style="display: none;" />
+    </div> 
+    <div class="cardOver cardOver6" style="display: none;">
+     <img src="img/cardBox.png" class="cardResult" /> 
+     <img src="img/cardBoxWin.png" class="cardResult" style="display: none;" /> 
+     <div class="name"></div> 
+     <div class="openCard">
+      <div class="cards card0">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card1">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div> 
+      <div class="cards card2">
+       <div class="face front"></div> 
+       <div class="face back cardundefined"></div>
+      </div>
+     </div> 
+     <div class="winText" style="display: none;">
+      <div class="winType winType0"></div> 
+      <div class="winScore winType0">
+       +
+      </div>
+     </div>
+    </div> 
+    <div class="PKbox" style="display: none;">
+     <div class="PKboxBack"></div>
+    </div>
+   </div> 
+   <div>
+    <div class="messageSay messageSay1" style="display: none;">
+     <div>
+      我们来血拼吧
+     </div> 
+     <div class="triangle"></div>
+    </div>
+   </div>
+  
+  
+   <div class="clock" style="display: none;">
+     -1 
+   </div> 
+    <div class="myButton" style="display: none;">
+   <div class="scoreList">
+    <div style="display: none;">
+     <div class="scoreItem scoreItemText scoreItem11">
+      4
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem50" style="display: none;">
+      4
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem21" onclick="scoresArea(1,8)">
+      8
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem50" style="display: none;">
+      8
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem31">
+      16
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem50" style="display: none;">
+      16
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem41">
+      20
+     </div>
+    </div> 
+    <div>
+     <div class="scoreItem scoreItemText scoreItem51" onclick="scoresArea(4,10)">
+      2
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem50" style="display: none;" onclick="scoresArea(4,10)">
+      2
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem11"  onclick="scoresArea(3,10)">
+      4
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem50" style="display: none;" onclick="scoresArea(3,10)">
+      4
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem21"  onclick="scoresArea(1,8)">
+      8
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem50" style="display: none;" onclick="scoresArea(1,8)">
+      8
+     </div> 
+     <div class="scoreItem scoreItemText scoreItem61" onclick="scoresArea(2,10)">
+      10
+     </div>
+    </div>
+   </div> 
+   <div class="doubleButton">
+    <div class="isOver">
+     <div class="leftButton button"></div> 
+     <div class="rightButton button" style="display: none;"></div> 
+     <div class="rightButton1 button"></div>
+    </div>
+   </div>
+  </div>
+   <div class="pkBackground" style="display: none;">
+    <div class="pkBackText">
+     选择比牌对象
+    </div>
+   </div>
+  </div> 
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="tishi" class="alert" style="display: none;"></div> 
+ 
+
+
+
+  
+ 
+
+
+
+
+ </body>
+</html>
